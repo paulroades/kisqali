@@ -1,0 +1,214 @@
+$selectfield-padding: 11px !default;
+$selectfield-vertical-spacing: 20px !default;
+
+$selectfield-font-family-base: $font-family-base;
+$selectfield-floating-label-fontsize: 1rem;
+$selectfield-floating-label-fontsize-small: 0.85714rem;
+$selectfield-default-fontsize: 1.1428rem;
+
+$selectfield-background-color: transparent !default;
+$selectfield-label-color: transparentize($color-black, 0.74) !default;
+$selectfield-label-color-alt: $color-grey-2;
+$selectfield-bottom-border-color: transparentize($color-black, .88) !default;
+$selectfield-highlight-color: $color-accent;
+$selectfield-disabled-color: $selectfield-bottom-border-color !default;
+$selectfield-disabled-text-color: $selectfield-label-color !default;
+$selectfield-error-color: $color-accent;
+$selectfield-background-reset: $color-white;
+
+// The container for the whole component.
+.mdl-selectfield {
+	position: relative;
+	font-size: $selectfield-default-fontsize;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 300px;
+	max-width: 100%;
+	margin: 0;
+	padding: $selectfield-vertical-spacing 0;
+	font-family: $selectfield-font-family-base;
+	&-reset {
+		display: none;
+		.is-dirty & {
+			display: block;
+			position: absolute;
+			right: 0;
+			cursor: pointer;
+			background: $selectfield-background-reset;
+			bottom: 1.7rem;
+			padding: 0.2rem;
+		}
+	}
+	// Optional class to align right.
+	&--align-right {
+		text-align: right;
+	}
+	// Optional class to display at full width.
+	&--full-width {
+		width: 100%;
+	}
+	// Styling for the select element.
+	&__select {
+		display: block;
+		width: 100%;
+		padding: $selectfield-padding 0;
+		margin: 0;
+		color: inherit;
+		background: $selectfield-background-color;
+		font-size: $selectfield-default-fontsize;
+		text-align: left;
+		color: inherit;
+		border: none;
+		border-bottom: 1px solid $selectfield-bottom-border-color;
+		border-radius: 0;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+
+		option {
+			-webkit-appearance: none;
+			-moz-appearance : none;
+			display: block;
+			padding: 10px 0;
+		}
+
+		.mdl-selectfield.is-focused & {
+			outline: none;
+		}
+
+		.mdl-selectfield.is-invalid & {
+			border-color: $selectfield-error-color;
+			box-shadow: none;
+		}
+
+		fieldset[disabled] .mdl-selectfield &, .mdl-selectfield.is-disabled & {
+			background-color: transparent;
+			border-bottom: 1px dotted $selectfield-disabled-color;
+			color: $selectfield-disabled-text-color;
+		}
+	}
+	// Styling for the label / floating label.
+	&__label {
+		bottom: 0;
+		color: $selectfield-label-color-alt;
+		font-size: $selectfield-default-fontsize;
+		left: 0;
+		right: 0;
+		pointer-events: none;
+		position: absolute;
+		display: block;
+		top: 24px;
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-align: left;
+
+		.mdl-selectfield.is-dirty & {
+			visibility: hidden;
+		}
+
+		// Floating Label
+		.mdl-selectfield--floating-label & {
+			@include material-animation-default();
+		}
+
+		fieldset[disabled] .mdl-selectfield &,
+		.mdl-selectfield.is-disabled.is-disabled & {
+			color: $selectfield-disabled-text-color;
+		}
+
+		.mdl-selectfield--floating-label.is-focused &,
+		.mdl-selectfield--floating-label.is-dirty & {
+			color: $color-grey-1;
+			font-size : $selectfield-floating-label-fontsize-small;
+			top: 4px;
+			visibility: visible;
+		}
+
+		.mdl-selectfield--floating-label.is-dirty & {
+			color: $color-grey-2;
+		}
+
+		.mdl-selectfield--floating-label.is-invalid & {
+			color: $selectfield-error-color;
+			font-size: $selectfield-floating-label-fontsize;
+		}
+
+		// The after label is the colored underline for the TextField.
+		&:after {
+			background-color: $selectfield-highlight-color;
+			bottom: $selectfield-vertical-spacing;
+			content: '';
+			height: 2px;
+			left: 45%;
+			position: absolute;
+			@include material-animation-default();
+			visibility: hidden;
+			width: 10px;
+		}
+
+		.mdl-selectfield.is-focused &:after {
+			left: 0;
+			visibility: visible;
+			width: 100%;
+		}
+
+		.mdl-selectfield.is-invalid &:after {
+			background-color: $selectfield-error-color;
+		}
+	}
+	// SelectField Error.
+	&__error {
+		color: $selectfield-error-color;
+		position: absolute;
+		font-size: $selectfield-floating-label-fontsize;
+		margin-top: 3px;
+		visibility: hidden; 
+		display: block;
+
+		.mdl-selectfield.is-invalid & {
+			visibility: visible;
+		}
+	}
+}
+
+.select-ajax-list {
+	label {
+		top: 24px;
+	}
+	.select2-container {
+		padding: $selectfield-padding 0;
+		border-bottom: 1px solid $selectfield-bottom-border-color;		
+		&--default {
+			.select2-selection--single {
+				height: 19px;
+				border: 0;
+				background: transparent;
+				.select2-selection__rendered {
+					padding: 0;
+				}
+				.select2-selection__arrow {
+					display: none;
+				}
+			}
+		}
+	}
+}
+.select2 {
+	&-results__option {
+		font-size: $selectfield-default-fontsize;
+		font-family: $selectfield-font-family-base;
+		&:empty {
+			padding: 0;
+		}
+	}
+	&-dropdown {
+		border-radius: 0;
+		border-color: $selectfield-bottom-border-color;
+	}
+	&-container--default .select2-search--dropdown .select2-search__field {
+		border: 0;
+		font-size: $selectfield-default-fontsize;
+		font-family: $selectfield-font-family-base;
+	}
+}

@@ -1,0 +1,12 @@
+﻿@using EPiServer.Web.Mvc.Html
+@model DigiOne.ServiceSphere.Web.Features.MasterPage.ViewModels.HeaderViewModel
+
+<div class="hero">
+    <h1>@Model.SectionHeading</h1>
+
+    <div class="hero-img-holder">
+        <div class="hero-img-fader"></div>
+        
+        @{ Html.RenderContentArea(Model.CurrentPage.TopImages); }
+    </div>
+</div>

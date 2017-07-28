@@ -1,0 +1,238 @@
+/*
+- Document  : event-page.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-02-24
+*/
+
+.event {
+    margin-bottom: 35px;
+    clear: left;
+	padding-top: 14px;
+	.events & {
+		@include desktop {
+			padding: 20px 0;
+		}
+	}
+	@media (min-width: $breakpoint-desktop) {
+		.events & {
+			padding: 10px 0;
+		}
+	}
+	&-attend-participants {
+		color: $color-accent;
+		font-size: 18px;
+	}
+	&-attend-holder {
+		overflow: hidden;
+		.event-attend-block {
+			width: 207px;
+			float: right;
+			text-align: center;
+		}
+		&-accent {
+			.event-attend-block {
+				text-align: center;
+				width: 265px;
+				margin: 0 auto;
+				.btn-outline {
+					font-size: 23px;
+					padding: 13px;
+				}
+			}
+			.event-attend-participants {
+				font-size: 18px;
+				margin-top: 14px;
+			}
+		}
+	}
+	&-address {
+		font-family: $font-family-base;
+		padding-top: 12px;
+		font-size: 20px;
+	}
+	&-date-short {
+		color: $color-grey-dark2;
+		font-size: 30px;
+		line-height: 0.8;
+		padding-bottom: 30px;
+		margin-top: -0.21428rem;
+	}
+	&-date-time {
+		padding-top: 15px;
+		font-family: $font-family-base;
+		font-size: 22px;
+	}
+	&-page {
+		ul, ol {
+			margin-top: 0;
+		}
+		h1 {
+			text-transform: none;
+			margin: 0;
+			font-size: 48px;
+			line-height: 55px;
+			color: $color-grey-dark2;
+		}
+		.content-focused-feauted {
+			.nav-social {
+				padding: 27px 0 14px 0;
+            }
+			color: $color-grey-light11;
+			p, blockquote {
+				font-size: 18px;
+				line-height: 1.6;
+				font-family: $font-family-base;
+				letter-spacing: 0;
+			}
+			blockquote {
+				font-style: normal;
+			}
+			p {
+				color: $color-grey-light11;
+			}
+			blockquote {
+				font-weight: bold;
+				color: $color-grey-dark2;
+				&:before, &:after {
+					display: none;
+				}
+			}
+			h2 {
+				font-family: $font-family-base;
+				font-size: 20px;
+				font-weight: bold;
+			}
+		}
+	}
+	a {
+		color: $color-grey-2;
+		float: left;
+		padding-left: 60px;
+		text-decoration: none;
+		text-decoration: none;
+		&.link {
+			position: absolute;
+			top: 25px;
+			bottom: auto;
+			right: 20px;
+			padding-right: 20px;
+			&:before {
+				position: absolute;
+				content: '';
+				width: 6px;
+				height: 10px;
+				right: 6px;
+				bottom: 2px;
+				background-size: cover;
+			}
+		}
+	}
+	&-date {
+		background: $color-grey-light none repeat scroll 0 0;
+		border-radius: 3px;
+		color: $color-white;
+		display: block;
+		float: left;
+		left: 35px;
+		padding-top: 3px;
+		position: absolute;
+		text-align: center;
+		width: 64px;
+		height: 55px;
+		line-height: 1;
+		.events & {
+			font-size: 19px;
+			text-transform: none;
+		}
+		article & {
+			left: 0;
+			position: relative;
+			margin-right: 10px;
+		}
+	}
+	&-day {
+		font-size: 1.71428rem;
+		font-weight: bold;
+		line-height: 1;
+		display: block;
+		font-size: 28px;
+	}
+	&-venue {
+		text-transform: capitalize;
+	}
+	&-place {
+		@include desktop {
+			font-size: 36px;
+		}
+    }
+    h2 {
+        padding-right: 100px;
+    }
+    .event-date {
+        position: inherit;
+        margin: 5px 10px 0 0;
+    }
+    .event-copy {
+        overflow: hidden;
+        max-height: 100px;
+        h3 {
+            font-family: $font-family-base;
+            font-size: 18px;
+            text-decoration: underline;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .event {
+        margin: 0;
+        padding: 5px 0;
+        overflow: hidden;
+        border-top: solid 1px $color-grey-light6;
+        a {
+            float: none;
+            padding: 0;
+        }
+        &:first-child {
+            border: 0;
+        }
+    }
+    .event-venue {
+        font-size: 14px;
+        font-family: $font-family-base;
+        display: block;
+        padding-bottom: 5px;
+    }
+    p {
+        margin: 0;
+        font-size: 12px;
+        font-family: $font-family-base;
+        color: $color-grey-light8;
+    }
+	@include hover {
+		h3 {
+			text-decoration: none;
+		}
+	}
+}
+.events {
+	a {
+		.event-date {
+			transition: all .3s ease;
+		}
+		@include hover {
+			.event-date {
+				background-color: $color-accent;
+			}
+		}
+	}
+}
+.gmap-area {
+	margin: 30px 0 0;
+	iframe {
+        width: 100%;
+    }
+}
+.grid-1-1 > .list-events > .events > .event > a {
+	width: 100%;
+}

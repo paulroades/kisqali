@@ -1,0 +1,355 @@
+/*
+- Document  : mixins.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-02-16
+*/
+
+/* Extensions */
+%accordion {
+	&::after {
+		float: right;
+		content: "\002b";
+	}
+	.state:checked + & {
+		&::after {
+			content: "\2212";
+		}
+	}
+}
+
+%grid-position {
+	top: $grid-gutter;
+	left: $grid-gutter;
+	right: $grid-gutter;
+	bottom: $grid-gutter;
+}
+
+%clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+%inner-width {
+	max-width: $max-inner-width;
+	margin: 0 auto;
+}
+
+%transall {
+	transition: all 0.3s ease;
+}
+
+/* Mixins */
+@mixin linear-gradient($direction, $color-stops...) {
+	$legacy-direction : top;
+
+	@if $direction == to right {
+		$legacy-direction: left;
+	} 
+
+	background: nth(nth($color-stops, 1), 1);
+	background: -webkit-linear-gradient($legacy-direction, $color-stops);
+	background: linear-gradient($direction, $color-stops);
+}
+
+@mixin button ($bgcolor, $txtcolor, $brdcolor, $hvrcolor, $hvrtxtcolor) {
+	@extend %transall;
+	font: inherit;
+	padding: 0.57rem 1.57rem;
+	border: 1px solid $brdcolor;
+	text-align: center;
+	background-color: $bgcolor;
+	color: $txtcolor;
+	cursor: pointer;
+	outline: 0;
+	@include hover {
+		background-color: $hvrcolor;
+		color: $hvrtxtcolor;
+	}
+}
+
+/// Mixin to prefix a property
+/// @author Hugo Giraudel
+/// @param {String} $property - Property name
+/// @param {*} $value - Property value
+/// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefixed($property, $value) {
+    $prefixes: moz ms o webkit;
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+}
+
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin circle( $radius ) {
+    display: block;
+    width: $radius;
+    height: $radius;
+    border-radius: $radius;
+}
+
+@mixin opacity( $opacity ) {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity)";
+    filter: alpha(opacity=$opacity);
+    -moz-opacity: $opacity;
+    -khtml-opacity: $opacity;
+    opacity: $opacity;
+}
+
+@mixin triangle($dir, $color, $size) {
+    border: $size transparent solid;
+
+    @if ($dir == "top" or $dir == "up") {
+        border-bottom-color: $color;
+    }
+    @else if ($dir == "right" or $dir == "after") {
+        border-left-color: $color;
+    }
+    @else if ($dir == "bottom" or $dir == "down") {
+        border-top-color: $color;
+    }
+    @else if ($dir == "left" or $dir == "before") {
+        border-right-color: $color;
+    }
+}
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+/* Hover */
+@mixin hover {
+	@media (hover) {
+        &:hover { @content; }
+	}
+}
+
+@mixin no-hover {
+	@media (hover:none) {
+        @content;
+	}
+}
+
+/* Responsive / Breakpoints */
+@mixin phablet {
+	@media (min-width: $breakpoint-phablet) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: $breakpoint-tablet) {
+		@content;
+	}
+}
+
+@mixin before-tablet {
+	@media (max-width: $breakpoint-tablet) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: $breakpoint-desktop) {
+		@content;
+	}
+}
+
+@mixin before-desktop {
+	@media (max-width: $breakpoint-desktop) {
+		@content;
+	}
+}
+
+@mixin no-select {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+@mixin selection-colors($color-text-shadow-selection, $background-selection, $color-selection) {
+    text-shadow: 1px 1px 0 $color-text-shadow-selection;
+    background: $background-selection;
+    color: $color-selection;
+}
+
+@mixin set-selection-colors( $color-text-shadow-selection, $background-selection, $color-selection) {
+    ::-moz-selection {
+        @include selection-colors($color-text-shadow-selection, $background-selection, $color-selection);
+	}
+    ::selection {
+        @include selection-colors($color-text-shadow-selection, $background-selection, $color-selection);
+	}
+}
+
+@mixin placeholder($color: #d6d6d6) {
+    .placeholder {
+        color: $color;
+	}
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color: $color;
+	}
+
+    ::-moz-placeholder {/* Mozilla Firefox 19+ */
+        color: $color;
+        opacity: 1;
+	}
+
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: $color;
+	}
+
+    :invalid:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: $color;
+	}
+
+    ::placeholder {
+        color: $color;
+	}
+}
+
+/* Positioning */
+@mixin position($position, $args: ()) {
+	$offsets: top right bottom left;
+	position: $position;
+	@each $offset in $offsets {
+		$index: index($args, $offset);
+		@if $index {
+			@if $index == length($args) {
+				#{$offset}: 0;
+			}
+			@else {
+				$next: nth($args, $index + 1);
+        		@if is-valid-length($next) {
+          			#{$offset}: $next;
+        		}
+        		@else if index($offsets, $next) {
+					#{$offset}: 0;
+        		}
+      		}
+    	}
+	}
+}
+
+@function is-valid-length($value) {
+	@return (type-of($value) == "number" and not unitless($value)) 
+    or (index(auto initial inherit 0, $value) != false);
+}
+
+@mixin absolute($args: ()) {
+	@include position(absolute, $args);
+}
+ 
+@mixin fixed($args: ()) {
+	@include position(fixed, $args);
+}
+ 
+@mixin relative($args: ()) {
+	@include position(relative, $args);
+}
+
+/* Single-line Ellipsis */
+@mixin line-overflow($lineheight, $maxwidth:90%) {
+	display: block;
+	max-width: $maxwidth;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;	
+}
+
+/* Multi-line Ellipsis */
+@mixin ellipsis($background-color, $height, $line-height, $ellipsis-width) {
+	line-height: $line-height;
+	overflow: hidden;
+	height: $height;
+	background-color: $background-color;
+	
+	&:before {
+		float: left;
+		width: 5px;
+		height: $height;
+		content: "";
+	}
+
+	& > *:first-child {
+		float: right;
+		width: 100%;
+		margin-left: -5px;
+	}
+	
+	&:after {
+		@include prefixed(box-sizing, content-box);
+		content: "\02026";  
+	    position: relative;
+	    top: -$line-height;
+	    left: 100%;
+	    float: right;
+	    width: $ellipsis-width;
+	    margin-left: -$ellipsis-width;
+	    padding-right: 5px;
+	    content: '\02026';
+	    background-color: inherit;
+	    text-align: right;
+	}
+	
+	p { 
+		margin: 0; 
+	}
+}
+
+/* Flexbox */
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex($values) {
+	-webkit-box-flex: $values;
+	-webkit-flex:  $values;
+	flex: $values;
+}
+
+@mixin align-self($val) {
+	-webkit-align-self: $val;
+	align-self: $val;
+}
+
+@mixin flex-flow($val) {
+	-webkit-flex-flow: $val;
+	flex-flow: $val;
+}
+
+@mixin justify-content($val) {
+	-webkit-justify-content: $val;
+	justify-content: $val;
+}
+
+@mixin order($val) {
+	-webkit-box-ordinal-group: $val;        
+	-webkit-order: $val;  
+	order: $val;
+}

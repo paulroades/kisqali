@@ -1,0 +1,34 @@
+﻿@using DigiOne.ServiceSphere.Web.Features.VisualTabSettings.Enums
+@using DigiOne.ServiceSphere.Web.Infrastructure.Extensions
+@using EPiServer.Editor
+@using EPiServer.Web.Mvc.Html
+@model DigiOne.ServiceSphere.Website.Areas.SpotBlock.Models.SpotBlockViewModel
+
+@*
+    Be aware, this view behaves as TopImage, this is because we have slyling only for Linex sites, so far...
+    In case of support new layout types for other sites, remove following style - spotLayout-topimage, from below
+*@
+<div class="@Model.ClassString trigger-change spotLayout-@(SpotLayoutTypes.TopImage.ToString().ToLower())" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="content">
+        @if (Model.SpotContent.SpotImage != null || PageEditing.PageIsInEditMode)
+            {
+            <div class="content-img">
+                <img itemprop="thumbnailUrl" content="@Model.SpotContent.SpotImage.ToFriendlyUrl()" src="" @Html.EditAttributes(x => x.SpotContent.SpotImage) class="lazy-image" data-src="@Model.SpotContent.SpotImage.ToFriendlyUrl()" />
+            </div>
+        }
+        <div class="content-restrict">
+            @if (Model.SpotContent.SpotHeading.DisplayForCurrentUser())
+            {
+                <h2 itemprop="headline" @Html.EditAttributes(x => x.SpotContent.SpotHeading)>@Model.SpotContent.SpotHeading</h2>
+            }
+            <div itemprop="text" @Html.EditAttributes(x => x.SpotContent.SpotContent)>@Model.SpotContent.SpotContent</div>
+        </div>
+        @if (!string.IsNullOrEmpty(Model.SpotContent.SpotLinkText) || PageEditing.PageIsInEditMode)
+            {
+            <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="@Model.SpotContent.SpotLink.ToFriendlyUrl()" />
+                <span itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                    <a itemprop="url" class="link" href="@Model.SpotContent.SpotLink.ToFriendlyUrl()" @Model.SpotContent.SpotLink.DetermineTargetAttribute() @Html.EditAttributes(x => x.SpotContent.SpotLinkText)>@Model.SpotContent.SpotLinkText</a>
+                </span>
+        }
+    </div>
+</div> 

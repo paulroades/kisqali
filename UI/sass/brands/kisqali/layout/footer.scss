@@ -1,0 +1,140 @@
+/*
+- Document  : footer.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-02-24
+*/
+
+footer[id=site-specifics] {
+	margin: 0 auto;
+	position: relative;
+	clear: left;
+	z-index: 10;
+	overflow: hidden;
+	background: $color-accent;
+	@include before-desktop {
+		text-align: center;
+	}
+	@include desktop {
+		margin: 0 auto;
+		text-align: right;
+		font-size: 18px;
+		line-height: 18px;
+		padding: 40px 15px 30px;
+	}
+	ul {
+		max-width: 1240px;
+		margin: 0 auto;
+		padding: 0 0 1.875rem 1.875rem;
+		@include desktop {
+			font-size: 18px;
+			line-height: 18px;
+		}
+	}
+	li {
+		display: inline-block;
+		padding: 5px 15px;
+		@include desktop {
+			padding-top: 0;
+			padding-bottom: 0;
+			min-height: 20px;
+			border-left: solid 1px #363836;
+			&:first-child,
+			&:nth-child(2) {
+				border-left: 0;
+			}
+		}
+		a {
+			text-decoration: none;
+			color: #fff;
+			@include desktop {
+				position: relative;
+				top: -1px;
+			}
+		}
+	}
+	p {
+		@include desktop {
+			margin: 0;
+			padding: 0;
+			font-size: 18px;
+			line-height: 1;
+		}
+	}
+	.logo-novartis-global {
+		padding: 5px 0;
+		text-align: left;
+		img {
+			max-width: 40%;
+			@include phablet {
+				max-width: 20%;
+			}
+			@include desktop {
+				left: 0;
+				max-width: 180px;
+				max-height: 100px;
+				margin-top: -16px;
+			}
+		}
+		@include before-desktop {
+			display: block;
+			text-align: center;
+			img {
+				margin: 0;
+			}
+		}
+		@include desktop {
+			padding-top: 0;
+			border-left: 0;
+			float: left;
+			width: 180px;
+			position: relative;
+			li & {
+				border-left: 0;
+			}
+			a {
+				display: block;
+				position: inherit;
+			}
+		}
+	}
+	.copy-novartis-global {
+		padding: 5px 0;
+		@include before-desktop {
+			text-align: center;
+			display: block;
+			color: $color-accent;
+		}
+		@include desktop {
+			position: relative;
+			top: -1px;
+			padding-top: 0;
+			text-align: right;
+			width: 180px;
+			border-left: 0;
+			float: right;
+			color: $color-accent;
+		}
+		img {
+			height: auto;
+			margin-right: 140px;
+			max-width: 180px;
+		}
+		span {
+			font-size: 26px;
+			line-height: 18px;
+			position: relative;
+			top: 3px;
+		}
+	}
+	.no-touch & {
+		a {
+			@include prefixed(transition, all .3s ease-in-out);
+			li & {
+				&:hover {
+					color: $color-accent;
+				}
+			}
+		}
+	}
+}

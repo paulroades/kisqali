@@ -1,0 +1,449 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        h5, h6 {
+            font-weight: bold;
+        }
+        p {
+            padding-bottom: 2rem;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+            <div class="col-md-12">
+                <h1>ServiceSphere theme</h1>
+                <h2>gulp</h2>
+                <h3>tasks</h3>
+                <p>Contains gulp tasks for compilins SASS files to compressed CSS files. 
+                    Also contains variables which are used in tasks for generation of JSDoc and SASSDoc documentation.
+                </p>
+                <h6>config.js</h6>
+                <p>
+                    Configuration file with paths to SASS sources and to concatenatted "master.css" files.
+                </p>
+                <hr />
+                <h2>Layouts</h2>
+                <p>
+                    Contains "cshtml" files with available layouts.    
+                </p>
+                <h6>_Layout.cshtml</h6>
+                <p>
+                    Master page template.
+                </p>
+                <hr />
+                <h2>UI</h2>
+                <h3>css</h3>
+                <p>
+                    Contains compressed versions of "master.css" files.
+                </p>
+                <h4>entresto</h4>
+                <p>
+                    Compiled version of master CSS file for the "Entresto" brand theme. 
+                </p>
+                <h6>editor.css</h6>
+                <p>
+                    Styles which appears in a dropdown in EpiServer CMS Editor TinyMCE text editor.
+                </p>
+                <h6>master.css</h6>
+                <p>
+                    All theme compiled styles.
+                </p>
+                <h6>master.css.map</h6>
+                <p>
+                    Auto generated source map with paths to SASS sources.
+                </p>
+                <h6>master-pdf.css</h6>
+                <p>
+                    Styles of theme with additional styles for auto generation of PDF version if site.
+                </p>
+                <h6>PropertyPicker.css</h6>
+                <p>
+                    Styles for a "PropertyPicker" functionality which is used by editor in EpiServer CMS.                    
+                </p>
+                <h3>fonts</h3>
+                <p>
+                    Contains local version of non-standart fonts. Currently contain only "iconmoon" font.
+                </p>
+                <h3>images</h3>
+                <p>
+                    Images which are used in themes layout.
+                </p>
+                <h3>js</h3>
+                <p>
+                    Specific scripts which are dedicated for this theme with current design.
+                </p>
+                <h6>ie-polyfills.js</h6>
+                <p>
+                    Polyfills which is needed for IE browser to support placeholders in form elements.
+                </p>
+                <h6>ie-polyfills-for-mdl.js</h6>
+                <p>
+                    Polyfills which is needed for IE browser to support Material Design Lite library.
+                </p>
+                <h6>pikaday.js</h6>
+                <p>
+                    Modified library with support of birthday date picker functionality.
+                </p>
+                <h6>script.js</h6>
+                <p>
+                    Custom scripts for support of specific features of theme.
+                </p>
+                <h3>jsdoc</h3>
+                <p>
+                    Generated JSDoc documentation.
+                </p>
+                <h3>sass</h3>
+                <h4>brands</h4>
+                <p>Contains styles for brand themes</p>
+                <h5>entresto</h5>
+                <h6>layout.scss</h6>
+                <p>
+                    Overrridings of default styles.    
+                </p>
+                <h6>master.sass</h6>
+                <p>
+                    Master SASS file with references to all sources of all styles of a main theme.
+                </p>
+                <h4>components</h4>
+                <p>
+                    Sources of styles for available components.
+                </p>
+                <h5>form</h5>
+                <p>
+                    Styles for form elements.    
+                </p>
+                <h6>buttons.scss</h6>
+                <p>
+                    Styles of common buttons, which are used across the elements of theme, including EpiServer forms
+                </p>
+                <h6>checkbox.scss</h6>
+                <p>
+                    Styles for checkbox element and related label in EpiServer forms which are supposed to used in forms. Overridings of MDL (Material Design Lite) styles.
+                </p>
+                <h6>common.scss</h6>
+                <p>
+                    General styles related to alignment of form elements, and main layout. Overridings of MDL styles.
+                </p>
+                <h6>date-picker.scss</h6>
+                <p>
+                    Styles for date picker component, which are additional styles for default styles of plugin "pikaday.js".
+                </p>
+                <h6>file.scss</h6>
+                <p>
+                    Styles for a input type file in EpiServer forms with MDL.
+                </p>
+                <h6>image-choice.scss</h6>
+                <p>
+                    Styles for a specific for EpiServer forms component "image choice".
+                </p>
+                <h6>master.sass</h6>
+                <p>
+                    Master file which combines all related to forms styles and contain references to all files in this folder.    
+                </p>
+                <h6>multiple-select.scss</h6>
+                <p>
+                    Styles for multiple select component which is used in EpiServer forms and registration page, including styles for MDL.
+                </p>
+                <h6>order-material.scss</h6>
+                <p>
+                    Styles for an "order material" functionality and form elements (EpiServer forms).    
+                </p>
+                <h6>selection.scss</h6>
+                <p>
+                    Styles for a dropdown which is used in EpiServer forms and Registration/Login blocks with MDL.
+                </p>
+                <h6>textbox.scss</h6>
+                <p>
+                    Styles for a text input and a text area field in EpiServer or other forms with MDL.
+                </p>
+                <h5>order-material</h5>
+                <p>
+                    Styles related to "order material" functionality.    
+                </p>
+                <h6>group.scss</h6>
+                <p>
+                    Styles for a group element of "order material" functionality.
+                </p>
+                <h6>grouping.scss</h6>
+                <p>
+                    Styles for integrating groups in "order material" functionality.
+                </p>
+                <h6>layout.scss</h6>
+                <p>
+                    General styles for a layout of "order material" functionality.
+                </p>
+                <h6>master.sass</h6>
+                <p>
+                    Master file which combines all related to "order material" functionality styles and contain references to all files in this folder.
+                </p>
+                <h6>step-indicator.scss</h6>
+                <p>
+                    Stylesf for a step indicator element which is used in "order material" functionality.
+                </p>
+                <hr>
+                <h6>_row-separator.scss</h6>
+                <p>
+                    Styles for a component "row separator", which is a headline to separate groups of blocks.    
+                </p>
+                <h6>accordion.scss</h6>
+                <p>
+                    Styles for an accordion component.    
+                </p>
+                <h6>alert.scss</h6>
+                <p>
+                    Styles related to "alerts" functionality and blocks which are used for that.   
+                </p>
+                <h6>carousel.scss</h6>
+                <p>
+                    Styles for a carousel block and part of a hero block, which is a carousel.
+                </p>
+                <h6>cookies-prompt.scss</h6>
+                <p>
+                    Styles related to prompt about using cookies on a website.    
+                </p>
+                <h6>external-link-disclaimer.scss</h6>
+                <p>
+                    Styles of a lightbox which appearing when user is going to leave site using external link.
+                </p>
+                <h6>filterdlistspot.scss</h6>
+                <p>
+                    Additional styles for a filtered list spot block functionality. These styles are addition to general styles for a spot blocks.
+                </p>
+                <h6>_global-panel.scss</h6>
+                <p>
+                    Reference styles which were used in prototype for additional panel in branded theme.
+                </p>
+                <h6>language-selector.scss</h6>
+                <p>
+                    Styles for a language selector component, which is a dropdown with available languages for a website.
+                </p>
+                <h6>navigation.scss</h6>
+                <p>
+                   Styles for a main navigation, including mobile, tablet and desktop version of navigation.  
+                </p>
+                <h6>overviewlistspot.scss</h6>
+                <p>
+                    Additional styles for a overview list spot block functionality. These styles are addition to general styles for a spot blocks.
+                </p>
+                <h6>popup.scss</h6>
+                <p>Reference styles for a lightbox.</p>
+                <h6>public-user-interest-prompt.scss</h6>
+                <p>
+                    Styles of a lightbox which appearing when user should select area of interest.
+                </p>
+                <h6>register.scss</h6>
+                <p>
+                    Specific styles for registration process.
+                </p>
+                <h6>search.scss</h6>
+                <p>
+                    Styles related to a search functionality, including search field, panel with results and filters.
+                </p>
+                <h6>spot.scss</h6>
+                <p>
+                    Styles for all spot blocks with available configurations, including possibility to choose colors, text alignment, background colors and images.
+                </p>
+                <h6>video.scss</h6>
+                <p>
+                    Styles for video block.
+                </p>
+                <h4>constants</h4>
+                <p>
+                    Main global constants including global fonts, colors and break points for responsive design, etc.
+                </p>
+                <h6>_colors.scss</h6>
+                <p>
+                    All general colors which are used in the theme, including main colors which are available for 
+                    editor to choose for Spot blocks in Visual tab in EpiServer edit mode,
+                    except overridings in some specific components.
+                </p>
+                <h6>_grid.scss</h6>
+                <p>
+                    Main constants for the grid which is used in a layout of theme, for structuring 
+                    of blocks position, content elements and other blocks including forms.
+                </p>
+                <h6>_screen-sizes.scss</h6>
+                <p>
+                    Defined breakpoints for responsive design.    
+                </p>
+                <h6>_typography.scss</h6>
+                <p>
+                    Two available in the theme fonts including imported Google Webfont.    
+                </p>
+                <h4>icons</h4>
+                <p>
+                    Styles for icons which can be used in templates or in other style files.
+                </p>
+                <h6>icons.scss</h6>
+                <p>
+                    Available icons.    
+                </p>
+                <h5>layout</h5>
+                <p>
+                    Styles for main parts of layout, including header, footer, hero, navigation and spot blocks, etc.
+                </p>
+                <h6>_grid.scss</h6>
+                <p>
+                    Styles for the grid which is used in a layout of theme, for structuring 
+                    of blocks position, content elements and other blocks including forms    
+                </p>
+                <h6>_recommendation.scss</h6>
+                <p>
+                    Styles for a recommendation functionality, which includes a counter and icon for voting for a content.    
+                </p>
+                <h6>event-page.scss</h6>
+                <p>
+                    Specific styles for a Event details page.
+                </p>
+                <h6>footer.scss</h6>
+                <p>
+                    Styles for the footer and elements inside of the footer.    
+                </p>
+                <h6>global.scss</h6>
+                <p>
+                    Main global styles for layout, including basic styles for html elements
+                     and primarily specific styles for content pages.
+                </p>
+                <h6>header.scss</h6>
+                <p>
+                    Styles for the header and some of elements inside of the header.    
+                </p>
+                <h6>layout.scss</h6>
+                <p>
+                    Reference file with layout styles.
+                </p>
+                <h6>master.sass</h6>
+                <p>
+                    Master file which combines all related to general layout and contain references to all files in this folder.
+                </p>
+                <h6>morph-button.scss</h6>
+                <p>
+                    Styles for special buttons which are used for calling lightboxes.
+                </p>
+                <h6>overlay.scss</h6>
+                <p>
+                    Styles for a lightbox functionality with overlay.
+                </p>
+                <h6>sub-navigation.scss</h6>
+                <p>
+                    Styles for a navigation component on content pages (sidebar menu).
+                </p>
+                <h6>sup-navigation.scss</h6>
+                <p>
+                    Styles for additional navigation (links) which is used in the header.    
+                </p>
+                <h5>mixins</h5>
+                <p>
+                    Global mixins which are used across SASS sources.
+                </p>
+                <h4>shared</h4>
+                <h6>master.sass</h6>
+                <p>Source master file which includes references to all sources of styles.</p>
+                <h6>master-pdf.sass</h6>
+                <p>Source master file which includes references to master.sass and specific styles for PDF.</p>                 
+                <p>Sources of all specific styles.</p>
+                <h3>sassdoc</h3>
+                <p>
+                    Generated SASSDoc documentation.
+                </p>
+                <h3>vendor</h3>
+                <p>
+                    All 3rd party components which are used in the theme without modifications.
+                </p>
+                <h4>jquery</h4>
+                <p>
+                    Library for supporting other plugins or libraries.    
+                </p>
+                <h4>jQuery.dotdotdot</h4>
+                <p>
+                    Plugin for adding three dots depending on content and available for content space.    
+                </p>
+                <h4>jquery-placeholder</h4>
+                <p>
+                    Polyfill for IE browsers to support placeholder text in text fields.    
+                </p>
+                <h4>material-design-lite</h4>
+                <p>
+                    Library with scripts and styles with special effects and functionality with "Material Design".    
+                </p>
+                <h4>mdl-components-ext</h4>
+                <p>
+                    Support of input type file for MDL.    
+                </p>
+                <h4>mdl-selectfield</h4>
+                <p>
+                    Support of dropdown for MDL.    
+                </p>
+                <h4>modernizr</h4>
+                <p>
+                    Library for a browser features detection.    
+                </p>
+                <h4>moment</h4>
+                <p>
+                    Reference library with moment.js    
+                </p>
+                <h4>momentjs</h4>
+                <p>
+                    Library for advanced work with dates in JavaScript.    
+                </p>
+                <h4>normalize.css</h4>
+                <p>
+                    Reset default styles of html elements and make them similar across browsers.
+                </p>
+                <h4>select2</h4>
+                <p>
+                    Plugin for replacing standard select component with advanced custom features including Ajax requests and filtering and search.    
+                </p>
+                <h4>videojs</h4>
+                <p>
+                    Support of vide player for playing media files.
+                </p>
+                <hr />
+                <h6>.bowerrc</h6>
+                <p>
+                    Path to directory for installing vendor packages.
+                </p>
+                <h6>.editorconfig</h6>
+                <p>
+                    Settings for IDE.
+                </p>
+                <h6>bower.json</h6>
+                <p>
+                    List of vendor dependencies for installing using bower.
+                </p>
+                <h6>BundleConfig.cs</h6>
+                <p>
+                    Settings for bundle all scripts from a theme.
+                </p>
+                <h6>gulpfile.js</h6>
+                <p>
+                    Contains settings and reference to all available gulp tasks
+                </p>
+                <h6>jsdoc.config.json</h6>
+                <p>
+                    Settings for generation of JSDoc documentation.
+                </p>
+                <h6>package.json</h6>
+                <p>
+                    Contains NPM dependencies for NodeJS. Needed for running gulp tasks using command line.   
+                </p>
+                <h6>readme.md</h6>
+                <p>
+                    Description of steps which sholud be done before start working on a theme. 
+                    Also contains available gulp tasks.    
+                </p>
+                <h6>Web.config</h6>
+                <p>
+                    System settings for availibility of a theme in solution.    
+                </p>
+            </div>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+/*
+- Document  : screen-sizes.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-02-19
+*/
+
+$tablet-size-primary:	640px;
+$tablet-size:			768px;
+$desktop-size-alt:		941px;
+$desktop-size:			1024px;
+
+$breakpoint-phablet:	$tablet-size-primary;
+$breakpoint-tablet:		$tablet-size;
+$breakpoint-desktop:	$desktop-size;
+

@@ -1,0 +1,42 @@
+﻿@using DigiOne.ServiceSphere.Web.Infrastructure.Extensions
+@using EPiServer.Web.Mvc.Html
+@model DigiOne.ServiceSphere.Web.Features.MasterPage.ViewModels.HeaderViewModel
+
+<div id="pp-o" class="popup-overlay hide">
+    <div class="popup-wrapper">
+        <nav class="popup-nav" id="pp-x">&#215;</nav>
+        <div id="pp-c" class="popup-content"></div>
+    </div>
+</div>
+
+<header>
+    <div class="inner-width" itemscope itemtype="http://schema.org/Organization">
+        
+        @foreach (var item in Model.SeoOrganizationItems)
+        {
+            <meta itemprop="@item.Key" content="@item.Value" />
+        }
+
+        <a href="@(Model.LogoTargetUrl.ToFriendlyUrl("/"))" id="logo">
+            @if (!Model.LogoUrl.IsEmpty())
+            {
+                <div class="logo-holder">
+                    <div class="logo-wrapper"><img itemprop="logo" class="logo" src="@Model.LogoUrl.ToFriendlyUrl()" alt="@Model.LogoAltText"/>
+                    </div>
+                    <input type="hidden" id="toptagline" value="@Model.TopTaglineLabel"/>
+                </div>
+            }
+        </a>
+
+        <nav class="navigation-service">
+            @Html.PropertyFor(x => x.TopToolbarContent, new
+            {
+                CustomTag = "ul",
+                ChildrenCustomTagName = "li",
+                ChildrenCssClass = ""
+            })
+        </nav>
+
+        <label for="tglMobileMenu" class="nav-mega-toggle-icon"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Themes/ServiceSphere/UI/images/icons.svg#icon-menu"></use></svg></label>
+    </div>
+</header>

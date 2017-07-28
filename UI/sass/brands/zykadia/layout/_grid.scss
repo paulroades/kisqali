@@ -1,0 +1,99 @@
+/*
+- Document  : grid.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-02-18
+*/
+
+@mixin grid($class, $gutter, $height) {
+	@at-root {
+		[class*="#{$class}-"] {
+			@if $height == "auto" {	@include flexbox(); }
+			float: left;
+			width: 100%;
+			padding: $gutter*0.65 $gutter*0.65 0 0;
+			& > .content { 
+				@if $height == "auto" {	@include flex(1); } 
+				@else {
+					overflow: hidden;
+					height: $height;
+					.content {
+						height: $height;
+					}
+				}
+			}
+		}
+	}
+	@extend %clearfix;	
+	@if $height == "auto" {	
+		@include flexbox();
+		@include flex-flow(row wrap);
+	}
+	padding: 0 0 $gutter $gutter;
+	
+	&-1-2, &-2-4 { @include desktop { width: 50%; } }
+	&-1-3 {	@include tablet { width: 33.333333%; } }
+	&-2-3 {	@include tablet { width: 66.666666%; } }
+	&-3-4 {	@include desktop { width: 75%; } }
+	&-1-4 { 
+		@include phablet { width: 50%; }
+		@include desktop { width: 25%; }
+	}
+	&-1-6 {
+		width: 50%;
+		@include phablet { width: 50%; }
+		@include tablet { width: 16.66666666666667%; }
+	}
+	/* Update width of rows for sub level */
+	$grid-sizes: 100, 50, 33.333;
+	@for $g from 1 through length($grid-sizes) {
+		@for $m from 1 through 4 {
+			&-#{$g}-4 .grid-#{$m}-4 {
+				@include desktop { width: calc(#{$m*nth($grid-sizes, $g)}%); }
+			}
+		}
+	}
+	&-3-4 {
+		@include desktop {
+			.grid-1-2 {
+				width: 66.666%;
+			}
+		}
+	}
+	&-1-2, &-2-4 {
+		@include desktop {
+			.grid-1-2 {
+				width: 100%;
+			}
+		}
+	}
+	/* Update width of rows for sub level */
+	@media all and (min-width: $breakpoint-phablet) and (max-width: $breakpoint-desktop) {
+		.tablet-grid-1 {
+			width: 100%;
+		}
+		.tablet-grid-1-2 {
+			width: 50%;
+		}
+	}
+	@media all and (max-width: $breakpoint-phablet) {
+		.mobile-grid-1 {
+			width: 100%;
+		}
+	}
+}
+.grid {
+	@include grid(grid, $grid-gutter, 27.5rem);
+	background-color: $color-grid-bg;
+	.grid {
+		padding-left: 0;
+		margin-right: -$grid-gutter*0.65;
+		&.sidebar {
+			margin-top: -$grid-gutter*0.65;
+		}
+	}
+}
+.grid-flex {
+	@include grid(grid-flex, $grid-gutter, auto);
+	background-color: $color-grid-bg;
+}

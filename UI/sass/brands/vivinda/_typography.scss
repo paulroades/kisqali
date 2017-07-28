@@ -1,0 +1,15 @@
+// Imported fonts
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url('http://fonts.googleapis.com/css?family=News+Cycle');
+
+// Font families
+$font-family-default:	'Open Sans', sans-serif;
+$font-family-base:		'Open Sans', sans-serif;
+$font-family-second:     'News Cycle', sans-serif;
+
+//html { font-size: 62.5%; } 
+
+body {
+   font: 400 14px/ 20px $font-family-base;
+   //font: 400 1.4rem/ 2rem $font-family-base;
+  }

@@ -1,0 +1,75 @@
+﻿@using System.Web.Mvc.Html
+@using System.Web.Optimization
+@using DigiOne.ServiceSphere.Web.Features.AdobeAnalytics.Html
+@using DigiOne.ServiceSphere.Web.Features.YandexAnalytics.Html
+@using DigiOne.ServiceSphere.Web.Infrastructure.Extensions
+@using DigiOne.ServiceSphere.Web.Infrastructure.LayoutTheme.Rendering
+@using EPiServer.Framework.Web
+@using EPiServer.Framework.Web.Mvc.Html
+@using EPiServer.Web.Mvc.Html
+@inherits DigiOne.ServiceSphere.Web.Features.MasterPage.ViewModels.LayoutViewModel
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <link href="/Themes/ServiceSphere/UI/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <meta name="description" content="@(CurrentPage.SeoDescription)"/>
+        <meta name="keywords" content="@(CurrentPage.Seo.Keywords)"/>
+        <title>@(CurrentPage.SeoTitle)</title>
+
+        @Html.Raw(Html.RequiredClientResources(RenderingTags.Header))
+        @CacheBuster.AddCssWithCacheBuster(LayoutService.ResolveThemeUiFilePath(PresentationContext.Service.Value.Layout, PresentationContext.Service.Value.Theme, "ui/css/master.css"))
+        @if (HttpContext.Current.Request.QueryString.AllKeys.Contains("generatepdf"))
+        {
+            @CacheBuster.AddCssWithCacheBuster(LayoutService.ResolveThemeUiFilePath(PresentationContext.Service.Value.Layout, PresentationContext.Service.Value.Theme, "ui/css/master-pdf.css"))
+        }
+
+        @AdobeScripts.Head(CurrentPage)
+		@YandexScripts.Head(CurrentPage)
+    </head>
+
+    <body class="@CurrentPage.GetBodyClasses()">
+        @Html.Raw(SiteSettings.Service.Value.CustomBodyScript ?? string.Empty)
+        @Html.RenderEPiServerQuickNavigator()
+        @Html.FullRefreshPropertiesMetaData()
+
+        @Html.Partial("~/Themes/ServiceSphere/Views/MainMenu.cshtml", MainMenuViewModel)
+
+        @Html.Partial("~/Themes/ServiceSphere/Views/SearchPanel.cshtml", SearchViewModel)
+
+        @Html.Partial("~/Themes/ServiceSphere/Views/Header.cshtml", HeaderViewModel)
+
+        @Html.Partial("~/Themes/ServiceSphere/Views/ContentHeader.cshtml", HeaderViewModel)
+
+
+        @RenderBody()
+
+        <footer id="site-specifics">
+            @Html.Partial("~/Themes/ServiceSphere/Views/Footer.cshtml", FooterViewModel)
+        </footer>
+
+        @{ Html.RenderContentArea(FooterViewModel.CurrentBlock.AdditionalBlocks); }
+
+        @* Social scripts, move to js-file *@
+        @Html.Raw(Html.RequiredClientResources(RenderingTags.Footer))
+
+        <!--[if lte IE 9]>
+            <script src="/Themes/ServiceSphere/UI/js/ie-polyfills-for-mdl.js"></script>
+        <![endif]-->
+
+        @Scripts.Render("~/bundles/ServiceSphere/script/master.js")
+
+        <!--[if lte IE 9]>
+            <script src="/Themes/ServiceSphere/UI/js/ie-polyfills.js"></script>
+        <![endif]-->
+
+        @AdobeScripts.Custom(CurrentPage)
+		@YandexScripts.Custom(CurrentPage)
+
+		@AdobeScripts.Footer(CurrentPage)
+		@YandexScripts.Footer(CurrentPage)
+    </body>
+</html>

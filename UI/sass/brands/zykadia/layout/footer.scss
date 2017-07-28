@@ -1,0 +1,148 @@
+/*
+- Document  : footer.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-02-24
+*/
+
+$footer-font-size: 16px;
+
+footer[id=site-specifics] {
+    margin: 0 auto;
+    max-width: 1240px;
+    position: relative;
+    clear: left;
+	z-index: 10;
+	overflow: hidden;
+	@include before-desktop {
+		text-align: center;
+	}
+	@include desktop {
+		margin: 0 auto;
+        max-width: 1240px;
+        text-align: center;
+        font-size: $footer-font-size;
+        line-height: $footer-font-size;
+        padding: 0.78571rem $grid-gutter 30px;
+	}
+	ul {
+		@include before-desktop {
+			margin: 0;
+            padding: 0;
+		}
+		@include desktop {
+			font-size: $footer-font-size;
+			line-height: $footer-font-size;
+            padding: 0;
+            margin: 0;
+		}
+	}
+	li {
+		display: inline-block;
+		padding: 5px 15px;
+		@include desktop {
+			padding-top: 0;
+			padding-bottom: 0;
+			min-height: 15px;
+            border-left: solid 1px $color-grey-dark2;
+			&:first-child,
+			&:nth-child(2) {
+				border-left: 0;
+			}
+		}
+		a {
+			text-decoration: none;
+			color: $color-grey-dark2;
+			@include desktop {
+				position: relative;
+			}
+		}
+	}
+	p {
+		@include desktop {
+			margin: 0;
+			padding: 0;
+			font-size: $footer-font-size;
+            line-height: $footer-font-size;
+		}
+	}
+	.logo-novartis-global {
+		padding: 5px 0;
+		text-align: left;
+		img {
+			max-width: 40%;
+			@include phablet {
+				max-width: 20%;
+			}
+			@include desktop {
+				left: 0;
+                max-width: 180px;
+				max-height: 100px;
+                position: relative;
+                top: -1.14285rem;
+			}
+		}
+		@include before-desktop {
+			display: block;
+			text-align: center;
+			img {
+				margin: 0;
+			}
+		}
+		@include desktop {
+			padding-top: 0;
+			border-left: 0;
+			float: left;
+            width: 180px;
+            position: relative;
+			li & {
+				border-left: 0;
+			}
+			a {
+				display: block;
+				position: inherit;
+			}
+		}
+	}
+	.copy-novartis-global {
+		padding: 5px 0;
+		@include before-desktop {
+			text-align: center;
+			display: block;
+			color: $color-dark-blue;
+		}
+		@include desktop {
+			position: relative;
+			padding-top: 0;
+			text-align: right;
+            width: 180px;
+            border-left: 0;
+            float: right;
+            color: $color-dark-blue;
+		} 
+		img {
+			height: auto;
+			margin-right: 140px;
+			max-width: 180px;
+		}
+		span {
+			font-size: 26px;
+            line-height: 1;
+            position: relative;
+            top: 3px;
+            margin-bottom: -20px;
+            margin-top: -10px;
+            display: inline-block
+		}
+	}
+	.no-touch & {
+		a {
+			@include prefixed(transition, all .3s ease-in-out);
+			li & {
+				&:hover {
+					color: $color-accent;
+				}
+			}
+		}
+	}
+}

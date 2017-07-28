@@ -1,0 +1,83 @@
+﻿@using DigiOne.ServiceSphere.Web.Infrastructure.Extensions
+@using EPiServer
+@model DigiOne.ServiceSphere.Web.Features.MasterPage.ViewModels.MainMenuViewModel
+
+<!-- Mobile Mega-Menu State -->
+<input type="checkbox" class="state nav-mega-toggle" id="tglMobileMenu" />
+<!--Mega-Menu Overlay -->
+<label for="tglMobileMenu" class="nav-overlay"></label>
+
+@if (Model.MenuItems != null && Model.MenuItems.Any())
+{
+    <div class="nav-mega-wrapper">
+        <nav class="nav-mega" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+            @{
+                int counter1 = 0;
+            }
+
+            @foreach (var level1 in Model.MenuItems)
+            {
+                counter1++;
+
+                <input id="nav-mg-@counter1" name="mgm" type="radio" class="state">
+
+                if (level1.SubMenuCategorized.Count == 0)
+                {
+                    <a href="@level1.ContentLink.ToFriendlyUrl()" @(level1.Page.ContentLink.DetermineTargetAttribute()) class="nav-mega-link @(level1.Selected ? "active" : string.Empty)" itemprop="name">@level1.Page.Name</a>
+                }
+                else
+                {
+                    <label for="nav-mg-@counter1" class="nav-mega-label @(level1.Selected ? "active" : string.Empty)" itemprop="name">@level1.Page.Name</label>
+                }
+
+                <div class="nav-mega-panel">
+                    <nav class="nav-mega-sub">
+                        <strong><svg class="icon"><use xlink:href="/Themes/ServiceSphere/UI/images/icons.svg#icon-new-tab"></use></svg><a href="@level1.Page.ContentLink.ToFriendlyUrl()">@level1.Page.Name</a></strong>
+
+                        @foreach (var relatedItem in level1.MenuRelatedLinks)
+                        {
+                            <a href="@(new Url(relatedItem.Href).ToFriendlyUrl())" target="@relatedItem.Target">@relatedItem.Text</a>
+                        }
+                    </nav>
+
+                    @if (level1.SubMenuCategorized.Count > 1)
+                    {
+                        foreach (var level2 in level1.SubMenuCategorized)
+                        {
+                            <nav class="nav-mega-sub">
+                                <strong>@level2.Key &nbsp;</strong>
+                                @if (Model.CurrentBlock.LevelToTake > 2)
+                                {
+                                    foreach (var level3 in level2.Value)
+                                    {
+                                        <a href="@level3.ContentLink.ToFriendlyUrl()"
+                                           class="@(level3.PageLink.CompareToIgnoreWorkID(Model.CurrentPage.PageLink) ? "active" : string.Empty)"
+                                           @level3.ContentLink.DetermineTargetAttribute()>@level3.Name</a>
+                                    }
+                                }
+                            </nav>
+                        }
+                    }
+                    else
+                    {
+                        foreach (var level2 in level1.SubMenu)
+                        {
+                            <nav class="nav-mega-sub">
+                                <strong>
+                                    <a href="@level2.Page.ContentLink.ToFriendlyUrl()" class="@(level2.Selected ? "active" : string.Empty)" @level2.Page.ContentLink.DetermineTargetAttribute()>@level2.Page.Name</a>
+                                </strong>
+                                @if (Model.CurrentBlock.LevelToTake > 2)
+                                {
+                                    foreach (var level3 in level2.SubMenu)
+                                    {
+                                        <a href="@level3.Page.ContentLink.ToFriendlyUrl()" class="@(level3.Selected ? "active" : string.Empty)" @level3.Page.ContentLink.DetermineTargetAttribute()>@level3.Page.Name</a>
+                                    }
+                                }
+                            </nav>
+                        }
+                    }
+                </div>
+            }
+        </nav>
+    </div>
+}

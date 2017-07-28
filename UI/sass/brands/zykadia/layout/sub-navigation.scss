@@ -1,0 +1,92 @@
+/*
+- Document  : sub-navigation.scss
+- Version   : 1.0.0
+- Client    : Zykadia
+- Date edit : 2016-05-11
+*/
+
+.sub-navigation {
+    background: $color-white;
+    display: block;
+    @include desktop {
+        max-width: 68%;
+    }
+	li {
+		display: inline-block;
+		text-transform: uppercase;
+	}
+	&-items {
+		padding: 0;
+		background: $color-white;
+		display: block;
+		transition: all .3s ease 0s;				
+		margin: 0;
+		height: auto;
+		width: auto;        
+        .content-focused-page & {
+            * {
+                font-size: 1.28571rem;
+                font-family: $font-family-default;
+            }
+        }
+		@include desktop {
+            min-width: 160px;
+			li {
+				margin: 0;
+				display: block;
+				border-bottom: solid 1px $color-grey-light1;
+				text-transform: uppercase;
+				a {
+					border: 0;
+					padding: 1.2rem 0.51428rem 1.2rem 0;
+                    line-height: 1;
+					border-radius: 0;
+				}
+
+			}
+		}
+		.no-touch & {
+			li a:hover {
+				color: $color-accent;
+			}
+		}
+		li {
+			&.active {
+				> a {
+					color: $color-accent;
+				}
+			}
+		}
+		a {
+			border: solid 1px $color-border-dark;
+			border-radius: 0.35714rem;
+			padding: 0.35714rem 0.71285rem 0.35714rem 0;
+			@include prefixed(transition, all .3s ease-in-out);
+			text-decoration: none;
+			color: $color-grey-2;
+			display: block;
+			margin: 0.35714rem;
+			@include desktop {
+				margin: 0;
+			}
+		}
+		@include desktop {
+			min-height: 400px;
+		}
+		&> li {
+			border: 0;
+			clear: left;
+			display: block;
+			&> a {
+				border-top: solid 1px $color-grey-light1;
+				border-bottom: solid 1px $color-grey-light1;
+			}
+		}
+		ul {
+			padding: 0;
+			li {
+				padding-left: 0.64285rem;
+			}
+		}
+	}
+}

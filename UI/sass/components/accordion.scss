@@ -1,0 +1,64 @@
+﻿.block-accordion { 
+    /* Top Margin-Fix */
+    .accordionblock &:first-of-type > * { margin-top: 0; }
+	
+    &.content {		
+		[class*="grid-"] > & {
+			overflow: visible;
+			height: auto;
+		}
+	}
+    &-label {
+		border-bottom: 1px solid $color-grey-light2;
+		background-color: $color-grey-light7;
+		color: $color-grey-darker;
+		display: block;
+		padding: 1.1428rem 2.2856rem 1.1428rem 1.1428rem;
+		position: relative;
+		font-size: 1.1428rem;
+		font-weight: bold;
+		&:before, &:after {
+			top: 1.1428rem;			
+			right: 0.914rem;
+			position: absolute;
+			content: '';
+		}
+		&:before {
+			display: none;
+		}
+		&:after {
+			margin-top: 0.4571rem;
+			@include triangle(right, $color-accent, 0.6rem);
+		}
+    } 
+    &-text {
+		display: none;
+		background-color: $color-white;
+		border: 1px solid $color-grey-light2;	
+		border-top-color: transparent;
+		padding: 1.1428rem;
+		h5 {
+			margin: 0;
+		}
+    }   
+	.state {
+		//position: absolute;
+		//height: 0;
+		//overflow: hidden;
+		&:checked {
+			&+ label {
+				&:after {
+					display: none;
+				}
+				&:before {
+					margin: 0.685rem 0 0 0;
+					display: block;
+					@include triangle(bottom, $color-accent, 0.5714rem);
+				}
+			}
+			&~ .block-accordion-text {
+				display: block;
+			}
+		}
+	}   
+}

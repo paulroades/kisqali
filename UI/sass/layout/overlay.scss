@@ -1,0 +1,243 @@
+.popup-default.morph-content {	
+	width: 90%;	
+	margin-right: -45%;
+	box-shadow: 0px 3px 7px 0px $color-trans-1;
+	.popup-controls {
+		margin-top: 2.85714rem;
+	}
+	@media all and (min-width: $tablet-size) {
+		max-width: 716px;
+		width: 716px;
+		margin-right: -358px;
+	}
+	&.active {
+		opacity: 1;
+	}
+	.btn {
+		border-radius: 0;
+		width: 35%;
+		margin: 0 2%;
+	}
+	label {
+		text-align: left;
+	}
+	.content-style-overlay {		
+		position: relative;
+		width: 100%;
+		padding: 20px;
+		@media all and (min-width: $tablet-size) {
+			padding: 50px;
+		}
+		&> ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			text-align: left;
+			font-size: 0;
+			&.list {
+				li {
+					padding-top: 1.1428rem;
+					line-height: 1;
+					@media all and (min-width: $tablet-size) {
+						width: 33.33%;
+						display: inline-block;
+						padding: 2rem 1rem 0 0;
+					}
+				}
+			}
+			&.popup-controls {
+				margin-top: 2.857rem;
+				text-align: center;
+				.btn {
+					font-size: 14px;
+					width: 100%;
+				}
+				li {
+					display: inline-block;
+					min-width: 35%;
+					margin: 0 2%;
+				}
+			}
+
+			a {
+				font-size: 1.028rem;
+				@media all and (min-width: $tablet-size) {
+					font-size: 1.2914rem;
+				}
+				text-decoration: none;
+			}
+		}
+		&> *, p {
+			font-family: $font-family-base;
+			font-size: 0.9485rem;
+			@media all and (min-width: $tablet-size) {
+				font-size: 1.2914rem;
+			}
+		}
+		&> h2 {
+			font-size: 1.028rem;
+			@media all and (min-width: $tablet-size) {
+				font-size: 1.71428rem;
+			}
+		}
+	}
+	a {
+		color: $color-accent;
+	}		
+	.icon-close {
+		left: inherit;
+		right: 0;
+		top: 0;
+		color: #ebd3bd;
+		font-size: 75%;
+		z-index: 100;
+		display: block;
+		overflow: hidden;
+		width: 3em;
+		height: 3em;
+		text-align: center;
+		line-height: 3;
+		cursor: pointer;
+		border: 0;	
+		&:before {
+			content: "\e601";
+		}
+	}
+	.no-touch & {
+		.icon-close:hover {
+			color: $color-red2;
+		}
+		a:hover {
+			color: $color-grey-dark2;
+		}
+	}
+}
+
+/* Style for overlay */
+.content-style-overlay {
+    background: $background-content-style-overlay;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+	padding: 100px 20px;
+	@media (max-width: $breakpoint-desktop) { 
+		width: 95%;
+        padding: 100px 20px;
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	h2 {
+		margin: 0 0 1em 0;
+		padding: 0;
+		font-weight: 300;
+		font-size: 3em;
+	}
+	p {
+		font-size: 1.71428rem;
+		font-weight: 300;
+		margin: 0 auto;
+		max-width: 700px;
+		padding: 10px 0;
+		text-align: left;
+		text-transform: none;
+	}
+	.icon-close {
+		border: 2px solid $border-color-icon-close;
+		border-radius: 50%;
+		line-height: 2.8;
+	}	
+}
+.no-touch .content-style-overlay .icon-close:hover {
+	border-color: $border-color-icon-close-hover;
+}
+
+/* Style for form modal */
+
+.content-style-form {
+    position: relative;
+    text-align: left;
+    background: $background-content-style-form;
+	h2 {
+		margin: 0;
+		padding: 20px 0 30px;
+		text-align: center;
+	}
+	form {
+		padding: 10px 30px;
+		p {
+			margin: 0 0 5px 0;
+			font-size: 0.7em;
+		}
+	}
+	.icon-close {
+		top: 0;
+		right: 0;
+		color: $color-icon-close-content-style-form;
+		font-size: 75%;
+	}
+	.no-touch & {
+		.icon-close:hover {
+			color: $color-icon-close-content-style-form-hover;
+		}
+	}
+}
+
+.js .content-style-form-1 {
+	h2, p, .icon-close {
+		opacity: 0;
+		-moz-transition: opacity 0.2s 0.35s, -moz-transform 0.2s 0.35s;
+		-webkit-transition: opacity 0.2s 0.35s, -webkit-transform 0.2s 0.35s;
+		transition: opacity 0.2s 0.35s, transform 0.2s 0.35s;
+		@include prefixed(transform, scale(0.85));
+	}
+}
+
+.content-style-form-1 {
+	p:nth-child(2),
+	p:first-child {
+		@include prefixed(transition-delay, 0.4s);
+	}
+	p:nth-child(3) {
+		@include prefixed(transition-delay, 0.5s);
+	}
+}
+
+.morph-button.open .content-style-form-1 {
+	h2, p, .icon-close {
+		opacity: 1;
+		@include prefixed(transform, scale(1));
+	}
+}
+
+@media all and (max-width: $tablet-size) {
+    .content-style-overlay {
+        font-size: 75%;
+    }
+    .content-style-overlay .icon-close {
+        top: 5px;
+        right: 5px;
+    }
+}
+
+.active-morph-button {
+    .morph-button-modal-2.open .morph-content {
+        top: 0;
+        margin-top: 0;
+    }
+    .morph-button-overlay.open .morph-content {
+        height: auto;
+        padding-bottom: 60px;
+    }
+}
+.morph-button.morph-button-modal-2 {
+    margin: 10px 0;
+    min-width: 50px;
+    width: auto;
+	@media (max-width: $breakpoint-desktop) {
+		position: inherit;
+        margin: 0;
+	}
+}

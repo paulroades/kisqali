@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: ExternalLinkDisclaimer/Assets/js/linkdisclaimer.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: ExternalLinkDisclaimer/Assets/js/linkdisclaimer.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>﻿(function () {
+
+    var $popup = $("#external-link-disclaimer");
+    // If no html code for prompt stop here
+    if (!$popup.length) return;
+
+    var $content = $popup.find('.content-style-overlay');
+    var overlayClass = 'page-overlay';
+    var selectorPopup = '.morph-content';
+    var closeIconSelector = '.icon-close';
+    var activeClass = 'active';
+    var activeSelector = '.' + activeClass;
+    var $body = $('body');
+    var $cancelButton = $popup.find('[data-action=cancel]');
+    var $proceedButton = $popup.find('[data-action=proceed]');
+
+    /**
+    * @function updateVerticalPositionOfPopup
+    * @description Update vertical position of Popup
+    * @param {object} $popup Popup DOM element
+    * @param {object} $content Content container in popup - DOM element
+    * @example
+    * updateVerticalPositionOfPopup($('.popup'), $('.popup').find('.content-style-overlay'));
+    */
+    function updateVerticalPositionOfPopup($popup, $content) {
+        var doc = document.documentElement;
+        var viewPortHeight = Math.max(doc.clientHeight, window.innerHeight || 0);
+        var topScrollOffset = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+        var offsetHeight = $content.outerHeight();
+
+        if (viewPortHeight > offsetHeight) {
+            $popup.css({
+                top: topScrollOffset + viewPortHeight / 2 - offsetHeight / 2
+            });
+        } else {
+            $popup.css({
+                top: topScrollOffset
+            });
+        }
+    }
+
+    /**
+    * @function openOverlay
+    * @description Open overlay with popup
+    * @param {object} $body Body DOM element
+    * @param {object} $popup Popup DOM element
+    * @param {string} overlayClass CSS class for overlay content above page
+    * @param {string} activeClass CSS class for adding to active popup
+    * @param {callback} closeOverlay Callback function for closing popup
+    * @param {object} event Event object
+    * @example
+    * openOverlay($('body'), $('.popup'), 'page-overlay', 'active', closeOverlay, event);
+    */
+    function openOverlay($body, $popup, overlayClass, activeClass, closeOverlay, event) {
+        if (event.preventDefault) {
+            event.preventDefault();
+        }
+        var $activeLink = $(event.target);
+        var externalURL = $activeLink.attr('href');
+
+        $body.addClass(overlayClass);
+        $popup.addClass(activeClass);
+
+        // Close popup if user clicked on Cancel button
+        $cancelButton.click(function () {
+            closeOverlay($body, $popup, selectorPopup, activeSelector, overlayClass, activeClass);
+            $proceedButton.unbind('click');
+            $cancelButton.unbind('click');
+        });
+
+        // Go to external URL after user clicked Proceed button
+        $proceedButton.click(function ($activeLink) {
+            closeOverlay($body, $popup, selectorPopup, activeSelector, overlayClass, activeClass);
+            openExternalURL(externalURL);
+            $proceedButton.unbind('click');
+            $cancelButton.unbind('click');
+        });
+
+    }
+
+    /**
+    * @function closeOverlay
+    * @description Close overlay with popup
+    * @param {object} $body Body DOM element
+    * @param {object} $popup Popup DOM element
+    * @param {string} selectorPopup CSS class of popup prefixed with dot for complex selector of active popup
+    * @param {string} activeSelector Active CSS class of popup prefixed with dot for complex selector of active popup
+    * @param {string} overlayClass CSS class for overlay content above page
+    * @param {string} activeClass CSS class for adding to active popup
+    * @example
+    * openOverlay($('body'), $('.popup'), 'page-overlay', 'active');
+    */
+    function closeOverlay($body, $popup, selectorPopup, activeSelector, overlayClass, activeClass) {
+        // If only one popup is visible remove overlay class
+        if ($(selectorPopup + activeSelector).length === 1) {
+            $body.removeClass(overlayClass);
+        }
+        $popup.removeClass(activeClass);
+    }
+
+    /**
+    * @function openExternalLink
+    * @description Open external link
+    * @param {string} url URL to external web site
+    * @example
+    * openExternalLink("http://novartis.com");
+    */
+    function openExternalURL(url) {
+        window.open(url);
+    }
+
+    // Detect all external links
+    // Creating custom :external selector
+    $.expr[':'].external = function (obj) {
+        return !obj.href.match(/^mailto\:/)
+                &amp;&amp; !obj.href.match(/^javascript\:/)
+                &amp;&amp; !obj.hasAttribute('data-local-link')
+                &amp;&amp; ((obj.hostname != location.hostname) &amp;&amp; obj.protocol)
+                &amp;&amp; obj.href;
+    };
+    // Add 'external' CSS class to all external links
+    $('a:external').addClass('external');
+    // Set attribute to open link in new window
+    $('.external').attr('target', "_blank");
+    // Set event listener for all external links
+    $('.external').on('click', function (event) {
+        updateVerticalPositionOfPopup($popup, $content);
+        openOverlay($body, $popup, overlayClass, activeClass, closeOverlay, event);
+    });
+
+    $popup.find(closeIconSelector).click(function () {
+        closeOverlay($body, $popup, selectorPopup, activeSelector, overlayClass, activeClass);
+    });
+
+    // Handle click outside of popup
+    $(document).on('click', function (event) {
+        if ($body.hasClass(overlayClass)) {
+            if ($(event.target).hasClass(overlayClass)) {
+                // close active popup
+                $(selectorPopup + activeSelector).find(closeIconSelector).trigger('click');
+            }
+        }
+    });
+
+})();</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="jQuery.html">jQuery</a></li></ul><h3>Global</h3><ul><li><a href="global.html#closeOverlay">closeOverlay</a></li><li><a href="global.html#openExternalLink">openExternalLink</a></li><li><a href="global.html#openOverlay">openOverlay</a></li><li><a href="global.html#updateVerticalPositionOfPopup">updateVerticalPositionOfPopup</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Wed Feb 03 2016 13:02:14 GMT+0100 (Romance Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

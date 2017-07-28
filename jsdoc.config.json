@@ -1,0 +1,21 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "include": ["UI/js", "../../Areas/"],
+        "exclude": ["../../Areas/VideoBlock/Assets/js/video.js"],
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": [],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "opts": {
+		"destination": "./UI/jsdoc",
+        "recurse": true,
+        "private": true
+    }
+}

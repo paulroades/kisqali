@@ -1,0 +1,23 @@
+﻿@using DigiOne.ServiceSphere.Web.Infrastructure.Extensions
+@using EPiServer
+@using EPiServer.Web.Mvc.Html
+@model DigiOne.ServiceSphere.Web.Features.MasterPage.ViewModels.FooterViewModel
+
+<ul>
+    <li class="logo-novartis-global">
+        <a href="@Model.CurrentBlock.LogoUrl" data-local-link @(Model.CurrentBlock.LogoUrl.DetermineTargetAttribute())><img src="@Url.ContentUrl(Model.CurrentBlock.LogoImageUrl)" /></a>
+    </li>
+
+    @if (@Model.CurrentBlock.FooterLinks != null)
+    {
+        foreach (var item in @Model.CurrentBlock.FooterLinks)
+        {
+            <li>@Html.PropertyFor(m => item)</li>
+        }
+    }
+
+    <li class="copy-novartis-global">
+        @Html.PropertyFor(m => m.CurrentBlock.About)
+        @Html.PropertyFor(m => m.Np4Number)
+    </li>
+</ul>

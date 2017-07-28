@@ -1,0 +1,29 @@
+// Only For PDF version of site
+header 
+	top: 0 !important
+
+.publicuserinterestpromptblock,
+.cookiespromptblock
+	display: none !important
+
+.gmap-area
+	width: 860px
+	height: 605px
+	overflow: hidden
+	position: relative
+	-webkit-transform: none
+	iframe 
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		-webkit-transform: scale(0.7) translate(0, 0)
+		-webkit-transform-origin: middle left
+		-webkit-transition-property: none
+
+body:before
+	display: none !important
+

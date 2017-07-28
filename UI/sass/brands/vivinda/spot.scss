@@ -1,0 +1,838 @@
+$spot-height: 27.5rem;
+$spot-default-padding: 1.4285rem;
+$spot-default-font-family: $font-family-default;
+$spot-base-font-family: $font-family-base;
+$spot-color-accent: $color-accent;
+$spot-color-neutral: $color-white;
+
+.content-img {
+    margin: 0 -$spot-default-padding;
+}
+.spotblock {
+	position: relative;
+	.no-touch & {
+		.breadcrumbs a {
+			transition: all .3s ease; 
+			@include hover {
+				color: $spot-color-accent;
+			}
+		}
+	}
+	&.entresto-branded h2 {
+		color: $color-blue; 
+	}
+	.content {
+		overflow: hidden; 
+		position: relative;
+		padding: $spot-default-padding;
+		font-family: $spot-base-font-family;
+		&:after {
+			@extend %clearfix; 
+		}
+		a {
+			text-decoration: underline;
+			@include hover { 
+				text-decoration: none; 
+			}
+			&.button {
+				transition: all .3s ease; 
+				@include hover { 
+					text-decoration: none; 
+					background: $spot-color-accent;
+					color: $spot-color-neutral;
+					outline: solid 1px $spot-color-neutral; 
+				} 
+			}
+			&.link:hover:before {
+				right: 5px; 
+			}
+			&.link:before {
+				transition: all .3s ease;
+			}			 
+			p {
+				text-decoration: none;
+			}
+			&.button {
+				padding: 8px 22px;
+				background: $spot-color-neutral;
+				color: $spot-color-accent;
+				display: inline-block;
+				font-family: $spot-default-font-family;
+				text-decoration: none;
+			}
+			&.doc-item {
+				text-decoration: none;
+			}
+			&.link {
+				text-decoration: none;
+				padding-right: $spot-default-padding;
+				right: $spot-default-padding;
+				font-size: 16px;
+				line-height: 1;
+				font-family: $spot-default-font-family; 
+				position: relative;
+				@media all and (max-width: $tablet-size-primary) {
+				    bottom: 0;
+					top: auto;
+					position: relative;
+					float: right;
+					right: 0;
+					margin-right: 0; 
+				}
+				@media all and (min-width: $tablet-size-primary) {
+					position: absolute;
+				}
+				&:before {
+					background: none;
+					content: '>';
+					font-size: 13px;
+					position: absolute;
+					width: 6px;
+					height: 10px;
+					right: 9px;
+					bottom: 2px;
+				}
+			}
+			.event-venue {
+				text-decoration: none;
+			}
+			.nav-social & {
+				text-decoration: none;
+			}
+			.events & {
+				text-decoration: none; 
+				&.link {
+					@media all and (min-width: $tablet-size-primary) {
+						bottom: auto;
+					}
+				}
+			}
+		}
+		h2 {
+			margin: 0;
+			padding: 0;
+			font-size: 22px;
+			&.icon-title {
+				position: relative;
+				padding-left: 53px; 
+				 img, svg {
+					position: absolute;
+					left: 0;
+					margin-top: -4px;
+					width: auto;
+					height: auto; 
+				}
+			}
+		}
+	}	 
+	a.doc-item {		
+		@include hover { color: $spot-color-accent; }
+	}
+	.video-label {
+		transition: all .3s ease;
+	}
+	.morph-form a.mdl-button, 
+	.btn-outline {
+		@include hover {
+			background: $spot-color-accent;
+			color: $spot-color-neutral; 
+		}
+	}
+	main.default & {
+		p {
+			font-size: 1rem;
+			font-family: $spot-base-font-family;
+		}
+	}
+	.morph-button {
+		&-fixed {
+			display: block !important;
+			text-align: center;
+		}
+		.popup {
+			padding: 8px 22px;
+			background: $spot-color-neutral;
+			color: $spot-color-accent;
+			border: solid 1px $spot-color-accent;
+			font-size: 14px;
+			font-weight: 500;
+			text-transform: uppercase;
+			transition: all 0.3s ease;
+			text-decoration: none;
+			font-family: $spot-default-font-family
+			img {
+				display: none;
+			}
+		}
+	}
+	h2 {
+		font-size: 1.375rem; 
+	}
+	h3 {
+		font-size: 1rem;
+		margin: 0 0 5px;
+		font-family: inherit; 
+	}
+	a {
+		color: $color-a-spotblock;
+		font-size: 1rem;
+		text-decoration: none;
+		font-family: $spot-base-font-family;
+		&.link {
+			position: absolute;
+			bottom: 40px;
+			right: 40px;
+			position: inherit;
+			float: right; 
+		}
+		&.doc-item {
+			text-align: left;
+			transition: all .3s ease-in-out;
+			display: table;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		p {
+			text-transform: none; 
+		}
+	}
+	p {
+		line-height: 1.5;
+	}
+	&.richtextblock .content-restrict {
+		max-height: 340px;
+	}	
+	&.entresto-branded { 
+		.content {
+			background: $color-branded-yellow;
+			background: -moz-linear-gradient(top, $color-branded-yellow 0%, $color-branded-dark-yellow 51%, $color-branded-dark-yellow 64%, $color-branded-dark-yellow 71%, $color-branded-dark-yellow 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, $color-branded-yellow), color-stop(51%, $color-branded-dark-yellow), color-stop(64%, $color-branded-dark-yellow), color-stop(71%, $color-branded-dark-yellow), color-stop(100%, $color-branded-dark-yellow));
+			background: -webkit-linear-gradient(top, $color-branded-yellow 0%, $color-branded-dark-yellow 51%, $color-branded-dark-yellow 64%, $color-branded-dark-yellow 71%, $color-branded-dark-yellow 100%);
+			background: -o-linear-gradient(top, $color-branded-yellow 0%, $color-branded-dark-yellow 51%, $color-branded-dark-yellow 64%, $color-branded-dark-yellow 71%, $color-branded-dark-yellow 100%);
+			background: -ms-linear-gradient(top, $color-branded-yellow 0%, $color-branded-dark-yellow 51%, $color-branded-dark-yellow 64%, $color-branded-dark-yellow 71%, $color-branded-dark-yellow 100%);
+			background: linear-gradient(to bottom, $color-branded-yellow 0%, $color-branded-dark-yellow 51%, $color-branded-dark-yellow 64%, $color-branded-dark-yellow 71%, $color-branded-dark-yellow 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-branded-yellow', endColorstr='$color-branded-dark-yellow', GradientType=0); 
+		}
+		 h2 {
+			color: $color-blue; 
+		}
+	}
+	&.fullpic .content {
+		padding: 0 $spot-default-padding $spot-default-padding;
+		min-height: 300px;
+		&> img {
+			margin: 0 -$spot-default-padding;
+		}
+		a.link {
+			position: absolute;
+			right: 40px;
+			bottom: 40px; 
+		}
+	}
+	&.flex-height {
+		.content {
+			@media all and (max-width: $desktop-size) {
+				height: auto;
+			}
+		}
+	}
+	&.docs-custon .docs a {
+		font-family: $spot-default-font-family;
+		font-size: 18px;
+		text-decoration: underline; 
+	}
+	&.content-focused-feauted .content {
+		@media all and (min-width: $tablet-size-primary) {
+			height: auto;
+			padding-top: 0; 
+		}
+	} 
+	&.breadcrumbs {
+		a {
+			transition: all .3s ease;
+			font-size: 18px;
+			text-transform: none;
+			font-family: $spot-default-font-family;
+			color: $color-grey-light10;
+			text-decoration: none;
+			@include hover {
+				color: $spot-color-accent;
+			}
+		}
+		.content {
+			padding: 0;
+			height: auto;
+		}
+	}
+}
+.breadcrumbblock .grid {
+	padding-bottom: 0;
+}
+.listspotblock {
+	position: relative; 
+	.defined-height {
+		.doc-items-list {
+			li {
+				display: none;
+				&:nth-child(-n + 3) {
+					display: block;
+				}
+			}
+		}
+	}
+	.backgroundColor-color12.spotContainer {
+		border: 1px solid $color-grey-dark2;
+	}
+	h2 {
+		font-size: 22px;
+		margin: 0;
+		padding: 0;
+	}
+	.spotContainer {
+		padding: 16px $spot-default-padding $spot-default-padding;
+		overflow: hidden;
+	}
+	.content, .content.docs {
+		padding: 0;
+		border: 0;
+	}
+}
+.videoblock {
+	position: relative; 
+	.video-js {
+		margin: 0;
+		position: absolute;
+		width: 100% !important;
+		height: 100% !important;
+		&.vjs-fullscreen {
+			position: fixed;
+			left: 0;
+			top: 0;  
+		}
+	}
+	.content {
+		position: relative;
+	}
+	&.spot.fullpic .content {
+		padding: 0;
+		position: relative;
+		min-height: $spot-height;
+	}
+	iframe {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		&.active {			
+			z-index: 2;
+		}
+	}
+	.video-play-button {
+		width: 99px;
+		height: 99px;
+		background: url(../images/button-video-play-dark.png) no-repeat !important;
+		top: 50%;
+		left: 50%;
+		margin: -50px 0 0 -50px;
+		border: 0;
+		position: absolute;
+		z-index: 1;
+		padding: 0;
+		cursor: pointer;
+		opacity: 1;
+		cursor: pointer;
+	}
+}
+
+@media all and (min-width: $tablet-size-primary) {
+	.videoblock .content,
+	.spotLayout-background,
+	.listspotblock .spotContainer {
+		height: $spot-height; 
+	} 
+}
+
+.videoblock .content,
+.videoblock {
+	min-height: $spot-height;
+}
+
+@media all and (min-width: $tablet-size-primary) and (max-width: $desktop-size) {
+  .spotblock .content a.link {
+		bottom: $spot-default-padding;
+		right: $spot-default-padding; 
+	} 
+}
+
+.flex-height {
+	height: auto !important;
+}
+.spotContainer {
+	.content {
+		box-sizing: border-box;
+		@include desktop {
+			position: relative;
+			a.link {		
+				position: absolute;
+			}
+		}
+	}
+	h2 { 
+		margin-top: 0px;
+	}
+}
+.spotLayout {
+	&-normal { 
+		background-image: none !important;
+		.content-restrict {
+			//max-height: 300px;
+		}
+		.content { 
+			padding: 15px; 
+		}
+	}
+	&-background {
+		min-height: $spot-height;
+		width: 100%;
+		display: block;
+		background-size: cover;
+		position: relative; 
+		.content {
+			.background {
+				padding: $spot-default-padding $spot-default-padding 75px $spot-default-padding;
+				left: $spot-default-padding;
+				right: $spot-default-padding;
+				bottom: $spot-default-padding;
+				width: auto;		
+				margin: 0;
+				@include tablet {
+					position: absolute;
+					a.link {
+						bottom: $spot-default-padding;
+					}
+				}
+			}
+		}
+		.grid-1-2 & {
+			.content .background {
+				left: inherit;
+				right: $spot-default-padding;
+				width: calc(50% - 35px);
+			}
+		}
+		.content-restrict {
+			max-height: 280px;
+		}
+		&.no-content .content {
+			min-height: $spot-height;
+			.background {
+				position: absolute;
+				box-sizing: border-box;
+				vertical-align: bottom;
+				margin: 15px;
+				left: auto;
+				padding: 15px 15px 30px 15px;
+				right: -15px;
+				bottom: -15px;    
+				height: 75px;
+				a.link {
+					left: auto;
+					@include tablet {
+						bottom: 40px;
+					}
+				}
+				@include tablet {
+					width: 160px;
+					position: absolute;
+				}
+			}
+		}
+		.content { 
+			box-sizing: border-box;
+			width: 100%;		
+			bottom: 0px;
+			padding: 0px;
+			@include tablet {
+				position: absolute;
+			}
+			.background { 
+				box-sizing: border-box;
+				vertical-align: bottom; 
+				margin: 15px;
+				padding: 15px 15px 30px 15px; 
+				@include tablet {
+					margin: 0;
+				}
+			}
+		}
+	}
+	&-topimage { 
+		padding: 0px; 
+		@for $i from 1 through length($main-colors) {
+			&.linkColor-color#{$i} a.link {
+				color: nth($main-colors, $i);
+			}
+		}
+		.content-restrict {
+			max-height: 160px;
+		}
+		.content-img { 		
+			overflow: hidden;
+			margin: 0 -$spot-default-padding 0 -$spot-default-padding; 
+			margin-bottom: 1.071rem;
+			@include tablet {
+				//max-height: 146px;
+			}
+		}
+		.replaced-svg { 
+			max-height: 110px;
+			margin: 25px auto 10px;
+			display: block;
+		}
+		img { 
+			width: 100%; 
+		}
+		.content { 
+			padding: $spot-default-padding; 
+		}
+	}
+	&-bottomimage { 
+		padding: 0px;
+		position: relative; 
+		@for $i from 1 through length($main-colors) {
+			&.linkColor-color#{$i} a.link {
+				color: nth($main-colors, $i);
+			}
+		}
+		.replaced-svg { 
+			max-height: 110px;
+			margin: 10px auto 25px;
+			display: block;
+		}
+		.content-restrict {
+			max-height: 220px;
+		}
+		.content-img { 
+			box-sizing: border-box;
+			width: calc(100% + 40px);		
+			bottom: 0; 
+			left: 0;
+			right: 0;		
+			overflow: hidden;
+			margin: 0 -$spot-default-padding -$spot-default-padding;
+			@include tablet {
+				height: 126px;
+				width: 100%;
+				margin: 0;
+				position: absolute;
+			}
+			img { 
+				width: 100%;
+				margin: 0px auto;
+				@include tablet {
+					position: absolute;
+					bottom: 0;
+				}
+			}
+		}
+		.content { 
+			padding: 15px 15px; 
+			.link { 
+				bottom: 151px;
+			}
+		}
+	}
+}
+
+.backgroundColor-transparent { 
+	background-color: transparent; 
+}
+.backgroundColor-color12 .content {
+	border: 1px solid $color-grey-dark2;
+}
+.spotLayout-background.backgroundColor-color12 .content { 
+	border: none; 
+}
+.spotLayout-background.backgroundColor-transparent .background { 
+	background-color: transparent; 
+}
+@for $i from 1 through length($main-colors) {
+    .backgroundColor-color#{$i} {
+        background-color: nth($main-colors, $i);
+    }
+    .textBackgroundColor-color#{$i} .video-label, .textBackgroundColor-color#{$i} .text {
+        background-color: nth($main-colors, $i);
+    }
+	.spot .linkColor-color#{$i} a.link,
+	.spot .linkColor-color#{$i} .doc-item,
+	.linkColor-color#{$i} .doc-items-list-video-link, 
+	.linkColor-color#{$i} a.doc-items-list-video-title {
+		color: nth($main-colors, $i);
+	}
+    .linkColor-color#{$i} a, .Sleek .linkColor-color#{$i} a {
+        color: nth($main-colors, $i);
+    }
+    .iconColor-color#{$i} .st0, .iconColor-color#{$i} .st1 ,
+	.iconColor-color#{$i} .doc-items-list .st0, .iconColor-color#{$i} .doc-items-list .st1 {
+        fill: nth($main-colors, $i);
+		stroke: nth($main-colors, $i);
+    }
+	.spot .textColor-color#{$i} a,
+    .textColor-color#{$i}, .headingColor-color#{$i} h2 {
+		color: nth($main-colors, $i);
+	}
+	.spotLayout-background.backgroundColor-color#{$i} .background {
+        background-color: transparentize(nth($main-colors, $i), 0.1);
+    }
+}
+.list-spot-wide {
+	p {
+		margin: 0;
+	}
+	li:nth-child(4n) {
+		border-top: 0;
+	} 
+	.flex-height & {
+		li:nth-child(4n) {
+			border-top: solid 1px $color-grey-light6;
+		} 
+	}
+}
+.docs {
+	svg {
+		max-height: 128px;
+		display: block;
+		margin: 0 auto;
+	}
+	.doc-item-img-holder svg {
+		max-height: 57px;
+	}
+	&-icon {
+		display: block;
+		width: 107px;
+		height: auto;
+		margin: 5px auto $spot-default-padding; 
+		max-height: 128px;
+	}
+}
+.headingAlignment {
+	&-left h2 { 
+		text-align: left; 
+	}
+	&-right h2 { 
+		text-align: right; 
+	}
+	&-center h2 { 
+		text-align: center; 
+	}
+}
+.headingStyle {
+	&-normal h2 { 
+		font-style: normal !important; 
+	}
+	&-italic h2 { 
+		font-style: italic !important; 
+	}
+}
+.textAlignment {
+	&-left p { 
+		text-align: left; 
+	}
+	&-right p { 
+		text-align: right; 
+	}
+	&-center p { 
+		text-align: center; 
+	}
+}
+.textStyle {
+	&-normal p { 
+		font-style: normal !important; 
+	}
+	&-italic p { 
+		font-style: italic !important; 
+	}
+}
+.spot {
+	@include hover {
+		.video-label {
+			opacity: 0.7;
+		}
+	}
+	a {
+		color: $spot-color-accent;
+	}
+	a.doc-item {
+		@include prefixed(transition, all .3s ease-in-out);
+		display: table;
+		overflow: hidden;
+		cursor: pointer;
+		color: #363836;
+		text-decoration: none;
+		.content & {
+			text-decoration: none;
+		}
+	}
+	.no-touch & {
+		a.doc-item:hover {
+			opacity: 0.8;
+		}
+	}
+	&.content-focused-feauted .content {
+        height: auto;
+        padding-top: 0;
+    }
+	&.content-focused {
+		@include desktop {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+		.content {
+			padding-left: 0;
+			padding-right: 0;
+			p {
+				color: $color-grey-light3;
+			}
+			h1 {
+				margin: 0 0 $spot-default-padding;
+				color: $color-grey-light3;
+				font-size: 30px;
+			}
+			h2 {
+				line-height: 1;
+				margin: 35px 0 30px;
+				color: $color-grey-light3;
+				text-transform: none;
+			}
+		}
+	}
+	.content {		
+		a.link:before {
+			transition: all .3s ease;
+		}
+		a {
+			@include hover { 
+				text-decoration: none;
+				&:before {
+					right: 5px;
+				}
+			}
+			&.button {
+				transition: all .3s ease;
+				@include hover { 
+					background: $spot-color-accent;
+					color: $spot-color-neutral;
+					outline: solid 1px $spot-color-neutral;
+				}
+			}
+		}
+		h2 {
+			margin: 0;
+			padding: 0;
+			font-size: 1.571rem;
+			* {
+				font-size: 1.571rem;
+				font-weight: bold;
+				margin: 0;
+			}
+		}
+		h2.icon-title {
+			position: relative;
+			padding-left: 53px;
+			img, svg {
+				position: absolute;
+				left: 0;
+				margin-top: -4px;
+				width: auto;
+				height: auto;
+			}
+		}
+	}
+}
+.doc {
+	&-items-list {
+		margin: 0;
+		padding: 0;
+		list-style: none; 
+		li {
+			border-top: solid 1px $color-grey-light6;
+			padding: $spot-default-padding 0;
+			@extend %clearfix;
+			&:first-child {
+				border: 0; 
+			} 
+		}
+		&-linked {
+			overflow: hidden;
+			&-title {
+				font-size: 1.2857rem;
+                font-family: $font-family-default;
+				& {
+					text-decoration: underline;
+					@include hover {
+						text-decoration: none;
+					}
+				}
+			}
+			&-link {
+				width: 4rem;
+				float: right; 
+				margin: 0.75rem 0 0 1rem;
+				text-align: center; 
+				display: block;
+				font-family: $spot-base-font-family;
+				font-size: 0.71428rem;
+				text-decoration: none;
+			}
+			&-icon {
+				height: 2.1428rem; 
+				width: 2.1428rem; 
+				margin: 0px auto;
+			}
+			&-copy {
+				padding-top: 0.71428rem;
+				font-family: $spot-base-font-family;
+				font-size: 1rem;			
+			}
+		}
+	}
+	&-item {
+		& {
+			text-decoration: none;
+		}
+		&-copy {
+			width: 100%;
+			max-width: 160px;
+			overflow: hidden;
+			display: table-cell;
+			vertical-align: middle;
+			font-size: 1.28571rem;
+		}
+		&-img-holder {
+			width: 70px;
+			text-align: center;
+			margin-right: 10px;
+			font-size: 0;
+			height: 57px;
+			img {
+				max-height: 57px;
+				max-width: 57px;
+			}
+		}
+		&-img {
+			display: table-cell;
+			vertical-align: middle;
+			img {
+				width: auto;
+				height: auto;
+			}
+		}
+	}
+	&-icon {
+		display: block;
+		width: 107px;
+		height: auto;
+		margin: 5px auto $spot-default-padding;
+	}
+}
