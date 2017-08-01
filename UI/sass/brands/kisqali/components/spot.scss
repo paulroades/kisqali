@@ -37,7 +37,7 @@ $k-orange: #ed6b20;
 		position: relative;
 		padding: $spot-default-padding;
 		font-family: $spot-base-font-family;
-		text-align: center;
+		// text-align: center;
 		&:after {
 			@extend %clearfix;
 		}
@@ -82,7 +82,7 @@ $k-orange: #ed6b20;
 				line-height: 1;
 				font-family: $spot-default-font-family;
 				position: relative;
-				color: $k-orange;
+				// color: $k-orange;
 				&:hover, &:active, &:focus {
 					text-decoration: underline;
 				}
@@ -691,7 +691,7 @@ $k-orange: #ed6b20;
 			h2 {
 				line-height: 1;
 				margin: 35px 0 30px;
-				color: $k-orange;
+				// color: $k-orange;
 				text-transform: none;
 			}
 		}
@@ -719,7 +719,7 @@ $k-orange: #ed6b20;
 		h2 {
 			margin: 0;
 			padding: 0;
-			color: $k-orange;
+			// color: $k-orange;
 			font-size: (24/14)+rem;
 			font-weight: normal;
 			* {

@@ -352,28 +352,31 @@
 		margin-top: -25px;
 		cursor: pointer;
 		z-index: 3;
+		@extend .icon-extend;
 		&:before {
-			content: '';
+			// content: '';
 			line-height: 1;
 			position: absolute;
 			top: 50%;
-			font-size: 1.1428rem;
-			margin-top: -9px;
+			font-size: (24/14)+rem;
+			margin-top: -11px;
 			width: 100%;
 			text-align: center;
 		}
 	}
 	&-next {
 		right: 0;
-		&:before {
-			content: '→';
-		}
+		@extend .icon-chevron-right;
+		// &:before {
+		// 	content: '→';
+		// }
 	}
 	&-prev {
 		left: 0;
-		&:before {
-			content: '←';
-		}
+		@extend .icon-chevron-left;
+		// &:before {
+		// 	content: '←';
+		// }
 	}
 }
 @for $i from 1 through length($main-colors) {
@@ -409,18 +412,18 @@
 			opacity: 0;
 			transition: all .6s ease;
 			position: absolute;
-			left: 0;
-			top: 60px;
+			left: 4rem;
+			top: 4rem;
 			padding: 10px 18px;
 			text-transform: uppercase;
-			font-size: 1.828rem;
+			font-size: (35/14)+rem;
 			@media (max-width: $breakpoint-phablet) {
 				font-size: 0.828rem;
 			}
 			line-height: 0.9;
 			z-index: 1;
 			&.active {
-				opacity: 1;
+				opacity: .8;
 				display: block;
 			}
 		}
