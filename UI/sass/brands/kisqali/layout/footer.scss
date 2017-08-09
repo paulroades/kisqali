@@ -32,17 +32,17 @@ footer[id=site-specifics] {
 			font-size: 12px;
 			line-height: 18px;
 		}
-		// &:before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	width: 99px;
-		// 	height: 36px;
-		// 	top: 0;
-		// 	left: 1.875rem;
-		// 	background-image: url(../../img/logo/novartis-hcp-portal@2x.png);
-		// 	background-repeat: no-repeat;
-		// 	background-size: contain;
-		// }
+		&:before {
+			content: '';
+			position: absolute;
+			width: 99px;
+			height: 36px;
+			top: 0;
+			left: 1.875rem;
+			background-image: url(../../img/logo/novartis-hcp-portal@2x.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
 	}
 	li {
 		display: inline-block;

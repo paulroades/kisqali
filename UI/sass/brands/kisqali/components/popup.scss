@@ -1,4 +1,4 @@
-﻿/*
+/*
 - Document  : popup.scss
 - Version   : 1.0.0
 - Client    : Novartis ServiceSphere
@@ -17,7 +17,7 @@
         &:hover { border-color: #a50a05; }
     }
     &-content {
-        padding: 1% 5%;   
+        padding: 1% 5%;
     }
     &-nav {
         @extend %clearfix;
@@ -34,10 +34,10 @@
     &-wrapper {
         @extend %clearfix;
         display: inline-block;
-        min-width: 10%; 
-        max-width: 80%; 
-        min-height: 50%; 
-        margin: 10% auto; 
+        min-width: 10%;
+        max-width: 80%;
+        min-height: 50%;
+        margin: 10% auto;
         background-color: #fff;
     }
 }

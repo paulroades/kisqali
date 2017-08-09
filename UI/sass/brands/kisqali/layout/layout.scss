@@ -107,7 +107,7 @@ header .navigation-service {
 	[id=logged-in-menu] {
 		.morph-button > button {
 			& > img {
-				position: relative;
+				position: relative
 				top: 5px;
 				width: 32px;
 				height: 32px;
@@ -2323,7 +2323,7 @@ main#content {
 			text-decoration: underline;
 			padding: 0 10px;
 			text-transform: none;
-		}	
+		}
 		.loggedinmenublock .label {
 			display: none;
 		}
