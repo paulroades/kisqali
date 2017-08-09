@@ -12,6 +12,8 @@ footer[id=site-specifics] {
 	z-index: 10;
 	overflow: hidden;
 	background: $color-accent;
+	padding: 40px 15px 30px;
+	color: #fff;
 	@include before-desktop {
 		text-align: center;
 	}
@@ -20,16 +22,27 @@ footer[id=site-specifics] {
 		text-align: right;
 		font-size: 18px;
 		line-height: 18px;
-		padding: 40px 15px 30px;
 	}
 	ul {
 		max-width: 1240px;
 		margin: 0 auto;
-		padding: 0 0 1.875rem 1.875rem;
+		// padding: 0 0 1.875rem 1.875rem;
+		position: relative;
 		@include desktop {
-			font-size: 18px;
+			font-size: 12px;
 			line-height: 18px;
 		}
+		// &:before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	width: 99px;
+		// 	height: 36px;
+		// 	top: 0;
+		// 	left: 1.875rem;
+		// 	background-image: url(../../img/logo/novartis-hcp-portal@2x.png);
+		// 	background-repeat: no-repeat;
+		// 	background-size: contain;
+		// }
 	}
 	li {
 		display: inline-block;
@@ -61,49 +74,49 @@ footer[id=site-specifics] {
 			line-height: 1;
 		}
 	}
-	.logo-novartis-global {
-		padding: 5px 0;
-		text-align: left;
-		img {
-			max-width: 40%;
-			@include phablet {
-				max-width: 20%;
-			}
-			@include desktop {
-				left: 0;
-				max-width: 180px;
-				max-height: 100px;
-				margin-top: -16px;
-			}
-		}
-		@include before-desktop {
-			display: block;
-			text-align: center;
-			img {
-				margin: 0;
-			}
-		}
-		@include desktop {
-			padding-top: 0;
-			border-left: 0;
-			float: left;
-			width: 180px;
-			position: relative;
-			li & {
-				border-left: 0;
-			}
-			a {
-				display: block;
-				position: inherit;
-			}
-		}
-	}
+	// .logo-novartis-global {
+	// 	padding: 5px 0;
+	// 	text-align: left;
+	// 	img {
+	// 		max-width: 40%;
+	// 		@include phablet {
+	// 			max-width: 20%;
+	// 		}
+	// 		@include desktop {
+	// 			left: 0;
+	// 			max-width: 180px;
+	// 			max-height: 100px;
+	// 			margin-top: -16px;
+	// 		}
+	// 	}
+	// 	@include before-desktop {
+	// 		display: block;
+	// 		text-align: center;
+	// 		img {
+	// 			margin: 0;
+	// 		}
+	// 	}
+	// 	@include desktop {
+	// 		padding-top: 0;
+	// 		border-left: 0;
+	// 		float: left;
+	// 		width: 180px;
+	// 		position: relative;
+	// 		li & {
+	// 			border-left: 0;
+	// 		}
+	// 		a {
+	// 			display: block;
+	// 			position: inherit;
+	// 		}
+	// 	}
+	// }
 	.copy-novartis-global {
 		padding: 5px 0;
 		@include before-desktop {
 			text-align: center;
 			display: block;
-			color: $color-accent;
+			color: #fff;
 		}
 		@include desktop {
 			position: relative;

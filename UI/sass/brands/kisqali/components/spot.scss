@@ -29,9 +29,6 @@ $k-orange: #ed6b20;
 			}
 		}
 	}
-	&.entresto-branded h2 {
-		color: $color-blue;
-	}
 	.content {
 		overflow: hidden;
 		position: relative;
@@ -264,7 +261,7 @@ $k-orange: #ed6b20;
 	}
 }
 .breadcrumbblock .grid {
-	padding-bottom: 0;
+	padding-bottom: 1.875rem;
 }
 .listspotblock {
 	position: relative;
@@ -348,7 +345,7 @@ $k-orange: #ed6b20;
 	.spotLayout-background,
 	.listspotblock .spotContainer,
 	.spotblock .content {
-		min-height: $spot-height;
+		// min-height: $spot-height;
 	}
 }
 

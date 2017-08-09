@@ -11,7 +11,7 @@ $color-mega-menu-bg: rgba(255, 255, 255, .9);
 $color-mega-menu-bg-mobile: #fff;
 $color-mega-menu-bg-snap: #fff;
 $color-mega-menu-label: #fff;
-$color-mega-menu-label-hover: #923222;
+$color-mega-menu-label-hover: $color-accent;
 $color-mega-menu-label-shadow: #bbb;
 $color-mega-menu-mobile-border: #eee;
 $color-mega-menu-panel-bg: #fff;
@@ -24,7 +24,7 @@ $service-menu-height: 6.8571rem;
 $service-menu-height-mobile: 4rem;
 $color-service-menu-label: #929292;
 $color-service-menu-label-checked: #fff;
-$color-service-menu-label-icon: #923222;
+$color-service-menu-label-icon: $color-accent;
 $color-service-menu-bg: #fff;
 
 .icon, .nav-mega-sub a::before {
@@ -71,7 +71,7 @@ $color-service-menu-bg: #fff;
 				@extend %mega-label;
 				padding-right: 0.5rem;
 			}
-			strong { 
+			strong {
 				background-color: #eee;
 				a {
 					padding: 0 0.5rem 0 0;
@@ -88,8 +88,8 @@ $color-service-menu-bg: #fff;
 					margin-top: 0.5rem;
 				}
 			}
-			svg { 
-				display: none; 
+			svg {
+				display: none;
 			}
 		}
 		&-toggle {
@@ -123,7 +123,7 @@ $color-service-menu-bg: #fff;
 					& + .nav-overlay-desktop { display: none; }
 				}
 			}
-		}	
+		}
 		&-wrapper {
 			@include fixed(top $service-menu-height-mobile right -75% bottom 0);
 			transition: opacity 0.3s ease;
@@ -131,7 +131,7 @@ $color-service-menu-bg: #fff;
 			width: 75%;
 			z-index: $mega-menu-zindex;
 			background-color: $color-mega-menu-bg-mobile;
-			.menu-is-ready & {				
+			.menu-is-ready & {
 				background: $background-menu;
 				z-index: 5005;
 				position: fixed;
@@ -151,7 +151,7 @@ $color-service-menu-bg: #fff;
 			font-size: 1.1rem;
 			text-align: center;
 			min-height: $mega-menu-height;
-			
+
 			&-label {
 				@include hover { border-bottom-color: $color-mega-menu-label-hover; }
 				position: relative;
@@ -159,7 +159,7 @@ $color-service-menu-bg: #fff;
 				border-bottom: .2rem solid transparent;
 				padding: 1.55rem 1rem;
 				&::after { content: ""; }
-				
+
 				.state:checked + & {
 					@include hover { border-bottom-color: transparent; }
 					background-color: $color-mega-menu-label;
@@ -195,19 +195,19 @@ $color-service-menu-bg: #fff;
 				padding-left: 1.5%;
 
 
-				&:nth-last-child(2):first-child, 
+				&:nth-last-child(2):first-child,
 				&:nth-last-child(2):first-child ~ .nav-mega-sub {
 					width: 66%;
 				}
-				
-				&:nth-last-child(3):first-child, 
+
+				&:nth-last-child(3):first-child,
 				&:nth-last-child(3):first-child ~ .nav-mega-sub {
 					width: 44%;
 				}
 				> a {
 					margin-left: 1.1rem;
 				}
-				a { 
+				a {
 					//@include line-overflow(2rem);
                     text-decoration: none;
 					padding-right: 0.5rem;
@@ -217,29 +217,29 @@ $color-service-menu-bg: #fff;
 					}
 					&::before {
 						@extend .icon;
-						width: .5em; 
+						width: .5em;
 						height: .5em;
 						content: "";
 						background: url("../images/arrow-right.svg") no-repeat;
 					}
 				}
-				strong { 
+				strong {
 					display: block;
-					font-size: 1rem; 
+					font-size: 1rem;
 					margin: 0 0 .5rem 0;
-					background: none; 
+					background: none;
 				}
 				a, strong { border-bottom: 0; padding: 0; }
-				svg { 
-					display: inline-block; 
+				svg {
+					display: inline-block;
 				}
 				&:first-of-type {
 					width: 33%;
 					float: left;
 					margin-left: -33%;
 					border-color: $color-white;
-					strong { 
-						display: inline-block; 
+					strong {
+						display: inline-block;
 						padding: .75rem 1rem;
 						margin: 0 0 1rem -1rem;
 						width: calc(100% - 1.5rem);
@@ -282,8 +282,8 @@ $color-service-menu-bg: #fff;
 				}
 			}
 			&-sub {
-				strong { 
-					font-size: 1.3rem; 
+				strong {
+					font-size: 1.3rem;
 				}
 			}
 			&-wrapper {
@@ -301,9 +301,9 @@ $color-service-menu-bg: #fff;
 		height: 100%;
 		background-color: rgba(0, 0, 0, .75);
 		z-index: ($mega-menu-zindex - 1);
-		&-desktop {	
+		&-desktop {
 			@include tablet {
-				@extend .nav-overlay; 
+				@extend .nav-overlay;
 				background-color: rgba(0, 0, 0, .25);
 			}
 		}
@@ -314,7 +314,7 @@ $color-service-menu-bg: #fff;
 		height: $service-menu-height-mobile;
 		z-index: $mega-menu-zindex;
 		background-color: $color-service-menu-bg;
-		
+
 		&-icons {
 			float: right;
 			padding: 1rem;
@@ -322,8 +322,8 @@ $color-service-menu-bg: #fff;
 				color: $color-service-menu-label;
 				font-size: 1.15rem;
 			}
-			span { 
-				display: none; 
+			span {
+				display: none;
 			}
 			svg {
 				@include square(2rem);
@@ -338,12 +338,12 @@ $color-service-menu-bg: #fff;
 			@include tablet { max-width: 8rem; margin: 0 0 0 3rem; }
 			max-width: 5rem;
 		}
-		@include tablet { 
-			height: $service-menu-height; 
+		@include tablet {
+			height: $service-menu-height;
 			&-icons {
 				padding: 2rem;
 				margin-right: 2rem;
-				a { 
+				a {
 					margin-left: 1rem;
 					&::after {
 						content : "|";
@@ -354,17 +354,17 @@ $color-service-menu-bg: #fff;
 						display: none;
 					}
 				}
-				span { 
+				span {
 					display: inline-block;
 					vertical-align: middle;
 				}
-				svg { 
+				svg {
 					@include square(1.15rem);
 					vertical-align: middle;
 				}
 			}
 		}
-	}	
+	}
 }
 a.nav-mega-link {
     @extend .nav-mega-label;

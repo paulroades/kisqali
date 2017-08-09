@@ -100,3 +100,9 @@
 	@include grid(grid-flex, $grid-gutter, auto);
 	background-color: $color-grid-bg;
 }
+
+// dodgy css, may need removing if it breaks odd things
+.grid-content {
+	padding-left: 1.875rem;
+	background: #fff;
+}
