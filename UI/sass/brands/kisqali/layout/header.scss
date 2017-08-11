@@ -48,6 +48,13 @@ $desktop-logo-width: 260px;
 	}
 }
 header {
+	@include desktop{
+		display:none;
+	}
+
+	@include tablet {
+		display:none;
+	}
     top: 0;
     position: fixed;
     margin-bottom: 20px;
