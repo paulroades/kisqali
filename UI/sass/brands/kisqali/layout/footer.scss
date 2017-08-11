@@ -119,14 +119,18 @@ footer[id=site-specifics] {
 			color: #fff;
 		}
 		@include desktop {
-			position: relative;
-			top: -1px;
-			padding-top: 0;
-			text-align: right;
-			width: 180px;
-			border-left: 0;
-			float: right;
-			color: $color-accent;
+			// position: relative;
+			// top: -1px;
+			// padding-top: 0;
+			// text-align: right;
+			// width: 180px;
+			// border-left: 0;
+			// float: right;
+			// color: $color-accent;
+			display: block;
+			width:100%;
+			text-align:center;
+			color:#fff;
 		}
 		img {
 			height: auto;
@@ -138,6 +142,10 @@ footer[id=site-specifics] {
 			line-height: 18px;
 			position: relative;
 			top: 3px;
+		}
+
+		div a{
+			color:#0061ab !important;
 		}
 	}
 	.no-touch & {

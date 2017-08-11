@@ -6,8 +6,8 @@
 */
 
 /* Mega-Menu Consts */
-$color-mega-menu: $color-black;
-$color-mega-menu-bg: rgba(255, 255, 255, .9);
+$color-mega-menu: #fff;
+$color-mega-menu-bg: #023761;
 $color-mega-menu-bg-mobile: #fff;
 $color-mega-menu-bg-snap: #fff;
 $color-mega-menu-label: #fff;
@@ -23,7 +23,7 @@ $mega-menu-zindex: 3000;
 $service-menu-height: 6.8571rem;
 $service-menu-height-mobile: 4rem;
 $color-service-menu-label: #929292;
-$color-service-menu-label-checked: #fff;
+$color-service-menu-label-checked: #023761;
 $color-service-menu-label-icon: $color-accent;
 $color-service-menu-bg: #fff;
 
@@ -76,7 +76,7 @@ $color-service-menu-bg: #fff;
 				a {
 					padding: 0 0.5rem 0 0;
 				     &.active {
-					    color: $color-grey-dark2;
+					    color: #fff;
 					}
 				}
 
@@ -149,7 +149,7 @@ $color-service-menu-bg: #fff;
 			@extend %inner-width;
 			position: relative;
 			font-size: 1.1rem;
-			text-align: center;
+			text-align: right;
 			min-height: $mega-menu-height;
 
 			&-label {
@@ -163,7 +163,7 @@ $color-service-menu-bg: #fff;
 				.state:checked + & {
 					@include hover { border-bottom-color: transparent; }
 					background-color: $color-mega-menu-label;
-					color: inherit;
+					color: #023761;
 					box-shadow: .25rem 0 1rem -.25rem $color-mega-menu-label-shadow, -.25rem 0 1rem -.25rem $color-mega-menu-label-shadow;
 					&::after {
 						@include absolute(left 0 bottom -.5rem);
@@ -261,7 +261,7 @@ $color-service-menu-bg: #fff;
 				}
 			}
 			&-wrapper {
-				@include absolute(top 17rem left 0); bottom: auto;
+				@include absolute(top 0rem left 0); bottom: auto;
 				display: block; overflow-y: visible;
 				width: 100%;
 				background-color: $color-mega-menu-bg;
@@ -276,9 +276,9 @@ $color-service-menu-bg: #fff;
 		@include desktop {
 			&-label {
 				font-size: 1.4rem;
-				padding: 1.26rem 1.3rem;
+				// padding: 1.26rem 1.3rem;
 				&:hover, &.active {
-				  color: $color-accent;
+				  color: #fff;
 				}
 			}
 			&-sub {
@@ -287,7 +287,7 @@ $color-service-menu-bg: #fff;
 				}
 			}
 			&-wrapper {
-				@include absolute(top 22rem left 0); bottom: auto;
+				@include fixed(top 0rem left 0); bottom: auto;
 				&.scroll {
 					@include fixed(top $service-menu-height left 0);
 				}
@@ -296,7 +296,7 @@ $color-service-menu-bg: #fff;
 	}
 	&-overlay {
 		@include fixed(top $service-menu-height-mobile left 0);
-		display: none;
+
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 0, 0, .75);

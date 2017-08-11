@@ -1,4 +1,4 @@
-﻿/*
+/*
 - Document  : typography.scss
 - Version   : 1.0.0
 - Client    : ServiceSphere 2.0
@@ -6,9 +6,10 @@
 */
 
 // Imported fonts
-@import url('//fonts.googleapis.com/css?family=News+Cycle');
-
+//@import url('//fonts.googleapis.com/css?family=News+Cycle');
+@import url('//fonts.googleapis.com/css?family=Overpass');
 // Font families
-$font-family-default:	'News Cycle', sans-serif;
+$font-family-default: 'Overpass', sans-serif;
+//$font-family-default:	'News Cycle', sans-serif;
 $font-family-base:		Verdana, sans-serif;
 
