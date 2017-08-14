@@ -185,9 +185,11 @@ main {
 	&-page-headline {
 		margin: 0;
 		padding: 0;
+		padding-bottom:10px;
 		font-size: 2.1428rem;
 		line-height: 1.1;
 		margin-top: -0.5rem;
+		border-bottom: 3px #ccc solid;
 	}
 
 	.content {
