@@ -312,12 +312,13 @@ $color-service-menu-bg: #fff;
 	}
 	&-overlay {
 		@include fixed(top $service-menu-height-mobile left 0);
-
+		display: none;
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 0, 0, .75);
 		z-index: ($mega-menu-zindex - 1);
 		&-desktop {
+			
 			@include tablet {
 				@extend .nav-overlay;
 				background-color: rgba(0, 0, 0, .25);
