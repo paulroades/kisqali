@@ -10,7 +10,7 @@
 		[class*="#{$class}-"] {
 			@if $height == "auto" {	@include flexbox(); }
 			float: left;
-			width: 100%;
+			width: 100%;			
 			padding: $gutter $gutter 0 0;
 			& > .content {
 				@if $height == "auto" {	@include flex(1); }

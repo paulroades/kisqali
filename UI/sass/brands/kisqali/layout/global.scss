@@ -94,16 +94,17 @@ nav {
 	width: auto;
 }
 main {
-	margin: 0 auto;
+	margin: 50px auto 0px auto;
 	max-width: $layout-max-width;
 	position: relative;
 	z-index: 6;
 	@extend %clearfix;
 	@media (max-width: $breakpoint-tablet) {
+		margin-top: 50px;
 		padding-top: 0;
 	}
 	@media (min-width: $breakpoint-desktop + 1px) {
-		margin-top: 410px;
+		margin-top: 90px;
 		min-height: 200px;
 	}
 	&.default {
@@ -184,9 +185,11 @@ main {
 	&-page-headline {
 		margin: 0;
 		padding: 0;
+		padding-bottom:10px;
 		font-size: 2.1428rem;
 		line-height: 1.1;
 		margin-top: -0.5rem;
+		border-bottom: 3px #ccc solid;
 	}
 
 	.content {
