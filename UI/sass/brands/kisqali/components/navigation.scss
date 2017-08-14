@@ -148,15 +148,17 @@ $color-service-menu-bg: #fff;
 			z-index: $mega-menu-zindex;
 			background-color: $color-mega-menu-bg-mobile;
 			.menu-is-ready & {
-				background: $background-menu;
+				background: #fff;
 				z-index: 5005;
 				position: fixed;
 				box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .15);
 				@include tablet {
-					top: 55px;
+					background: $color-mega-menu;
+					top: 0px;
 				}
 				@include desktop {
-					top: 88px;
+					background: $color-mega-menu;
+					top: 0px;
 				}
 			}
 		}
@@ -318,7 +320,7 @@ $color-service-menu-bg: #fff;
 		background-color: rgba(0, 0, 0, .75);
 		z-index: ($mega-menu-zindex - 1);
 		&-desktop {
-			
+
 			@include tablet {
 				@extend .nav-overlay;
 				background-color: rgba(0, 0, 0, .25);
