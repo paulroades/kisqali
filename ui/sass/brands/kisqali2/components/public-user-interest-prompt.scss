@@ -1,0 +1,9 @@
+[id=public-user-interest-prompt].morph-content {	
+	width: 90%;	
+	margin-right: -45%;
+	@media all and (min-width: $tablet-size) {
+		max-width: 716px;
+		width: 716px;
+		margin-right: -358px;
+	}
+}

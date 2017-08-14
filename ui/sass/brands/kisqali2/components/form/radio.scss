@@ -1,0 +1,29 @@
+/*
+- Document  : radio.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-03-30
+*/
+
+/* Component Consts */
+$radio-color: $color-grey-light3;
+$radio-color-active: $color-accent;
+
+.mdl-radio {
+	position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+}
+.mdl-radio__inner-circle,
+.mdl-radio__ripple-container .mdl-ripple {
+	background: $radio-color-active;
+}
+.mdl-radio__outer-circle {
+	border-color: $radio-color;
+}
+.mdl-radio.is-checked .mdl-radio__outer-circle {
+	border-color: $radio-color-active;
+}

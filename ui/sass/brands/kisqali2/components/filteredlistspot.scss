@@ -1,0 +1,74 @@
+.filteredlistspotblock.spot {
+	.spotContainer {
+		height: 385px;
+	}
+	@for $i from 1 through length($main-colors) {
+		.backgroundColor-color#{$i} {
+			background-color: nth($main-colors, $i);
+		}
+	}
+	@for $i from 1 through length($main-colors) {
+		.linkColor-color#{$i} a h3, .linkColor-color#{$i} a.link {
+			color: nth($main-colors, $i);
+		}
+	}
+    @for $i from 1 through length($main-colors) {
+		.textColor-color#{$i} {
+            .event-copy, .event-venue  {
+			    color: nth($main-colors, $i);
+		    }
+            p {
+                color: nth($main-colors, $i);
+            }
+		}
+	}
+	.content {
+		padding: 16px 20px 0;
+	}
+	.events {
+		padding-top: 15px;
+		.event {
+		    height: auto;
+			overflow: hidden;
+			margin-bottom: 0;
+			a {
+				padding-left: 0;
+			}
+		}
+	}
+	.event {
+		position: relative;
+		margin-left: -20px;
+		margin-right: -20px;
+		padding: 7px 20px;
+		height: 108px;
+		border: 0;
+		&-venue {
+			color: $color-grey-light8;
+		}
+		.event-copy h3 {
+			padding-top: 10px;
+		}
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 20px;
+			content: '';
+			width: calc(100% - 40px);
+			height: 1px; 
+			background: $color-grey-light6;
+		}
+		&:first-child:before {
+			display: none;
+		}	
+	}
+	.content h2.icon-title {
+		min-height: 27px;
+		padding-right: 70px;
+		img, svg {
+			width: 41px;
+			height: 41px;
+		}
+	}
+}
+

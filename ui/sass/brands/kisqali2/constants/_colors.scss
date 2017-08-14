@@ -1,0 +1,133 @@
+/*
+- Document  : colors.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-02-19
+*/
+
+$color-white:			#fff;
+$color-black1:			#111;
+$color-light-grey:		#fbfbfb;
+$color-accent:			#023761;
+$color-grey-1:			#ccc;
+$color-grey-2:			#444;
+$color-grey-3:			#bbb;
+$color-grey-4:			#e4e4e4;
+$color-grey-darker:		#333;
+$color-grey-dark:		#222;
+$color-grey-dark2:		#363836;
+$color-grey-dark3:		#99a19c;
+$color-grey-light:		#a7a7a7;
+$color-grey-light2:		#dfdfdf;
+$color-grey-light3:		#686d6a;
+$color-grey-light4:		#8b8b8b;
+$color-grey-light5:		#929292;
+$color-grey-light6:		#d3d3d3;
+$color-grey-light7:		#f2f0ee;
+$color-grey-light8:		#7a868c;
+$color-grey-light9:		#dbe0e6;
+$color-grey-light10:	#413f3f;
+$color-grey-light11:	#575958;
+$color-grey-light12:	#f6f7f7;
+$color-border-dark:		#a7a7a7;
+$color-black:			#000;
+$color-brown:			#634329;
+$color-orange:			#e0aa1e;
+$color-orange2:			#fcaf17;
+$color-orange3:			#ed6b20;
+$color-biege:			#f5ebd7;
+$color-biege2:			#edeae5;
+$color-biege3:			#f9e1c9;
+$color-biege4:			#faf1e0;
+$color-biege5:			#f0ddcc;
+$color-dark-biege:		#ebd3bd;
+$color-light-orange:	#f2a668;
+$color-light-orange2:	#FCAF17;
+$color-yellow:			#FED300;
+$color-red:				#a50a05;
+$color-red2:			#e75854;
+$color-red3:			#E44C16;
+$color-blue:			#325170;
+$color-dark-blue:		#355A77;
+$color-dark-blue-2:		#6e7e9b;
+$color-dark-blue-3:		#0061ab;
+$color-dark-blue-4:		#286f81;
+$color-green-1:			#00AF9F;
+$color-green-2:			#26a69a;
+$color-violet:			#642c85;
+$color-dark-violet:		#553445;
+
+// kisqali colours
+$k-grey:				#616b6f;
+$k-orange: 				$color-orange3;
+$k-blue: 				$color-accent;
+
+// Branded colors
+$color-branded-yellow:		#fad73e;
+$color-branded-dark-yellow: #e5b334;
+
+// Transparent colors
+$color-trans-1: transparentize($color-black, 0.65);
+$color-trans-2: transparentize($color-grey-light12, 0.1);
+$color-trans-3: transparentize($color-accent, 0.1);
+$color-trans-4: transparentize($color-black, 0.55);
+$color-trans-5: transparentize($color-white, 0);
+$color-trans-6: transparentize($color-grey-darker, 0.7);
+$color-trans-7: transparentize($color-black, 0.5);
+$color-trans-8: transparentize($color-biege5, 0.3);
+$color-trans-9: transparentize($color-black, 0.88);
+
+// Semantic values
+$color-icon-close-hover:					$color-red;
+$background-content-style-overlay:			$color-white;
+$border-color-icon-close:					$color-biege3;
+$border-color-icon-close-hover:				$color-red;
+$background-content-style-form:				$color-white;
+$color-icon-close-content-style-form:		$color-dark-biege;
+$color-icon-close-content-style-form-hover: $color-red2;
+
+$color-html-bg:								linear-gradient(to bottom, transparentize($color-black, 0.55) 0%, $color-white 50%);
+$color-body-bg:								transparent;
+$color-grid-bg:								$color-white;
+
+// Colors for PropertyPicker
+$outline-color-spotbutton:					$color-grey-dark3;
+$border-color-spotbutton:					$color-light-grey;
+$outline-color-spotbutton-selected:			$color-accent;
+$border-color-spot-preview:					$color-light-grey;
+$background-spotbutton-normal:				$color-white;
+$background-spotbutton:						$color-grey-1;
+$background-spotbutton-topimage:			$color-black1;
+$background-spotbutton-bottomimage:			$color-black;
+
+// Spots colors
+$color-a-spotblock:		$color-accent;
+$main-color1:			$color-dark-blue-3;
+$main-color2:			$color-accent;
+$main-color3:			$color-red3;
+$main-color4:			$color-orange3;
+$main-color5:			$color-light-orange2;
+$main-color6:			$color-yellow;
+$main-color7:			$color-biege;
+$main-color8:			$color-grey-dark2;
+$main-color9:			$color-grey-light11;
+$main-color10:			$color-grey-light8;
+$main-color11:			$color-grey-dark3;
+$main-color12:			$color-white;
+
+$main-colors:			$main-color1,
+						$main-color2,
+						$main-color3,
+						$main-color4,
+						$main-color5,
+						$main-color6,
+						$main-color7,
+						$main-color8,
+						$main-color9,
+						$main-color10,
+						$main-color11,
+						$main-color12;
+
+// Menu
+$background-menu: $color-white;
+$box-shadow-menu: $color-grey-3;

@@ -88,6 +88,25 @@ gulp.task('build:css', function () {
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest(pathTo.distributive + 'kisqali/'));
 
+     // Build CSS file for kisqali2 branded version
+    gulp.src(pathTo.sourceDir + 'sass/brands/kisqali2/master.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            indentedSyntax: false,
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(pathTo.distributive + 'kisqali2/'));
+    // Build shared CSS files for EpiServer
+    gulp.src(pathTo.sourceDir + 'sass/brands/kisqali2/shared/' + '*.scss')
+        .pipe(sass({
+            indentedSyntax: false,
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(gulp.dest(pathTo.distributive + 'kisqali2/'));
+
     // Build shared CSS files for EpiServer
     gulp.src(pathTo.sharedSources + '*.scss')
         .pipe(sass({

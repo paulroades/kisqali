@@ -1,0 +1,18 @@
+﻿/*
+- Document  : bliss-streaming-video.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-08-03
+*/
+
+/* Component Consts */
+
+.blissstreamingvideoblock {
+    .iframe {
+        width: 100%;
+    }
+    &[class*="grid-"]>.content {
+        height: auto;
+        min-height: $grid-default-height;
+    }
+}
