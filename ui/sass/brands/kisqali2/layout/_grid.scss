@@ -106,3 +106,17 @@
 	padding-left: 1.875rem;
 	background: #fff;
 }
+
+
+[class*="grid-"]>.content{
+	height: 15.5rem !important;
+
+
+	@include tablet{
+		height: 23.5rem !important;
+	}
+
+	@include desktop{
+		height: 37.5rem !important;
+	}
+}
