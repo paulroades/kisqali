@@ -6,7 +6,7 @@
 */
 
 /* Mega-Menu Consts */
-$color-mega-menu: #fff;
+$color-mega-menu: #023761;
 $color-mega-menu-bg: #023761;
 $color-mega-menu-bg-mobile: #fff;
 $color-mega-menu-bg-snap: #fff;
@@ -46,6 +46,13 @@ $color-service-menu-bg: #fff;
 .nav {
 	&-mega {
 		color: $color-mega-menu;
+		@include desktop{
+			color:#fff;
+		}
+		@include tablet{
+			color:#fff;
+		}
+
 		&-label {
 			@include no-select;
 			@extend %mega-label;
@@ -57,8 +64,17 @@ $color-service-menu-bg: #fff;
 				font-size: .875rem;
 			}
 			.state:checked + & {
+
+				@include desktop{
+					background-color: $color-service-menu-label-icon;
+					color: $color-service-menu-label-checked;
+				}
+				@include tablet{
+					background-color: $color-service-menu-label-icon;
+					color: $color-service-menu-label-checked;
+				}
 				background-color: $color-service-menu-label-icon;
-				color: $color-service-menu-label-checked;
+				color: #fff;
 			}
 		}
 		&-panel {
@@ -371,3 +387,4 @@ a.nav-mega-link {
 	text-decoration: none;
 	color: inherit;
 }
+
