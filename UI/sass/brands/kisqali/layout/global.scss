@@ -221,6 +221,8 @@ main {
 		@for $i from 1 through length($main-text-elements) {
 			#{nth($main-text-elements, $i)}:first-of-type {
 				margin-top: -#{nth($main-text-elements-margin-for-alignment, $i)}rem;
+			    text-transform: uppercase;
+				color: #006781
 			}
 		}
 
