@@ -16,7 +16,7 @@ $color-mega-menu-label-shadow: #bbb;
 $color-mega-menu-mobile-border: #eee;
 $color-mega-menu-panel-bg: #fff;
 $color-mega-menu-panel-divider: #ccc;
-$mega-menu-height: 5rem;
+$mega-menu-height: 4.5rem;
 $mega-menu-zindex: 3000;
 
 /* Service Menu Consts */
@@ -175,7 +175,8 @@ $color-service-menu-bg: #fff;
 				position: relative;
 				display: inline-block;
 				border-bottom: .2rem solid transparent;
-				padding: 1.55rem 1rem;
+				padding: 2rem 1rem 0.5rem 1rem;
+				margin:0 1rem;
 				&::after { content: ""; }
 
 				.state:checked + & {
@@ -293,7 +294,7 @@ $color-service-menu-bg: #fff;
 		}
 		@include desktop {
 			&-label {
-				font-size: 1.4rem;
+				font-size: 1.2rem;
 				// padding: 1.26rem 1.3rem;
 				&:hover, &.active {
 				  color: #fff;
@@ -387,7 +388,7 @@ $color-service-menu-bg: #fff;
 }
 a.nav-mega-link {
     @extend .nav-mega-label;
+    font-size:1.2rem;
 	text-decoration: none;
 	color: inherit;
 }
-
