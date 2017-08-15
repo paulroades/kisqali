@@ -294,7 +294,8 @@ $color-service-menu-bg: #fff;
 		}
 		@include desktop {
 			&-label {
-				font-size: 1.2rem;
+				font-size: 1.1rem;
+				text-transform: uppercase;
 				// padding: 1.26rem 1.3rem;
 				&:hover, &.active {
 				  color: #fff;
@@ -388,7 +389,8 @@ $color-service-menu-bg: #fff;
 }
 a.nav-mega-link {
     @extend .nav-mega-label;
-    font-size:1.2rem;
 	text-decoration: none;
+	font-size: 1.1rem;
+	text-transform: uppercase;
 	color: inherit;
 }
