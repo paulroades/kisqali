@@ -315,3 +315,27 @@ main {
 	text-transform: uppercase;
 	font-size: 1.6em;
 }
+
+.kisqali--bold--blue{
+	color:#006781 !important;
+	font-size:2.5rem !important;
+	font-weight:bold !important;
+}
+
+.kisqali--bold--orange{
+	color:#ed6b20 !important;
+	font-size:2.5rem !important;
+	font-weight:bold !important;
+}
+
+.kisqali--large--blue{
+	@extend .kisqali--bold--blue;
+	font-size:2rem !important;
+	font-weight:normal !important;
+}
+
+.kisqali--large--orange{
+	@extend .kisqali--bold--orange;
+	font-size:2rem !important;
+	font-weight:normal !important;
+}
