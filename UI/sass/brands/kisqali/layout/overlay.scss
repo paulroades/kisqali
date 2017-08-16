@@ -1,14 +1,32 @@
-.popup-default.morph-content {	
-	width: 90%;	
-	margin-right: -45%;
-	box-shadow: 0px 3px 7px 0px $color-trans-1;
+.morph-content.popup-default {
+	width: 100%;
+	background: rgba(255,255,255, .5);
+	position: fixed;
+	top: 0!important;
+	left: 0;
+	opacity: 0;
+	right: 0;
+	bottom: 0;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-content: stretch;
+	-ms-flex-line-pack: stretch;
+	align-content: stretch;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 	.popup-controls {
 		margin-top: 2.85714rem;
-	}
-	@media all and (min-width: $tablet-size) {
-		max-width: 716px;
-		width: 716px;
-		margin-right: -358px;
 	}
 	&.active {
 		opacity: 1;
@@ -21,12 +39,12 @@
 	label {
 		text-align: left;
 	}
-	.content-style-overlay {		
+	.content-style-overlay {
 		position: relative;
 		width: 100%;
 		padding: 20px;
 		@media all and (min-width: $tablet-size) {
-			padding: 50px;
+			padding: 45px;
 		}
 		&> ul {
 			list-style: none;
@@ -81,48 +99,65 @@
 			}
 		}
 	}
-	a {
-		color: $color-accent;
-	}		
+	a,.btn {
+		color: #62151a;
+		border-color: #62151a;
+		&:hover, &:focus, &:active {
+			background: #62151a;
+			color: #fff;
+		}
+	}
 	.icon-close {
 		left: inherit;
+		display: none;
 		right: 0;
 		top: 0;
 		color: #ebd3bd;
 		font-size: 75%;
 		z-index: 100;
-		display: block;
+		// display: block;
 		overflow: hidden;
 		width: 3em;
 		height: 3em;
 		text-align: center;
 		line-height: 3;
 		cursor: pointer;
-		border: 0;	
+		border: 0;
 		&:before {
 			content: "\e601";
 		}
 	}
-	.no-touch & {
-		.icon-close:hover {
-			color: $color-red2;
-		}
-		a:hover {
-			color: $color-grey-dark2;
-		}
-	}
+	// .no-touch & {
+	// 	.icon-close:hover {
+	// 		color: $color-red2;
+	// 	}
+	// 	a:hover {
+	// 		color: $color-grey-dark2;
+	// 	}
+	// }
 }
 
 /* Style for overlay */
 .content-style-overlay {
-    background: $background-content-style-overlay;
-    margin: 0 auto;
-    text-align: center;
-    width: 80%;
+	border: 1px solid #000;
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+	max-width: 736px;
+	background: $background-content-style-overlay;
+	margin: 0 auto;
+	text-align: center;
+	width: 80%;
 	padding: 100px 20px;
-	@media (max-width: $breakpoint-desktop) { 
+	@media (max-width: $breakpoint-desktop) {
 		width: 95%;
-        padding: 100px 20px;
+		padding: 100px 20px;
 	}
 	&:after {
 		content: "";
@@ -148,7 +183,7 @@
 		border: 2px solid $border-color-icon-close;
 		border-radius: 50%;
 		line-height: 2.8;
-	}	
+	}
 }
 .no-touch .content-style-overlay .icon-close:hover {
 	border-color: $border-color-icon-close-hover;
@@ -157,9 +192,9 @@
 /* Style for form modal */
 
 .content-style-form {
-    position: relative;
-    text-align: left;
-    background: $background-content-style-form;
+	position: relative;
+	text-align: left;
+	background: $background-content-style-form;
 	h2 {
 		margin: 0;
 		padding: 20px 0 30px;
@@ -213,31 +248,31 @@
 }
 
 @media all and (max-width: $tablet-size) {
-    .content-style-overlay {
-        font-size: 75%;
-    }
-    .content-style-overlay .icon-close {
-        top: 5px;
-        right: 5px;
-    }
+	.content-style-overlay {
+		font-size: 75%;
+	}
+	.content-style-overlay .icon-close {
+		top: 5px;
+		right: 5px;
+	}
 }
 
 .active-morph-button {
-    .morph-button-modal-2.open .morph-content {
-        top: 0;
-        margin-top: 0;
-    }
-    .morph-button-overlay.open .morph-content {
-        height: auto;
-        padding-bottom: 60px;
-    }
+	.morph-button-modal-2.open .morph-content {
+		top: 0;
+		margin-top: 0;
+	}
+	.morph-button-overlay.open .morph-content {
+		height: auto;
+		padding-bottom: 60px;
+	}
 }
 .morph-button.morph-button-modal-2 {
-    margin: 10px 0;
-    min-width: 50px;
-    width: auto;
+	margin: 10px 0;
+	min-width: 50px;
+	width: auto;
 	@media (max-width: $breakpoint-desktop) {
 		position: inherit;
-        margin: 0;
+		margin: 0;
 	}
 }

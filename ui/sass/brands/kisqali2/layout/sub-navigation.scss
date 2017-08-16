@@ -17,7 +17,7 @@
 		height: 44px;
 		top: 0;
 		left: 0;
-		background-image: url(../../img/logo/kisqali-logo@2x.png);
+		background-image: url(./../img/kisqali_side_logo.png);
 		background-repeat: no-repeat;
 		background-size: contain;
 	}
@@ -43,7 +43,7 @@
 				// text-transform: uppercase;
 				a {
 					border: 0;
-					padding: 1rem 0.51428rem;
+					padding: 0.4rem 0.51428rem;
 					line-height: 1.6;
 					border-radius: 0;
 				}
@@ -94,7 +94,7 @@
 		ul {
 			padding: 0;
 			li {
-				padding-left: 20px;
+				// padding-left: 20px;
 			}
 		}
 	}

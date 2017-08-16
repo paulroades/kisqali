@@ -18,9 +18,9 @@ $k-orange: #ed6b20;
 }
 .spotblock {
 	position: relative;
-	p {
-		color: #7a858b;
-	}
+	// p {
+	// 	color: #7a858b;
+	// }
 	.no-touch & {
 		.breadcrumbs a {
 			transition: all .3s ease;
@@ -177,9 +177,9 @@ $k-orange: #ed6b20;
 	}
 	a {
 		color: $color-a-spotblock;
-		font-size: 1rem;
+		// font-size: 1rem;
 		text-decoration: none;
-		font-family: $spot-base-font-family;
+		// font-family: $spot-base-font-family;
 		&.doc-item {
 			text-align: left;
 			transition: all .3s ease-in-out;
@@ -540,6 +540,11 @@ $k-orange: #ed6b20;
 .spotLayout-background.backgroundColor-color12 .content {
 	border: none;
 }
+
+.backgroundColor-color12.textColor-color12 {
+	color: #616b6f;
+}
+
 .spotLayout-background.backgroundColor-transparent .background {
 	background-color: transparent;
 }
@@ -822,5 +827,25 @@ $k-orange: #ed6b20;
 		width: 107px;
 		height: auto;
 		margin: 5px auto $spot-default-padding;
+	}
+}
+
+// super specific hardcoded for kisqali
+
+.backgroundColor-color12.textColor-color12 {
+	color: #616b6f;
+}
+
+.textColor-color12.linkColor-color1.backgroundColor-color11,
+.headingColor-color8.backgroundColor-color12.textColor-color12 {
+	background: #fff;
+	text-align: center;
+	color: #616b6f;
+	h2 {
+		color: $k-orange;
+		font-weight: 300;
+	}
+	h2,p {
+		text-align: center;
 	}
 }

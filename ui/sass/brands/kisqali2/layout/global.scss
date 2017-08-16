@@ -45,9 +45,11 @@ p {
 	margin: 14px 0;
 	line-height: 1.6;
 	font-size: $layout-font-size-small;
+	font-weight: 300;
 }
 a {
 	color: $layout-color-accent;
+	font-weight: inherit;
 }
 button {
 	font-family: $layout-font-family-default;

@@ -48,6 +48,7 @@ p {
 }
 a {
 	color: $layout-color-accent;
+	font-weight: inherit;
 }
 button {
 	font-family: $layout-font-family-default;
@@ -225,7 +226,9 @@ main {
 		@for $i from 1 through length($main-text-elements) {
 			#{nth($main-text-elements, $i)}:first-of-type {
 				margin-top: -#{nth($main-text-elements-margin-for-alignment, $i)}rem;
-			    text-transform: uppercase;
+					margin-top: -2.501rem;
+					margin-bottom: -0.501rem;
+					text-transform: uppercase;
 				color: #006781
 			}
 		}
