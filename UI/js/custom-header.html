@@ -2,23 +2,39 @@
 <script>
 $( document ).ready(function() {
 	var subnav = $('.sub-navigation-items');
-	var subnavCurrent = $('.sub-navigation-items > li > a');
+	var subnavCurrent = $('.sub-navigation-items .active').parent('ul').prev('a').parent('li');
+	var subnavCurrentText = $('.sub-navigation-items .active').parent('ul').prev('a').find('span').text();
 	var mega = $('.nav-mega-label.active + div > .nav-mega-sub +.nav-mega-sub ');
 	var megaEach = $('.nav-mega-label.active + div > .nav-mega-sub +.nav-mega-sub a');
+	var currentIndex = 1000;
 
-	console.log(subnavCurrent.text())
-	console.log(mega.length)
+	// create missing nav items
+	if ($('.sub-navigation-items > li > a > span:contains(Home)').length === 0) {
+		console.log('go nav go');
+		megaEach.each(function( index ) {
+			// console.log( index + ": " + $( this ).text() );
 
-	megaEach.each(function( index ) {
-		console.log( index + ": " + $( this ).text() );
-		if ($( this ).text() == subnavCurrent) {
-			console.log('true');
-		}
+			if ($( this ).text() == subnavCurrentText) {
+				// console.log('currentIndex: '+ currentIndex);
+				currentIndex = index;
+			}
 
-		if (index > 4) {
-			$(this).clone().prependTo(subnav).wrap('<li></li>')
-		}
-	});
+			// if index is bigger than current - go under
+			if (index > currentIndex) {
+				$(this).clone().appendTo(subnav).wrap('<li></li>')
+			}
+			// go above current
+			if (index < currentIndex) {
+				$(this).clone().insertBefore(subnavCurrent).wrap('<li></li>')
+			}
+		});
+		//  css styles
+		$('.sub-navigation-items .active').parent('ul').css('padding-left', '20px');
+		$('.sub-navigation-items .active').parent('ul').prev('a').css('color', '#ed6b20');
+		$('.sub-navigation-items .active a').css({color: '#7a868c', textDecoration: 'underline'});
+	}
+	// make a clickable logo
+	$('.sub-navigation').prepend('<a href="/products/kisqali/" style="width: 100%; height: 55px; position: absolute; top: 0;"></a>');
 
 });
 </script>
