@@ -333,12 +333,14 @@ main {
 
 .kisqali--large--blue{
 	@extend .kisqali--bold--blue;
-	font-size:2rem !important;
+	font-size:1.5rem !important;
+	line-height:1.2;
 	font-weight:normal !important;
 }
 
 .kisqali--large--orange{
 	@extend .kisqali--bold--orange;
-	font-size:2rem !important;
+	font-size:1.5rem !important;
+	line-height:1.2;
 	font-weight:normal !important;
 }
