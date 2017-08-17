@@ -1,0 +1,24 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+	var subnav = $('.sub-navigation-items');
+	var subnavCurrent = $('.sub-navigation-items > li > a');
+	var mega = $('.nav-mega-label.active + div > .nav-mega-sub +.nav-mega-sub ');
+	var megaEach = $('.nav-mega-label.active + div > .nav-mega-sub +.nav-mega-sub a');
+
+	console.log(subnavCurrent.text())
+	console.log(mega.length)
+
+	megaEach.each(function( index ) {
+		console.log( index + ": " + $( this ).text() );
+		if ($( this ).text() == subnavCurrent) {
+			console.log('true');
+		}
+
+		if (index > 4) {
+			$(this).clone().prependTo(subnav).wrap('<li></li>')
+		}
+	});
+
+});
+</script>
