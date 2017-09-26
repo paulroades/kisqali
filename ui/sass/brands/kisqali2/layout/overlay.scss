@@ -68,12 +68,12 @@
 				text-align: center;
 				.btn {
 					font-size: 14px;
-					width: 100%;
+					width: auto;
+					text-transform: none;
 				}
 				li {
 					display: inline-block;
-					min-width: 35%;
-					margin: 0 2%;
+					min-width: 50%;
 				}
 			}
 
