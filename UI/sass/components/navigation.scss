@@ -41,6 +41,9 @@ $color-service-menu-bg: #fff;
 	padding: .8rem 1.3rem;
 	border-bottom: 1px solid $color-mega-menu-mobile-border;
 	text-align: left;
+	font-size: 1.1rem;
+    font-weight: 300;
+	text-transform: uppercase;
 }
 
 .nav {
@@ -50,7 +53,7 @@ $color-service-menu-bg: #fff;
 			@include no-select;
 			@extend %mega-label;
 			@extend %accordion;
-			cursor: pointer;
+			cursor: pointer;			
 			.state:checked + & + .nav-mega-panel {
 				display: block;
 				width: 100%;
@@ -155,8 +158,9 @@ $color-service-menu-bg: #fff;
 			&-label {
 				@include hover { border-bottom-color: $color-mega-menu-label-hover; }
 				position: relative;
-				display: inline-block;
+				display: inline-block;				
 				border-bottom: .2rem solid transparent;
+				text-transform: uppercase;
 				padding: 1.55rem 1rem;
 				&::after { content: ""; }
 				
@@ -368,6 +372,7 @@ $color-service-menu-bg: #fff;
 }
 a.nav-mega-link {
     @extend .nav-mega-label;
+	text-transform: uppercase;
 	text-decoration: none;
 	color: inherit;
 }
