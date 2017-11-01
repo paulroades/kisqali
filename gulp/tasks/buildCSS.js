@@ -69,6 +69,7 @@ gulp.task('build:css', function () {
     //     .pipe(autoprefixer(autoprefixerOptions))
     //     .pipe(gulp.dest(pathTo.distributive + 'zykadia/'));
 
+	
     // Build CSS file for kisqali branded version
     gulp.src(pathTo.sourceDir + 'sass/brands/kisqali/master.scss')
         .pipe(sourcemaps.init())
@@ -88,8 +89,8 @@ gulp.task('build:css', function () {
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest(pathTo.distributive + 'kisqali/'));
 
-     // Build CSS file for kisqali2 branded version
-    gulp.src(pathTo.sourceDir + 'sass/brands/kisqali2/master.scss')
+     // Build CSS file for portal branded version
+    gulp.src(pathTo.sourceDir + 'sass/brands/portal/master.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             indentedSyntax: false,
@@ -97,15 +98,15 @@ gulp.task('build:css', function () {
         }))
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(pathTo.distributive + 'kisqali2/'));
+        .pipe(gulp.dest(pathTo.distributive + 'portal/'));
     // Build shared CSS files for EpiServer
-    gulp.src(pathTo.sourceDir + 'sass/brands/kisqali2/shared/' + '*.scss')
+    gulp.src(pathTo.sourceDir + 'sass/brands/portal/shared/' + '*.scss')
         .pipe(sass({
             indentedSyntax: false,
             outputStyle: 'compressed'
         }))
         .pipe(autoprefixer(autoprefixerOptions))
-        .pipe(gulp.dest(pathTo.distributive + 'kisqali2/'));
+        .pipe(gulp.dest(pathTo.distributive + 'portal/'));
 
     // Build shared CSS files for EpiServer
     gulp.src(pathTo.sharedSources + '*.scss')

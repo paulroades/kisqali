@@ -29,7 +29,7 @@
 		@include flexbox();
 		@include flex-flow(row wrap);
 	}
-	padding: 0 0 $gutter $gutter;
+	padding: 0 $gutter $gutter $gutter;
 
 	&-1-2, &-2-4 { @include desktop { width: 50%; } }
 	&-1-3 {
