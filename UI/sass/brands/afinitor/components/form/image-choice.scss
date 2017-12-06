@@ -1,0 +1,31 @@
+body,
+form.EPiServerForms {
+	.Form__Element.FormChoice--Image {
+		padding: 20px 0;
+		.Form__Element__Caption {
+			display: block;
+			font-size: 1.1428rem;
+			padding-bottom: 1.1428rem;
+		}
+	}
+	.FormChoice--Image__Item {
+		vertical-align: top;			
+		&__Caption {
+			display: block;
+			padding-bottom: 1.1428rem;
+			transition: all 0.5s ease;
+		}	
+		.FormChoice__Input ~ img {
+			border: solid 1px $color-white;
+			transition: all 0.5s ease;
+		}
+		.FormChoice__Input:checked{
+			&~ img {
+				border: solid 1px $color-accent;
+			}	
+			&~ .FormChoice--Image__Item__Caption {
+				color: $color-accent;
+			}
+		}
+	}
+}

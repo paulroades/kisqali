@@ -1,0 +1,414 @@
+/*
+- Document  : navigation.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-02-18
+*/
+
+/* Mega-Menu Consts */
+$color-mega-menu: #023761;
+$color-mega-menu-bg: #023761;
+$color-mega-menu-bg-mobile: #fff;
+$color-mega-menu-bg-snap: #fff;
+$color-mega-menu-label: #fff;
+$color-mega-menu-label-hover: $color-accent;
+$color-mega-menu-label-shadow: #bbb;
+$color-mega-menu-mobile-border: #eee;
+$color-mega-menu-panel-bg: #fff;
+$color-mega-menu-panel-divider: #ccc;
+$mega-menu-height: 4.5rem;
+$mega-menu-zindex: 3000;
+
+/* Service Menu Consts */
+$service-menu-height: 6.8571rem;
+$service-menu-height-mobile: 4rem;
+$color-service-menu-label: #929292;
+$color-service-menu-label-checked: #023761;
+$color-service-menu-label-icon: $color-accent;
+$color-service-menu-bg: #fff;
+
+.icon, .nav-mega-sub a::before {
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	fill: #fff;
+	margin-right: .5em;
+	vertical-align: middle;
+}
+
+%mega-label {
+	display: block;
+	padding: .8rem 1.3rem;
+	border-bottom: 1px solid $color-mega-menu-mobile-border;
+	text-align: left;
+}
+
+.nav {
+	&-mega {
+		color: $color-mega-menu;
+		@include desktop{
+			color:#fff;
+		}
+		@include tablet{
+			color:#fff;
+		}
+
+		&-label {
+			@include no-select;
+			@extend %mega-label;
+			@extend %accordion;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-size: 1.1rem;
+			.state:checked + & + .nav-mega-panel {
+				display: block;
+				width: 100%;
+				font-size: .875rem;
+			}
+			.state:checked + & {
+				@include desktop{
+					background-color: rgba(0,97,171, .9);
+					color: #fff;
+				}
+				@include tablet{
+					background-color: rgba(0,97,171, .9);
+					color: #fff;
+				}
+				background-color: $color-service-menu-label-icon;
+				color: #fff;
+			}
+		}
+		&-panel {
+			display: none;
+			text-align: left;
+		}
+		&-sub {
+			font-size: 1rem;
+			a, strong {
+				@extend %mega-label;
+				padding-right: 0.5rem;
+			}
+			strong {
+				background-color: #eee;
+				a {
+					padding: 0 0.5rem 0 0;
+					&.active {
+						color: #fff;
+					}
+				}
+
+				@include before-desktop {
+					border-bottom: solid 1px $color-mega-menu-panel-divider;
+				}
+				svg {
+					float: left;
+					margin-top: 0.3rem;
+					margin-left: 0.3rem;
+				}
+			}
+			svg {
+				display: none;
+			}
+		}
+		&-toggle {
+			display: none;
+			&:checked {
+				& ~ .nav-mega-wrapper {
+					right: 0;
+				}
+				& ~ .nav-overlay {
+					display: block;
+					@include tablet { display: none; }
+				}
+			}
+			&-icon {
+				position: absolute;
+				right: 1rem;
+				top: 1.2rem;
+				width: 2rem;
+				height: 2rem;
+				fill: $color-mega-menu-label-hover;
+				margin-left: .5rem;
+				svg {
+					width: 2rem;
+					height: 2rem;
+				}
+				@include tablet { display: none; }
+			}
+			&-desktop {
+				&:checked,
+				&:not(:checked) {
+					& + .nav-overlay-desktop { display: none; }
+				}
+			}
+		}
+		&-wrapper {
+			@include fixed(top $service-menu-height-mobile right -75% bottom 0);
+			transition: opacity 0.3s ease;
+			overflow-y: scroll;
+			width: 75%;
+			z-index: $mega-menu-zindex;
+			background-color: $color-mega-menu-bg-mobile;
+			.menu-is-ready & {
+				background: #fff;
+				z-index: 5005;
+				position: fixed;
+				box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .15);
+				@include tablet {
+					background: $color-mega-menu;
+					top: 0px;
+				}
+				@include desktop {
+					background: $color-mega-menu;
+					top: 0px;
+				}
+			}
+		}
+
+		@include tablet {
+			@extend %inner-width;
+			position: relative;
+			font-size: 1.1rem;
+			text-align: right;
+			min-height: $mega-menu-height;
+
+			&-label {
+				@include hover { border-bottom-color: $color-mega-menu-label-hover; }
+				position: relative;
+				display: inline-block;
+				border-bottom: .2rem solid transparent;
+				padding: 2rem 1rem 0.5rem 1rem;
+				margin:0 1rem;
+				&::after { content: ""; }
+
+				.state:checked + & {
+					@include hover { border-bottom-color: transparent; }
+					background-color: rgba(0,97,171, .9);
+					color: #fff;
+					box-shadow: .25rem 0 1rem -.25rem $color-mega-menu-label-shadow, -.25rem 0 1rem -.25rem $color-mega-menu-label-shadow;
+					&::after {
+						@include absolute(left 0 bottom -.5rem);
+						z-index: ($mega-menu-zindex + 2);
+						width: 100%;
+						height: .5rem;
+						content: "";
+						background-color: inherit;
+					}
+					+ .nav-mega-panel {
+						@include absolute(top $mega-menu-height);
+						font-size: 0;
+						z-index: ($mega-menu-zindex + 1);
+						min-height: 10rem;
+						padding: 1rem $grid-gutter;
+						padding-left: 25%;
+						background-color: rgba(0,97,171, .9);
+						box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, .35);
+						color: #fff;
+					}
+				}
+			}
+			&-sub {
+				&:first-child {
+					border-left: 0;
+				}
+				display: inline-block;
+				vertical-align: top;
+				width: 32%;
+				min-height: 2rem;
+				line-height: 200%;
+				border-left: 1px dotted $color-mega-menu-panel-divider;
+				padding-left: 1.5%;
+
+
+				&:nth-last-child(2):first-child,
+				&:nth-last-child(2):first-child ~ .nav-mega-sub {
+					width: 66%;
+				}
+
+				&:nth-last-child(3):first-child,
+				&:nth-last-child(3):first-child ~ .nav-mega-sub {
+					width: 44%;
+				}
+				> a {
+					margin-left: 1.1rem;
+				}
+				a {
+					color: inherit;
+					text-decoration: none;
+					padding-right: 0.5rem;
+					@include hover {
+						text-decoration: underline;
+						text-decoration-color: $color-mega-menu-label-hover;
+						background: $color-accent;
+					}
+					&::before {
+						@extend .icon;
+						width: .5em;
+						height: .5em;
+						content: "";
+						background: url("../images/arrow-right.svg") no-repeat;
+					}
+				}
+				strong {
+					display: block;
+					font-size: 1rem;
+					margin: 0 0 .5rem 0;
+					background: none;
+					font-weight: 300;
+					text-transform: uppercase;
+				}
+				a, strong { border-bottom: 0; padding: 0; }
+				svg {
+					display: inline-block;
+				}
+				&:first-of-type {
+					width: 33%;
+					float: left;
+					margin-left: -33%;
+					border-color: $color-white;
+					strong {
+						display: inline-block;
+						// padding: .75rem 1rem;
+						// margin: 0 0 1rem -1rem;
+						width: calc(100% - 1.5rem);
+						// background: $color-mega-menu-label-hover;
+						color: $color-mega-menu-label;
+						font-weight: 300;
+						text-transform: uppercase;
+						a {
+							color: $color-mega-menu-label;
+							text-decoration: none;
+							&:before {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			&-toggle-desktop {
+				&:not(:checked) {
+					& + .nav-overlay-desktop { display: block; }
+				}
+			}
+			&-wrapper {
+				@include absolute(top 0rem left 0); bottom: auto;
+				display: block; overflow-y: visible;
+				width: 100%;
+				background-color: $color-mega-menu-bg;
+				&.scroll {
+					@extend %transall;
+					@include fixed(top 3.875rem left 0);
+					background-color: $color-mega-menu-bg-snap;
+					box-shadow: 0 .25rem .25rem rgba(0, 0, 0, .35);
+				}
+			}
+		}
+		@include desktop {
+			&-label {
+				font-size: 1.1rem;
+				text-transform: uppercase;
+				&:hover, &.active {
+				  color: #fff;
+				}
+			}
+			&-sub {
+				strong {
+					font-size: 1.3rem;
+				}
+			}
+			&-wrapper {
+				@include fixed(top 0rem left 0); bottom: auto;
+				&.scroll {
+					@include fixed(top $service-menu-height left 0);
+				}
+			}
+		}
+	}
+	&-overlay {
+		@include fixed(top $service-menu-height-mobile left 0);
+		display: none;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, .75);
+		z-index: ($mega-menu-zindex - 1);
+		&-desktop {
+
+			@include tablet {
+				@extend .nav-overlay;
+				background-color: rgba(0, 0, 0, .25);
+			}
+		}
+	}
+	&-service {
+		@include fixed(top 0 left 0);
+		width: 100%;
+		height: $service-menu-height-mobile;
+		z-index: $mega-menu-zindex;
+		background-color: $color-service-menu-bg;
+
+		&-icons {
+			float: right;
+			padding: 1rem;
+			a {
+				color: $color-service-menu-label;
+				font-size: 1.15rem;
+			}
+			span {
+				display: none;
+			}
+			svg {
+				@include square(2rem);
+				fill: $color-service-menu-label-icon;
+				margin-left: .5rem;
+			}
+		}
+		&-inner {
+			@extend %inner-width;
+		}
+		&-logo img {
+			@include tablet { max-width: 8rem; margin: 0 0 0 3rem; }
+			max-width: 5rem;
+		}
+		@include tablet {
+			height: $service-menu-height;
+			&-icons {
+				padding: 2rem;
+				margin-right: 2rem;
+				a {
+					margin-left: 1rem;
+					&::after {
+						content : "|";
+						margin-left: 1rem;
+						vertical-align: middle;
+					}
+					&:last-of-type::after {
+						display: none;
+					}
+				}
+				span {
+					display: inline-block;
+					vertical-align: middle;
+				}
+				svg {
+					@include square(1.15rem);
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+a.nav-mega-link {
+	@extend .nav-mega-label;
+	text-decoration: none;
+	font-size: 1.1rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: inherit;
+}
+
+@media only screen and (max-device-width: $breakpoint-phablet)
+{
+	#container {
+		margin: 0 0 0 -1.875rem;
+	}
+}	

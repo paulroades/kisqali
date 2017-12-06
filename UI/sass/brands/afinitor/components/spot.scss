@@ -541,10 +541,6 @@ $k-orange: #ed6b20;
 	border: none;
 }
 
-.backgroundColor-color12.textColor-color12 {
-	color: #616b6f;
-}
-
 .spotLayout-background.backgroundColor-transparent .background {
 	background-color: transparent;
 }
@@ -836,6 +832,22 @@ $k-orange: #ed6b20;
 	color: #616b6f;
 }
 
+.spot .backgroundColor-color7{
+	background:$color-grey-light2 !important;
+}
+
+.spot .content h2{
+	color:$color-brown1;
+}
+
+.spot .content p{
+	color:$color-grey-dark4;
+}
+
+.spot .content a.link{
+	color:$color-brown1;
+}
+
 .textColor-color12.linkColor-color1.backgroundColor-color11,
 .headingColor-color8.backgroundColor-color12.textColor-color12 {
 	background: #fff;
@@ -844,6 +856,7 @@ $k-orange: #ed6b20;
 	h2 {
 		color: $k-orange;
 		font-weight: 300;
+		font-size:1.5rem;
 	}
 	h2,p {
 		text-align: center;

@@ -1,0 +1,56 @@
+﻿.cookies-prompt {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    color: $color-white;
+    background: transparentize($color-accent, .2);
+	font-size: 0.8571rem;
+	line-height: 1.14rem;
+	font-family: $font-family-base;
+	.no-touch & {
+		a:hover {
+			text-decoration: none;
+		}
+		a.accept:hover {
+			border-color: $color-white;
+			background: $color-accent;
+			color: $color-white;
+		}
+	}
+	p {
+		margin: 0;
+		font-size: 0.8571rem;
+		line-height: 1.14rem;
+	}
+	a {
+		color: $color-white;
+	}
+	&-inner {
+	    margin: 0 auto;
+		max-width: 1240px;
+		padding: 1.14rem 1rem 1.828rem;
+	}
+	&-control {
+		@include before-tablet {
+			min-width: 40%;
+		}
+		width: 15%;
+		float: right;
+		padding: 0 1rem;
+		text-align: center;
+	}
+    a.accept  {
+		display: inline-block;
+		margin: 0.3428rem 0;
+		padding: 0.5714rem 1.4857rem;
+		border: solid 1px $color-accent;
+        cursor: pointer;
+		font-family: $font-family-default;
+		font-size: 1.14rem;
+		line-height: 0.9;
+		color: $color-accent;
+		background: $color-white; 
+    }
+}

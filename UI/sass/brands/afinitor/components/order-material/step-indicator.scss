@@ -1,0 +1,74 @@
+﻿.ordermaterialstepblock {
+	font-size: 1rem;
+	@media all and (min-width: $tablet-size) {
+		display: inline-block;
+	}
+}
+
+.no-touch .order-materials-step-indicator-item {
+	.order-materials-step-indicator-number,
+	&:before,
+	.order-materials-step-indicator-label {
+		transition: all 0.3s ease;
+	}
+}
+.order-materials-step-indicator {
+	font-family: $font-family-base;
+	padding: 0 15px 25px;
+	&-list {
+		font-size: 0;
+		padding-top: 15px;
+	}
+	a {
+		text-decoration: none;		
+	}
+	&-total {
+		clear: both;
+	}
+	&-item {		
+		padding-right: 3.5rem;		
+		padding-bottom: 10px;
+		position: relative;
+		&.active:before {
+			color: $color-accent;
+		}
+		&:before {
+			content: '➝';
+			color: $color-grey-light2;
+			font-family: $font-family-base;
+			font-size: 2rem;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top: -1.9rem;
+			margin-left: 14%;
+			.ordermaterialstepblock:last-child & {
+				display: none;
+			}			
+		}
+	}
+	&-number {
+		background: $color-grey-light2;
+		border-radius: 1.9285rem;		
+		color: $color-white;
+		font-size: 1.9285rem;
+		line-height: 1;
+		text-align: center;
+		width: 3.857rem;
+		height: 3.857rem;
+		margin: 0 auto;
+		line-height: 3.857rem;				
+		.active & {
+			background: $color-accent;
+		}
+	}
+	&-label {
+		color: $color-grey-light2;
+		font-size: 0.857rem;	
+		padding-top: 0.4375rem;
+		text-align: center;
+		.active & {
+			color: $color-accent;
+		}
+	}
+}

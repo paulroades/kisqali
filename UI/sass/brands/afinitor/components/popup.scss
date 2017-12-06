@@ -1,0 +1,43 @@
+/*
+- Document  : popup.scss
+- Version   : 1.0.0
+- Client    : Novartis ServiceSphere
+- Date edit : 2016-01-28
+*/
+
+.hide { display: none; }
+
+.popup {
+    &-close {
+        line-height: 2.8;
+        position: relative;
+        float: right;
+        border: 2px solid #f9e1c9;
+        border-radius: 50%;
+        &:hover { border-color: #a50a05; }
+    }
+    &-content {
+        padding: 1% 5%;
+    }
+    &-nav {
+        @extend %clearfix;
+        display: block;
+    }
+    &-overlay {
+        position: fixed;
+        z-index: 10000;
+        width: 100%;
+        height:100%;
+        text-align: center;
+        background: rgba(167, 167, 167, 0.9);
+    }
+    &-wrapper {
+        @extend %clearfix;
+        display: inline-block;
+        min-width: 10%;
+        max-width: 80%;
+        min-height: 50%;
+        margin: 10% auto;
+        background-color: #fff;
+    }
+}

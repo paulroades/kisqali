@@ -89,6 +89,26 @@ gulp.task('build:css', function () {
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest(pathTo.distributive + 'kisqali/'));
 
+		 // Build CSS file for afinitor branded version
+    gulp.src(pathTo.sourceDir + 'sass/brands/afinitor/master.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            indentedSyntax: false,
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(pathTo.distributive + 'afinitor/'));
+    // Build shared CSS files for EpiServer
+    gulp.src(pathTo.sourceDir + 'sass/brands/afinitor/shared/' + '*.scss')
+        .pipe(sass({
+            indentedSyntax: false,
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(gulp.dest(pathTo.distributive + 'afinitor/'));
+	
+		
      // Build CSS file for portal branded version
     gulp.src(pathTo.sourceDir + 'sass/brands/portal/master.scss')
         .pipe(sourcemaps.init())
