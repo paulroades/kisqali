@@ -140,6 +140,10 @@ var evohome = (function() {
 		
 	}
 
+    function wrapDivs() {
+        $('.grid-1-2').wrapAll("<div class='bgImage'></div>");
+        $('.bgImage').append("<div style='clear: both'></div>");
+    }
 
 
 
@@ -163,6 +167,7 @@ var evohome = (function() {
 		siteLogo() 
 
 		disclaimerLink()
+        wrapDivs()
 		/*
 		sectionSpotBlock() 
 		tealBlueBlock() 

@@ -1,0 +1,49 @@
+main{    margin-top: 10.5rem;}
+.sectionpage {
+    background: rgba(224,0,91,0.15);
+}
+
+.padding {
+    padding: 40px!important;
+}
+
+/********************/
+/** Header Styling **/
+/********************/
+
+.nav-mega-wrapper .nav-mega .logo-holder {
+    height: auto;
+}
+.nav-mega-wrapper .nav-mega #logo .logo-wrapper img {
+    height: auto;
+}
+#secondary-menu {
+    height: auto;
+}
+#secondary-menu .nav-mega {
+    padding: 40px 0;
+}
+#secondary-menu .nav-mega #cosentyx-logo {
+    display: inline-block;
+    width: 13%;
+    max-width: 200px;
+}
+#secondary-menu .nav-mega .nav-mega-link {
+    padding: 0 1.5rem 0 1.5rem;
+}
+#secondary-menu .nav-mega #cosentyx-logo img {
+    width: 100%;
+    height: auto;
+}
+
+/**************************/
+/** main content Styling **/
+/**************************/
+
+.spotLayout-topimage .content {
+    padding: 0;
+}
+
+#content {
+    background: none;
+}

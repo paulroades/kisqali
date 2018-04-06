@@ -5,6 +5,7 @@ main{    margin-top: 10.5rem;}
 background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bg.png);
 height:310px;
 max-height:310px;
+    background-size: cover;
 }
 
 .haem_past_background{
@@ -39,13 +40,27 @@ background-position: center center;
 background-color: #f6f7f7;
 }
 
+.grid .bgImage {
+    background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bg_Alt.png);
+    background-size: cover;
+    background-position: center center;
+}
+.grid .bgImage .backgroundColor-color7 {
+    background: none;
+}
 .event_background_left{
-	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/events/img/eventbackground_left.jpg);
+/*	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/events/img/eventbackground_left.jpg);*/
 }
 
 .event_background_right{
-	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/events/img/eventbackground_right.jpg);
+/*	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/events/img/eventbackground_right.jpg);*/
 }
+/*
+#content_97426 {
+    background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bg_Alt.png);
+    
+}
+*/
 
 .filter--block{
 	padding:10px;
@@ -148,14 +163,28 @@ background-color: #f6f7f7;
     margin: -10px 15px 0 0;
 }
 
+.filter--key p {
+    position: relative;
+    padding-left: 45px;
+}
+
 .filter--key p:before{
 	content: "";
     display: block;
-    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/nvs_icon.png") no-repeat;
-    width: 36px;
-    height: 36px;
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/nvs_icon_Color.png") no-repeat;
+    width: 25px;
+    height: 28px;
     float: left;
-    margin: 10px 6px 0 0;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+.filter--key p.sponsoredBY:before{
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/sponsoredByImage.png") no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
 }
 
 .select {
@@ -272,3 +301,13 @@ background-color: #f6f7f7;
 }
 
 .accordian--video .oo-control-bar{background: #0762AB;}
+.styledList {
+    padding: 0px;
+    margin: 0 0 10px 20px;
+}
+.styledList li {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
