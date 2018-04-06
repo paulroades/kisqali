@@ -137,4 +137,70 @@ gulp.task('build:css', function () {
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(pathTo.distributive));
+		
+	// Build CSS file for event branded version
+    gulp.src(pathTo.sourceDir + 'sass/brands/event/master.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            indentedSyntax: false,
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(pathTo.distributive + 'event/'));
+		
+		
+    // Build shared CSS files for EpiServer
+    gulp.src(pathTo.sourceDir + 'sass/brands/event/shared/' + '*.scss')
+        .pipe(sass({
+            indentedSyntax: false,
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(gulp.dest(pathTo.distributive + 'event/'));
+
+    // Build shared CSS files for EpiServer
+    gulp.src(pathTo.sharedSources + '*.scss')
+        .pipe(sass({
+            indentedSyntax: false,
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(pathTo.distributive));	
+		
+		///NEW POERTAL CSS
+			// Build CSS file for new_portal branded version
+    gulp.src(pathTo.sourceDir + 'sass/brands/new_portal/master.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            indentedSyntax: false,
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(pathTo.distributive + 'new_portal/'));
+		
+		
+    // Build shared CSS files for EpiServer
+    gulp.src(pathTo.sourceDir + 'sass/brands/new_portal/shared/' + '*.scss')
+        .pipe(sass({
+            indentedSyntax: false,
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(gulp.dest(pathTo.distributive + 'new_portal/'));
+
+    // Build shared CSS files for EpiServer
+    gulp.src(pathTo.sharedSources + '*.scss')
+        .pipe(sass({
+            indentedSyntax: false,
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(pathTo.distributive));	
+		
+		
+		
 });

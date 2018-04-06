@@ -1,0 +1,11 @@
+.order-material-group {
+	margin: 0;
+	font-size: 1.875rem;
+	padding: 1.5rem 0;
+	border-top: solid 1px $color-grey-light2;
+	clear: both;
+	&:first-of-type {
+		padding-top: 0.625rem;
+		border: 0;
+	}
+}

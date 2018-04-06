@@ -1,0 +1,19 @@
+﻿/*
+- Document  : row-separator.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-02-24
+*/
+
+/* Component Consts */
+$row-separator-border-color: $color-grey-light6;
+$row-separator-color: inherit;
+
+.row-separator {
+    margin: 0;
+    padding: $grid-gutter 0 0;
+    font-size: 1.857rem;
+    border-top: solid 3px $row-separator-border-color;
+	color: $row-separator-color;
+    text-transform: uppercase;
+}

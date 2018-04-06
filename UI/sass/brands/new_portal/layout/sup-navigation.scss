@@ -1,0 +1,252 @@
+/*
+- Document  : main-navigation.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-02-24
+*/
+
+.navigation-service {
+	transition: all .3s ease 0s;
+    display: block;
+	background: $color-white;
+    font-family: $font-family-default;
+    padding-right: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1006;
+    text-align: right;
+	width: 100%;
+    max-width: 1240px;
+	padding-top: 0;
+    height: auto;
+	min-height: 58px;
+	@media all and (min-width: 900px) and (max-width: 1024px) {
+        margin-right: 58px;
+	}
+	@include before-desktop {
+		margin-left: auto;
+        max-width: 40%;
+        position: relative;
+        z-index: 5002;
+        padding: 0 10px 0 0;
+        background: transparent;
+        @include tablet { max-width: none; }
+		li {
+			margin: 0 0 5px 1px;
+		}
+	}
+	@include tablet {
+		padding-right: $grid-gutter;
+	}
+	@include desktop {
+		margin-right: 0;
+		padding-top: 15px;
+		height: 97px;
+
+		.help {
+			display: inline-block;
+		}
+        .sign {
+            display: none;
+        }
+        .label {
+            display: inline;
+        }
+        li {
+            &:before {
+                content: '';
+                position: absolute;
+                margin: 5px 0 0 -5px;
+                border-left: solid 1px $color-accent;
+                width: 0;
+                height: 16px;
+                z-index: 1;
+            }
+            &:first-child {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+	}
+
+    .block.popuplinkblock .label,
+    .block.sectionpage {
+        display: none;
+        @include tablet { display: inline-block; }
+    }
+
+
+	.morph-button > button {
+		font-family: $font-family-default;
+		text-transform: none;
+        text-decoration: none;
+	}
+	li {
+		text-align: left;
+		display: inline-block;
+		text-transform: uppercase;
+		margin-left: 25px;
+		margin: 0 0 0 5px;
+		vertical-align: top;
+		a {
+			padding: 0 10px;
+			text-transform: none;
+			color: #fff;
+			svg {
+				path {
+					fill: $color-grey-light5 !important;
+				}
+			}
+			@include hover {
+				text-decoration: none;
+				svg {
+					path {
+						fill: $color-black !important;
+					}
+				}
+			}
+		}
+		&.mdl-menu__item {
+			display: block;
+			text-transform: none;
+			font-size: 1rem;
+			margin: 0;
+			a {
+				color: $color-accent;
+				text-decoration: underline;
+			}
+		}
+		&.welcome img, &.welcome svg {
+			height: auto;
+			margin-right: 10px;
+			position: relative;
+			top: 5px;
+			width: 15px;
+		}
+		&.welcome svg {
+			height: 15px;
+			width: 15px;
+		}
+	}
+	.mdl-menu {
+		margin: 0;
+		padding: 8px 0;
+	}
+	[id=logged-in-menu] {
+		.morph-button > button {
+			& > {
+				img, svg {
+					position: relative;
+					top: 5px;
+					width: 32px;
+					height: 32px;
+					margin: -8px 0 -5px;
+				}
+			}
+		}
+	}
+    ul {
+        margin: 0;
+        padding: 16px 0;
+		@include desktop { padding-top: 21px; }
+    }
+    .sign {
+        font-size: 20px;
+        line-height: 16px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+	.label {
+		font-size: 1.15rem;
+		text-decoration: underline;
+	}
+	header & {
+		.morph-button-modal-2>button {
+			color: $color-accent;
+		}
+	}
+	@include before-desktop {
+		.loggedinmenublock .label {
+			display: none;
+		}
+		.label {
+			padding: 0 10px;
+			text-transform: none;
+		}
+	}
+	li.welcome {
+		img, svg {
+			width: 32px;
+			height: 32px;
+			margin: -8px 0 -4px;
+		}
+	}
+	background: transparent;
+    padding: 0;
+    margin-right: 58px;
+	text-align: right;
+	padding-left: 110px;
+	padding-right: 60px;
+	max-width: inherit;
+	ul {
+		padding-bottom: 0;
+	}
+    li {
+        margin-left: 5px;
+    }
+	.search-init-holder {
+		@include desktop {
+			background: $color-white;
+			right: -4px;
+			width: 10px;
+			height: 30px;
+			z-index: 2;
+            .search-init:after {
+                bottom: 35px;
+            }
+		}
+	}
+	.help {
+		&:before {
+			display: none;
+		}
+		.sign {
+			color: $color-accent;
+			position: relative;
+			top: 3px;
+		}
+	}
+}
+
+/* Icon Link*/
+.linkwithiconblock {
+    a {
+        text-decoration: none;
+        & > {
+			svg, img {
+				vertical-align: middle;
+				width: auto;
+				height: 32px;
+				margin: -2px 0 0 -6px;
+			}
+			svg {
+				width: 32px;
+			}
+		}
+        & > span {
+            display: none;
+            text-decoration: underline;
+            @include hover { text-decoration: none; }
+        }
+        @include tablet {
+            & > img { width: 24px; height: auto; }
+			& > svg { width: 24px; height: 24px; }
+            & > span { display: inline-block }
+        }
+    }
+}
+header .loggedinmenublock .morph-button>button svg path {
+	fill: $color-accent !important;
+}

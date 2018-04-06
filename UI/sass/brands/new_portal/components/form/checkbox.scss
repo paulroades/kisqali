@@ -1,0 +1,53 @@
+$checkbox-image-path: '/Themes/ServiceSphere/UI/vendor/material-design-lite/src/images/';
+
+.mdl-checkbox__tick-outline {
+	mask: url("#{$checkbox-image-path}tick-mask.svg?embed");
+	.mdl-checkbox.is-checked & {
+		background-image: url("#{$checkbox-image-path}tick.svg?embed");
+	}
+	.mdl-checkbox.is-checked.is-disabled & {
+		background-image: url("#{$checkbox-image-path}tick.svg?embed");
+	}
+}
+.mdl-checkbox__ripple-container .mdl-ripple,
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
+	background-color: $color-accent;
+}
+.morph-content-separated .mdl-checkbox {
+	text-align: left;
+}
+.mdl-checkbox__box-outline {
+	background-color: $color-white;
+	border: solid 1px $color-grey-3;
+	border-radius: 0;
+	width: 15px;
+	height: 15px;
+	.mdl-checkbox.is-checked & {
+		border-color: $color-accent;
+	}
+}
+.mdl-checkbox {
+	height: auto;
+	min-height: 1.714rem;
+	.field-validation-error {
+		display: block;
+		padding-bottom: 0.5714rem;
+	}
+}
+.FormChoice * {
+	font-family: $font-family-base;
+	font-size: 1.1428rem;
+}
+.mdl-checkbox__label {
+	font-family: $font-family-base;
+	top: -1px;
+    .block-register & {
+        p {
+            font-size: 1.14285rem;
+            line-height: 1.5;
+        }
+        *:first-child {
+            margin-top: 0;
+        }
+    }
+}

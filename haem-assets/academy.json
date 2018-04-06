@@ -1,0 +1,215 @@
+{"Dates":[
+{"Event":
+ {
+   "title": "Beyond the Platelet – a Revolade (eltrombopag) meeting series",
+   "address": "South West | Maidstone",
+   "start-date": "22nd May 2018",
+   "area": "Chronic and Refractory ITP",
+   "link": "/haematology-academy/events/Beyond_the_Platelet_meeting_series_south_east_maidstone",
+   "month": 5,
+   "location": 3,
+   "disease": 3,
+   "bg":"red_background_nvs",
+   "date":"2018-05-22"
+ }},
+ {"Event":
+ {
+   "title": "Beyond the Platelet – a Revolade (eltrombopag) meeting series",
+   "address": "West Midlands | Birmingham",
+   "start-date": "24th May 2018",
+   "area": "Chronic and Refractory ITP",
+   "link": "/haematology-academy/events/Beyond_the_Platelet_meeting_series_West_Midlands_Birmingham",
+   "month": 5,
+   "location": 4,
+   "disease": 3,
+   "bg":"red_background_nvs",
+   "date":"2018-05-24"
+ }},
+  {"Event":
+ {
+   "title": "Beyond the Platelet – a Revolade (eltrombopag) meeting series",
+   "address": "South East | Oxford",
+   "start-date": "21st June 2018",
+   "area": "Chronic and Refractory ITP",
+   "link": "/haematology-academy/events/Beyond_the_Platelet_meeting_series_South_East_Oxford",
+   "month": 6,
+   "location": 2,
+   "disease": 3,
+   "bg":"red_background_nvs",
+   "date":"2018-06-21"
+ }},
+  {"Event":
+ {
+  "title": "Beyond the Platelet – a Revolade (eltrombopag) meeting series",
+   "address": "London",
+   "start-date": "26th June 2018",
+   "area": "Chronic and Refractory ITP",
+   "link": "/haematology-academy/events/Beyond_the_Platelet_meeting_series_London",
+   "month": 6,
+   "location": 1,
+   "disease": 3,
+   "bg":"red_background_nvs",
+   "date":"2018-06-26"
+ }},
+{"Event":
+ {
+  "title": "Beyond the Platelet – a Revolade (eltrombopag) meeting series",
+   "address": "Yorkshire | South Yorkshire",
+   "start-date": "28th June 2018",
+   "area": "Chronic and Refractory ITP",
+   "link": "/haematology-academy/events/Beyond_the_Platelet_meeting_series_South_Yorkshire",
+   "month": 6,
+   "location": 5,
+   "disease": 3,
+   "bg":"red_background_nvs",
+   "date":"2018-06-28"
+ }},
+{"Event":
+ {
+  "title": "Changing the treatment landscape in FLT 3+ AML",
+   "address": "South West | Oxford",
+   "start-date": "1st July – 31st July 2018",
+   "area": "AML",
+   "link": "/haematology-academy/events/Changing_the_treatment_landscape_in_FLT_3plus_Acute_Myeloid_Leukemia",
+   "month": 7,
+   "location": 3,
+   "disease": 1,
+   "bg":"red_background",
+   "date":"2018-07-01"
+ }},
+{"Event":
+ {
+  "title": "BSBMT Educational Day",
+   "address": "London",
+   "start-date": "9th October 2018",
+   "area": "BMT",
+   "link": "/haematology-academy/events/British_Society_of_Blood_and_Marrow_Transplantation_Educational_Day",
+   "month": 10,
+   "location": 1,
+   "disease": 2,
+   "bg":"red_background",
+   "date":"2018-10-09"
+ }},
+
+{"Event":
+ {
+  "title": "BSBMT Educational Day",
+   "address": "London",
+   "start-date": "2nd May 2018",
+   "area": "BMT",
+   "link": "/haematology-academy/events/british_society_of_blood_and_marrow_transplantation_scientific_day",
+   "month": 5,
+   "location": 1,
+   "disease": 2,
+   "bg":"red_background",
+   "date":"2018-05-02"
+ }},
+
+{"Event":
+ {
+  "title": "16th Lymphoma Forum",
+   "address": "London",
+   "start-date": "24th May 2018",
+   "area": "Lymphoma",
+   "link": "/haematology-academy/events/16th_London_Lymphoma_Forum",
+   "month": 5,
+   "location": 1,
+   "disease": 6,
+   "bg":"red_background",
+   "date":"2018-05-24"
+ }},
+{"Event":
+ {
+  "title": "CML/MPN education day",
+   "address": "London",
+   "start-date": "21st September 2018",
+   "area": "MPN",
+   "link": "/haematology-academy/events/Chronic_Myeloid_Leukemia_Myeloproliferative_Neoplasms_education_day",
+   "month": 9,
+   "location": 1,
+   "disease": 7,
+   "bg":"red_background",
+   "date":"2018-09-21"
+ }},
+{"Event":
+ {
+  "title": "16th Lymphoma Forum",
+   "address": "London",
+   "start-date": "14th November 2018",
+   "area": "Lymphoma",
+   "link": "/haematology-academy/events/16th_london_lymphoma_forum_London",
+   "month": 11,
+   "location": 1,
+   "disease": 6,
+   "bg":"red_background",
+   "date":"2018-11-14"
+ }},
+{"Event":
+ {
+  "title": "South West Myeloma Group",
+   "address": "South West | Taunton",
+   "start-date": "9th May 2018",
+   "area": "Myeloma",
+   "link": "/haematology-academy/events/South_West_Myeloma_Group",
+   "month": 11,
+   "location": 3,
+   "disease": 8,
+   "bg":"red_background",
+   "date":"2018-05-09"
+ }},
+{"Event":
+ {
+  "title": "Haematology: Teenage & Young Adults",
+   "address": "London",
+   "start-date": "11th May 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/Haematology_Teenage_and_Young_Adults_through_to_30",
+   "month": 5,
+   "location": 1,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2018-05-11"
+ }},
+{"Event":
+ {
+  "title": "Haematological Malignancy Diagnostic Service Update",
+   "address": "Yorkshire | Leeds",
+   "start-date": "29th June 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/Haematological_Malignancy_Diagnostic_Service_Annual_Haematology_Update/",
+   "month": 6,
+   "location": 5,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2018-06-29"
+ }},
+{"Event":
+ {
+  "title": "Current Perspectives in Haematology",
+   "address": "London",
+   "start-date": "4th July 2018",
+   "area": "CML / MPN",
+   "link": "/haematology-academy/events/Current_Perspectives_in_Haematology_Malignancies",
+   "month": 7,
+   "location": 1,
+   "disease": 3,
+   "bg":"red_background",
+   "date":"2018-07-04"
+ }},
+{"Event":
+ {
+  "title": "11th South West Lymphoma Group",
+   "address": "South West | Taunton",
+   "start-date": "26th September 2018",
+   "area": "BMT",
+   "link": "/haematology-academy/events/11th_southwest_lymphoma_group",
+   "month": 9,
+   "location": 3,
+   "disease": 2,
+   "bg":"red_background",
+   "date":"2018-09-26"
+ }}
+
+
+
+ ]}

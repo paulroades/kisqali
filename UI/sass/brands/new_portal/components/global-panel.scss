@@ -1,0 +1,159 @@
+﻿/*
+- Document  : global-panel.scss
+- Version   : 1.0.0
+- Client    : ServiceSphere 2.0
+- Date edit : 2016-02-24
+*/
+
+.global-panel {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: $color-white;
+    box-shadow: 0px 3px 7px 0px $color-trans-1;
+    img {
+        width: auto;
+    }
+	&-copy {
+		display: none;
+		max-width: 1240px;
+		padding: 0 45px 65px;
+		font-family: $font-family-base;
+		font-size: 18px;
+		line-height: 1.2;
+		margin: 0 auto;
+		color: $color-grey-light10;
+		p {
+			margin: 0;
+		}
+		h1, h2 {
+			font-family: $font-family-base;
+		}
+		#logo {
+			display: block;
+			text-align: center;
+			position: inherit;
+			margin: 20px 0 40px;
+		}
+		.logo {
+			position: inherit;
+			margin: 0 auto;
+			width: 114px;
+		}
+		.active & {
+			display: block;
+		}	
+	}
+	&-toggler {
+		&-line {
+			cursor: pointer;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 20px;
+			background: $color-white;
+			z-index: 1;
+		}
+		.active & {
+			&:before {
+                border-left: 11px solid transparent;
+                border-right: 11px solid transparent;
+                border-bottom: 19px solid $color-accent;
+                position: absolute;
+                content: '';
+                left: 50%;
+                bottom: 11px;
+                margin: 0 0 0 -11px;
+            }
+            .global-panel-logo {
+                display: none;
+            }
+		}
+	}
+}
+
+.grid, .grid-content{background-color:$color-grey-light12;
+}
+
+.block-resetpassword, .block-changepassword {
+padding: 2.3rem $login-gutter 2.3rem $login-gutter !important;
+margin-top:3.875rem;
+background-color:$color-light-blue1;
+}
+
+
+.loginblock {
+padding: 0 $login-gutter $login-gutter $login-gutter !important;
+background-color:$color-light-blue1;
+}
+
+
+.loginblock form{
+    margin-left: 1.2rem;
+}
+
+.block-register{
+padding: $login-gutter $login-gutter $login-gutter 3.2rem !important;
+background-color:$color-light-blue1;
+}
+
+.block-register{
+margin-top:3.875rem;
+}
+
+.reset--block
+{
+	padding: 0 0 0 20px;
+}
+
+.block-changepassword form , .block-resetpassword form {
+	padding: 0 0 0 20px;
+}
+
+
+.login--block, .page--block{
+padding:$login-gutter $login-gutter 0.125rem 3.275rem !important;
+margin-top:3.875rem;
+background-color:$color-light-blue1;
+}
+
+.loginblock h2{display:none}
+.login--block h3{font-size:1.875rem !important;}
+.login--block p{font-size:1.375rem !important;}
+.login--block a{color:$color-dark-blue-5 !important;}
+
+
+.remove--bottom{margin-bottom:-$login-gutter;}
+
+
+#login > button, .mdl-button {    
+	background-color: $color-dark-blue-5 !important;
+   border: 1px solid $color-dark-blue-5 !important;
+   color: $color-white !important;
+}
+
+.mdl-textfield.is-focused .mdl-textfield__label:after{display:none;}
+.mdl-textfield__label{
+color:$color-grey-2!important;
+font-family: $font-family-default !important;
+		top:24px;
+		left: 5px;
+		line-height: 2.2rem;
+}
+
+.mdl-selectfield.is-focused .mdl-selectfield__label:after{display:none;}
+.mdl-selectfield__label{
+	color:$color-grey-2 !important;
+	font-family: $font-family-default !important;
+	top:30px;
+	left: 5px;
+}
+
+.mdl-checkbox{width:50%}
+
+.mdl-textfield.is-disabled .mdl-textfield__input {background-color: $color-white;}
+
