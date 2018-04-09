@@ -186,6 +186,13 @@ background-color: #f6f7f7;
     height: 30px;
     background-size: 30px 30px;
 }
+.filter--key p.newContent:before{
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/starIcon.png") no-repeat;
+    width: 30px;
+    height: 27px;
+    background-size: 30px 27px;
+    top: 0px;
+}
 
 .select {
     position: relative;
@@ -311,3 +318,46 @@ background-color: #f6f7f7;
     font-size: 1.2rem;
     font-weight: 300;
 }
+.spotLayout-topimage .content {
+    position: relative;
+    padding-bottom: 65px;
+}
+.spotLayout-topimage .content .absolutePositionedBottom {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 25px;
+    width: 100%;
+}
+.spotLayout-topimage .content .absolutePositionedBottom .widthHalf {
+    display: inline-block;
+    width: 49%;
+}
+.spotLayout-topimage .content .absolutePositionedBottom .widthHalf:last-of-type {
+    text-align: right;
+}
+.spotLayout-topimage .content .absolutePositionedBottom .widthHalf h4 {
+    margin: 0;
+}
+.spotLayout-topimage .content .absolutePositionedBottom .widthHalf .link {
+    color: #fff;
+    font-size: 0.813em;
+}
+.bgGrey {
+    background-color: #b2b2b2;
+}
+.bgGreyOther {
+    background-color: #d0d0d0;
+}
+.footerContent {
+    padding: 40px 0 ;
+}
+.footerContent p {
+    font-size: 1.125em;
+    line-height: 1.6em;
+    margin: 0 0 20px 0;
+}
+
+
+
+

@@ -4,7 +4,60 @@ main{    margin-top: 10.5rem;}
 }
 
 .padding {
-    padding: 40px!important;
+    padding: 40px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.grid-1-4 .padding {
+    padding: 40px 35px;
+}
+.rowTable {
+    display: table;
+    width: 100%;
+}
+.rowTableCell {
+    display: table-cell;
+    height: 100%;
+    float: none;
+    vertical-align: top;
+    position: relative;
+}
+.rowTableCell.bgImage {
+    background:url(/siteassets/hcp-portal-master/medicines/cosentyx/img/xraypurplebg.jpg) no-repeat center center ;
+    background-size: cover;
+}
+.rowTableCell.bgImage p {
+    text-indent: -10000px;
+}
+
+
+/*******************************/
+/** Background colors Styling **/
+/*******************************/
+
+.bgGradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#df005b+0,532a5b+100 */
+    background: rgb(223,0,91); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(223,0,91,1) 0%, rgba(83,42,91,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(223,0,91,1) 0%,rgba(83,42,91,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(223,0,91,1) 0%,rgba(83,42,91,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df005b', endColorstr='#532a5b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/****************/
+/** Typography **/
+/****************/
+
+h1 {
+    font-size: 3.750em;
+    line-height: 1em;
+    padding: 0; 
+    color: #fff;
+}
+h1 + p {
+   color: #fff; 
+   margin: 0;
 }
 
 /********************/
@@ -47,3 +100,54 @@ main{    margin-top: 10.5rem;}
 #content {
     background: none;
 }
+
+/***********************/
+/** Home Page Styling **/
+/***********************/
+
+.home .spot .backgroundColor-color7 {
+    background-color: none!important;
+}
+.home .patternBG {
+    background: url(/siteassets/hcp-portal-master/medicines/cosentyx/img/patternbgone.jpg) no-repeat right top;
+    background-size: cover;
+}
+.home .grid-1-4 p {
+    font-size: 1.875em;
+    line-height: 1.4em;
+    margin: 0;
+    color: #fff;
+    font-weight: 100;
+}
+.home .grid-3-4 .bgPattern .padding {
+    
+}
+.home .grid-3-4 .bgPattern .padding h2 {
+    color: #fff;
+    font-size: 3.750em;
+    line-height: 1.2em;
+    margin: 0 0 80px 0;
+}
+.home .grid-3-4 .bgPattern .padding h2 + p {
+    margin: 0;
+    text-align: right;
+}
+.home .grid-1-4 .bgGradient .padding {
+    padding-bottom: 100px;
+}
+.home .grid-3-4 .bgPattern p a {
+    color: #fff;
+    font-size: 0.813em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
