@@ -56,6 +56,11 @@ var evohome = (function() {
 		$('.publicuserinterestpromptblock').find('.popup-controls > li:first-of-type > a.btn').attr("href", target); 
 
 	}
+    
+    function increaseWidthColumn() {
+        var block = $('.absolutePositionedBottom');
+        block.parent().parent().parent().parent().parent().addClass('halfWidthColumn');	
+    }
 
 	/*
 	function sectionSpotBlock() {
@@ -148,14 +153,13 @@ var evohome = (function() {
 
 
 
-
 /*------------------------------------*\
   go
 \*------------------------------------*/
 	var init = function() {
 
 		retriveData()
-	
+	    increaseWidthColumn()
 		titleSpotBlock() 
 		subMenu() 
 		homeBlock() 

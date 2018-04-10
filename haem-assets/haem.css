@@ -1,5 +1,29 @@
-main{    margin-top: 10.5rem;}
+main{    margin-top: 12.5rem;}
 
+
+/*************/
+/** Nav bar **/
+/*************/
+
+.nav-mega-wrapper {
+    -webkit-transition: all 250ms ease;
+-moz-transition: all 250ms ease;
+-ms-transition: all 250ms ease;
+-o-transition: all 250ms ease;
+transition: all 250ms ease;
+}
+body.menu-is-ready > div.nav-mega-wrapper {
+    display: block;
+    top: -50px;
+}
+.menu-is-ready .nav-mega-wrapper {
+    -webkit-transition: all 250ms ease;
+-moz-transition: all 250ms ease;
+-ms-transition: all 250ms ease;
+-o-transition: all 250ms ease;
+transition: all 250ms ease;
+    z-index: 10001!important;
+}
 
 .haem_ec_background{
 background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bg.png);
@@ -42,8 +66,10 @@ background-color: #f6f7f7;
 
 .grid .bgImage {
     background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bg_Alt.png);
-    background-size: cover;
-    background-position: center center;
+    background-size: 90%;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-color: #cb0b0f;
 }
 .grid .bgImage .backgroundColor-color7 {
     background: none;
@@ -62,6 +88,12 @@ background-color: #f6f7f7;
 }
 */
 
+.title_spot_block h4 {
+    font-size: 1.563em;
+}
+.title_spot_block p {
+    max-width: 100%;
+}
 .filter--block{
 	padding:10px;
 }
@@ -329,6 +361,9 @@ background-color: #f6f7f7;
     padding: 25px;
     width: 100%;
 }
+.spotLayout-topimage .content .absolutePositionedBottom h4 {
+    color: #023761!important;
+}
 .spotLayout-topimage .content .absolutePositionedBottom .widthHalf {
     display: inline-block;
     width: 49%;
@@ -340,14 +375,14 @@ background-color: #f6f7f7;
     margin: 0;
 }
 .spotLayout-topimage .content .absolutePositionedBottom .widthHalf .link {
-    color: #fff;
+    color: #023761;
     font-size: 0.813em;
 }
 .bgGrey {
-    background-color: #b2b2b2;
+    background-color: #e9e9e9;
 }
 .bgGreyOther {
-    background-color: #d0d0d0;
+    background-color: #e9e9e9;
 }
 .footerContent {
     padding: 40px 0 ;
@@ -357,7 +392,20 @@ background-color: #f6f7f7;
     line-height: 1.6em;
     margin: 0 0 20px 0;
 }
+.footNote {
+    margin: 20px 0;
+}
+.footNote p {
+    font-size: 1.125em;
+    line-height: 1.6em;
+    margin: 0 0 10px 0;
+}
+.oo-player-container .oo-player>div {
+    z-index: 1!important;
+}
 
-
+.grid-1-3.halfWidthColumn {
+    width: 50%;
+}
 
 
