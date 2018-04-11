@@ -60,6 +60,9 @@ var evohome = (function() {
     function increaseWidthColumn() {
         var block = $('.absolutePositionedBottom');
         block.parent().parent().parent().parent().parent().addClass('halfWidthColumn');	
+        $( ".halfWidthColumn" ).wrapAll( "<div class='alignCenter'></div>");
+        	
+        $( '.alignCenter' ).append('<div style="clear:both"></div>');
     }
 
 	/*

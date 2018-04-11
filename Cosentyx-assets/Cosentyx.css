@@ -30,7 +30,24 @@ main{    margin-top: 10.5rem;}
 .rowTableCell.bgImage p {
     text-indent: -10000px;
 }
-
+.bgPurple {
+    background: #512a5b;
+}
+.bgWhite {
+    background: #fff;
+}
+.bgPink {
+    background: #e0005b;
+}
+.textWhite {
+    color: #fff!important;
+}
+.textPurple {
+    color: #512a5b!important;
+}
+.textPink {
+    color: #e0005b!important;
+}
 
 /*******************************/
 /** Background colors Styling **/
@@ -139,6 +156,8 @@ h1 + p {
     color: #fff;
     font-size: 0.813em;
 }
+
+
 
 
 

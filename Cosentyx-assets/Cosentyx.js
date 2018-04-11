@@ -22,6 +22,9 @@ var evohome = (function() {
         var bgPattern = $('.home .bgPattern');
         bgPattern.parent().parent().parent().parent().parent().parent().addClass('patternBG');
         bgPattern.parent().parent().parent().parent().parent().removeClass('backgroundColor-color7');
+        var bgGradient = $('.home .bgGradient');
+        bgGradient.parent().parent().parent().parent().parent().parent().addClass('bgGradient');
+        bgGradient.parent().parent().parent().parent().parent().removeClass('backgroundColor-color7');
 	}
 
 
