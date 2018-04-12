@@ -1,5 +1,8 @@
 main{    margin-top: 12.5rem;}
 
+#haem-logo {
+    margin-right: 10px;
+}
 #haem-logo img {
     max-width: 200px;
 }
