@@ -38,12 +38,12 @@ var evohome = (function() {
 
 	function leftBlock() {
 		var block = $('.event--left');		
-		block.parent().parent().parent().addClass('event_background_left');		
+		block.parent().parent().parent().parent() .parent().addClass('event_background');		
 	}
 
 	function rightBlock() {
 		var block = $('.event--right');		
-		block.parent().parent().parent().addClass('event_background_right');		
+		block.parent().parent().parent().parent().parent().addClass('event_background');		
 	}
 
 
@@ -59,10 +59,11 @@ var evohome = (function() {
     
     function increaseWidthColumn() {
         var block = $('.absolutePositionedBottom');
-        block.parent().parent().parent().parent().parent().addClass('halfWidthColumn');	
-        $( ".halfWidthColumn" ).wrapAll( "<div class='alignCenter'></div>");
+        block.parent().parent().parent().parent().parent().addClass('half');	
+        $( ".half" ).wrapAll( "<div class='alignCenter blocks--event--links'></div>");
         	
         $( '.alignCenter' ).append('<div style="clear:both"></div>');
+    	$( ".blocks--event--links" ).wrap( "<div class='block richtextblock spotblock grid-1-1 haem_background'></div>");
     }
 
 	/*
@@ -149,8 +150,30 @@ var evohome = (function() {
 	}
 
     function wrapDivs() {
-        $('.grid-1-2').wrapAll("<div class='bgImage'></div>");
+        $('.event_background').wrapAll("<div class='bgImage'></div>");
         $('.bgImage').append("<div style='clear: both'></div>");
+    }
+
+
+    function menuHighlight(){
+		var url = $(location).attr('href'), parts = url.split("/"), last_part = parts[parts.length-2];
+
+/*
+		console.log(parts);
+		console.log(last_part);
+
+		if (last_part != ""){
+			last_part = parts[parts.length-2];
+		}
+
+		var y = document.getElementsByClassName(last_part);
+
+
+		console.log(last_part);
+*/
+		var menuItem= $('.'+last_part);
+		menuItem.addClass('menu-red');	
+
     }
 
 
@@ -159,6 +182,7 @@ var evohome = (function() {
 \*------------------------------------*/
 	var init = function() {
 
+		menuHighlight()
 		retriveData()
 	    increaseWidthColumn()
 		titleSpotBlock() 
@@ -173,7 +197,9 @@ var evohome = (function() {
 
 		disclaimerLink()
         wrapDivs()
+
 		/*
+		
 		sectionSpotBlock() 
 		tealBlueBlock() 
 		midBlueBlock() 

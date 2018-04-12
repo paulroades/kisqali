@@ -74,9 +74,7 @@ function renderDataVisualsTemplate(data){
     return 0;
 });
 
-
-//console.log(data.Dates);
-
+	//console.log(data.Dates);
 	//var x =arry.sort(function(a,b){ return a[2] > b[2] ? 1 : -1; });
 	//alert(x);
 
