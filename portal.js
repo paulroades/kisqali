@@ -57,6 +57,11 @@ var evohome = (function() {
 		var block = $('.dark--blue--4');		
 		block.parent().parent().parent().parent().addClass('add-dark-blue4');				
 	}	
+
+	function myProfile() {
+		var block = $('.edit--profile');		
+		block.parent().addClass('remove--top');			
+	}	
 	
 	
 	function pageStyle() {
@@ -100,6 +105,7 @@ var evohome = (function() {
 		medicineSpotBlock() 
 		medicineSpotBlockw()
 		siteLogo() 
+		myProfile()
 		//siteSearch() 
 		pageStyle() 
 	};
