@@ -125,9 +125,9 @@ function searchProducts() {
 		var inputL = $('#location');
 		var inputD = $('#disease');
 		var item = $('.event--link');
-		var months = [];
-		var locations = [];
-		var diseases = [];
+		var months = "";
+		var locations = "";
+		var diseases = "";
 		
 
 		// show and hide depending on whether brand has links to the product
@@ -137,29 +137,29 @@ function searchProducts() {
 				itemLocation = $(this).attr('data-location');
 				itemDisease = $(this).attr('data-disease');
 
-				console.log(itemDisease);	
 
 				if ((months.length == 0 ) && (locations.length == 0 ) && (diseases.length == 0 )){
 					$(this).show();		
 				} else {
 
-					if (jQuery.inArray(itemLocation, locations) !== -1)
+					if (itemMonth.indexOf(months) == -1)
+				{									
+					$(this).hide();						
+				}	else {		
+					if (itemLocation.indexOf(locations) == -1)
 					{									
-						$(this).show();						
-					}	else {								
-						if (jQuery.inArray(itemMonth, months) !== -1)
-						{							
-							$(this).show();					
-						}	else {									
-							if (jQuery.inArray(itemDisease, diseases) !== -1)
-							{							
-								$(this).show();					
-							}	else {									
-								$(this).hide();				
-							}			
-						}		
-					}
+						$(this).hide();						
+					}	else {	
 
+						if (itemDisease.indexOf(diseases) == -1)
+						{									
+							$(this).hide();						
+						}	else {	
+
+							$(this).show();	
+						}						
+					}
+				}	
 			}			
 		});
 		}
@@ -167,29 +167,29 @@ function searchProducts() {
 		// on input change turn relevant data attributes off or on except if the data attribute is set to none in that case it's assumed the product has no link for this product and can't be switched on
 
 		inputL.change(function(){				
-			locations = [];
+			locations = "";
 			if (this.value > 0){
-				locations.push(this.value);
+				locations = this.value;
 			}
-			//console.log(locations);
+			console.log("1a: "+locations);
 			changePlaces(); // run show hide
 		});
 		
 		inputM.change(function(){		
-			months = [];
+			months = "";
 			if (this.value > 0){
-				months.push(this.value);
+				months = this.value;
 			}
-			//console.log(months);
+			console.log("1b: "+months);
 			changePlaces(); // run show hide
 		});
 
 		inputD.change(function(){		
-			diseases = [];
+			diseases = "";
 			if (this.value > 0){
-				diseases.push(this.value);
+				diseases = this.value;
 			}
-			//console.log(months);
+			//console.log("dis: "+diseases);
 			changePlaces(); // run show hide
 		});
 		
