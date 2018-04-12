@@ -1,4 +1,4 @@
-main{    margin-top: 12.5rem;}
+main{    margin-top: 12rem;}
 
 #haem-logo {
     margin-right: 10px;
@@ -310,13 +310,13 @@ background-color: #f6f7f7;
 }
 
 .haem--video{
-    padding: 20px;
+    padding: 25px 50px;
     background: #000;
 }
 
 .haem--video .oo-control-bar{background: #000;}
 
-.oo-player-skin{z-index:1000 !important;}
+
 
 .block-accordion-label{
 	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/accordian_blue_bg.png);
@@ -419,9 +419,10 @@ background-color: #f6f7f7;
     line-height: 1.6em;
     margin: 0 0 10px 0;
 }
+/*
 .oo-player-container .oo-player>div {
     z-index: 0!important;
-}
+}*/
 .alignCenter {
     width: 66%;
     margin: 0 auto;
