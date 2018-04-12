@@ -8,7 +8,7 @@
    "link": "/haematology-academy/events/Beyond_the_Platelet_meeting_series_south_east_maidstone",
    "month": 5,
    "location": 3,
-   "disease": 3,
+   "disease": 5,
    "bg":"red_background_nvs",
    "date":"2018-05-22"
  }},
@@ -21,7 +21,7 @@
    "link": "/haematology-academy/events/Beyond_the_Platelet_meeting_series_West_Midlands_Birmingham",
    "month": 5,
    "location": 4,
-   "disease": 3,
+   "disease": 5,
    "bg":"red_background_nvs",
    "date":"2018-05-23"
  }},
@@ -34,7 +34,7 @@
    "link": "/haematology-academy/events/Beyond_the_Platelet_meeting_series_South_East_Oxford",
    "month": 6,
    "location": 2,
-   "disease": 3,
+   "disease": 5,
    "bg":"red_background_nvs",
    "date":"2018-06-21"
  }},
@@ -47,7 +47,7 @@
    "link": "/haematology-academy/events/Beyond_the_Platelet_meeting_series_London",
    "month": 6,
    "location": 1,
-   "disease": 3,
+   "disease": 5,
    "bg":"red_background_nvs",
    "date":"2018-06-26"
  }},
@@ -60,7 +60,7 @@
    "link": "/haematology-academy/events/Beyond_the_Platelet_meeting_series_South_Yorkshire",
    "month": 6,
    "location": 5,
-   "disease": 3,
+   "disease": 5,
    "bg":"red_background_nvs",
    "date":"2018-06-28"
  }},
@@ -102,7 +102,7 @@
    "link": "/haematology-academy/events/Chronic_Myeloid_Leukemia_Myeloproliferative_Neoplasms_education_day",
    "month": 9,
    "location": 1,
-   "disease": 7,
+   "disease": "3 7",
    "bg":"red_background_nvs",
    "date":"2018-09-21"
  }},
@@ -155,7 +155,7 @@
    "link": "/haematology-academy/events/Current_Perspectives_in_Haematology_Malignancies",
    "month": 7,
    "location": 1,
-   "disease": 3,
+   "disease": "3 7",
    "bg":"red_background",
    "date":"2018-07-04"
  }}

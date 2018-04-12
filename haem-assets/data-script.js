@@ -137,6 +137,8 @@ function searchProducts() {
 				itemLocation = $(this).attr('data-location');
 				itemDisease = $(this).attr('data-disease');
 
+				console.log(itemDisease);	
+
 				if ((months.length == 0 ) && (locations.length == 0 ) && (diseases.length == 0 )){
 					$(this).show();		
 				} else {

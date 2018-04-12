@@ -63,7 +63,7 @@ var evohome = (function() {
         $( ".half" ).wrapAll( "<div class='alignCenter blocks--event--links'></div>");
         	
         $( '.alignCenter' ).append('<div style="clear:both"></div>');
-    	$( ".blocks--event--links" ).wrap( "<div class='block richtextblock spotblock grid-1-1 haem_background'></div>");
+    	$( ".blocks--event--links" ).wrap( "<div class='block richtextblock spotblock grid-1-1 grey_background'></div>");
     }
 
 	/*

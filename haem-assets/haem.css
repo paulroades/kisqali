@@ -64,6 +64,11 @@ background-repeat:no-repeat;
 background-color: #e30613;
 }
 
+
+.grey_background{
+    background-color:#dadada;
+}
+
 .blue_background{
 background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_blue_bg.png);
 }
