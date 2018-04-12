@@ -56,6 +56,14 @@ var evohome = (function() {
 		$('.publicuserinterestpromptblock').find('.popup-controls > li:first-of-type > a.btn').attr("href", target); 
 
 	}
+    
+    function increaseWidthColumn() {
+        var block = $('.absolutePositionedBottom');
+        block.parent().parent().parent().parent().parent().addClass('halfWidthColumn');	
+        $( ".halfWidthColumn" ).wrapAll( "<div class='alignCenter'></div>");
+        	
+        $( '.alignCenter' ).append('<div style="clear:both"></div>');
+    }
 
 	/*
 	function sectionSpotBlock() {
@@ -140,7 +148,10 @@ var evohome = (function() {
 		
 	}
 
-
+    function wrapDivs() {
+        $('.grid-1-2').wrapAll("<div class='bgImage'></div>");
+        $('.bgImage').append("<div style='clear: both'></div>");
+    }
 
 
 
@@ -151,7 +162,7 @@ var evohome = (function() {
 	var init = function() {
 
 		retriveData()
-	
+	    increaseWidthColumn()
 		titleSpotBlock() 
 		subMenu() 
 		homeBlock() 
@@ -163,6 +174,7 @@ var evohome = (function() {
 		siteLogo() 
 
 		disclaimerLink()
+        wrapDivs()
 		/*
 		sectionSpotBlock() 
 		tealBlueBlock() 

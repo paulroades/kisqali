@@ -1,10 +1,54 @@
-main{    margin-top: 10.5rem;}
+main{    margin-top: 12.5rem;}
 
+#haem-logo {
+    margin-right: 10px;
+}
+#haem-logo img {
+    max-width: 200px;
+}
+
+
+/*************/
+/** Nav bar **/
+/*************/
+
+#logo .logo-holder {
+    height: 40px!important;
+}
+#secondary-menu {
+    height: auto!important;
+    padding-bottom: 10px;
+}
+
+#secondary-menu>.nav-mega>a.nav-mega-link {
+    padding-top: 2.5rem;
+}
+
+.nav-mega-wrapper {
+    -webkit-transition: all 250ms ease;
+-moz-transition: all 250ms ease;
+-ms-transition: all 250ms ease;
+-o-transition: all 250ms ease;
+transition: all 250ms ease;
+}
+body.menu-is-ready > div.nav-mega-wrapper {
+    display: block;
+    top: -50px;
+}
+.menu-is-ready .nav-mega-wrapper {
+    -webkit-transition: all 250ms ease;
+-moz-transition: all 250ms ease;
+-ms-transition: all 250ms ease;
+-o-transition: all 250ms ease;
+transition: all 250ms ease;
+    z-index: 10001!important;
+}
 
 .haem_ec_background{
 background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bg.png);
 height:310px;
 max-height:310px;
+    background-size: cover;
 }
 
 .haem_past_background{
@@ -39,14 +83,36 @@ background-position: center center;
 background-color: #f6f7f7;
 }
 
+.grid .bgImage {
+    background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bg_Alt.png);
+    background-size: 90%;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-color: #cb0b0f;
+}
+.grid .bgImage .backgroundColor-color7 {
+    background: none;
+}
 .event_background_left{
-	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/events/img/eventbackground_left.jpg);
+/*	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/events/img/eventbackground_left.jpg);*/
 }
 
 .event_background_right{
-	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/events/img/eventbackground_right.jpg);
+/*	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/events/img/eventbackground_right.jpg);*/
 }
+/*
+#content_97426 {
+    background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bg_Alt.png);
+    
+}
+*/
 
+.title_spot_block h4 {
+    font-size: 1.563em;
+}
+.title_spot_block p {
+    max-width: 100%;
+}
 .filter--block{
 	padding:10px;
 }
@@ -148,14 +214,35 @@ background-color: #f6f7f7;
     margin: -10px 15px 0 0;
 }
 
+.filter--key p {
+    position: relative;
+    padding-left: 45px;
+}
+
 .filter--key p:before{
 	content: "";
     display: block;
-    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/nvs_icon.png") no-repeat;
-    width: 36px;
-    height: 36px;
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/nvs_icon_Color.png") no-repeat;
+    width: 25px;
+    height: 28px;
     float: left;
-    margin: 10px 6px 0 0;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+.filter--key p.sponsoredBY:before{
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/sponsoredByImage.png") no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+}
+.filter--key p.newContent:before{
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/starIcon.png") no-repeat;
+    width: 30px;
+    height: 27px;
+    background-size: 30px 27px;
+    top: 0px;
 }
 
 .select {
@@ -272,3 +359,91 @@ background-color: #f6f7f7;
 }
 
 .accordian--video .oo-control-bar{background: #0762AB;}
+.styledList {
+    padding: 0px;
+    margin: 0 0 10px 20px;
+}
+.styledList li {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.spotLayout-topimage .content {
+    position: relative;
+    padding-bottom: 65px;
+}
+.spotLayout-topimage .content .absolutePositionedBottom {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 25px;
+    width: 100%;
+}
+.spotLayout-topimage .content .absolutePositionedBottom h4 {
+    color: #023761!important;
+}
+.spotLayout-topimage .content .absolutePositionedBottom .widthHalf {
+    display: inline-block;
+    width: 49%;
+}
+.spotLayout-topimage .content .absolutePositionedBottom .widthHalf:last-of-type {
+    text-align: right;
+}
+.spotLayout-topimage .content .absolutePositionedBottom .widthHalf h4 {
+    margin: 0;
+}
+.spotLayout-topimage .content .absolutePositionedBottom .widthHalf .link {
+    color: #023761;
+    font-size: 0.813em;
+}
+.bgGrey {
+    background-color: #e9e9e9;
+}
+.bgGreyOther {
+    background-color: #e9e9e9;
+}
+.footerContent {
+    padding: 40px 0 ;
+}
+.footerContent p {
+    font-size: 1.125em;
+    line-height: 1.6em;
+    margin: 0 0 20px 0;
+}
+.footNote {
+    margin: 20px 0;
+}
+.footNote p {
+    font-size: 1.125em;
+    line-height: 1.6em;
+    margin: 0 0 10px 0;
+}
+.oo-player-container .oo-player>div {
+    z-index: 0!important;
+}
+.alignCenter {
+    width: 66%;
+    margin: 0 auto;
+}
+
+.grid-1-3.halfWidthColumn {
+    width: 50%;
+}
+
+.productSummary h4 {
+    margin: 0 0 20px 0;
+}
+.productSummary p {
+    font-size:  1.4rem;
+    color: #616b6f;
+}
+.productSummary p span {
+    font-size: 80%;
+}
+.productSummary p sup {
+    font-size: 80%;
+}
+.productSummary p a {
+    text-decoration: underline!important;
+}
