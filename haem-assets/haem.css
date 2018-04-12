@@ -426,10 +426,13 @@ a.menu-red {color:#cb0b0f !important}
     line-height: 1.6em;
     margin: 0 0 10px 0;
 }
-/*
-.oo-player-container .oo-player>div {
-    z-index: 0!important;
-}*/
+.oo-player-container {
+    padding: 10px;
+    background: #000;
+}
+.oo-player-container .oo-player {
+    padding-top: 40%!important;
+}
 .alignCenter {
     width: 66%;
     margin: 0 auto;
