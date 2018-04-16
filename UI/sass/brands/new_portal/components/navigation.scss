@@ -414,6 +414,14 @@ body.menu-is-ready > div.nav-mega-wrapper{
 	display:none;
 }
 
+#logo .logo-holder {
+    height: 40px!important;
+}
+#logo .logo-holder .logo-wrapper img {
+    width: 130px;
+    height: 27px;
+}
+
 #secondary-menu>.nav-mega {
 	 text-align: left !important;
     min-height: 7rem;

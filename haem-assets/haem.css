@@ -12,13 +12,7 @@ main{    margin-top: 12rem;}
 /** Nav bar **/
 /*************/
 
-#logo .logo-holder {
-    height: 40px!important;
-}
-#logo .logo-holder .logo-wrapper img {
-    width: 130px;
-    height: 27px;
-}
+
 #secondary-menu {
     height: auto!important;
     padding-bottom: 10px;
