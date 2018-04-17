@@ -10,8 +10,35 @@ var evohome = (function() {
             $('body').addClass('home');
         }
     }
+
+
+	function titleSpotBlock() {
+		var block = $('.title_spot_block');		
+		block.parent().parent().parent().addClass('content_413');		
+	}
+
     
-    function homeBlock() {
+	function homeBlock() {
+		var block = $('.haem');		
+		block.parent().parent().parent().addClass('cos_bgGradient');	
+		var block = $('.pattern');		
+		block.parent().parent().parent().addClass('patternBG');
+		/*var block = $('.haem-acad-past');		
+		
+		block.parent().parent().parent().addClass('haem_past_background');	
+	*/}
+
+
+	function eventSpotBlock() {
+		var block = $('.310');		
+		block.parent().parent().parent().addClass('content_310');		
+		var block = $('.spot_block_248');		
+		block.parent().parent().parent().addClass('content_248 bgPurple');		
+
+
+	}	
+
+    function homeBlock_dom() {
 		var block = $('.home .tableLayout');		
 		block.parent().parent().parent().parent().parent().addClass('rowTableCell');
         if ($('.home .spot').hasClass('rowTableCell')) {
@@ -26,6 +53,18 @@ var evohome = (function() {
         bgGradient.parent().parent().parent().parent().parent().parent().addClass('bgGradient');
         bgGradient.parent().parent().parent().parent().parent().removeClass('backgroundColor-color7');
 	}
+
+
+	function colorBlocks() {
+		var block = $('.purple');		
+		block.parent().parent().parent().parent().addClass('add-purple');
+		var block = $('.pink');		
+		block.parent().parent().parent().parent().addClass('add-pink');	
+		var block = $('.white');		
+		block.parent().parent().parent().parent().addClass('add-white');
+		var block = $('.dusky');		
+		block.parent().parent().parent().parent().addClass('add-dusky');				
+	}	
 
 
 	function disclaimerLink() {
@@ -68,14 +107,14 @@ var evohome = (function() {
 
 		//retriveData()
 	
-		//titleSpotBlock() 
+		titleSpotBlock() 
 		subMenu() 
         addClassToBody()
 		homeBlock() 
         
-		//blueBlock() 
+		colorBlocks() 
 		//redBlocks() 
-		//eventSpotBlock() 
+		eventSpotBlock() 
 		//leftBlock()
 		//rightBlock()
 		siteLogo() 

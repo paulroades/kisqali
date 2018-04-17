@@ -4,7 +4,6 @@
 - Client    : ServiceSphere 2.0
 - Date edit : 2016-02-234
 */
-
 /* Global layout Consts */
 /* Fonts */
 $layout-font-family-default:	$font-family-default;
@@ -39,7 +38,8 @@ button:focus {
 	outline: none;
 }
 ul, ol {
-	font-size: $layout-font-size-middle;
+	line-height: 1.6;
+	font-size: $layout-font-size-small;
 }
 p {
 	margin: 14px 0;
@@ -312,14 +312,14 @@ main {
 
 .sub-menu,{
 top:3.5rem;
-height:7rem;
+/*height:7rem;*/
 background:$color-white !important;
 z-index:2500;
 }
 
 .menu-is-ready{
 top:3.5rem;
-height:7rem;
+/*height:7rem;*/
 background:$color-grey-light12 !important;
 z-index:2500;
 }

@@ -864,6 +864,13 @@ $k-orange: #ed6b20;
 	position:relative;
 }
 
+
+.content_248{
+	height:248px;
+	max-height:248px;
+	position:relative;
+}
+
 .content_413{
 	height:413px;
 	max-height:413px;
@@ -898,6 +905,10 @@ display:inline-block;
 float: right;
 }
 
+.text--block{
+	padding:1.875rem;
+	background-color:$color-white !important;
+}
 
 
 
@@ -908,6 +919,18 @@ float: right;
 
 .therapy .header, .therapy-w .header {
     margin: 100px 0 50px 20px;
+}
+
+
+
+.therapy .header h2, .medicine_spot_block>.header h2{
+	color: $color-white;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    line-height: 4rem;
 }
 
 .therapy .header h3, .medicine_spot_block>.header h3{
