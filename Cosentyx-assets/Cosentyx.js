@@ -23,6 +23,13 @@ var evohome = (function() {
 		block.parent().parent().parent().addClass('cos_bgGradient');	
 		var block = $('.pattern');		
 		block.parent().parent().parent().addClass('patternBG');
+
+
+		var block = $('.leap');		
+		block.parent().parent().parent().addClass('bgLeap');
+
+		
+
 		/*var block = $('.haem-acad-past');		
 		
 		block.parent().parent().parent().addClass('haem_past_background');	
@@ -31,7 +38,10 @@ var evohome = (function() {
 
 	function eventSpotBlock() {
 		var block = $('.310');		
-		block.parent().parent().parent().addClass('content_310');		
+		block.parent().parent().parent().addClass('content_310');	
+		var block = $('.share-col');		
+		block.parent().parent().parent().parent().addClass('add-purple');	
+		block.parent().parent().parent().addClass('rep');	
 		var block = $('.spot_block_248');		
 		block.parent().parent().parent().addClass('content_248 bgPurple');		
 
@@ -95,7 +105,56 @@ var evohome = (function() {
 		
 	}
 
+    function questionBlockWrap() {
+        $('.wrapMePadding').parent().wrapAll("<div class='questionBlock paddingLarge backgroundColor-color7 grid-1-1'></div>");
+        $('.questionBlock').append('<div style="clear:both"></div>');
+    }
+    
+    function menuHighlight(){
+        switch (window.location.pathname) {
+            case '/products/cosentyx/early-intervention':
+                $('.early-intervention').addClass('menu-red');
+                break;
+            case '/products/cosentyx/targeting-inflammation':
+                $('.targeting-inflammation').addClass('menu-red');
+                break;
+            case '/products/cosentyx/AS':
+                $('.AS').addClass('menu-red');
+                break;
+            case '/products/cosentyx/psoriatic-arthritis-disease-background':
+                $('.PSA').addClass('menu-red');
+                break;
+            case '/products/cosentyx/mission-for-movement':
+                $('.mission-for-movement').addClass('menu-red');
+                break;
+            case '/products/cosentyx/resources':
+                $('.resources').addClass('menu-red');
+                break;
+            case '/products/cosentyx/prescribing-information/':
+                $('.prescribing-information').addClass('menu-red');
+                break;
+            default:
+                $('.cosentyx').addClass('menu-red');
+        }
+//		var url = $(location).attr('href'), parts = url.split("/"), last_part = parts[parts.length-2];
+//
+///*
+//		console.log(parts);
+//		console.log(last_part);
+//
+//		if (last_part != ""){
+//			last_part = parts[parts.length-2];
+//		}
+//
+//		var y = document.getElementsByClassName(last_part);
+//
+//
+//		console.log(last_part);
+//*/
+//		var menuItem= $('.'+last_part);
+//		menuItem.addClass('menu-red');	
 
+    }
 
 
 
@@ -104,9 +163,9 @@ var evohome = (function() {
   go
 \*------------------------------------*/
 	var init = function() {
-
+        menuHighlight()
 		//retriveData()
-	
+	    questionBlockWrap()
 		titleSpotBlock() 
 		subMenu() 
         addClassToBody()
