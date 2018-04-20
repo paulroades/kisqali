@@ -319,6 +319,8 @@ padding:0;
     font-size:1.375rem;
     font-weight:600;
     margin:0;
+    position: relative;
+    padding-left: 65px;
 }
 
 .related h2.textPink:before{
@@ -328,7 +330,9 @@ padding:0;
     width: 54px;
     height: 40px;
     content: "";
-    position: relative;
+    position: absolute;
+    left: 0px;
+    top: 0px;
 }
 
 .related h3{

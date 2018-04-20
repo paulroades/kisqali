@@ -53,11 +53,11 @@
     content: '';
     display: block;
     width: 18px;
-    height: 35px;
+    height: 100%;
     position: absolute;
     background: url('/siteassets/hcp-portal-master/medicines/cosentyx/mission-for-movement/img/rightArrow.png') no-repeat center center;
     background-size: 18px 35px;
-    top: 40px;
+    top: 0px;
     right: 20px;
 }
 .questionContainer .question p {
