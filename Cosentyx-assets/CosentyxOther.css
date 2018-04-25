@@ -1,0 +1,147 @@
+.gridPaddingRight {
+    padding-right: 1%;
+}
+.gridPaddingleft {
+    padding-left: 1%;
+}
+
+.footerBlock {
+    padding: 50px 0;
+}
+.footerBlock p {
+    color: #000;
+    font-size: 0.875em;
+    margin: 0 0 20px 0;
+}
+.centralAlign {
+    text-align: center;
+}
+.centralAlign .leftAlign {
+    text-align: left;
+}
+
+.paddingLarge {
+    padding: 45px 12.5%;
+}
+
+/****************************/
+/** Question block styling **/
+/****************************/
+
+.questionContainer .question {
+    padding: 45px 30px 45px 125px;
+    position: relative;
+    background: url('/siteassets/hcp-portal-master/medicines/cosentyx/mission-for-movement/img/questionbgone.png') no-repeat top left;
+    background-size: cover;
+}
+.questionContainer .question.questionAlt {
+    background: url('/siteassets/hcp-portal-master/medicines/cosentyx/mission-for-movement/img/questionbgtwo.png') no-repeat top left;
+    background-size: cover;
+}
+.questionContainer .question:before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background: url('/siteassets/hcp-portal-master/medicines/cosentyx/img/questionIcon.png') no-repeat center center;
+    background-size: 80px 80px;
+    top: 20px;
+    left: 20px;
+}
+.questionContainer .question:after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 100%;
+    position: absolute;
+    background: url('/siteassets/hcp-portal-master/medicines/cosentyx/mission-for-movement/img/rightArrow.png') no-repeat center center;
+    background-size: 18px 35px;
+    top: 0px;
+    right: 20px;
+}
+.questionContainer .question p {
+    margin: 0;
+    font-size: 2.500em;
+    color: #fff;
+    line-height: 1em;
+}
+.questionContainer .answer {
+    padding: 60px 80px 45px 125px;
+    background: #ededed;
+    position: relative;
+}
+.questionContainer .answer:before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background: url('/siteassets/hcp-portal-master/medicines/cosentyx/img/answerIcon.png') no-repeat center center;
+    background-size: 80px 80px;
+    top: 40px;
+    left: 20px;
+}
+.questionContainer .answer p {
+    color: #512a5b;
+    font-size: 1.250em;
+    line-height: 1.4em;
+    margin: 0 0 20px 0;
+}
+.contactButton {
+    padding: 60px 0;
+}
+.contactButton p {
+    margin: 0 0 20px 0;
+    font-weight: 100;
+    font-size: 1.188em;
+    color: #000;
+}
+.contactButton p.pinkText {
+    color: #e0005b;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .paddingLarge {
+        padding: 45px 10px;
+    }
+    .questionContainer .question,
+    .questionContainer .answer {
+        padding: 20px 30px 20px 60px;
+    }
+    .questionContainer .question:before,
+    .questionContainer .answer:before {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+        top: 20px;
+        left: 10px;
+    }
+    .questionContainer .question:after {
+        right: 10px;
+        top: 30%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -73,17 +73,42 @@ background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/ima
 
 
 .red_background{
+/*
 background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg.png);
 background-repeat:no-repeat;
 background-position: center center;
-background-color: #f6f7f7;
+*/
+    background-color: #f6f7f7;
+    border-top: 5px solid #e30613;
+    border-bottom:5px solid #7f1210;
+    background-image: 
+        linear-gradient(#e30613, #7f1210),
+        linear-gradient(#e30613, #7f1210),
+        url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg.png)
+    ;
+    background-size:5px 100%, 5px 100%, cover;
+    background-position:0 0, 100% 0, bottom right;
+    background-repeat:no-repeat, no-repeat, no-repeat;
 }
 
 .red_background_nvs{
+/*
 background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg_nvs.png);
 background-repeat:no-repeat;
 background-position: center center;
+*/
 background-color: #f6f7f7;
+    background-color: #f6f7f7;
+    border-top: 5px solid #e30613;
+    border-bottom:5px solid #7f1210;
+    background-image: 
+        linear-gradient(#e30613, #7f1210),
+        linear-gradient(#e30613, #7f1210),
+        url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg_nvs.png);
+    ;
+    background-size:5px 100%, 5px 100%, cover;
+    background-position:0 0, 100% 0, bottom right;
+    background-repeat:no-repeat, no-repeat, no-repeat;
 }
 
 .grid .bgImage {
@@ -464,6 +489,24 @@ footer[id=site-specifics] li a:hover {
     text-decoration: underline!important;
 }
 
+#data-details {
+    margin-top: 10px;
+}
+#data-details .event--link {
+    width: 32.6666666667%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+#data-details .event--link:first-of-type {
+    margin-left: 0;
+}
+#data-details .event--link:nth-of-type(4),
+#data-details .event--link:nth-of-type(7),
+#data-details .event--link:nth-of-type(10),
+#data-details .event--link:nth-of-type(13) {
+    margin-left: 0;
+}
+
 @media (max-width: 1024px) {
     #logo .logo-holder {
         position: relative;
@@ -539,8 +582,24 @@ footer[id=site-specifics] li a:hover {
     .haem_background {
         background-image: none;
     }
+    [class*="grid-"] {
+        width: 100%!important;
+    }
+    #data-details .event--link {
+        width: 49%!important;
+        margin-left: 0.5%!important;
+    }
+    #data-details .event--link:nth-of-type(odd) {
+/*        margin-left: 0!important;*/
+    }
 }
 
+@media (max-width: 450px) { 
+    #data-details .event--link {
+        width: 99%!important;
+        margin-left: 0.5%!important;
+    }
+}
 
 
 
