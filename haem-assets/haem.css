@@ -479,6 +479,15 @@ footer[id=site-specifics] li a:hover {
     .alignCenter {
         width: 90%;
     }
+
+    .red {
+        padding: 10px 35px;
+    }
+
+    .spotblock .red_background a.link, .spotblock .red_background_nvs a.link {
+        margin: 40px 0 0 40px;
+    }
+
 }
 
 @media (max-width: 768px) { 

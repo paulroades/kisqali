@@ -23,6 +23,13 @@ var evohome = (function() {
 		block.parent().parent().parent().addClass('cos_bgGradient');	
 		var block = $('.pattern');		
 		block.parent().parent().parent().addClass('patternBG');
+
+
+		var block = $('.leap');		
+		block.parent().parent().parent().addClass('bgLeap');
+
+		
+
 		/*var block = $('.haem-acad-past');		
 		
 		block.parent().parent().parent().addClass('haem_past_background');	
@@ -31,7 +38,10 @@ var evohome = (function() {
 
 	function eventSpotBlock() {
 		var block = $('.310');		
-		block.parent().parent().parent().addClass('content_310');		
+		block.parent().parent().parent().addClass('content_310');	
+		var block = $('.share-col');		
+		block.parent().parent().parent().parent().addClass('add-purple');	
+		block.parent().parent().parent().addClass('rep');	
 		var block = $('.spot_block_248');		
 		block.parent().parent().parent().addClass('content_248 bgPurple');		
 
