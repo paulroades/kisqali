@@ -286,3 +286,36 @@
 		margin: 0;
 	}
 }
+
+
+@media (max-width: 767px) { 
+    .popup-default {
+        .content-style-overlay {
+            p {
+                float: none!important;
+                display: inline-block;
+                width: 49%!important;
+            }
+        }
+    }
+    .publicuserinterestpromptblock {
+        .popup-controls {
+            margin-top: 1rem!important;
+            li {
+                width: 50%;
+                min-width: auto;
+                a {
+                    height: auto;
+                    display: block;
+                    line-height: 16px!important;
+                    width: 100%;
+                    padding: 15px!important;
+                }
+            }
+        }
+    }
+}
+
+
+
+

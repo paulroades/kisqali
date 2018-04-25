@@ -579,6 +579,14 @@ footer[id=site-specifics] li a:hover {
     #secondary-menu #haem-logo {
         padding: 1.2rem 2rem 0.5rem 2rem;
     }
+    #secondary-menu .nav-mega-link {
+        display: none;
+    }
+    .nav-mega-wrapper #haem-logo {
+        display: block;
+        padding: 15px 30px;
+        margin: 0;
+    }
     .haem_background {
         background-image: none;
     }
@@ -592,6 +600,14 @@ footer[id=site-specifics] li a:hover {
     #data-details .event--link:nth-of-type(odd) {
 /*        margin-left: 0!important;*/
     }
+    .publicuserinterestpromptblock p {
+        float: none;
+        display: inline-block;
+    }
+    .publicuserinterestpromptblock .popup-controls {
+        
+    }
+    .publicuserinterestpromptblock .popup-controls 
 }
 
 @media (max-width: 450px) { 

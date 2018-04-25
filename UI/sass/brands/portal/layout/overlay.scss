@@ -276,3 +276,30 @@
 		margin: 0;
 	}
 }
+
+
+@media (max-width: 767px) { 
+    .popup-default {
+        .content-style-overlay {
+            p {
+                float: none!important;
+                display: inline-block;
+            }
+        }
+    }
+    .publicuserinterestpromptblock {
+        .popup-controls {
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -175,12 +175,23 @@ var evohome = (function() {
 		menuItem.addClass('menu-red');	
 
     }
+    
+    
+    
+    function addToMobileMenu() {
+        var newMenuItems = $('#secondary-menu .nav-mega a');
+        $(".nav-mega-wrapper .nav-mega").append(newMenuItems);
+    }
+
 
 
 /*------------------------------------*\
   go
 \*------------------------------------*/
-	var init = function() {
+	
+    
+    
+    var init = function() {
 
 		menuHighlight()
 		retriveData()
@@ -197,6 +208,14 @@ var evohome = (function() {
 
 		disclaimerLink()
         wrapDivs()
+        if($(window).width() > 767) {
+        } else {
+             addToMobileMenu();
+        }
+        
+        
+        
+        
 
 		/*
 		
@@ -221,3 +240,7 @@ var evohome = (function() {
 $(function() {
 	evohome.init();
 });
+
+
+
+
