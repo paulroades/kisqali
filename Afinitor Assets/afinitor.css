@@ -1,0 +1,73 @@
+.clear {
+    clear: both;
+}
+
+[class*="grid-"] {
+    float: left;
+    width: 100%;
+    padding: 1.875rem 1.875rem 0 0;
+}
+
+
+/********************/
+/** Header Styling **/
+/********************/
+
+#secondary-menu .nav-mega #afinitor-logo {
+    width: 9%;
+    display: inline-block;
+}
+#secondary-menu .nav-mega #afinitor-logo img {
+    width: 100%;
+    height: auto;
+}
+#secondary-menu .nav-mega .nav-mega-link {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    vertical-align: bottom!important;
+}
+
+/*********************/
+/** Content Styling **/
+/*********************/
+
+main {
+    margin-top: 12rem;
+}
+main .grid {
+    padding: 1.875rem;
+    background: #fff;
+}
+.tableRow {
+    width: 100%;
+}
+.tableRow .grid-1-4 {
+    background: #dcdcdc !important;
+    width: 24.25%;
+    margin-left: 1%;
+     margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 0;
+}
+.tableRow .grid-1-4:first-of-type {
+    margin-left: 0;
+}
+.tableRow .grid-1-4 .spotContainer {
+    padding: 1.4285rem;
+    background: none !important;
+}
+.tableRow .grid-1-4 .spotContainer .content {
+    padding: none;
+}
+.tableRow .grid-1-4 .spotContainer .content h2 {
+    color: #6E1810;
+}
+.tableRow .grid-1-4 .spotContainer .content p {
+    color: #55565A;
+    font-family: Verdana,sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.tableRow .grid-1-4 .spotContainer .content a.link {
+    color: #6E1810;
+}
