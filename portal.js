@@ -56,7 +56,15 @@ var evohome = (function() {
 	function darkBlue4Block() {
 		var block = $('.dark--blue--4');		
 		block.parent().parent().parent().parent().addClass('add-dark-blue4');				
-	}	
+	}
+    function addExjadeTeal() {
+		var block = $('.addExjadeTeal');		
+		block.parent().parent().parent().parent().addClass('add-exjade-teal');				
+	}
+    function addTasignaBlue() {
+		var block = $('.addTasignaBlue');		
+		block.parent().parent().parent().parent().addClass('add-tasigna-blue');				
+	}
 
 	function myProfile() {
 		var block = $('.edit--profile');		
@@ -94,6 +102,8 @@ var evohome = (function() {
   go
 \*------------------------------------*/
 	var init = function() {
+        addTasignaBlue()
+        addExjadeTeal()
 		titleSpotBlock() 
 		homeBlock() 
 		sectionSpotBlock() 

@@ -876,7 +876,7 @@ $k-orange: #ed6b20;
 	max-height:413px;
 }
 .home_background{
-background-image:url(/siteassets/hcp-portal-master/portal-main/home/img/hp_pattern.png);
+background-image:url(/siteassets/gb-portal/portal-home/img/hp_pattern.png);
 background-color: #0376BB;
 }
 
@@ -886,11 +886,70 @@ background-color: #0376BB;
 	max-height:155px;
 }
 
-.add-white{background-color:$color-white !important;}
+.add-white{
+    background-color:$color-white !important;
+    h4 {
+        color: $color-dark-blue-4!important;
+    }
+    h3 {
+        color: $color-dark-blue-4!important;
+    }
+    p {
+        color: $color-dark-blue-4!important;
+        a {
+            color: inherit!important;
+        }
+    }
+    .content {
+        .link {
+            color: $color-dark-blue-4!important;
+        }
+    }
+}
 .add-mid-blue{background-color:$color-mid-blue !important;}
 .add-dark-blue{background-color:$color-dark-blue-3 !important;}
-.add-dark-blue4{background-color:$color-dark-blue-4 !important;}
-.add-teal-blue{background-color:$color-teal-blue !important;}
+.add-dark-blue4{
+    background-color:$color-dark-blue-4 !important;
+    h4 {
+        color: $color-white!important;
+    }
+    h3 {
+        color: $color-white!important;
+    }
+    p {
+        color: $color-white!important;
+        a {
+            color: inherit!important;
+        }
+    }
+    .content {
+        .link {
+            color: $color-white!important;
+        }
+    }
+}
+.add-teal-blue{
+    background-color:$color-teal-blue !important;
+//    h4 {
+//        color: $color-dark-blue-4!important;
+//    }
+//    h3 {
+//        color: $color-dark-blue-4!important;
+//    }
+//    p {
+//        color: $color-dark-blue-4!important;
+//        a {
+//            color: inherit!important;
+//        }
+//    }
+//    .content {
+//        .link {
+//            color: $color-dark-blue-4!important;
+//        }
+//    }
+}
+.add-exjade-teal {background-color: $color-exjade!important;}
+.add-tasigna-blue {background-color: $color-tasigna-blue!important;}
 
 .section_spot_block .grid{
 background-color:transparent;

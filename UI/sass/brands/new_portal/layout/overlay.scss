@@ -30,6 +30,7 @@
 	}
 	&.active {
 		opacity: 1;
+        z-index: 9999;
 	}
 	.btn {
 		border-radius: 0;
@@ -194,6 +195,32 @@
 		border-radius: 50%;
 		line-height: 2.8;
 	}
+    .internalPopup {
+        border: none!important;
+        padding: 20px!important;
+        img {
+            margin: 0 0 50px 0;
+        }
+        p {
+            margin: 0 0 10px 0;
+            font-size: 0.8em!important;
+            padding: 0 5%!important;
+            text-align: center;
+            a {
+                background: none!important;
+                padding: 0;
+                border: none;
+                color: #0762ab!important;
+            }
+            &.smallText {
+                font-size: 0.6em!important;
+                text-align: left;
+            }
+        }
+        .addPadding {
+            padding: 0 2%;
+        }
+    }
 }
 .no-touch .content-style-overlay .icon-close:hover {
 	border-color: $border-color-icon-close-hover;
@@ -256,6 +283,8 @@
 		@include prefixed(transform, scale(1));
 	}
 }
+
+
 
 @media all and (max-width: $tablet-size) {
 	.content-style-overlay {
