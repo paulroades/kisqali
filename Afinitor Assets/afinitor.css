@@ -4,17 +4,31 @@
 
 [class*="grid-"] {
     float: left;
-    width: 100%;
-    padding: 1.875rem 1.875rem 0 0;
+/*    width: 100%;*/
+    padding: 0;
 }
-
+.grid-content {
+    background: #fff!important;
+}
+.sub-navigation:before {
+    display: none;
+}
+.paddingLeft {
+    padding-left: 5%;
+}
+.paddingRight {
+    padding-right: 5%;
+}
 
 /********************/
 /** Header Styling **/
 /********************/
 
+#secondary-menu .nav-mega {
+    padding-right: 0;
+}
 #secondary-menu .nav-mega #afinitor-logo {
-    width: 9%;
+    width: 10%;
     display: inline-block;
 }
 #secondary-menu .nav-mega #afinitor-logo img {
@@ -22,8 +36,8 @@
     height: auto;
 }
 #secondary-menu .nav-mega .nav-mega-link {
-    padding: 0 1rem;
-    font-size: 0.8rem;
+    padding: 0 1.1rem;
+    font-size: 0.9rem;
     vertical-align: bottom!important;
 }
 
@@ -35,8 +49,11 @@ main {
     margin-top: 12rem;
 }
 main .grid {
-    padding: 1.875rem;
+    padding: 1.875rem!important;
     background: #fff;
+}
+main .grid .grid {
+    padding: 0!important;
 }
 .tableRow {
     width: 100%;
@@ -70,4 +87,7 @@ main .grid {
 }
 .tableRow .grid-1-4 .spotContainer .content a.link {
     color: #6E1810;
+}
+.content-focused .content h2:first-of-type {
+    margin-top: 1rem;
 }
