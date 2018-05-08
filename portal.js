@@ -96,6 +96,14 @@ var evohome = (function() {
 	function hasClass(element, cls) {
 		return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 	}
+    
+    function showPopUp() {
+        $('.breastCancer').parent().parent().parent().parent().addClass('breastCancerClickContainer');
+        $('.breastCancerClickContainer a').click(function(e){
+            e.preventDefault();
+            $('#therapyAreaPopup').addClass('active');
+        });
+	}
 
 	
 /*------------------------------------*\
@@ -118,6 +126,7 @@ var evohome = (function() {
 		myProfile()
 		//siteSearch() 
 		pageStyle() 
+        showPopUp()
 	};
 
 	return { init: init };

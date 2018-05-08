@@ -6,6 +6,7 @@
     float: left;
 /*    width: 100%;*/
     padding: 0;
+/*    padding: 1.875rem 1.875rem 0 0;*/
 }
 .grid-content {
     background: #fff!important;
@@ -19,6 +20,7 @@
 .paddingRight {
     padding-right: 5%;
 }
+
 
 /********************/
 /** Header Styling **/
@@ -40,10 +42,17 @@
     font-size: 0.9rem;
     vertical-align: bottom!important;
 }
+.grid-1-4 ul.sub-navigation-items > li > ul {
+    margin-left: 15px;
+}
 
 /*********************/
 /** Content Styling **/
 /*********************/
+
+.spot .content h2 * {
+    font-weight: normal;
+}
 
 main {
     margin-top: 12rem;
@@ -91,3 +100,32 @@ main .grid .grid {
 .content-focused .content h2:first-of-type {
     margin-top: 1rem;
 }
+
+/*******************/
+/** Table Styling **/
+/*******************/
+
+table tr th {
+/*    font-size: 0.9em;*/
+    text-align: left;
+    padding: 5px;
+}
+table tr td {
+/*    font-size: 0.9em;*/
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

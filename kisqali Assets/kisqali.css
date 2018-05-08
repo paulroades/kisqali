@@ -5,11 +5,13 @@ main{    margin-top: 12rem;}
 }
 
 .grid-content{
-background-color:transparent;
-
+ background-color:transparent;
+ 
 }
-
-
+.backgroundWhiteBG {
+    background: #ffffff;
+    padding: 20px;
+}
 
 
 .grid-4-4 > .content-focused-page-headline, .grid-3-4 > .content-focused-page-headline{
@@ -106,7 +108,7 @@ h3.kisqali--large--blue{
     max-width: 200px;
 }
 #secondary-menu .nav-mega .nav-mega-link {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 1.3rem 0 1.3rem;
     vertical-align: bottom!important;
 }
 #secondary-menu .nav-mega #kisqali-logo img {
