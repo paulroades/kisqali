@@ -858,12 +858,16 @@ $k-orange: #ed6b20;
 	max-height:620px;
 }
 
-.content_310{
-	height:310px;
+.content_410 {
+	height:410px;
+	max-height:410px;
+	position:relative;
+}
+.content_310 {
+    height:310px;
 	max-height:310px;
 	position:relative;
 }
-
 
 .content_248{
 	height:248px;
@@ -892,7 +896,7 @@ background-color: #0376BB;
         color: $color-dark-blue-4!important;
     }
     h3 {
-        color: $color-dark-blue-4!important;
+        color: $color-dark-blue-4;
     }
     p {
         color: $color-dark-blue-4!important;
@@ -1163,7 +1167,7 @@ padding:0;
 		top:50px;
 	}
 	@include desktop {
-		font-size: 4rem;
+		font-size: 2.500em;
     	left: 20px;
 	}
 }

@@ -17,6 +17,8 @@ var evohome = (function() {
 		block.parent().parent().parent().addClass('haem_ec_background');
 		var block = $('.haem-acad-past');		
 		block.parent().parent().parent().addClass('haem_past_background');	
+        var block = $('.white');		
+		block.parent().parent().parent().addClass('white_background');	
 	}
 
 	function blueBlock() {
@@ -197,10 +199,15 @@ var evohome = (function() {
         $('.internalLinks li a[href*="#"]').on('click', function (e) {
             e.preventDefault();
             $('html, body').animate({
-                scrollTop: $($(this).attr('href')).offset().top
+                scrollTop: $($(this).attr('href')).offset().top - 100
             }, 500, 'linear');
         });
     };
+    
+    function whatsOnBanner() {
+        $('.whatsOn').parent().parent().parent().parent().addClass('fluidBGWhatsOn');
+        $('.whatsOn').parent().parent().parent().parent().wrap('<a href="/haematology-academy/calendar/"></a>');
+    }
 
 
 
@@ -225,7 +232,7 @@ var evohome = (function() {
 		leftBlock()
 		rightBlock()
 		siteLogo() 
-
+        whatsOnBanner()
 		disclaimerLink()
         wrapDivs()
         if($(window).width() > 767) {

@@ -464,7 +464,7 @@ $font-alt: $font-family-base;
     @include desktop {
         padding: 0;
         margin: 0 auto;
-        max-width: 200px;
+        max-width: 150px;
 		box-shadow: none;
         left: 50%;
         margin-left: 480px;
@@ -498,6 +498,9 @@ $font-alt: $font-family-base;
 				height: 25px;
 			}
 		}
+    }
+    .menu-is-ready & {
+        display: none;
     }
 }
 .search-init {

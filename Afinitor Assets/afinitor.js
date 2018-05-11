@@ -4,6 +4,11 @@ var evohome = (function() {
 /*------------------------------------*\
     section blocks
 \*------------------------------------*/
+    
+    function removePadding() {
+        $('#secondary-menu').parent().addClass('noPadding');
+    }
+    
 	function titleSpotBlock() {
 		var block = $('.title_spot_block');		
 		block.parent().parent().parent().addClass('content_413');		
@@ -99,6 +104,7 @@ var evohome = (function() {
   go
 \*------------------------------------*/
 	var init = function() {
+        removePadding();
 		titleSpotBlock() 
 		homeBlock() 
 		sectionSpotBlock() 

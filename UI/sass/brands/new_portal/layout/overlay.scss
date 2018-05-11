@@ -149,7 +149,7 @@
     z-index: -1;
     display: none;
     &.active {
-        z-index: 11;
+        z-index: 9999;
         display: -ms-flexbox;
         display: -webkit-flex;
         display: -webkit-box;

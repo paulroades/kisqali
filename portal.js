@@ -104,6 +104,9 @@ var evohome = (function() {
             $('#therapyAreaPopup').addClass('active');
         });
 	}
+    function removePadding() {
+        $('#secondary-menu').parent().addClass('noPadding');
+    }
 
 	
 /*------------------------------------*\
@@ -127,6 +130,7 @@ var evohome = (function() {
 		//siteSearch() 
 		pageStyle() 
         showPopUp()
+        removePadding()
 	};
 
 	return { init: init };

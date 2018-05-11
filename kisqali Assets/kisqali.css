@@ -108,8 +108,9 @@ h3.kisqali--large--blue{
     max-width: 200px;
 }
 #secondary-menu .nav-mega .nav-mega-link {
-    padding: 0 1.3rem 0 1.3rem;
+    padding: 0 1.5%;
     vertical-align: bottom!important;
+    text-transform: none;
 }
 #secondary-menu .nav-mega #kisqali-logo img {
     width: 100%;
