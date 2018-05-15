@@ -48,6 +48,18 @@ var evohome = (function() {
 		var block = $('.event--right');		
 		block.parent().parent().parent().parent().parent().addClass('event_background');		
 	}
+    
+    function gradientBoxBlue() {
+        $('.blueGradient').parent().parent().parent().parent().parent().addClass('gradWrap');
+        $('.bgImageBlueGrad').parent().addClass('gradWrap');
+        $('.gradWrap').wrapAll( '<div class="gradientBackground"></div>');
+        $('.gradientBackground').append('<div style="clear: both;"></div>');
+    }
+    
+    function rowItems() {
+        $('.rowItem').parent().wrapAll( '<div class="row"></div>');
+        $('.row').append('<div style="clear: both;"></div>');
+    }
 
 
 	function disclaimerLink() {
@@ -67,6 +79,9 @@ var evohome = (function() {
         	
         $( '.alignCenter' ).append('<div style="clear:both"></div>');
     	$( ".blocks--event--links" ).wrap( "<div class='block richtextblock spotblock grid-1-1 grey_background'></div>");
+    }
+    function eventsBlockHeight() {
+        $('.height_310').parent().parent().parent().addClass('content_310');
     }
 
 	/*
@@ -208,6 +223,10 @@ var evohome = (function() {
         $('.whatsOn').parent().parent().parent().parent().addClass('fluidBGWhatsOn');
         $('.whatsOn').parent().parent().parent().parent().wrap('<a href="/haematology-academy/calendar/"></a>');
     }
+    
+    function addLogoOnMobile() {
+        $('.inner-width').append('<a href="/" id="logo"><div class="logo-holder"><div class="logo-wrapper"><img itemprop="logo" class="logo" src="/siteassets/hcp-portal-master/img/novartis_logosm2.svg" alt="ServiceSphere GB"></div><input type="hidden" id="toptagline" value="Welcome to Novartis MedHub GB"></div></a>')
+    }
 
 
 
@@ -237,12 +256,13 @@ var evohome = (function() {
         wrapDivs()
         if($(window).width() > 767) {
         } else {
-             addToMobileMenu();
+            addToMobileMenu()
+            addLogoOnMobile()
         }
         
-        
-        
-        
+        gradientBoxBlue()
+        rowItems()
+        eventsBlockHeight()
 
 		/*
 		

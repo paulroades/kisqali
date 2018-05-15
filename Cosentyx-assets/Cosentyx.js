@@ -165,8 +165,10 @@ var evohome = (function() {
             $(this).toggleClass('active');
             if ($(this).hasClass('active')) {
                 $(this).next('div').slideDown();
+                $(this).text('Hide footnotes');
             } else {
                 $(this).next('div').slideUp();
+                $(this).text('Show footnotes');
             }
         });
     }

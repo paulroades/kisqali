@@ -10,8 +10,10 @@
     position: fixed;
     z-index: 5003;
     left: 1rem;
+    display: block;
 	@include before-desktop {
 		top: 20px;
+        display: none;
 	}
 	@include desktop {
 		position: absolute;
@@ -62,7 +64,7 @@ header {
     width: 100%;
     background: $color-white;
 	overflow: visible;
-	z-index: 5003;
+	z-index: 99999;
 	@include before-tablet {
 		position: relative;
 		height: auto;

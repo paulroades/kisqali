@@ -27,9 +27,6 @@ main{    margin-top: 12rem;}
 #secondary-menu {
     height: auto!important;
     padding-bottom: 10px;
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-       -moz-box-shadow: 0 8px 6px -6px #999;
-            box-shadow: 0 8px 6px -6px #999;
 }
 
 #secondary-menu>.nav-mega>a.nav-mega-link {
@@ -62,6 +59,15 @@ height:310px;
 max-height:310px;
     background-size: cover;
 }
+
+.spotLayout-topimage .haem_ec_background.content_310 a.link {
+    float: none;
+    position: absolute;
+    left: 40px;
+    bottom: 50px;
+}
+
+
 
 .haem_past_background{
 background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_past_bg.png);
@@ -118,6 +124,8 @@ background-position: center center;
     background-repeat:no-repeat, no-repeat, no-repeat;
 }
 
+
+
 .red_background_nvs{
 /*
 background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg_nvs.png);
@@ -143,8 +151,21 @@ background-color: #f6f7f7;
     background-size: 90%;
     background-position: left top;
     background-repeat: no-repeat;
-    background-color: #cb0b0f;
+/*    background-color: #cb0b0f;*/
 }
+
+.grid .gradientBackground {
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/blueGradientBGSmall.png) no-repeat left top; 
+    background-size: cover;
+    background-color: none!important;
+}
+.grid .gradientBackground .bgImageBlueGrad {
+    background-color: none!important;
+}
+.grid .gradientBackground .backgroundColor-color7 {
+    background-color: none!important;
+}
+
 .grid .bgImage .backgroundColor-color7 {
     background: none;
 }
@@ -535,9 +556,9 @@ footer[id=site-specifics] li a:hover {
 }
 
 #content .grid .borderBottom {
-    border-top: 3px solid #0762ab;
-    margin: 0 0 50px 0;
-    padding:30px 30px 0 30px;
+/*    border-top: 3px solid #0762ab;*/
+    margin: 0 0 30px 0;
+    padding:50px 25px 0 25px;
 }
 #content .grid .borderBottom.borderBottomNone {
     border-top: none;
@@ -545,8 +566,10 @@ footer[id=site-specifics] li a:hover {
 #content .grid .borderBottom h2 {
     color: #1d70b7;
     margin: 0;
-    font-size: 1.8em;
+    font-size: 2.063em;
     line-height: 1em;
+    font-weight: 100;
+    padding: 0;
 }
 #content .grid .textAlignRight {
     text-align: right;
@@ -559,7 +582,7 @@ footer[id=site-specifics] li a:hover {
 #content .grid .internalLinks li {
     display: inline-block;
     color: #1d1d1b;
-    font-size: 1em;
+    font-size: 1.250em;
     line-height: 1em;
     border-right: 1px solid #1d1d1b;
     padding: 0 10px 0 0;
@@ -693,6 +716,9 @@ footer[id=site-specifics] li a:hover {
         width: 100%;
         height: auto;
     }
+    a.nav-mega-link {
+        padding: 1.2rem 1rem 0.5rem 1rem;
+    }
     main {
         margin-top: 3.4rem;
     }
@@ -769,6 +795,18 @@ footer[id=site-specifics] li a:hover {
     }
     .footNote.bgLightBlue {
         padding: 20px 15px;
+    }
+    #content .grid .textAlignRight {
+        text-align: left;
+    }
+    #content .grid .internalLinks {
+        margin-top: 10px;
+    }
+    #content .grid .internalLinks li:first-of-type {
+        width: 100%;
+    }
+    .spotLayout-topimage .haem_ec_background.content_310 a.link {
+        left: 20px;
     }
 }
 
