@@ -489,21 +489,25 @@ footer[id=site-specifics] li a:hover {
     text-decoration: underline!important;
 }
 
-#data-details {
+#data-details, #past-details {
     margin-top: 10px;
 }
-#data-details .event--link {
+#data-details .event--link, #past-details .event--link  {
     width: 32.6666666667%;
     margin-left: 1%;
     margin-bottom: 1%;
 }
-#data-details .event--link:first-of-type {
+#data-details .event--link:first-of-type, #past-details .event--link:first-of-type {
     margin-left: 0;
 }
 #data-details .event--link:nth-of-type(4),
 #data-details .event--link:nth-of-type(7),
 #data-details .event--link:nth-of-type(10),
-#data-details .event--link:nth-of-type(13) {
+#data-details .event--link:nth-of-type(13),
+#past-details .event--link:nth-of-type(4),
+#past-details .event--link:nth-of-type(7),
+#past-details .event--link:nth-of-type(10),
+#past-details .event--link:nth-of-type(13) {
     margin-left: 0;
 }
 
