@@ -54,34 +54,67 @@ function retriveData(callback) {
 	//var data = makeCorsRequest(dataSource);
 	
 	//console.log(0);
-	var dataSource = '/siteassets/theme/NEW_Portal/ui/js/calender/academy.json';
+	//var dataSource = '/siteassets/theme/NEW_Portal/ui/js/calender/academy.json';
 	//var data = makeCorsRequest(dataSource);
+	var dataSource = 'https://ssuk.edit.stage.servicesphere.novartis.episerverhosting.com/siteassets/theme/NEW_Portal/ui/js/calender/academy.json';
 	
-	
-    jqueryNoConflict.getJSON(dataSource, renderDataVisualsTemplate);
+    jqueryNoConflict.getJSON(dataSource, renderDataVisualsTemplate_future);
+    jqueryNoConflict.getJSON(dataSource, renderDataVisualsTemplate_past);
     
 };
 
 // render compiled handlebars template
-function renderDataVisualsTemplate(data){	
+function renderDataVisualsTemplate_future(data){	
+
+	var i = data.Dates.length	
+	//remove past event and sort in date order
+	while (i--) {
+		var dt1 = Date.parse(data.Dates[i].Event["date"]);
+		var today = new Date();		
+		if (dt1 < today) {
+			data.Dates.splice(i, 1);
+		} 
+	}
 	data.Dates.sort(function(a, b) {
+    	var dt1 = Date.parse(a.Event["date"]);
+    	var dt2 = Date.parse(b.Event["date"]);   
 
-    var dt1 = Date.parse(a.Event["date"]);
-    var dt2 = Date.parse(b.Event["date"]);   
+	    if (dt1 < dt2) return -1;
+    	if (dt2 < dt1) return 1;
+    	return 0;
 
-    if (dt1 < dt2) return -1;
-    if (dt2 < dt1) return 1;
-    return 0;
-});
-
-	//console.log(data.Dates);
-	//var x =arry.sort(function(a,b){ return a[2] > b[2] ? 1 : -1; });
-	//alert(x);
-
+	}); 
 
     handlebarsDebugHelper();
     renderHandlebarsTemplate('/siteassets/theme/NEW_Portal/ui/js/calender/dataDetailsTemplate.html', '#data-details', data);
 };
+
+// render compiled handlebars template
+function renderDataVisualsTemplate_past(data){	
+
+
+	var i = data.Dates.length	
+	//remove past event and sort in date order
+	while (i--) {
+		var dt1 = Date.parse(data.Dates[i].Event["date"]);
+		var today = new Date();		
+		if (dt1 > today) {
+			data.Dates.splice(i, 1);
+		} 
+	}
+	data.Dates.sort(function(a, b) {
+    	var dt1 = Date.parse(a.Event["date"]);
+    	var dt2 = Date.parse(b.Event["date"]);   
+
+	    if (dt1 < dt2) return -1;
+    	if (dt2 < dt1) return 1;
+    	return 0;
+
+	});
+    handlebarsDebugHelper();
+    renderHandlebarsTemplate('/siteassets/theme/NEW_Portal/ui/js/calender/dataDetailsTemplate.html', '#past-details', data);
+};
+
 
 // render handlebars templates via ajax
 function getTemplateAjax(path, callback) {
@@ -129,6 +162,11 @@ function searchProducts() {
 		var locations = "";
 		var diseases = "";
 		
+		var diseases = getParameterByName('d');
+
+		$("div.select select#disease").val(diseases);
+
+		changePlaces();
 
 		// show and hide depending on whether brand has links to the product
 		function changePlaces() {
@@ -189,7 +227,7 @@ function searchProducts() {
 			if (this.value > 0){
 				diseases = this.value;
 			}
-			//console.log("dis: "+diseases);
+			console.log("dis: "+diseases);
 			changePlaces(); // run show hide
 		});
 		
@@ -197,5 +235,16 @@ function searchProducts() {
 			$(this).toggleClass('checked');
 		});
 	}
+
+
+	function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
 
