@@ -1,0 +1,201 @@
+main{    margin-top: 12rem;}
+
+.sectionpage, .menu-is-ready {
+    background: #f6f7f7 !important;
+}
+
+.grid-content{
+ background-color:transparent;
+ 
+}
+.backgroundWhiteBG {
+    background: #ffffff;
+    padding: 20px;
+}
+
+
+.grid-4-4 > .content-focused-page-headline, .grid-3-4 > .content-focused-page-headline{
+	margin-top:1.875rem;
+	padding: 1.875rem;
+    background-color: #fff !important;
+}
+
+
+
+.grid-4-4 >  .content-focused, .grid-3-4 >  .content-focused{
+	padding: 1.875rem;
+    background-color: #fff !important;
+}
+
+
+.grid-1-4 ul.sub-navigation-items > li:nth-child(1){
+	font-weight: 600;
+    font-size: 16px;
+}
+
+.grid-1-4 ul.sub-navigation-items > li > ul{
+	margin-left:15px;
+}
+
+
+body.home .grid > .block:nth-child(1){
+    margin-bottom:1.875rem;
+}
+
+
+body.home .grid-4-4 >  .content-focused{
+	padding: 0;
+    background-color: transparent;
+
+}
+
+
+.content_360 {
+    height: 360px;
+    max-height: 360px;
+}
+
+.content_620 {
+    height: 620px;
+    max-height: 620px;
+}
+
+.transparent--block{
+    padding:1.875rem;
+}
+
+/********************/
+/** Headers Styling **/
+/********************/
+
+.kisqali--bold--blue, .kisqali--large--blue {
+    color: #006781 !important;
+    font-size: 2.5rem !important;
+    font-weight: bold !important;
+}
+
+h3.kisqali--large--blue{
+    font-size: 1.5rem !important;
+}
+
+
+
+.content-focused-page-headline {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.6em;
+}
+
+/********************/
+/** Header Styling **/
+/********************/
+
+.nav-mega-wrapper .nav-mega .logo-holder {
+    height: auto;
+}
+.nav-mega-wrapper .nav-mega #logo .logo-wrapper img {
+    height: auto;
+}
+#secondary-menu {
+    height: auto;
+}
+#secondary-menu .nav-mega {
+    padding: 40px 0;
+}
+#secondary-menu .nav-mega #kisqali-logo {
+    display: inline-block;
+    width: 13%;
+    max-width: 200px;
+}
+#secondary-menu .nav-mega .nav-mega-link {
+    padding: 0 1.5%;
+    vertical-align: bottom!important;
+    text-transform: none;
+}
+#secondary-menu .nav-mega #kisqali-logo img {
+    width: 100%;
+    height: auto;
+    max-width: 145px;
+}
+#secondary-menu .nav-mega .nav-mega-link.menu-red {
+    color: #e50e63;
+}
+
+
+/********************/
+/** TAb Styling **/
+/********************/
+ 
+.tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table; /* [1] */
+    table-layout: fixed; /* [2] */
+    width: 100%; /* [3] */
+
+    border-bottom: #006781 solid 5px;
+
+}
+
+    .tabs__item {
+        display: table-cell; 
+        border-right: 1px solid #dadada;/* [4] */
+    }
+
+    .tabs__item:last-child {
+        border-right: none;/
+    }
+
+        .tabs__link {
+            display: block; /* [5] */
+        }
+
+
+/**
+ * Primary nav. Extends `.tabs`.
+ *
+ * 1. Stop tabs’ corners leaking out beyond our 4px round.
+ */
+.primary {
+    text-align: center;
+    overflow: hidden; /* [1] */
+}
+
+        .primary a {
+            padding: 1em;
+            background-color: #006781;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-decoration: none;
+            
+        }
+
+        .primary a:hover {
+            background-color: #006781;
+        }
+
+.idle {
+    text-align: center;
+    overflow: hidden; /* [1] */
+}
+
+        .idle a {
+            padding: 1em;
+            background-color: #fff;
+            color: #000;
+            font-size: 0.9rem;
+             font-weight: 300;
+            text-transform: uppercase;
+            text-decoration: none;
+             
+        }
+
+        .idle a:hover {
+            background-color: #006781;
+             color: #fff;
+        }
+
+

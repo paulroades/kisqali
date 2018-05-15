@@ -7,6 +7,17 @@ main{    margin-top: 12rem;}
     max-width: 200px;
 }
 
+.content_300 {
+    height: 300px;
+    max-height: 300px;
+}
+.bgImage {
+    width: 100%;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+}
+
 
 /*************/
 /** Nav bar **/
@@ -16,6 +27,9 @@ main{    margin-top: 12rem;}
 #secondary-menu {
     height: auto!important;
     padding-bottom: 10px;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+       -moz-box-shadow: 0 8px 6px -6px #999;
+            box-shadow: 0 8px 6px -6px #999;
 }
 
 #secondary-menu>.nav-mega>a.nav-mega-link {
@@ -39,7 +53,7 @@ body.menu-is-ready > div.nav-mega-wrapper {
 -ms-transition: all 250ms ease;
 -o-transition: all 250ms ease;
 transition: all 250ms ease;
-    z-index: 10001!important;
+    z-index: 20001!important;
 }
 
 .haem_ec_background{
@@ -70,7 +84,20 @@ background-color: #e30613;
 .blue_background{
 background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_blue_bg.png);
 }
-
+.white_background {
+    background: #fff;
+}
+.white_background .title_spot_block h2.title {
+    color: #1d70b7;
+    font-size: 2.500em;
+    line-height: 1em;
+    margin: 0 0 20px 0;
+}
+.white_background .title_spot_block .header h4 {
+    font-size: 1.563em;
+    color: #1d70b7;
+    line-height: 1.4em;
+}
 
 .red_background{
 /*
@@ -511,6 +538,117 @@ footer[id=site-specifics] li a:hover {
     margin-left: 0;
 }
 
+#content .grid .borderBottom {
+    border-top: 3px solid #0762ab;
+    margin: 0 0 50px 0;
+    padding:30px 30px 0 30px;
+}
+#content .grid .borderBottom.borderBottomNone {
+    border-top: none;
+}
+#content .grid .borderBottom h2 {
+    color: #1d70b7;
+    margin: 0;
+    font-size: 1.8em;
+    line-height: 1em;
+}
+#content .grid .textAlignRight {
+    text-align: right;
+}
+#content .grid .internalLinks {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#content .grid .internalLinks li {
+    display: inline-block;
+    color: #1d1d1b;
+    font-size: 1em;
+    line-height: 1em;
+    border-right: 1px solid #1d1d1b;
+    padding: 0 10px 0 0;
+    margin: 0 5px 0 0;
+}
+#content .grid .internalLinks li:first-of-type,
+#content .grid .internalLinks li:last-of-type {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#content .grid .internalLinks li a {
+    color: #0762ab;
+    text-decoration: none;
+}
+.videoEmbedContainer {
+    padding: 25px;
+}
+.videoEmbedContainer h3 {
+    color: #1d1d1b;
+    font-size: 1.20em;
+    margin: 0 0 35px 0;
+    padding: 0 0 15px 0;
+    border-bottom: 2px solid #d11b19;
+}
+.videoEmbedContainer h3.addTop {
+/*    padding-top: 21px;*/
+}
+.videoEmbedContainer p {
+    color: #1d1d1b;
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.4em;
+}
+.videoEmbedContainer .oo-player-container {
+    padding: 0!important;
+    min-height: 260px;
+    margin: 0 0 30px 0;
+}
+.videoEmbedContainer .oo-player-container  .oo-player {
+    padding-top: 75%!important;
+}
+.bgWhite .grid {
+    background-color: #fff!important;
+}
+.bgWhite .alignCenter {
+    width: 100%;
+    background: #f6f7f7 !important;
+}
+.footNote.bgLightBlue {
+   background: #f6f7f7 !important;
+   margin: 0;
+   padding: 20px 0;
+}
+.bgWhite .piLink {
+    padding: 40px 20px;
+    background-color: #fff!important;
+    margin: 0;
+}
+.bgWhite .piLink p {
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 1em;
+}
+.fluidBGWhatsOn {
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/whatsonbg.jpg) no-repeat 66% 30%!important;
+    background-size: cover;
+}
+.fluidBGWhatsOn .content {
+    padding: 90px 0;
+}
+.fluidBGWhatsOn .content h2 {
+    font-size: 3.125em;
+    line-height: 1em;
+    color: #fff;
+    text-align: center;
+}
+.fluidBGWhatsOn .content p {
+    font-size: 1.313em;
+    line-height: 1em;
+    color: #fff;
+    text-align: center;
+}
+
 @media (max-width: 1024px) {
     #logo .logo-holder {
         position: relative;
@@ -518,6 +656,16 @@ footer[id=site-specifics] li a:hover {
         left: 5px;
         width: 140px;
         padding-top: 0;
+    }
+    .nav-mega {
+        padding: 0 15px;
+    }
+    .videoEmbedContainer h3 {
+        font-size: 1.1em;
+    }
+    .oo-player-container {
+        min-width: 100%;
+        min-height: auto!important;
     }
     .title_spot_block h2.title,
     .title_spot_block .header {
@@ -573,6 +721,9 @@ footer[id=site-specifics] li a:hover {
     .spotLayout-topimage .content .absolutePositionedBottom .widthHalf h4 {
         font-size: 1.2em!important;
     }
+    .videoEmbedContainer {
+        min-height: 500px;
+    }
 }
 
 @media (max-width: 767px) { 
@@ -582,6 +733,14 @@ footer[id=site-specifics] li a:hover {
     }
     #secondary-menu #haem-logo {
         padding: 1.2rem 2rem 0.5rem 2rem;
+    }
+    #secondary-menu .nav-mega-link {
+        display: none;
+    }
+    .nav-mega-wrapper #haem-logo {
+        display: block;
+        padding: 15px 30px;
+        margin: 0;
     }
     .haem_background {
         background-image: none;
@@ -595,6 +754,25 @@ footer[id=site-specifics] li a:hover {
     }
     #data-details .event--link:nth-of-type(odd) {
 /*        margin-left: 0!important;*/
+    }
+    .publicuserinterestpromptblock p {
+        float: none;
+        display: inline-block;
+    }
+    .publicuserinterestpromptblock .popup-controls {
+        
+    }
+    .publicuserinterestpromptblock .popup-controls {
+        
+    }
+    .fluidBGWhatsOn .content {
+        padding: 90px 15px;
+    }
+    #content .grid .borderBottom h2 {
+        margin: 0 0 10px 0;
+    }
+    .footNote.bgLightBlue {
+        padding: 20px 15px;
     }
 }
 

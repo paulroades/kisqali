@@ -150,6 +150,7 @@ $color-service-menu-bg: #fff;
 			width: 75%;
 			z-index: $mega-menu-zindex;
 			background-color: $color-mega-menu-bg-mobile;
+            z-index: 10;
 			.menu-is-ready & {
 				background: #fff;
 				z-index: 5005;

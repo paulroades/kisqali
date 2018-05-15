@@ -100,7 +100,7 @@ main {
 	margin: 0 auto;
 	max-width: $layout-max-width;
 	position: relative;
-	z-index: 6;
+//	z-index: 6;
 	@extend %clearfix;
 	@media (max-width: $breakpoint-tablet) {
 		padding-top: 0;

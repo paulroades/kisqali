@@ -6,7 +6,8 @@ var evohome = (function() {
 \*------------------------------------*/
 	function titleSpotBlock() {
 		var block = $('.title_spot_block');		
-		block.parent().parent().parent().addClass('content_413');		
+		block.parent().parent().parent().addClass('content_413');
+        $('.title_spot_block_300').parent().parent().parent().addClass('content_300');
 	}
 	
 	function homeBlock() {
@@ -16,6 +17,8 @@ var evohome = (function() {
 		block.parent().parent().parent().addClass('haem_ec_background');
 		var block = $('.haem-acad-past');		
 		block.parent().parent().parent().addClass('haem_past_background');	
+        var block = $('.white');		
+		block.parent().parent().parent().addClass('white_background');	
 	}
 
 	function blueBlock() {
@@ -175,13 +178,48 @@ var evohome = (function() {
 		menuItem.addClass('menu-red');	
 
     }
+    
+    
+    
+    function addToMobileMenu() {
+        var newMenuItems = $('#secondary-menu .nav-mega a');
+        $(".nav-mega-wrapper .nav-mega").append(newMenuItems);
+    }
+    
+    function MPNPage() {
+        if ($('.MPNPage')[0]){
+            $('body').addClass('bgWhite');
+        } else {
+            // Do something if class does not exist
+        }
+    }
+  
+    
+    function smoothScroll() {
+        $('.internalLinks li a[href*="#"]').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top - 100
+            }, 500, 'linear');
+        });
+    };
+    
+    function whatsOnBanner() {
+        $('.whatsOn').parent().parent().parent().parent().addClass('fluidBGWhatsOn');
+        $('.whatsOn').parent().parent().parent().parent().wrap('<a href="/haematology-academy/calendar/"></a>');
+    }
+
 
 
 /*------------------------------------*\
   go
 \*------------------------------------*/
-	var init = function() {
-
+	
+    
+    
+    var init = function() {
+        smoothScroll()
+        MPNPage()
 		menuHighlight()
 		retriveData()
 	    increaseWidthColumn()
@@ -194,9 +232,17 @@ var evohome = (function() {
 		leftBlock()
 		rightBlock()
 		siteLogo() 
-
+        whatsOnBanner()
 		disclaimerLink()
         wrapDivs()
+        if($(window).width() > 767) {
+        } else {
+             addToMobileMenu();
+        }
+        
+        
+        
+        
 
 		/*
 		
@@ -221,3 +267,7 @@ var evohome = (function() {
 $(function() {
 	evohome.init();
 });
+
+
+
+

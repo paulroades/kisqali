@@ -30,6 +30,7 @@
 	}
 	&.active {
 		opacity: 1;
+        z-index: 9999;
 	}
 	.btn {
 		border-radius: 0;
@@ -144,6 +145,18 @@
 	// 	}
 	// }
 }
+#therapyAreaPopup {
+    z-index: -1;
+    display: none;
+    &.active {
+        z-index: 9999;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: -webkit-box;
+        display: flex;
+
+    }
+}
 
 /* Style for overlay */
 .content-style-overlay {
@@ -194,6 +207,37 @@
 		border-radius: 50%;
 		line-height: 2.8;
 	}
+    .internalPopup {
+        border: none!important;
+        padding: 0px!important;
+        img {
+            margin: 0 0 50px 0;
+        }
+        p {
+            margin: 0 0 10px 0;
+            font-size: 0.8em!important;
+            padding: 0 1%!important;
+            text-align: center;
+            a {
+                background: none!important;
+                padding: 0;
+                border: none;
+                color: #0762ab!important;
+            }
+            &.smallText {
+                font-size: 0.6em!important;
+                text-align: left;
+            }
+        }
+        .addPadding {
+            padding: 0 2%;
+            .noButton {
+                padding: 0!important;
+                background: none!important;
+                color: inherit!important;
+            }
+        }
+    }
 }
 .no-touch .content-style-overlay .icon-close:hover {
 	border-color: $border-color-icon-close-hover;
@@ -257,6 +301,8 @@
 	}
 }
 
+
+
 @media all and (max-width: $tablet-size) {
 	.content-style-overlay {
 		font-size: 75%;
@@ -286,3 +332,36 @@
 		margin: 0;
 	}
 }
+
+
+@media (max-width: 767px) { 
+    .popup-default {
+        .content-style-overlay {
+            p {
+                float: none!important;
+                display: inline-block;
+                width: 49%!important;
+            }
+        }
+    }
+    .publicuserinterestpromptblock {
+        .popup-controls {
+            margin-top: 1rem!important;
+            li {
+                width: 50%;
+                min-width: auto;
+                a {
+                    height: auto;
+                    display: block;
+                    line-height: 16px!important;
+                    width: 100%;
+                    padding: 15px!important;
+                }
+            }
+        }
+    }
+}
+
+
+
+

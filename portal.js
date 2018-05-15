@@ -56,7 +56,15 @@ var evohome = (function() {
 	function darkBlue4Block() {
 		var block = $('.dark--blue--4');		
 		block.parent().parent().parent().parent().addClass('add-dark-blue4');				
-	}	
+	}
+    function addExjadeTeal() {
+		var block = $('.addExjadeTeal');		
+		block.parent().parent().parent().parent().addClass('add-exjade-teal');				
+	}
+    function addTasignaBlue() {
+		var block = $('.addTasignaBlue');		
+		block.parent().parent().parent().parent().addClass('add-tasigna-blue');				
+	}
 
 	function myProfile() {
 		var block = $('.edit--profile');		
@@ -88,12 +96,25 @@ var evohome = (function() {
 	function hasClass(element, cls) {
 		return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 	}
+    
+    function showPopUp() {
+        $('.breastCancer').parent().parent().parent().parent().addClass('breastCancerClickContainer');
+        $('.breastCancerClickContainer a').click(function(e){
+            e.preventDefault();
+            $('#therapyAreaPopup').addClass('active');
+        });
+	}
+    function removePadding() {
+        $('#secondary-menu').parent().addClass('noPadding');
+    }
 
 	
 /*------------------------------------*\
   go
 \*------------------------------------*/
 	var init = function() {
+        addTasignaBlue()
+        addExjadeTeal()
 		titleSpotBlock() 
 		homeBlock() 
 		sectionSpotBlock() 
@@ -108,6 +129,8 @@ var evohome = (function() {
 		myProfile()
 		//siteSearch() 
 		pageStyle() 
+        showPopUp()
+        removePadding()
 	};
 
 	return { init: init };

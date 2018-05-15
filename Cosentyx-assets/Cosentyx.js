@@ -14,7 +14,7 @@ var evohome = (function() {
 
 	function titleSpotBlock() {
 		var block = $('.title_spot_block');		
-		block.parent().parent().parent().addClass('content_413');		
+		block.parent().parent().parent().addClass('content_310');		
 	}
 
     
@@ -95,6 +95,10 @@ var evohome = (function() {
 		 
  		
 	}
+    
+    function gradBGColor() {
+        $('.gradient').parent().parent().parent().parent().addClass('cos_bgGradient_narrow');
+    }
 
 
   	function subMenu() {
@@ -156,7 +160,29 @@ var evohome = (function() {
 
     }
 
-
+    function showFootnoteText() {
+        $('.footnotes h6').click(function(){
+            $(this).toggleClass('active');
+            if ($(this).hasClass('active')) {
+                $(this).next('div').slideDown();
+            } else {
+                $(this).next('div').slideUp();
+            }
+        });
+    }
+    
+    function slideDownContent() {
+        $('.iconRight .content .showButton').click(function(e){
+            e.preventDefault();
+            $(this).toggleClass('active');
+            if ($(this).hasClass('active')) {
+                $(this).text('Close Graph');
+            } else {
+                $(this).text('Open Graph');
+            }
+            $(this).parent().parent().parent().parent().next('.slideReveal').slideToggle();
+        });
+    }
 
 
 /*------------------------------------*\
@@ -179,6 +205,7 @@ var evohome = (function() {
 		siteLogo() 
 
 		disclaimerLink()
+        gradBGColor()
 		/*
 		sectionSpotBlock() 
 		tealBlueBlock() 
@@ -191,6 +218,8 @@ var evohome = (function() {
 		
 		//siteSearch() 
 		pageStyle()*/ 
+        showFootnoteText()
+        slideDownContent()
 		
 	};
 
