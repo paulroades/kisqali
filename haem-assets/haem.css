@@ -820,6 +820,11 @@ footer[id=site-specifics] li a:hover {
     .spotLayout-topimage .haem_ec_background.content_310 a.link {
         left: 20px;
     }
+    .content_310 {
+        height: auto;
+        min-height: auto;
+        max-height: 100%!important;
+    }
 }
 
 @media (max-width: 450px) { 

@@ -107,12 +107,18 @@ var evohome = (function() {
     function removePadding() {
         $('#secondary-menu').parent().addClass('noPadding');
     }
+    
+    function addGoggleAnalytics() {
+        console.log('GA loaded');
+        $('head').append('<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109035671-1"><\/script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-109035671-1");<\/script>');
+    }
 
 	
 /*------------------------------------*\
   go
 \*------------------------------------*/
 	var init = function() {
+        addGoggleAnalytics()
         addTasignaBlue()
         addExjadeTeal()
 		titleSpotBlock() 
