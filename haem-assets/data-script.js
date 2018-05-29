@@ -56,7 +56,7 @@ function retriveData(callback) {
 	//console.log(0);
 	//var dataSource = '/siteassets/theme/NEW_Portal/ui/js/calender/academy.json';
 	//var data = makeCorsRequest(dataSource);
-	var dataSource = 'https://ssuk.edit.stage.servicesphere.novartis.episerverhosting.com/siteassets/theme/NEW_Portal/ui/js/calender/academy.json';
+	var dataSource = '/siteassets/theme/NEW_Portal/ui/js/calender/academy.json';
 	
     jqueryNoConflict.getJSON(dataSource, renderDataVisualsTemplate_future);
     jqueryNoConflict.getJSON(dataSource, renderDataVisualsTemplate_past);
@@ -162,9 +162,9 @@ function searchProducts() {
 		var locations = "";
 		var diseases = "";
 		
-		var diseases = getParameterByName('d');
+		//var diseases = getParameterByName('d');
 
-		$("div.select select#disease").val(diseases);
+		//$("div.select select#disease").val(diseases);
 
 		changePlaces();
 
@@ -175,8 +175,8 @@ function searchProducts() {
 				itemLocation = $(this).attr('data-location');
 				itemDisease = $(this).attr('data-disease');
 
-
-				if ((months.length == 0 ) && (locations.length == 0 ) && (diseases.length == 0 )){
+                
+				if ((months.length < 1 ) && (locations.length < 1 ) && (diseases.length < 1 )){
 					$(this).show();		
 				} else {
 

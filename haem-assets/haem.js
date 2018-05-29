@@ -221,7 +221,10 @@ var evohome = (function() {
     
     function whatsOnBanner() {
         $('.whatsOn').parent().parent().parent().parent().addClass('fluidBGWhatsOn');
-        $('.whatsOn').parent().parent().parent().parent().wrap('<a href="/haematology-academy/calendar/"></a>');
+    }
+    
+    function whatsOnFooterBlock() {
+        $('.whatsOnMPN').parent().parent().parent().parent().addClass('whatsOnFooter');
     }
     
     function addLogoOnMobile() {
@@ -263,7 +266,7 @@ var evohome = (function() {
         gradientBoxBlue()
         rowItems()
         eventsBlockHeight()
-
+        whatsOnFooterBlock()
 		/*
 		
 		sectionSpotBlock() 

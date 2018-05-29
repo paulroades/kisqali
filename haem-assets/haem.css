@@ -611,12 +611,17 @@ footer[id=site-specifics] li a:hover {
     color: #0762ab;
     text-decoration: none;
 }
+
+/**********************/
+/** MPN Page Styling **/
+/**********************/
+
 .videoEmbedContainer {
     padding: 25px;
 }
 .videoEmbedContainer h3 {
     color: #1d1d1b;
-    font-size: 1.20em;
+    font-size: 1.10em;
     margin: 0 0 35px 0;
     padding: 0 0 15px 0;
     border-bottom: 2px solid #d11b19;
@@ -678,6 +683,11 @@ footer[id=site-specifics] li a:hover {
     line-height: 1em;
     color: #fff;
     text-align: center;
+}
+.whatsOnFooter .content span .link {
+    position: absolute;
+    right: 1.4285rem;
+    bottom: 60px;
 }
 
 @media (max-width: 1024px) {
