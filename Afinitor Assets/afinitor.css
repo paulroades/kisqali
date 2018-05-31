@@ -137,6 +137,55 @@ table tr td {
     padding: 5px;
 }
 
+@media (max-width: 1024px) {
+    .tablet-grid-1 {
+        width: auto!important;
+    }
+    .nav-mega-wrapper {
+        position: fixed;
+    }
+    #secondary-menu .nav-mega .nav-mega-link {
+        padding: 0 1%;
+    }
+    .sub-navigation-items a {
+        
+    }
+}
+@media (max-width: 768px) {
+    .nav-mega-wrapper {
+        position: fixed;
+    }
+    .tableRow .grid-1-4 {
+        width: 49%;
+    }
+    .sub-navigation-items {
+        margin-bottom: 20px;
+    }
+    .sub-navigation-items a {
+        margin: 0;
+        padding: 0 5px ;
+        border: none;
+        border-radius: 0px;
+    }
+    .sub-navigation {
+        padding-top: 0;
+    }
+    .sub-navigation li {
+        display: block;
+    }
+}
+@media (max-width: 767px) {
+    main {
+        margin-top: 4rem;
+    }
+    [class*="grid-"] {
+        width: 100%;
+        padding: 0;
+    }
+    .tableRow .grid-1-4 {
+        width: 100%;
+    }
+}
 
 
 

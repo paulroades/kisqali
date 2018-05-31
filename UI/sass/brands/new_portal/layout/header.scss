@@ -13,7 +13,14 @@
     display: block;
 	@include before-desktop {
 		top: 20px;
-        display: none;
+//        display: none;
+        width: 130px;
+        height: 27px;
+        top: 15px; 
+        left: 15px!important;
+        .logo-holder {
+            padding-top: 0;
+        }
 	}
 	@include desktop {
 		position: absolute;
@@ -34,6 +41,9 @@ $desktop-logo-width: 260px;
 		width: $desktop-logo-width;
 		height: 97px;
 		padding-top:15px;
+	}
+    @include tablet {
+		display:block;
 	}
 }
 .logo-wrapper {

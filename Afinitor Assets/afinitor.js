@@ -4,11 +4,6 @@ var evohome = (function() {
 /*------------------------------------*\
     section blocks
 \*------------------------------------*/
-    
-    function removePadding() {
-        $('#secondary-menu').parent().addClass('noPadding');
-    }
-    
 	function titleSpotBlock() {
 		var block = $('.title_spot_block');		
 		block.parent().parent().parent().addClass('content_413');		
@@ -98,13 +93,21 @@ var evohome = (function() {
         $('.home-spot').parent().parent().parent().parent().parent().wrapAll('<div class="tableRow"></div>');
         $('.tableRow').append('<div class="clear"></div>')
     }
+    
+    function addToMobileMenu() {
+        var newMenuItems = $('#secondary-menu .nav-mega a');
+        $(".nav-mega-wrapper .nav-mega").append(newMenuItems);
+    }
+    
+    function addLogoOnMobile() {
+        $('.inner-width').append('<a href="/" id="logo"><div class="logo-holder"><div class="logo-wrapper"><img itemprop="logo" class="logo" src="/siteassets/hcp-portal-master/img/novartis_logosm2.svg" alt="ServiceSphere GB"></div><input type="hidden" id="toptagline" value="Welcome to Novartis MedHub GB"></div></a>')
+    }
 
 	
 /*------------------------------------*\
   go
 \*------------------------------------*/
 	var init = function() {
-        removePadding();
 		titleSpotBlock() 
 		homeBlock() 
 		sectionSpotBlock() 
@@ -120,6 +123,11 @@ var evohome = (function() {
 		//siteSearch() 
 		pageStyle() 
         homeSpotTable()
+        if($(window).width() > 767) {
+        } else {
+            addToMobileMenu()
+            addLogoOnMobile()
+        }
 	};
 
 	return { init: init };

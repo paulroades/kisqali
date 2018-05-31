@@ -198,4 +198,19 @@ h3.kisqali--large--blue{
              color: #fff;
         }
 
+@media (max-width: 767px) {
+    main {
+        margin-top: 4rem;
+    }
+    [class*="grid-"] {
+        width: 100%;
+        padding: 0;
+    }
+    .grid-content {
+        padding: 0px;
+    }
+    .tableRow .grid-1-4 {
+        width: 100%;
+    }
+}
 
