@@ -107,6 +107,7 @@ var evohome = (function() {
     function addToMobileMenu() {
         var newMenuItems = $('#secondary-menu .nav-mega a');
         $(".nav-mega-wrapper .nav-mega").append(newMenuItems);
+        console.log('menu');
     }
     
     function addLogoOnMobile() {
@@ -117,19 +118,20 @@ var evohome = (function() {
   go
 \*------------------------------------*/
 	var init = function() {
-        menuHighlight()	
-        whiteBackground()
-		subMenu() 
-       	siteLogo() 
-		disclaimerLink()
-		homeSpotBlock()
-        halfSpotBlock()
+        menuHighlight()	;
+        whiteBackground();
+		//subMenu() ;
+       	siteLogo() ;
+		disclaimerLink();
+		homeSpotBlock();
+        halfSpotBlock();
 
-        addClassToBody()
+        addClassToBody();
         if($(window).width() > 767) {
+            
         } else {
-            addToMobileMenu()
-            addLogoOnMobile()
+            addLogoOnMobile();
+            addToMobileMenu();
         }
 		
 	};
