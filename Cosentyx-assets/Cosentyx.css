@@ -12,12 +12,42 @@ ul li {
     margin: 0 0 20px 0;
 }
 
+.clear {
+    clear: both;
+}
+.scale-with-grid {
+    width: 80%;
+    height: auto;
+}
+.alignCenter {
+    text-align: center;
+}
+
+.linkAlt {
+    font-size: inherit!important;
+    color: inherit!important;
+    position: relative;
+    display: block;
+}
+.linkAlt span {
+    position: relative;
+    -webkit-transition: .33s;
+    transition: .33s;
+    right: 0px;
+}
+.linkAlt:hover span {
+    right: -5px;
+}
+
 main{    margin-top: 12rem;}
-.sectionpage, .menu-is-ready {
+.sectionpage, .menu-is-ready, body {
     background: rgba(224,0,91,0.15) !important;
 }
 
-.grid{background:inherit}
+.grid{
+    background:inherit;
+    position: relative;
+}
 
 .padding {
     padding: 40px;
@@ -49,16 +79,26 @@ main{    margin-top: 12rem;}
 
 .bgLeap {
     background: #512a5b;
-    background:url(/siteassets/gb-portal/cosentyx-section/img/leap-bg.png) no-repeat center center ;
+    background:url(/siteassets/gb-portal/cosentyx-section/img/gradientone.jpg) no-repeat center center ;
+    background-size: cover;
+}
+.bgLeap .leapLogoImage {
+    width: 100%;
+    max-width: 215px;
+    margin-top: 60px;
 }
 
 
 .leap .header h4{
-    margin:0;
-    font-size: 1.8rem;
+    margin:0 0 5px 0;
+    font-size: 2.500em;
     color:#ffffff;
-    }
-
+}
+.leap .header p {
+    font-size: 1.563em;
+    width: 60%;
+    max-width: 100%;
+}
 
 .bgPurple {
     background: #512a5b;
@@ -70,12 +110,15 @@ main{    margin-top: 12rem;}
 .bgPink {
     background: #e0005b;
 }
+.bgPalePink {
+    background: #ef6ea1;
+}
 
 
 .bgGrey {
     background: #d1d2d4;
 }
-.bgWhite .header {padding:20px;}
+.bgPalePink .header {padding:20px;}
 
 .bgDusky{
     background:#ddd5e0;
@@ -172,9 +215,16 @@ h1 + p {
 
 .title_spot_block h2.title{
     font-weight:600;
+    font-size: 3.750em;
 }
-
-
+.title_spot_block h4 {
+    font-size: 1.563em;
+}
+.title_spot_block h2.titleSmall {
+    font-weight:600;
+    font-size: 2.500em;
+    color: #fff;
+}
 
 .title_spot_block .header, .title_spot_block .header p{
     width:95%;
@@ -185,34 +235,41 @@ h1 + p {
 .add-purple{background-color:#512a5b !important;}
 .add-dusky{background-color:#ddd5e0 !important;}
 .add-light-pink {background-color:#dfcfd5 !important;}
+.add-grad {background: url(/siteassets/gb-portal/cosentyx-section/img/gradientone.jpg) no-repeat right bottom;background-size: cover;}
 
 .pattern .header, .share-col .header{
-    margin: 30px 0 0 20px !important;
+    margin: 0 0 0 20px !important;
 }
 
 
 .pattern .header h2, .share-col .header h2{
     text-transform: inherit;
-    font-size: 3.6rem;
-    width:65%;
+    font-size:3.6rem;
+/*    width:65%;*/
 }
-
-.share-col .header h2:after{
-    background-image: url('/siteassets/gb-portal/cosentyx-section/img/contact_rep.png');
-    background-size: 140px 160px;
-    display: inline-block;
-    width: 140px;
-    height: 160px;
-    content: "";
-    left: 400px;
-    top: -180px;
-    position: relative;
+.pattern .header h2 {
+    font-size: 2.500em;
+    line-height: 1.4em;
 }
-
-
+.pattern .header h2 span {
+    font-size: inherit!important;
+    font-weight: inherit!important;
+}
+.event_spot_block .header.alignCenter {
+    text-align: center;
+}
+.event_spot_block .header.alignCenter h2 {
+    text-align: center;
+}
+.event_spot_block .header .icon {
+    width: 110px;
+    height: auto;
+    margin: 20px 0;
+}
 .rep a.link{
     margin-top: -110px;
 }
+
 
 
 .home .spot .backgroundColor-color7 {
@@ -254,13 +311,22 @@ h1 + p {
 
 
 
-.purple>.header, .pink>.header, .white>.header{
+.purple>.header, .pink>.header, .white>.header, .grad>.header{
     padding: 25px;
+/*
     height: 150px;
     max-height: 150px;
+*/
 }
 
 .add-white .content_310 a.link {color:#e0005b !important;}
+
+.grad > .header .icon  {
+    width: 120px;
+    height: 122px;
+    margin: 0 auto;
+}
+
 
 .event_spot_block>.header h3{
 color: #ffffff;
@@ -268,6 +334,12 @@ font-size:1.8rem;
 font-weight:300;
 margin:0;
 padding:0;
+}
+.grad > .header h3 {
+    color: #ffffff;
+}
+.grad > .header h3 a {
+    color: inherit!important;
 }
 .event_spot_block .addPadding {
     padding: 20px;
@@ -342,15 +414,16 @@ padding:0;
 
 
 
-.related h2.textPink{
+.related h2 {
     font-size:1.375rem;
     font-weight:600;
     margin:0;
     position: relative;
     padding-left: 70px;
+    color: #532e63;
 }
 
-.related h2.textPink:before{
+.related h2:before{
      background-image: url('/siteassets/gb-portal/cosentyx-section/img/finger.png');
     background-size: 54px 40px;
     display: inline-block;
@@ -369,24 +442,69 @@ font-weight:600;
 
 
 .related p{
-font-size:1.2rem;
+font-size:1.125em;
 max-width:100% !important;
-font-weight:300;
+/*font-weight:300;*/
 }
 
 
-.r--content{padding: 20px 0;
-     width: 48%;}
+.r--content{
+    padding: 20px 0;
+}
 
- .r--content a{
-        font-size:1.2rem;
-        line-height:1.5;
-    }
+.r--content a{
+    font-size:1.250em;
+    line-height:1.2em;
+    margin: 0 0 5px 0;
+    color: #fff;
+}
 
 .r--content:first-of-type{border-bottom: 1px #512a5b solid;}
 
 
 .inherit-bg{background: inherit;}
+
+/**************************/
+/** SideBar Page Styling **/
+/**************************/
+
+.grid-3-4 .grid-1-2 {
+    width: 50%;
+}
+.grid-content {
+    padding-left: 0px;
+    padding-right: 1.875rem;
+    background: none!important;
+}
+.sectionHeading h3 {
+    font-size: 1.563em;
+    line-height: 1.4em;
+    margin: 0;
+    color: #fff;
+}
+.sideBar {
+    width: 100%;
+    position: relative;
+    top: 0px;
+}
+.sideBar .addBottom {
+    margin-bottom: 30px;
+}
+.sideBar .contactRepBox .header {
+    margin: 0;
+    text-align: center;
+    padding: 26px 10px;
+}
+.sideBar .contactRepBox .header .icon {
+    width: 80px;
+    margin: 0 0 26px 0;
+    height: auto;
+}
+.sideBar .contactRepBox .header h3 {
+    color: #fff;
+    font-size: 1.563em;
+    font-weight: bold;
+}
 
 /**********/
 /** Tabs **/

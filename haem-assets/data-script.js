@@ -59,7 +59,7 @@ function retriveData(callback) {
 	//console.log(0);
 	//var dataSource = '/siteassets/theme/NEW_Portal/ui/js/calender/academy.json';
 	//var data = makeCorsRequest(dataSource);
-	var dataSource = '/siteassets/Theme/New_Portal/UI/js/calender/academy.json';
+	var dataSource = '/siteassets/theme/New_Portal/UI/js/calendar/academy.json';
     
     jqueryNoConflict.getJSON(dataSource, renderDataVisualsTemplate_future);
     jqueryNoConflict.getJSON(dataSource, renderDataVisualsTemplate_past);

@@ -14,7 +14,12 @@ var evohome = (function() {
 
 	function titleSpotBlock() {
 		var block = $('.title_spot_block');		
-		block.parent().parent().parent().addClass('content_310');		
+		block.parent().parent().parent().addClass('content_410');		
+	}
+    
+   function titleSpotBlock() {
+		var block = $('.title_spot_block');		
+		block.parent().parent().parent().addClass('content_410');		
 	}
 
     
@@ -73,7 +78,9 @@ var evohome = (function() {
 		var block = $('.white');		
 		block.parent().parent().parent().parent().addClass('add-white');
 		var block = $('.dusky');		
-		block.parent().parent().parent().parent().addClass('add-dusky');				
+		block.parent().parent().parent().parent().addClass('add-dusky');	
+        var block = $('.grad');		
+		block.parent().parent().parent().parent().addClass('add-grad');
 	}	
 
 
@@ -185,6 +192,28 @@ var evohome = (function() {
             $(this).parent().parent().parent().parent().next('.slideReveal').slideToggle();
         });
     }
+    
+	
+	
+    function staticBlock(){
+        var headerHeight = $('#secondary-menu').outerHeight() + 20;
+        var $sidebar   = $("#static"), 
+                $window    = $(window),
+                offset     = $sidebar.offset(),
+                topPadding = headerHeight;
+
+            $window.scroll(function() {
+                if ($window.scrollTop() > offset.top) {
+                    $sidebar.stop().animate({
+                        top: $window.scrollTop() - offset.top + topPadding
+                    });
+                } else {
+                    $sidebar.stop().animate({
+                        top: 0
+                    });
+                }
+            });
+	}
 
 
 /*------------------------------------*\
@@ -222,7 +251,7 @@ var evohome = (function() {
 		pageStyle()*/ 
         showFootnoteText()
         slideDownContent()
-		
+        staticBlock()
 	};
 
 	return { init: init };
