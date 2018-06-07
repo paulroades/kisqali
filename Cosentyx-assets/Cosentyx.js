@@ -200,7 +200,7 @@ var evohome = (function() {
         var $sidebar   = $("#static"), 
                 $window    = $(window),
                 offset     = $sidebar.offset(),
-                topPadding = headerHeight;
+                topPadding = -180;
 
             $window.scroll(function() {
                 if ($window.scrollTop() > offset.top) {
@@ -214,6 +214,38 @@ var evohome = (function() {
                 }
             });
 	}
+    
+    function headingSectionWithSidebar() {
+        $('.content-focused-page-headline').parent().wrap('<div class="headingSection addBottom"><div class="block spotblock spot grid-3-4 leftSideHeader"><div class="spotContainer visual headingColor-color2 headingAlignment-left headingStyle-normal iconColor-color1 textColor-color1 textAlignment-left textStyle-normal linkColor-color1 backgroundColor-color7 spotLayout-topimage trigger-change"><div class="content content_410 patternBG content_310"></div></div></div></div>');
+        var headerSideImage = $('.content-heading-img img').attr('src');
+        $('.headingSection').append('<div class="block htmlembedblock grid-1-4" id="content_84996"><div class="content_310 bgImage" style="background: url(' + headerSideImage + ') no-repeat center center; background-size: cover;"></div></div><div class="clear"></div>');
+    }
+    
+    function backtoTop() {
+        $('.backToTopButton').click(function() {
+          $("html, body").animate({ scrollTop: 0 }, "slow");
+          return false;
+        });
+    }
+    
+//    function addTabsNavigation() {
+//        if ($('.iHaveTabs')[0]){
+//            $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-long-term-benefits">LONG-TERM BENEFITS</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-your-AS-patient">YOUR AS PATIENT</a></li></ul></div>');
+//        } else {
+//            // Do something if class does not exist
+//        }
+//    }
+    
+    function addToBodyClass() {
+        switch (window.location.pathname) {
+            case '/Medicines/cosentyx/ankylosing-spondylitis-disease-background':
+                $('#content').prepend('<div class="tabs"><ul><li><a class="active" href="/Medicines/cosentyx/ankylosing-spondylitis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-long-term-benefits">LONG-TERM BENEFITS</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-your-AS-patient">YOUR AS PATIENT</a></li></ul></div>');
+                break;
+            case '/something':
+            case '/somestuff':
+                $('#main').addClass('some')
+        }
+    }
 
 
 /*------------------------------------*\
@@ -248,10 +280,15 @@ var evohome = (function() {
 		medicineSpotBlockw()
 		
 		//siteSearch() 
-		pageStyle()*/ 
+		pageStyle()*/
+        
         showFootnoteText()
         slideDownContent()
+        addToBodyClass()
         staticBlock()
+        headingSectionWithSidebar()
+        backtoTop() 
+        
 	};
 
 	return { init: init };
