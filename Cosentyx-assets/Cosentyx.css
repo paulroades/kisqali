@@ -5,11 +5,13 @@ p {
 ul {
     font-size: 100%;
     padding: 0 0 0 15px;
+    color: #231f20;
 }
 ul li {
 /*    font-size: 0.875em;*/
     line-height: 1.5;
     margin: 0 0 20px 0;
+    color: #231f20;
 }
 p {
     color: #231f20;
@@ -206,6 +208,18 @@ h1 {
 h1 + p {
    color: #fff; 
    margin: 0;
+}
+.text--block .figureText {
+    font-size: 0.875em;
+    margin: 0;
+}
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub { 
+  top: 0.4em; 
 }
 
 /********************/

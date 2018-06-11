@@ -239,11 +239,15 @@ var evohome = (function() {
     function addToBodyClass() {
         switch (window.location.pathname) {
             case '/Medicines/cosentyx/ankylosing-spondylitis-disease-background':
-                $('#content').prepend('<div class="tabs"><ul><li><a class="active" href="/Medicines/cosentyx/ankylosing-spondylitis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-long-term-benefits">LONG-TERM BENEFITS</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-your-AS-patient">YOUR AS PATIENT</a></li></ul></div>');
+                $('#content').prepend('<div class="tabs"><ul><li><a class="active" href="/Medicines/cosentyx/ankylosing-spondylitis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient">YOUR AS PATIENT</a></li><li><a href="#">SUSTAINED BENEFITS</a></li></ul></div>');
                 break;
-            case '/something':
-            case '/somestuff':
-                $('#main').addClass('some')
+            case '/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient':
+                console.log('test');
+                $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-disease-background">DISEASE BACKGROUND</a></li><li><a class="active" href="/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient">YOUR AS PATIENT</a></li><li><a href="#">SUSTAINED BENEFITS</a></li></ul></div>');
+                break;
+            case '/Medicines/cosentyx/psoriatic-arthritis-disease-background/':
+                $('#content').prepend('<div class="tabs"><ul><li><a class="active" href="/Medicines/cosentyx/psoriatic-arthritis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient">YOUR PsA PATIENT</a></li><li><a href="#">SUSTAINED BENEFITS</a></li></ul></div>');
+                break;
         }
     }
 
