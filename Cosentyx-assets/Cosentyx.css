@@ -2,16 +2,26 @@ p {
 /*    font-size: 0.875em;*/
     margin: 0 0 20px 0;
 }
-ul {
+.text--block ul {
     font-size: 100%;
-    padding: 0 0 0 15px;
+    padding: 0px;
     color: #231f20;
 }
-ul li {
+.text--block ul li {
 /*    font-size: 0.875em;*/
     line-height: 1.5;
     margin: 0 0 20px 0;
     color: #231f20;
+    list-style: none;
+    padding-left: 15px;
+    position: relative;
+}
+.text--block ul li:before {
+  content: "• ";
+  color: #e40e63; /* or whatever color you prefer */
+  position: absolute;
+    left: 0px;
+    top: 0px;
 }
 p {
     color: #231f20;
@@ -33,6 +43,17 @@ p {
 .paddingRight {
     padding-right: 5%;
 }
+.paddingLeft {
+    padding-left: 5%;
+}
+.borderRight {
+    border-right: 1px solid #231f20;
+}
+/*
+.hide {
+    padding: 20px 0;
+}
+*/
 .backToTopButton {
     border: 1px solid #e50e63;
     width: 160px;
@@ -59,6 +80,70 @@ p {
     -o-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+.footNoteButton {
+    border: 1px solid #532e63;
+    width: 180px;
+    display: block;
+    padding: 15px 20px;
+    color: #532e63!important;
+    font-size: 1em; 
+    line-height: 1em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+.footNoteButton:after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background:url(/siteassets/gb-portal/cosentyx-section/img/plus.png) no-repeat center center #532e63;
+    background-size: 8px 8px;
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 16px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    border-radius: 12px 12px 12px 12px;
+    text-align: center;
+}
+.footNoteButton.active:after {
+    background:url(/siteassets/gb-portal/cosentyx-section/img/minus.png) no-repeat center center #532e63;
+    background-size: 8px 8px;
+}
+.showButton {
+    border: 1px solid #fff;
+    width: 180px;
+    display: block;
+    padding: 15px 20px;
+    color: #fff!important;
+    font-size: 1em; 
+    line-height: 1em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+.showButton:after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background:url(/siteassets/gb-portal/cosentyx-section/img/plusPurple.png) no-repeat center center #fff;
+    background-size: 8px 8px;
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 16px;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    border-radius: 12px 12px 12px 12px;
+    text-align: center;
+}
+.showButton.active:after {
+    background:url(/siteassets/gb-portal/cosentyx-section/img/minusPurple.png) no-repeat center center #fff;
+    background-size: 8px 8px;
 }
 
 .text--block--purple {
@@ -552,6 +637,15 @@ max-width:100% !important;
     margin: 0;
     color: #fff;
 }
+.sectionHeading h4 {
+    color: #fff;
+    font-size: 1.250em;
+    line-height: 1.2em;
+    margin: 0;
+}
+.sectionHeading h4.addBottom {
+    margin-bottom: 30px;
+}
 .sectionHeading p {
     margin: 0;
     color: #fff;
@@ -568,6 +662,16 @@ max-width:100% !important;
 .text--block h3 + p {
     font-size: 1.563em;
     line-height: 1em;
+}
+.text--block h5 {
+    color: #532e63;
+    font-size: 1.125em;
+    line-height: 1.2em;
+    margin: 0 0 20px 0;
+}
+.text--block h5.pinkText {
+    color: #e40e63;
+    margin: 0 0 10px 0;
 }
 .sideBar {
     width: 100%;
@@ -747,6 +851,7 @@ max-width:100% !important;
     width: 100px;
     height: 100px;
 }
+/*
 .iconRight .content .showButton {
     width: 140px;
     border: 1px solid #fff;
@@ -781,6 +886,7 @@ max-width:100% !important;
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+*/
 
 @media (max-width: 1024px){
     main {

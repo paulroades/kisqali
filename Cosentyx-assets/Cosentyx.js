@@ -168,11 +168,12 @@ var evohome = (function() {
     }
 
     function showFootnoteText() {
-        $('.footnotes h6').click(function(){
+        $('.footNoteButton').click(function(e){
+            e.preventDefault();
             $(this).toggleClass('active');
             if ($(this).hasClass('active')) {
                 $(this).next('div').slideDown();
-                $(this).text('Hide footnotes');
+                $(this).text('Close footnotes');
             } else {
                 $(this).next('div').slideUp();
                 $(this).text('Show footnotes');
@@ -181,15 +182,16 @@ var evohome = (function() {
     }
     
     function slideDownContent() {
-        $('.iconRight .content .showButton').click(function(e){
+        $('.showButton').click(function(e){
             e.preventDefault();
             $(this).toggleClass('active');
             if ($(this).hasClass('active')) {
-                $(this).text('Close Graph');
+                $(this).children('span').text('Close');
             } else {
-                $(this).text('Open Graph');
+                //$(this).text('Show infographic');
+                $(this).children('span').text('Open');
             }
-            $(this).parent().parent().parent().parent().next('.slideReveal').slideToggle();
+            $(this).parent().parent().parent().parent().siblings('.slideReveal').slideToggle();
         });
     }
     
@@ -235,7 +237,7 @@ var evohome = (function() {
 //            // Do something if class does not exist
 //        }
 //    }
-    
+    //Adding tabs to the top of these pages
     function addToBodyClass() {
         switch (window.location.pathname) {
             case '/Medicines/cosentyx/ankylosing-spondylitis-disease-background':
@@ -245,9 +247,15 @@ var evohome = (function() {
                 console.log('test');
                 $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-disease-background">DISEASE BACKGROUND</a></li><li><a class="active" href="/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient">YOUR AS PATIENT</a></li><li><a href="#">SUSTAINED BENEFITS</a></li></ul></div>');
                 break;
-            case '/Medicines/cosentyx/psoriatic-arthritis-disease-background/':
-                $('#content').prepend('<div class="tabs"><ul><li><a class="active" href="/Medicines/cosentyx/psoriatic-arthritis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient">YOUR PsA PATIENT</a></li><li><a href="#">SUSTAINED BENEFITS</a></li></ul></div>');
+            case '/Medicines/cosentyx/psoriatic-arthritis-disease-background':
+                $('#content').prepend('<div class="tabs"><ul><li><a class="active" href="/Medicines/cosentyx/psoriatic-arthritis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/your-psoriatic-arthritis-patient">YOUR PsA PATIENT</a></li><li><a href="/Medicines/cosentyx/sustained-benefits-in-psa">SUSTAINED BENEFITS</a></li></ul></div>');
                 break;
+            case '/Medicines/cosentyx/your-psoriatic-arthritis-patient':
+               $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/psoriatic-arthritis-disease-background">DISEASE BACKGROUND</a></li><li><a class="active" href="/Medicines/cosentyx/your-psoriatic-arthritis-patient">YOUR PsA PATIENT</a></li><li><a href="/Medicines/cosentyx/sustained-benefits-in-psa">SUSTAINED BENEFITS</a></li></ul></div>');
+               break; 
+            case '/Medicines/cosentyx/sustained-benefits-in-psa':
+               $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/psoriatic-arthritis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/your-psoriatic-arthritis-patient">YOUR PsA PATIENT</a></li><li><a class="active" href="/Medicines/cosentyx/sustained-benefits-in-psa">SUSTAINED BENEFITS</a></li></ul></div>');
+               break; 
         }
     }
 
