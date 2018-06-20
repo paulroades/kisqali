@@ -199,22 +199,28 @@ var evohome = (function() {
 	
     function staticBlock(){
         var headerHeight = $('#secondary-menu').outerHeight() + 20;
-        var $sidebar   = $("#static"), 
-                $window    = $(window),
-                offset     = $sidebar.offset(),
-                topPadding = -180;
-
-            $window.scroll(function() {
-                if ($window.scrollTop() > offset.top) {
-                    $sidebar.stop().animate({
-                        top: $window.scrollTop() - offset.top + topPadding
-                    });
-                } else {
-                    $sidebar.stop().animate({
-                        top: 0
-                    });
-                }
-            });
+        
+        $('#static').parent().parent().parent().addClass('stickySidebar').css('top', headerHeight);
+        
+        Stickyfill.add($('.stickySidebar'));
+//        var headerHeight = $('#secondary-menu').outerHeight() + 20;
+//        var $sidebar   = $("#static"), 
+//                $window    = $(window),
+//                offset     = $sidebar.offset(),
+//                topPadding = headerHeight;
+//
+//            $window.scroll(function() {
+//                console.log(topPadding);
+//                if ($window.scrollTop() > offset.top) {
+//                    $sidebar.stop().animate({
+//                        top: $window.scrollTop() - offset.top + topPadding
+//                    });
+//                } else {
+//                    $sidebar.stop().animate({
+//                        top: 0
+//                    });
+//                }
+//            });
 	}
     
     function headingSectionWithSidebar() {
@@ -297,7 +303,12 @@ var evohome = (function() {
         showFootnoteText()
         slideDownContent()
         addToBodyClass()
-        staticBlock()
+        if ($(window).width() > 1024) {
+            staticBlock()
+        } else {
+            
+        }
+        
         headingSectionWithSidebar()
         backtoTop() 
         

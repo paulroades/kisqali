@@ -573,7 +573,13 @@ padding:0;
     left: 0px;
     top: 0px;
 }
-
+.related h2.noIcon {
+    margin: 15px 0 ;
+    padding: 0;
+}
+.related h2.noIcon:before {
+    display: none;
+}
 .related h3{
 font-size:1.2rem;
 font-weight:600;
@@ -673,10 +679,10 @@ max-width:100% !important;
     color: #e40e63;
     margin: 0 0 10px 0;
 }
-.sideBar {
-    width: 100%;
-    position: relative;
-    top: 0px;
+.stickySidebar {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 20px;
     
 }
 .sideBar .addBottom {
@@ -887,6 +893,54 @@ max-width:100% !important;
     transform: rotate(180deg);
 }
 */
+
+/**********************/
+/** M4M page styling **/
+/**********************/
+
+.missionForMovementContent {
+    background: url(/siteassets/gb-portal/cosentyx-section/img/mission4movementbg.jpg) no-repeat right top;
+    background-size: cover;
+}
+.missionForMovementContent .m4mLogo {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    margin: 0 0 20px 0;
+}
+.missionForMovementContent h2 {
+    color: #e40e63;
+    font-size: 1.563em;
+    line-height: 1em;
+    margin: 0 0 20px 0;
+    padding: 0 0 0 20px;
+    -moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+#content .grid .missionForMovementContent p {
+    color: #231f20;
+    font-size: 1.125em;
+    line-height: 1.4em;
+    margin: 0 0 20px 0;
+    padding: 0 0 0 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#content .grid .missionForMovementContent p a {
+    color: #0069b1;
+}
+.bannerBGText {
+    background: url(/siteassets/gb-portal/cosentyx-section/img/bannergradbg.png) repeat-x top left;
+    padding: 20px ;
+    margin-bottom: 80px;
+}
+#content .grid .missionForMovementContent .bannerBGText p {
+    margin: 0; 
+    padding: 0;
+    font-size: 1.250em;
+}
 
 @media (max-width: 1024px){
     main {
