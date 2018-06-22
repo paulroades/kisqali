@@ -81,6 +81,8 @@ var evohome = (function() {
 		block.parent().parent().parent().parent().addClass('add-dusky');	
         var block = $('.grad');		
 		block.parent().parent().parent().parent().addClass('add-grad');
+        $('.whiteBGImage').parent().parent().parent().parent().addClass('add-bgOne');
+        $('.whiteBGImage2').parent().parent().parent().parent().addClass('add-bgTwo');
 	}	
 
 
@@ -123,25 +125,25 @@ var evohome = (function() {
     
     function menuHighlight(){
         switch (window.location.pathname) {
-            case '/products/cosentyx/early-intervention':
+            case '/Medicines/cosentyx/early-intervention':
                 $('.early-intervention').addClass('menu-red');
                 break;
-            case '/products/cosentyx/targeting-inflammation':
+            case '/Medicines/cosentyx/targeting-inflammation':
                 $('.targeting-inflammation').addClass('menu-red');
                 break;
-            case '/products/cosentyx/AS':
+            case '/Medicines/cosentyx/ankylosing-spondylitis-disease-background':
                 $('.AS').addClass('menu-red');
                 break;
-            case '/products/cosentyx/psoriatic-arthritis-disease-background':
+            case '/Medicines/cosentyx/psoriatic-arthritis-disease-background':
                 $('.PSA').addClass('menu-red');
                 break;
-            case '/products/cosentyx/mission-for-movement':
+            case '/Medicines/cosentyx/mission-for-movement':
                 $('.mission-for-movement').addClass('menu-red');
                 break;
-            case '/products/cosentyx/resources':
+            case '/Medicines/cosentyx/resources':
                 $('.resources').addClass('menu-red');
                 break;
-            case '/products/cosentyx/prescribing-information/':
+            case '/Medicines/cosentyx/prescribing-information/':
                 $('.prescribing-information').addClass('menu-red');
                 break;
             default:
@@ -225,8 +227,13 @@ var evohome = (function() {
     
     function headingSectionWithSidebar() {
         $('.content-focused-page-headline').parent().wrap('<div class="headingSection addBottom"><div class="block spotblock spot grid-3-4 leftSideHeader"><div class="spotContainer visual headingColor-color2 headingAlignment-left headingStyle-normal iconColor-color1 textColor-color1 textAlignment-left textStyle-normal linkColor-color1 backgroundColor-color7 spotLayout-topimage trigger-change"><div class="content content_410 patternBG content_310"></div></div></div></div>');
+        
         var headerSideImage = $('.content-heading-img img').attr('src');
         $('.headingSection').append('<div class="block htmlembedblock grid-1-4" id="content_84996"><div class="content_310 bgImage" style="background: url(' + headerSideImage + ') no-repeat center center; background-size: cover;"></div></div><div class="clear"></div>');
+        
+        var paraText = $('.content-holder').html();
+        $('.content-holder').hide();
+        $('.headingSection .patternBG .grid-content').append(paraText);
     }
     
     function backtoTop() {

@@ -245,7 +245,8 @@ main{    margin-top: 12rem;}
 .bgGrey {
     background: #d1d2d4;
 }
-.bgPalePink .header {padding:20px;}
+.bgPalePink .header,
+.bgWhite .header {padding:20px;}
 
 .bgDusky{
     background:#ddd5e0;
@@ -311,6 +312,12 @@ sub {
 /** Header Styling **/
 /********************/
 
+.nav-mega-wrapper {
+    z-index: 9;
+}
+.search-control-holder {
+    z-index: 10;
+}
 .nav-mega-wrapper .nav-mega .logo-holder {
     height: auto;
 }
@@ -337,6 +344,10 @@ sub {
     height: auto;
 }
 #secondary-menu .nav-mega .nav-mega-link.menu-red {
+    color: #e50e63;
+}
+#secondary-menu .nav-mega .nav-mega-link:hover {
+    border-bottom-color: #e50e63;
     color: #e50e63;
 }
 
@@ -375,6 +386,8 @@ sub {
 .add-dusky{background-color:#ddd5e0 !important;}
 .add-light-pink {background-color:#dfcfd5 !important;}
 .add-grad {background: url(/siteassets/gb-portal/cosentyx-section/img/gradientone.jpg) no-repeat right bottom;background-size: cover;}
+.add-bgOne {background: url(/siteassets/gb-portal/cosentyx-section/home-page/img/whitebgxray.png) no-repeat right bottom;background-size: cover;}
+.add-bgTwo {background: url(/siteassets/gb-portal/cosentyx-section/home-page/img/whiteBGXrayHip.png) no-repeat right bottom;background-size: cover;}
 
 .pattern .header, .share-col .header{
     margin: 0 0 0 20px !important;
@@ -403,7 +416,21 @@ sub {
 .event_spot_block .header .icon {
     width: 110px;
     height: auto;
-    margin: 20px 0;
+    margin: 20px auto;
+    display: block;
+}
+.event_spot_block .header .icon.m4mIcon {
+    width: 160px;
+    height: 99px;
+    background: url(/siteassets/gb-portal/cosentyx-section/home-page/img/m4mLogoSmall.png) no-repeat left top;
+    background-size: cover;
+}
+.event_spot_block .header .icon.phoneIcon {
+    width: 98px;
+    height: 101px;
+    background: url(/siteassets/gb-portal/cosentyx-section/img/handPhone.png) no-repeat left top;
+    background-size: cover;
+    margin-top: 75px;
 }
 .rep a.link{
     margin-top: -110px;
@@ -451,7 +478,7 @@ sub {
 
 
 .purple>.header, .pink>.header, .white>.header, .grad>.header{
-    padding: 25px;
+/*    padding: 25px;*/
 /*
     height: 150px;
     max-height: 150px;
@@ -463,7 +490,7 @@ sub {
 .grad > .header .icon  {
     width: 120px;
     height: 122px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 
@@ -558,7 +585,7 @@ padding:0;
     font-weight:600;
     margin:0;
     position: relative;
-    padding-left: 70px;
+    padding-left: 60px;
     color: #532e63;
 }
 
@@ -579,6 +606,41 @@ padding:0;
 }
 .related h2.noIcon:before {
     display: none;
+}
+.related .r--content a {
+    color: #e40e63;
+}
+.quickLinks h2 {
+    font-size:1.375rem;
+    font-weight:600;
+    margin:0;
+    position: relative;
+    padding-left: 60px;
+    color: #532e63;
+}
+.quickLinks h2:before{
+    background-image: url('/siteassets/gb-portal/cosentyx-section/early-intervention/img/quickLinkIcon.png');
+    background-size: 40px 42px;
+    display: inline-block;
+    width: 40px;
+    height: 42px;
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.quickLinks .r--content:last-of-type {
+    border-bottom: none;
+}
+.quickLinks .r--content .linkAlt,
+.related .r--content .linkAlt {
+    font-size: 1.250em!important;
+    line-height: 1.2em!important;
+    margin: 0 0 5px 0;
+    color: #fff!important;
+}
+.related .r--content .linkAlt {
+    color: #e40e63!important;
 }
 .related h3{
 font-size:1.2rem;
@@ -622,6 +684,11 @@ max-width:100% !important;
     margin: 0;
     text-transform: none;
 }
+.headingSection .grid-content p {
+    font-size: 1.563em; 
+    line-height: 1.4em;
+    margin: 70px 0 0 0;
+}
 .content-heading-img  {
     display: none;
 }
@@ -636,6 +703,7 @@ max-width:100% !important;
 .grid-content .icons {
     width: 75%;
     margin: 0 auto;
+    margin-top: 20px;
 }
 .sectionHeading h3 {
     font-size: 1.563em;
@@ -680,9 +748,11 @@ max-width:100% !important;
     margin: 0 0 10px 0;
 }
 .stickySidebar {
+/*
     position: -webkit-sticky; 
     position: sticky;
     top: 20px;
+*/
     
 }
 .sideBar .addBottom {
@@ -932,9 +1002,10 @@ box-sizing: border-box;
     color: #0069b1;
 }
 .bannerBGText {
-    background: url(/siteassets/gb-portal/cosentyx-section/img/bannergradbg.png) repeat-x top left;
+    background: url(/siteassets/gb-portal/cosentyx-section/img/bannergradbg.png) repeat-x top right;
     padding: 20px ;
     margin-bottom: 80px;
+    background-size: 100%;
 }
 #content .grid .missionForMovementContent .bannerBGText p {
     margin: 0; 
