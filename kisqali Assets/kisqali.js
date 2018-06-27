@@ -113,6 +113,11 @@ var evohome = (function() {
     function addLogoOnMobile() {
         $('.inner-width').append('<a href="/" id="logo"><div class="logo-holder"><div class="logo-wrapper"><img itemprop="logo" class="logo" src="/siteassets/hcp-portal-master/img/novartis_logosm2.svg" alt="ServiceSphere GB"></div><input type="hidden" id="toptagline" value="Welcome to Novartis MedHub GB"></div></a>')
     }
+    
+    
+    
+    
+    
 
 /*------------------------------------*\
   go

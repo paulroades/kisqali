@@ -37,10 +37,13 @@ sub {
     padding-bottom: 10px;
 }
 
-#secondary-menu>.nav-mega>a.nav-mega-link {
+#secondary-menu > .nav-mega > a.nav-mega-link {
     padding-top: 2.5rem;
 }
-
+#secondary-menu > .nav-mega > a.nav-mega-link:hover {
+    border-bottom-color: #cb0b0f !important;
+    color: #cb0b0f !important;
+}
 .nav-mega-wrapper {
     -webkit-transition: all 250ms ease;
 -moz-transition: all 250ms ease;
@@ -62,7 +65,7 @@ transition: all 250ms ease;
 }
 
 .haem_ec_background{
-background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/haem_event_bgNew.png);
+background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bgNew.png);
 height:310px;
 max-height:310px;
     background-size: cover;
@@ -78,13 +81,13 @@ max-height:310px;
 
 
 .haem_past_background{
-background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/haem_past_bg.png);
+background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_past_bg.png);
 height:310px;
 max-height:310px;
 }
 
 .haem_background{
-background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/haem_home_bg.png);
+background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_home_bg.png);
 background-position: right center;
 background-repeat:no-repeat;
 background-color: #e30613;
@@ -96,7 +99,7 @@ background-color: #e30613;
 }
 
 .blue_background{
-background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/haem_blue_bg.png);
+background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_blue_bg.png);
 }
 .white_background {
     background: #fff;
@@ -125,7 +128,7 @@ background-position: center center;
     background-image: 
         linear-gradient(#e30613, #7f1210),
         linear-gradient(#e30613, #7f1210),
-        url(/siteassets/gb-portal/therapy-areas/haematology/images/event_bg.png)
+        url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg.png)
     ;
     background-size:5px 100%, 5px 100%, cover;
     background-position:0 0, 100% 0, bottom right;
@@ -147,7 +150,7 @@ background-color: #f6f7f7;
     background-image: 
         linear-gradient(#e30613, #7f1210),
         linear-gradient(#e30613, #7f1210),
-        url(/siteassets/gb-portal/therapy-areas/haematology/images/event_bg_nvs.png);
+        url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg_nvs.png);
     ;
     background-size:5px 100%, 5px 100%, cover;
     background-position:0 0, 100% 0, bottom right;
@@ -155,7 +158,7 @@ background-color: #f6f7f7;
 }
 
 .grid .bgImage {
-    background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/haem_event_bg_Alt.png);
+    background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bg_Alt.png);
     background-size: 90%;
     background-position: left top;
     background-repeat: no-repeat;
@@ -163,7 +166,7 @@ background-color: #f6f7f7;
 }
 
 .grid .gradientBackground {
-    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/blueGradientBGSmall.png) no-repeat left top; 
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/blueGradientBGSmall.png) no-repeat left top; 
     background-size: cover;
     background-color: none!important;
 }
@@ -273,7 +276,7 @@ a.menu-red {color:#cb0b0f !important}
 }
 
 .filter--block h2{
-    background-image: url(/siteassets/gb-portal/therapy-areas/haematology/images/ec_filter_bg.png);
+    background-image: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/ec_filter_bg.png);
     padding: 10px;
     color: #fff;
     font-size: 1.2rem;	
@@ -293,7 +296,7 @@ a.menu-red {color:#cb0b0f !important}
 
 .past-events a span.cal--icon{
     display: block;
-    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/calendar_icon.png") no-repeat;
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/calendar_icon.png") no-repeat;
     width: 54px;
     height: 46px;
     float: left;
@@ -308,7 +311,7 @@ a.menu-red {color:#cb0b0f !important}
 .filter--key p:before{
 	content: "";
     display: block;
-    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/nvs_icon_Color.png") no-repeat;
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/nvs_icon_Color.png") no-repeat;
     width: 25px;
     height: 28px;
     float: left;
@@ -318,13 +321,13 @@ a.menu-red {color:#cb0b0f !important}
     top: 5px;
 }
 .filter--key p.sponsoredBY:before{
-    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/sponsoredByImage.png") no-repeat;
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/sponsoredByImage.png") no-repeat;
     width: 30px;
     height: 30px;
     background-size: 30px 30px;
 }
 .filter--key p.newContent:before{
-    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/starIcon.png") no-repeat;
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/starIcon.png") no-repeat;
     width: 30px;
     height: 27px;
     background-size: 30px 27px;
@@ -405,7 +408,7 @@ a.menu-red {color:#cb0b0f !important}
 
 
 .block-accordion-label{
-	background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/accordian_blue_bg.png);
+	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/accordian_blue_bg.png);
 	max-height:310px;
 	height:310px;
 	padding:50px;
@@ -661,7 +664,7 @@ footer[id=site-specifics] li a:hover {
     line-height: 1em;
 }
 .fluidBGWhatsOn {
-    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/whatsonbg.jpg) no-repeat 66% 30%!important;
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/whatsonbg.jpg) no-repeat 66% 30%!important;
     background-size: cover;
 }
 .fluidBGWhatsOn .content {

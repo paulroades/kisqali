@@ -175,7 +175,7 @@ $color-service-menu-bg: #fff;
 			min-height: $mega-menu-height;
 
 			&-label {
-				@include hover { border-bottom-color: #cb0b0f; }
+				@include hover { border-bottom-color: #818285; }
 				position: relative;
 				display: inline-block;
 				border-bottom: .1rem solid transparent;
