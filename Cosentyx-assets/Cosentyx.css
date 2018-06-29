@@ -1,3 +1,4 @@
+
 p {
 /*    font-size: 0.875em;*/
     margin: 0 0 20px 0;
@@ -338,10 +339,12 @@ sub {
 #secondary-menu .nav-mega .nav-mega-link {
     padding: 0 1.5rem 0 1.5rem;
     vertical-align: bottom!important;
+    text-transform: capitalize;
 }
 #secondary-menu .nav-mega #cosentyx-logo img {
     width: 100%;
     height: auto;
+    max-width: 150px;
 }
 #secondary-menu .nav-mega .nav-mega-link.menu-red {
     color: #e50e63;
@@ -375,7 +378,13 @@ sub {
     font-size: 2.500em;
     color: #fff;
 }
-
+.title_spot_block p {
+     font-size: 1.563em;
+    line-height: 1.4em;
+    margin: 40px 0 0 0;
+    color: #fff;
+    width: 90%;
+}
 .title_spot_block .header, .title_spot_block .header p{
     width:95%;
     max-width:95%;
@@ -864,6 +873,76 @@ max-width:100% !important;
     color: #fff;
 }
 
+/*****************/
+/** Quick links **/
+/*****************/
+
+.alignRight {
+    text-align: right;
+}
+.internalLinks {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.internalLinks li {
+    display: inline-block;
+    color: #1d1d1b;
+/*    font-size: 1.250em;*/
+    line-height: 1em;
+    border-right: 1px solid #1d1d1b;
+    padding: 0 10px 0 0;
+    margin: 0 5px 0 0;
+}
+.internalLinks li a {
+    color: #0762ab;
+    text-decoration: none;
+}
+.internalLinks li:first-of-type, 
+.internalLinks li:last-of-type {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+/********************/
+/** Resources Page **/
+/********************/
+
+
+.resourcesDownload {
+   border-right: 3px solid rgba(224,0,91,0.15); 
+   margin-bottom: 3px;
+   min-height: 350px;
+}
+.resourcesDownloadBW {
+    border-right-color: #fff;
+}
+.resourcesDownload .iconRight {
+    position: relative;
+    padding-right: 100px;
+}
+
+.resourcesDownload .iconRight p strong {
+    font-weight: 700;
+}
+.resourcesDownload .iconRight p.addBottom {
+    margin-bottom: 45px;
+}
+.resourcesDownload .iconRight .iconDownload {
+    width: 22px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}  
+.text--block .iconBox {
+    width: 175px;
+    float: left;
+}
+.text--block .iconBox img {
+    width: 140px;
+}
+
 /***************/
 /** Footnotes **/
 /***************/
@@ -1015,9 +1094,32 @@ box-sizing: border-box;
 
 @media (max-width: 1024px){
     main {
-        margin-top: 0;
+/*        margin-top: 0;*/
     }
-
+    .grid {
+        padding: 0 15px;
+        position: inherit;
+    }
+    .grid .grid-1-4 {
+        width: 25%!important;
+    }
+    .grid .grid-1-4 .grid,
+    .grid .grid-3-4 .grid {
+        padding: 0;
+    }
+    .content_410 {
+        max-height: 500px;
+        height: 500px;
+    }
+    .content_310 {
+        height: 310px;
+        max-height: 310px;
+    }
+    #secondary-menu .nav-mega .nav-mega-link {
+        padding: 0 1rem 0 1rem;
+        vertical-align: bottom!important;
+        font-size: 0.8rem;
+    }
     .inherit-bg{display:none; !important}
 
     .early .header {

@@ -271,6 +271,15 @@ var evohome = (function() {
                break; 
         }
     }
+    
+    function smoothScroll() {
+        $('.internalLinks li a[href*="#"], .pageLink[href*="#"]').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top - 250
+            }, 500, 'linear');
+        });
+    };
 
 
 /*------------------------------------*\
@@ -318,7 +327,7 @@ var evohome = (function() {
         
         headingSectionWithSidebar()
         backtoTop() 
-        
+        smoothScroll()
 	};
 
 	return { init: init };
