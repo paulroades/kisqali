@@ -19,10 +19,13 @@ p {
 }
 .text--block ul li:before {
   content: "• ";
-  color: #e40e63; /* or whatever color you prefer */
+  color: #e40e63; 
   position: absolute;
-    left: 0px;
-    top: 0px;
+  left: 0px;
+  top: 0px;
+}
+.spotLayout-topimage .content {
+    padding: 30px;
 }
 p {
     color: #231f20;
@@ -327,24 +330,26 @@ sub {
 }
 #secondary-menu {
     height: auto;
+    z-index: 99999!important;
 }
 #secondary-menu .nav-mega {
-    padding: 40px 0;
+    padding: 35px 0;
 }
 #secondary-menu .nav-mega #cosentyx-logo {
     display: inline-block;
-    width: 13%;
+    width: 15%;
     max-width: 200px;
 }
 #secondary-menu .nav-mega .nav-mega-link {
     padding: 0 1.5rem 0 1.5rem;
     vertical-align: bottom!important;
     text-transform: capitalize;
+    color: #1D1D27;
 }
 #secondary-menu .nav-mega #cosentyx-logo img {
     width: 100%;
     height: auto;
-    max-width: 150px;
+    max-width: 100%;
 }
 #secondary-menu .nav-mega .nav-mega-link.menu-red {
     color: #e50e63;
@@ -399,9 +404,12 @@ sub {
 .add-bgTwo {background: url(/siteassets/gb-portal/cosentyx-section/home-page/img/whiteBGXrayHip.png) no-repeat right bottom;background-size: cover;}
 
 .pattern .header, .share-col .header{
-    margin: 0 0 0 20px !important;
+    margin: 0 !important;
 }
-
+.title_spot_block h2.title,
+.title_spot_block .header {
+    left: 0;
+}
 
 .pattern .header h2, .share-col .header h2{
     text-transform: inherit;
@@ -439,7 +447,7 @@ sub {
     height: 101px;
     background: url(/siteassets/gb-portal/cosentyx-section/img/handPhone.png) no-repeat left top;
     background-size: cover;
-    margin-top: 75px;
+    margin-top: 35px;
 }
 .rep a.link{
     margin-top: -110px;
@@ -1048,14 +1056,14 @@ max-width:100% !important;
 /**********************/
 
 .missionForMovementContent {
-    background: url(/siteassets/gb-portal/cosentyx-section/img/mission4movementbg.jpg) no-repeat right top;
+    background: url(/siteassets/gb-portal/cosentyx-section/img/mission4movementbg.jpg) no-repeat right bottom;
     background-size: cover;
 }
 .missionForMovementContent .m4mLogo {
     width: 100%;
     height: auto;
-    max-width: 500px;
-    margin: 0 0 20px 0;
+    max-width: 530px;
+    margin: 60px 0 40px 0;
 }
 .missionForMovementContent h2 {
     color: #e40e63;
@@ -1083,7 +1091,7 @@ box-sizing: border-box;
 .bannerBGText {
     background: url(/siteassets/gb-portal/cosentyx-section/img/bannergradbg.png) repeat-x top right;
     padding: 20px ;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
     background-size: 100%;
 }
 #content .grid .missionForMovementContent .bannerBGText p {
@@ -1154,3 +1162,36 @@ box-sizing: border-box;
     }
 
 }
+
+@media (max-width: 767px){
+    .nav-overlay {
+        z-index: 8;
+    }
+    main {
+        margin-top: 4rem;
+    }
+    .title_spot_block h2.title {
+        top: 0;
+        font-size: 3em;
+    }
+    .title_spot_block .header {
+        top: 0;
+    }
+    .content_410,
+    .content_310 {
+        max-height: 100%!important;
+        height: 100%;
+    }
+    .content_310 {
+        min-height: 250px;
+    }
+    .grid-content {
+        padding-right: 0;
+    }
+    .grid .grid-1-4 {
+        width: 100%!important;
+    }
+}
+
+
+

@@ -150,10 +150,10 @@ $color-service-menu-bg: #fff;
 			width: 75%;
 			z-index: $mega-menu-zindex;
 			background-color: $color-mega-menu-bg-mobile;
-            z-index: 99999;
+            z-index: 9;
 			.menu-is-ready & {
 				background: #fff;
-				z-index: 99999;
+				z-index: 9;
 				position: fixed;
 				box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .15);
 				@include tablet {

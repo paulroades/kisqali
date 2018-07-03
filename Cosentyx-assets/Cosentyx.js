@@ -280,12 +280,22 @@ var evohome = (function() {
             }, 500, 'linear');
         });
     };
+    
+    function addToMobileMenu() {
+        var newMenuItems = $('#secondary-menu .nav-mega a');
+        $(".nav-mega-wrapper .nav-mega").append(newMenuItems);
+    }
+    
+    function addLogoOnMobile() {
+        $('.inner-width').append('<a href="/" id="logo"><div class="logo-holder"><div class="logo-wrapper"><img itemprop="logo" class="logo" src="/siteassets/gb-portal/portal-home/img/novartis_logosm2.svg" alt="ServiceSphere GB"></div><input type="hidden" id="toptagline" value="Welcome to Novartis MedHub GB"></div></a>')
+    }
 
 
 /*------------------------------------*\
   go
 \*------------------------------------*/
 	var init = function() {
+        
         menuHighlight()
 		//retriveData()
 	    questionBlockWrap()
@@ -321,6 +331,9 @@ var evohome = (function() {
         addToBodyClass()
         if ($(window).width() > 1024) {
             staticBlock()
+        } else if ($(window).width() < 767)  {
+           addToMobileMenu()
+           addLogoOnMobile()        
         } else {
             
         }

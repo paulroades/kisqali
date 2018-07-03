@@ -157,6 +157,10 @@ main {
 			font-family: $layout-font-family-base;
 			font-size: 1rem;
 			line-height: 1.8;
+            &.largerText {
+                font-size: 1.125em;
+                margin: 0;
+            }
 		}
 		ul, ol {
 			margin-top: 0;
