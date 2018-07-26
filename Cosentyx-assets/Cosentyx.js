@@ -146,27 +146,12 @@ var evohome = (function() {
             case '/Medicines/cosentyx/prescribing-information/':
                 $('.prescribing-information').addClass('menu-red');
                 break;
+            case '/Medicines/cosentyx/contact':
+                $('.contact').addClass('menu-red');
+                break;
             default:
                 $('.cosentyx').addClass('menu-red');
         }
-//		var url = $(location).attr('href'), parts = url.split("/"), last_part = parts[parts.length-2];
-//
-///*
-//		console.log(parts);
-//		console.log(last_part);
-//
-//		if (last_part != ""){
-//			last_part = parts[parts.length-2];
-//		}
-//
-//		var y = document.getElementsByClassName(last_part);
-//
-//
-//		console.log(last_part);
-//*/
-//		var menuItem= $('.'+last_part);
-//		menuItem.addClass('menu-red');	
-
     }
 
     function showFootnoteText() {
@@ -289,13 +274,32 @@ var evohome = (function() {
     function addLogoOnMobile() {
         $('.inner-width').append('<a href="/" id="logo"><div class="logo-holder"><div class="logo-wrapper"><img itemprop="logo" class="logo" src="/siteassets/gb-portal/portal-home/img/novartis_logosm2.svg" alt="ServiceSphere GB"></div><input type="hidden" id="toptagline" value="Welcome to Novartis MedHub GB"></div></a>')
     }
-
+    
+    function addingToForm() {
+        $('.EPiServerForms').wrap('<div class="textBlock"></div>');
+        $('#cfeba562-9fdd-4787-800f-6a113828b22e').prepend('<h3>What can we help you with?</h3>');
+    }
+    
+    
+    // This function is to add the sidebar content below the main content on mobile
+    function addToFooter() {
+        if ($(window).width() < 769) {
+            $('.footerGroup').parent().addClass('footerGroupParent');
+            $('.footerGroupParent').wrapAll('<div class="mobileFooterContent"></div>');
+            $('.mobileFooterContent').append('<div style="clear:both;"></div>');
+            var footerItems = $('.mobileFooterContent');
+            $('#content').append(footerItems);
+        } else {
+            
+        }
+    }
+    
 
 /*------------------------------------*\
   go
 \*------------------------------------*/
 	var init = function() {
-        
+        addingToForm()
         menuHighlight()
 		//retriveData()
 	    questionBlockWrap()
@@ -330,7 +334,7 @@ var evohome = (function() {
         slideDownContent()
         addToBodyClass()
         if ($(window).width() > 1024) {
-            staticBlock()
+            //staticBlock()
         } else if ($(window).width() < 767)  {
            addToMobileMenu()
            addLogoOnMobile()        
@@ -341,6 +345,7 @@ var evohome = (function() {
         headingSectionWithSidebar()
         backtoTop() 
         smoothScroll()
+        addToFooter()
 	};
 
 	return { init: init };

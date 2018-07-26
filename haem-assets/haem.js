@@ -6,7 +6,7 @@ var evohome = (function() {
 \*------------------------------------*/
 	function titleSpotBlock() {
 		var block = $('.title_spot_block');		
-		block.parent().parent().parent().addClass('content_413');
+		block.parent().parent().parent().addClass('content_400');
         $('.title_spot_block_300').parent().parent().parent().addClass('content_300');
 	}
 	
@@ -18,7 +18,8 @@ var evohome = (function() {
 		var block = $('.haem-acad-past');		
 		block.parent().parent().parent().addClass('haem_past_background');	
         var block = $('.white');		
-		block.parent().parent().parent().addClass('white_background');	
+		block.parent().parent().parent().addClass('white_background');
+        $('.haem-footer').parent().parent().parent().addClass('haem-footer-bg');
 	}
 
 	function blueBlock() {
@@ -54,6 +55,7 @@ var evohome = (function() {
         $('.bgImageBlueGrad').parent().addClass('gradWrap');
         $('.gradWrap').wrapAll( '<div class="gradientBackground"></div>');
         $('.gradientBackground').append('<div style="clear: both;"></div>');
+        $('.whiteGradient').parent().parent().parent().parent().parent().parent().addClass('gradientBackgroundWhite');
     }
     
     function rowItems() {
@@ -211,10 +213,16 @@ var evohome = (function() {
   
     
     function smoothScroll() {
-        $('.internalLinks li a[href*="#"]').on('click', function (e) {
+        $('.internalLinksMPN li a[href*="#"]').on('click', function (e) {
             e.preventDefault();
             $('html, body').animate({
                 scrollTop: $($(this).attr('href')).offset().top - 100
+            }, 500, 'linear');
+        });
+        $('.piQuickLinks li a[href*="#"]').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top - 200
             }, 500, 'linear');
         });
     };
@@ -227,6 +235,65 @@ var evohome = (function() {
     function addLogoOnMobile() {
         $('.inner-width').append('<a href="/" id="logo"><div class="logo-holder"><div class="logo-wrapper"><img itemprop="logo" class="logo" src="/siteassets/hcp-portal-master/img/novartis_logosm2.svg" alt="ServiceSphere GB"></div><input type="hidden" id="toptagline" value="Welcome to Novartis MedHub GB"></div></a>')
     }
+    
+    function addingToForm() {
+        $('.EPiServerForms').wrap('<div class="textBlock"></div>');
+        $('#d24b2b3c-6218-43f1-a667-28e5d03066f7').prepend('<h3>What can we help you with?</h3>');
+        $('#8fc84c2e-2d08-41c7-97c7-37dd6bf11994').append('<p style="margin:35px 0 ;">If you have a question about the product, please contact Medical Information on 01276 698370 or medinfo.uk@novartis.com</p>');
+        
+        // Adding info after drug name as system wont let me add them. Hacky but its needed.
+        
+        var drugNames = [
+             '<sup>&reg;</sup><span style="color: #000;">▼</span> (deferasirox)', 
+             '<sup>&reg;</sup> (panobinostat)', 
+             '<sup>&reg;</sup> (ruxolitinib)',  
+             '<sup>&reg;</sup> (eltrombopag)', 
+             '<sup>&reg;</sup> (nilotinib)',  
+             '<sup>&reg;</sup><span style="color: #000;">▼</span> (midostaurin)'
+        ];
+        
+        //drugNames[1];
+        
+        var i;
+        for (i = 0; i < drugNames.length; i++) {
+            var nthChildNumber = i + 1;
+            $('#d24b2b3c-6218-43f1-a667-28e5d03066f7 label:nth-of-type(' + nthChildNumber + ') .mdl-checkbox__label').append(drugNames[i]);
+            //console.log(drugNames[i]);
+        }
+
+    }
+    
+    function eventsContentWrap() {
+        $('.whiteBackground').parent().addClass('whiteBackgroundWrap');
+        $('.whiteBackgroundWrap').wrapAll('<div class="whiteBackgroundContent"></div>');
+        $('.whiteBackgroundContent').append('<div style="clear:both"></div>');
+    }
+    
+    // Add class to quick links on the PI page.
+    
+    function isScrolledIntoView(elem) {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+
+        return (elemTop <= docViewBottom);
+    }
+    
+//    $(window).scroll(function () {
+//        $('.piContainer').each(function () {
+//            if (isScrolledIntoView(this) === true) {
+//                $(this).addClass('inview');
+//            } else {
+//                $(this).removeClass('inview');
+//            }
+//        });
+//    });
+    
+    // button to reset search by dropdowns
+    
+    
 
 
 
@@ -263,7 +330,8 @@ var evohome = (function() {
         gradientBoxBlue()
         rowItems()
         eventsBlockHeight()
-
+        addingToForm() 
+        eventsContentWrap() 
 		/*
 		
 		sectionSpotBlock() 

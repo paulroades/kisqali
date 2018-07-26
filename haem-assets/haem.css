@@ -1,10 +1,22 @@
-main{    margin-top: 12rem;}
+body,
+.menu-is-ready {
+    color: #1d1d1b;
+    background: rgba(7,98,171, 0.1)!important;
+}
+.grid, 
+.grid-content {
+    background: none!important;
+}
+main {   
+    margin-top: 11rem;
+    background: none!important;
+}
 
 #haem-logo {
     margin-right: 30px;
 }
 #haem-logo img {
-    max-width: 200px;
+    max-width: 190px;
 }
 
 .content_300 {
@@ -25,25 +37,39 @@ sup, sub {
 sub { 
   top: 0.4em; 
 }
+.content_400 {
+    height: 400px;
+    max-height: 400px;
+}
+.content_300 {
+    height: 300px;
+    max-height: 300px;
+}
+.whiteBackgroundContent {
+    background: #fff;
+}
 
 
 /*************/
 /** Nav bar **/
 /*************/
 
-
+#secondary-menu > .nav-mega {
+    padding-top: 16px;
+    min-height: 100%;
+}
 #secondary-menu {
     height: auto!important;
     padding-bottom: 10px;
 }
 
-#secondary-menu > .nav-mega > a.nav-mega-link {
-    padding-top: 2.5rem;
+#secondary-menu>.nav-mega>a.nav-mega-link {
+    padding-top: 2rem;
+    text-transform: none;
+    font-size: 1.125em;
+    color: #1d1d1b;
 }
-#secondary-menu > .nav-mega > a.nav-mega-link:hover {
-    border-bottom-color: #cb0b0f !important;
-    color: #cb0b0f !important;
-}
+
 .nav-mega-wrapper {
     -webkit-transition: all 250ms ease;
 -moz-transition: all 250ms ease;
@@ -65,9 +91,10 @@ transition: all 250ms ease;
 }
 
 .haem_ec_background{
-background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bgNew.png);
-height:310px;
-max-height:310px;
+    background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/liquidfooterbg.jpg);
+    background-position: center center;
+    height:310px;
+    max-height:310px;
     background-size: cover;
 }
 
@@ -81,25 +108,66 @@ max-height:310px;
 
 
 .haem_past_background{
-background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_past_bg.png);
+background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/haem_past_bg.png);
 height:310px;
 max-height:310px;
 }
 
-.haem_background{
-background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_home_bg.png);
-background-position: right center;
-background-repeat:no-repeat;
-background-color: #e30613;
+.haem_background {
+    background-color: #fff;
 }
-
+.haem_background .home .title {
+    color: #e10613;
+    font-weight: bold;
+}
+.haem_background .home h4 {
+    font-size: 1.250em;
+    line-height: 1.5em;
+    color: #1d70b6;
+    margin: 0 0 30px 0;
+}
+.haem_background .home p {
+    color: #1d70b6;
+    font-weight: bold;
+}
+.haem_background .home ul {
+    margin: 30px 0 30px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #e10613;
+    display: inline-block;
+    
+}
+.haem_background .home ul li {
+    display: inline-block;
+    color: #1d70b6;
+    font-size: 1.6em; 
+    line-height: 1em;
+    border-right: 1px solid #1d70b6;
+    font-weight: 100;
+    padding: 0 20px 0 0;
+    margin: 0 0 0 12px;
+}
+.haem_background .home ul li:first-of-type {
+    margin-left: 0;
+}
+.haem_background .home ul li:last-of-type {
+    padding-right: 0;
+    border-right: none;
+}
+.bgBubbles {
+    background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/whitebubblebg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
 
 .grey_background{
     background-color:#dadada;
 }
 
 .blue_background{
-background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_blue_bg.png);
+/*background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/haem_blue_bg.png);*/
+    background: #29235c;
 }
 .white_background {
     background: #fff;
@@ -116,6 +184,52 @@ background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/ima
     line-height: 1.4em;
 }
 
+.spotLayout-topimage .haem-footer-bg {
+    background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/liquidfooterbg.jpg);
+    height:100%;
+    max-height:100%;
+    background-size: cover;
+    padding: 45px 0;
+}
+.spotLayout-topimage .haem-footer-bg h2.title {
+    font-size: 3.125em;
+    line-height: 1em;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+}
+.spotLayout-topimage .haem-footer-bg .linkAlt {
+    color: #fff;
+    font-size: 1.563em;
+    line-height: 1em;
+    padding-right: 30px;
+    position: relative;
+}
+.spotLayout-topimage .haem-footer-bg .linkAlt:after {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    content: '';
+    display: block;
+    width: 14px;
+    height: 16px;
+    background:url(/siteassets/gb-portal/therapy-areas/haematology/images/rightTriangle.png) no-repeat center center;
+    background-size: 14px 16px;
+     -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+.spotLayout-topimage .haem-footer-bg .linkAlt:hover:after {
+    right: 4px;
+}
+.spotLayout-topimage .haem-footer-bg .icon  {
+    display: block;
+    width: 112px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 25px;
+}
 .red_background{
 /*
 background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg.png);
@@ -128,7 +242,7 @@ background-position: center center;
     background-image: 
         linear-gradient(#e30613, #7f1210),
         linear-gradient(#e30613, #7f1210),
-        url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg.png)
+        url(/siteassets/gb-portal/therapy-areas/haematology/images/event_bg.png)
     ;
     background-size:5px 100%, 5px 100%, cover;
     background-position:0 0, 100% 0, bottom right;
@@ -138,19 +252,14 @@ background-position: center center;
 
 
 .red_background_nvs{
-/*
-background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg_nvs.png);
-background-repeat:no-repeat;
-background-position: center center;
-*/
-background-color: #f6f7f7;
+    background-color: #f6f7f7;
     background-color: #f6f7f7;
     border-top: 5px solid #e30613;
     border-bottom:5px solid #7f1210;
     background-image: 
         linear-gradient(#e30613, #7f1210),
         linear-gradient(#e30613, #7f1210),
-        url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg_nvs.png);
+        url(/siteassets/gb-portal/therapy-areas/haematology/images/event_bg_nvs.png);
     ;
     background-size:5px 100%, 5px 100%, cover;
     background-position:0 0, 100% 0, bottom right;
@@ -158,15 +267,69 @@ background-color: #f6f7f7;
 }
 
 .grid .bgImage {
-    background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bg_Alt.png);
+    background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/liquidfooterbg.jpg);
     background-size: 90%;
     background-position: left top;
     background-repeat: no-repeat;
 /*    background-color: #cb0b0f;*/
 }
-
+.grid .bgImage .sponsoredbyContent {
+    margin-top: 40px;
+}
+.grid .bgImage .sponsoredbyContent ul {
+    margin: 0;
+    padding: 0;
+}
+.grid .bgImage .sponsoredbyContent ul li {
+    display: inline-block;
+    padding: 0 15px 0 0;
+    margin: 0 0 0 10px;
+    border-right: 1px solid #fff;
+    width: 170px;
+    line-height: 1em;
+}
+.grid .bgImage .sponsoredbyContent ul li.sponsor {
+    position: relative;
+    top: -3px;
+}
+.grid .bgImage .sponsoredbyContent ul li:first-of-type {
+    margin: 0;
+}
+.grid .bgImage .sponsoredbyContent ul li:last-of-type {
+    width: 210px;
+    padding: 0;
+    border-right: none;
+}
+.grid .bgImage .spotblock .content .button {
+    background: #ed1c24;
+    padding: 15px 30px 15px 10px;
+    color: #fff;
+    font-size: 1.125em;
+    position: relative;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.grid .bgImage .spotblock .content .button:after {
+    content: '';
+    display: block;
+    background:url(/siteassets/gb-portal/therapy-areas/haematology/images/rightTriangle.png) no-repeat center center;
+    background-size: 11px 13px;
+     -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    width: 11px; 
+    height: 13px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+.button {
+    
+}
 .grid .gradientBackground {
-    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/blueGradientBGSmall.png) no-repeat left top; 
+    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/blueGradientBGSmall.png) no-repeat left top; 
     background-size: cover;
     background-color: none!important;
 }
@@ -179,6 +342,25 @@ background-color: #f6f7f7;
 
 .grid .bgImage .backgroundColor-color7 {
     background: none;
+}
+.grid .gradientBackground.gradientBackgroundWhite {
+    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/whiteheaderbg.jpg) no-repeat right top #fff;
+}
+.grid .gradientBackground.gradientBackgroundWhite .content_300 {
+    height: 100%;
+    max-height: 100%;
+    padding-bottom: 10px;
+}
+.grid .gradientBackground.gradientBackgroundWhite .title {
+    color:#e10818;
+}
+.grid .gradientBackground.gradientBackgroundWhite .header h4 {
+    color: #2071b7;
+    font-size: 1.250em;
+    margin: 50px 0;
+}
+.grid .gradientBackground.gradientBackgroundWhite .header p {
+    color: #2071b7;
 }
 .event_background_left{
 /*	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/events/img/eventbackground_left.jpg);*/
@@ -203,7 +385,7 @@ a.menu-red {color:#cb0b0f !important}
     max-width: 100%;
 }
 .filter--block{
-	padding:10px;
+	padding: 10px 10px 0 0;
 }
 
 
@@ -216,7 +398,15 @@ a.menu-red {color:#cb0b0f !important}
 	color: #ffffff;
     margin-top: 30px;
 }
-
+.eventLink {
+    position: relative;
+    color: inherit!important;
+    font-size: 100%!important;
+    font-weight: inherit!important;
+}
+.eventLink span {
+    font-size: 80%!important;
+}
 .event_spot_block > .header {
 
 	display:inline-block;
@@ -240,7 +430,7 @@ a.menu-red {color:#cb0b0f !important}
 }
 
 .red > h2 {
-	color: #1d1d1b;
+	color: #e30613;
     margin-top: 30px;
     max-height:80px;
     height:80px;
@@ -276,27 +466,54 @@ a.menu-red {color:#cb0b0f !important}
 }
 
 .filter--block h2{
-    background-image: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/ec_filter_bg.png);
+    background-image: url(/siteassets/gb-portal/therapy-areas/haematology/images/ec_filter_bg.png);
     padding: 10px;
     color: #fff;
     font-size: 1.2rem;	
     margin-top:0;
+    text-transform: uppercase;
+    background-size: cover;
 }
 
 .past-events{
-    display: inline-block;
-    margin: 30px 0;
+/*    display: inline-block;*/
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 1px solid #e30613;
+    border-bottom: 1px solid #e30613;
 }
 
-.past-events a{
-	color: #e30613;
-	font-size: 1.2rem;
-	text-decoration:underline !important;
+.past-events a {
+    padding: 10px;
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 0;
+    text-transform: uppercase;
+    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/ec_filter_bg.png);
+    font-weight: 600;
+    position: relative;
+    background-size: cover;
+}
+.past-events a:after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    border-color: #fff transparent transparent transparent;
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 
 .past-events a span.cal--icon{
     display: block;
-    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/calendar_icon.png") no-repeat;
+    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/calendar_icon.png") no-repeat;
     width: 54px;
     height: 46px;
     float: left;
@@ -311,7 +528,7 @@ a.menu-red {color:#cb0b0f !important}
 .filter--key p:before{
 	content: "";
     display: block;
-    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/nvs_icon_Color.png") no-repeat;
+    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/nvs_icon_Color.png") no-repeat;
     width: 25px;
     height: 28px;
     float: left;
@@ -321,13 +538,13 @@ a.menu-red {color:#cb0b0f !important}
     top: 5px;
 }
 .filter--key p.sponsoredBY:before{
-    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/sponsoredByImage.png") no-repeat;
+    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/sponsoredByImage.png") no-repeat;
     width: 30px;
     height: 30px;
     background-size: 30px 30px;
 }
 .filter--key p.newContent:before{
-    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/starIcon.png") no-repeat;
+    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/starIcon.png") no-repeat;
     width: 30px;
     height: 27px;
     background-size: 30px 27px;
@@ -339,48 +556,48 @@ a.menu-red {color:#cb0b0f !important}
     display: inline-block;
     margin-bottom: 15px;
     width: 100%;
-}    .select select {        
-        display: inline-block;
-        width: 100%;
-        cursor: pointer;
-        padding: 10px 15px;
-        outline: 0;
-        border: 0px solid #FFFFFF;
-        border-radius: 0px;
-        background: #FFFFFF;
-        color: #e30613;
-        font-size: 1.2rem;	
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }
-        .select select::-ms-expand {
-            display: none;
-        }
-        .select select:hover,
-        .select select:focus {
-            color: #000000;
-            background: #CCCCCC;
-        }
-        .select select:disabled {
-            opacity: 0.5;
-            pointer-events: none;
-        }
+}    
+.select select {        
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0px solid #FFFFFF;
+    border-radius: 0px;
+    background: #FFFFFF;
+    color: #e30613;
+    font-size: 1.2rem;	
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.select select::-ms-expand {
+    display: none;
+}
+.select select:hover,
+.select select:focus {
+    color: #000000;
+    background: #CCCCCC;
+}
+.select select:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
 .select select option{        
- 		display: inline-block;
-        width: 100%;
-        cursor: pointer;
-        padding: 10px 15px;
-        outline: 0;
-        border: 0px solid #FFFFFF;
-        border-radius: 0px;
-        background: #FFFFFF;
-        color: #e30613;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-	}
-
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0px solid #FFFFFF;
+    border-radius: 0px;
+    background: #FFFFFF;
+    color: #e30613;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 .select_arrow {
     position: absolute;
     top: 16px;
@@ -397,6 +614,33 @@ a.menu-red {color:#cb0b0f !important}
 .select select:disabled ~ .select_arrow {
     border-top-color: #CCCCCC;
 }
+.filter--block .select .resetLink {
+    color: #e30613;
+    font-size: 1.125em;
+    line-height: 1em;
+    background: #fff;
+    position: relative;
+    padding: 15px 40px 15px 18px;
+    display: block;
+    width: 100%;
+    max-width: 110px;
+    margin: 20px 0 0 0;
+}
+.filter--block .select .resetLink:after {
+    content: '';
+    position: absolute;
+    top: 19px;
+    right: 25px;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    border-color: #e30613 transparent transparent transparent;
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
 
 .haem--video{
     padding: 25px 50px;
@@ -408,7 +652,7 @@ a.menu-red {color:#cb0b0f !important}
 
 
 .block-accordion-label{
-	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/accordian_blue_bg.png);
+	background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/accordian_blue_bg.png);
 	max-height:310px;
 	height:310px;
 	padding:50px;
@@ -470,7 +714,8 @@ a.menu-red {color:#cb0b0f !important}
     width: 100%;
 }
 .spotLayout-topimage .content .absolutePositionedBottom h4 {
-    color: #023761!important;
+    color: #18171c!important;
+    font-size: 1em!important;
 }
 .spotLayout-topimage .content .absolutePositionedBottom .widthHalf {
     display: inline-block;
@@ -483,8 +728,17 @@ a.menu-red {color:#cb0b0f !important}
     margin: 0;
 }
 .spotLayout-topimage .content .absolutePositionedBottom .widthHalf .link {
-    color: #023761;
+    color: #0070b5;
     font-size: 0.813em;
+}
+.spotLayout-topimage .content .absolutePositionedBottom.addToCalendar {
+    background: #d3d2df;
+}
+.spotLayout-topimage .content .absolutePositionedBottom.registerInterest {
+    background: #fbd1d3;
+}
+.spotLayout-topimage .content .absolutePositionedBottom.similarEvents {
+    background: #d1e3f1;
 }
 .bgGrey {
     background-color: #e9e9e9;
@@ -515,10 +769,12 @@ a.menu-red {color:#cb0b0f !important}
 .oo-player-container .oo-player {
     padding-top: 40%!important;
 }
+/*
 .alignCenter {
     width: 66%;
     margin: 0 auto;
 }
+*/
 
 .grid-1-3.halfWidthColumn {
     width: 50%;
@@ -664,7 +920,7 @@ footer[id=site-specifics] li a:hover {
     line-height: 1em;
 }
 .fluidBGWhatsOn {
-    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/whatsonbg.jpg) no-repeat 66% 30%!important;
+    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/whatsonbg.jpg) no-repeat 66% 30%!important;
     background-size: cover;
 }
 .fluidBGWhatsOn .content {
@@ -682,6 +938,134 @@ footer[id=site-specifics] li a:hover {
     color: #fff;
     text-align: center;
 }
+
+
+/******************/
+/** Form Styling **/
+/******************/
+
+.block .textBlock {
+    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/formBottomImage.jpg) no-repeat bottom right #fff;
+    background-size: 300px 309px;
+    padding: 16px 30px 60px 30px;
+}
+.block .textBlock form {
+    width: 50%;
+}
+.block .textBlock form .FormTextbox__Input {
+    border: 1px solid #2071b7;
+    padding: 20px 15px;
+    width: 100%;
+}
+.block .textBlock form .Form__Element__Caption {
+    margin: 0;
+    color: #434343;
+    font-size: 14px;
+    line-height: 1em;
+    top: 38px;
+    left: 15px;
+}
+.block .textBlock form .is-focused .Form__Element__Caption {
+    top: 20px;
+    left: 15px;
+}
+.block .textBlock form h3 {
+    font-size: 1.563em;
+    color: #2071b7;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.block .textBlock form .FormChoice .Form__Element__Caption {
+    padding: 20px 15px;
+    background: #2071b7;
+    color: #fff;
+    line-height: 1em;
+    font-size: 1.125em;
+}
+.block .textBlock form .FormChoice .mdl-checkbox {
+    width: 100%;
+    padding-left: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1em;
+    line-height: 1em;
+    color: #2071b7;
+    margin: 0;
+}
+.block .textBlock form .FormChoice .mdl-checkbox.is-checked {
+    background: #e10818;
+    color: #fff;
+}
+.block .textBlock form .FormChoice .mdl-checkbox .mdl-checkbox__box-outline {
+    top: 6px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    border-color: #2071b7;
+    background-color: #fff;
+}
+.block .textBlock form .FormChoice .mdl-checkbox.is-checked .mdl-checkbox__box-outline {
+    background: none;
+    background-color: #fff!important;
+    background-image: url(/siteassets/gb-portal/therapy-areas/haematology/images/tick.png);
+    background-size: 12px 11px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-mask: none!important;
+    mask: none!important;
+    border-color: #e10818!important;
+    
+}
+.block .textBlock form .FormChoice .mdl-checkbox.is-checked .mdl-checkbox__box-outline .mdl-checkbox__tick-outline {
+    background: none!important;
+    background-color: #fff;
+}
+
+.block .textBlock form p {
+    color: #2071b7;
+    font-size: 1.250em;
+    line-height: 1.4em;
+    margin: 15px 0;
+}
+
+/*********************/
+/** PI Page Styling **/
+/*********************/
+
+#content .grid .piHeading {
+    padding: 30px;
+    margin: 0;
+    background: #fff;
+}
+#content .grid .piHeading h2 {
+    color: #e10818;
+    font-size: 2.500em;
+    line-height: 1em;
+    font-weight: bold;
+}
+#content .grid .piHeading .internalLinks {
+    margin-top: 10px;
+}
+#content .grid .piHeading .internalLinks li {
+    font-size: 1em;
+}
+#content .grid .piHeading .internalLinks li.active a {
+    color: #e10818;
+}
+#content .grid .piContainer {
+    background-image: none;
+    background-color: #fff;
+}
+#content .grid .piContainer .padding {
+    padding: 0 15px;
+}
+#content .grid .piContainer .paddingRight {
+    padding-left: 0;
+}
+#content .grid .piContainer .paddingLeft {
+    padding-right: 0;
+}
+
 
 @media (max-width: 1024px) {
     #logo .logo-holder {
@@ -705,9 +1089,11 @@ footer[id=site-specifics] li a:hover {
     .title_spot_block .header {
         top: 0;
     }
+/*
     .alignCenter {
         width: 90%;
     }
+*/
 
     .red {
         padding: 10px 35px;
@@ -764,6 +1150,13 @@ footer[id=site-specifics] li a:hover {
 }
 
 @media (max-width: 767px) { 
+    .nav-overlay, 
+    .nav-overlay-desktop {
+        z-index: 8;
+    }
+    .haem_background .home ul li {
+        font-size: 1em;
+    }
     #secondary-menu {
         right: 0!important;
         position: relative;
@@ -823,10 +1216,23 @@ footer[id=site-specifics] li a:hover {
     .spotLayout-topimage .haem_ec_background.content_310 a.link {
         left: 20px;
     }
-    .content_310 {
+    .content_310,
+    .content_300,
+    .content_400 {
         height: auto;
         min-height: auto;
         max-height: 100%!important;
+    }
+    .content_400.bgBubbles {
+        height: 400px;
+        max-height: 400px!important;
+    }
+    .grid .gradientBackground.gradientBackgroundWhite,
+    .block .textBlock {
+        background-image: none;
+    }
+    .block .textBlock form {
+        width: 100%;
     }
 }
 

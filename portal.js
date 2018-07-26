@@ -112,6 +112,20 @@ var evohome = (function() {
         console.log('GA loaded');
         $('head').append('<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109035671-1"><\/script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-109035671-1");<\/script>');
     }
+    
+    function externalLinkAlt() {
+        $('.external').click(function(e) {
+            e.preventDefault();
+            $('#external-link-disclaimer').addClass('active');
+            var internalLinlocation = $(this).attr('href');
+            $('.btn-success').click(function(){
+               window.location = internalLinlocation;
+            });
+            $('.btn-cancel').click(function(){
+               $('#external-link-disclaimer').removeClass('active');
+           });
+        });
+    }
 
 	
 /*------------------------------------*\
@@ -137,6 +151,7 @@ var evohome = (function() {
 		pageStyle() 
         showPopUp()
         removePadding()
+        externalLinkAlt()
 	};
 
 	return { init: init };

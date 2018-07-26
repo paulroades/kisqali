@@ -102,6 +102,22 @@ var evohome = (function() {
     function addLogoOnMobile() {
         $('.inner-width').append('<a href="/" id="logo"><div class="logo-holder"><div class="logo-wrapper"><img itemprop="logo" class="logo" src="/siteassets/hcp-portal-master/img/novartis_logosm2.svg" alt="ServiceSphere GB"></div><input type="hidden" id="toptagline" value="Welcome to Novartis MedHub GB"></div></a>')
     }
+    
+    function externalLinkAlt() {
+        $('.external').click(function(e) {
+            e.preventDefault();
+            $('#external-link-disclaimer').addClass('active');
+            var internalLinlocation = $(this).attr('href');
+            $('.btn-success').click(function(){
+               window.location = internalLinlocation;
+            });
+            $('.btn-cancel').click(function(){
+               $('#external-link-disclaimer').removeClass('active');
+           });
+        });
+    }
+    
+    
 
 	
 /*------------------------------------*\
@@ -128,6 +144,7 @@ var evohome = (function() {
             addToMobileMenu()
             addLogoOnMobile()
         }
+        externalLinkAlt()
 	};
 
 	return { init: init };

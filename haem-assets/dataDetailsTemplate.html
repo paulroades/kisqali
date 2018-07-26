@@ -1,26 +1,24 @@
 	{{#each Dates}}				
 		{{#Event}}	
 		<div class="block spotblock spot grid-1-3 event--link" data-date="{{month}}" data-location="{{location}}" data-disease="{{disease}}">
-<div class="spotContainer visual headingColor-color2 headingAlignment-left headingStyle-normal iconColor-color1 textColor-color1 textAlignment-left textStyle-normal linkColor-color1 backgroundColor-color7 spotLayout-topimage trigger-change" itemscope="" itemtype="http://schema.org/CreativeWork">
-    <div class="content {{bg}} content_310">
-        <div class="content-restrict" style="word-wrap: break-word;">
-            <div itemprop="text"><div class="event_spot_block red">
-<div class="header">
-<h4 class="underline">{{start-date}}</h4>
-<h4 class="underline">{{address}}</h4>
-<h4>{{area}}</h4>
-</div>
-<h2 class="title" itemprop="headline">{{title}}</h2>
-</div></div>
-        </div>
-            <meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="/registration/login/">
-            <span itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-                <a itemprop="url" class="link" href="{{link}}">Find Out More</a>
-            </span>
-    </div>
-</div> 
+            <div class="spotContainer visual headingColor-color2 headingAlignment-left headingStyle-normal iconColor-color1 textColor-color1 textAlignment-left textStyle-normal linkColor-color1 backgroundColor-color7 spotLayout-topimage trigger-change" itemscope="" itemtype="http://schema.org/CreativeWork">
+                <div class="content {{bg}} content_310">
+                    <div class="content-restrict" style="word-wrap: break-word;">
+                        <div itemprop="text">
+                            <div class="event_spot_block red">
+                                <div class="header">
+                                    <h4 class="underline">{{start-date}}</h4>
+                                    <h4 class="underline">{{address}}</h4>
+                                    <h4>{{area}}</h4>
+                                </div>
+                                <h2 class="title" itemprop="headline"><a class="eventLink" href="{{link}}">{{title}} <span>&#9654;</span></a></h2>
+                            </div>
+                        </div>
+                    </div>
 
-</div>
+                </div>
+            </div> 
+        </div>
 						
 		{{/Event}}	
 	{{/each}}

@@ -12,7 +12,9 @@ main{    margin-top: 12rem;}
     background: #ffffff;
     padding: 20px;
 }
-
+.grid .grid {
+    background: #ffffff;
+}
 
 .grid-4-4 > .content-focused-page-headline, .grid-3-4 > .content-focused-page-headline{
 	margin-top:1.875rem;
@@ -63,6 +65,13 @@ body.home .grid-4-4 >  .content-focused{
 .transparent--block{
     padding:1.875rem;
 }
+.content-focused-page p, 
+.content-focused-page blockquote, 
+.content-focused-page ul, 
+.content-focused-page ol {
+    font-size: 1.1rem;
+}
+ 
 
 /********************/
 /** Headers Styling **/
@@ -70,7 +79,7 @@ body.home .grid-4-4 >  .content-focused{
 
 .kisqali--bold--blue, .kisqali--large--blue {
     color: #006781 !important;
-    font-size: 2.5rem !important;
+    font-size: 1.5rem !important;
     font-weight: bold !important;
 }
 

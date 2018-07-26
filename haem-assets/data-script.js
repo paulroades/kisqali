@@ -168,9 +168,9 @@ function searchProducts() {
 		//var diseases = getParameterByName('d');
 
 		//$("div.select select#disease").val(diseases);
-
+        clearViewBy();
 		changePlaces();
-
+        
 		// show and hide depending on whether brand has links to the product
 		function changePlaces() {
 			item.each(function() {
@@ -201,9 +201,14 @@ function searchProducts() {
 						}						
 					}
 				}	
-			}			
+			}	
+           
 		});
 		}
+    
+        
+    
+    
 		//changePlaces();
 		// on input change turn relevant data attributes off or on except if the data attribute is set to none in that case it's assumed the product has no link for this product and can't be switched on
 
@@ -237,6 +242,16 @@ function searchProducts() {
 		$('.quick-link--search').on('click', function(){
 			$(this).toggleClass('checked');
 		});
+        function clearViewBy() {
+            $('.resetLink').click(function(e){
+                e.preventDefault();
+                months = "";
+                locations = "";
+                diseases = "";
+                changePlaces();
+            });
+        }
+        
 	}
 
 

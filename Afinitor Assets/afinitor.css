@@ -23,6 +23,12 @@
 .paddingRight {
     padding-right: 5%;
 }
+.grid-content {
+    padding: 0;
+}
+.grid-content .grid-1-1 {
+    padding: 0;
+}
 
 
 /********************/

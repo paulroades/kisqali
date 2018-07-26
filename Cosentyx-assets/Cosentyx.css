@@ -30,7 +30,9 @@ p {
 p {
     color: #231f20;
 }
-
+.cookies-prompt p {
+    color: #fff;
+}
 .clear {
     clear: both;
 }
@@ -52,6 +54,9 @@ p {
 }
 .borderRight {
     border-right: 1px solid #231f20;
+}
+a img {
+     border:none!important;
 }
 /*
 .hide {
@@ -215,10 +220,13 @@ main{    margin-top: 12rem;}
 }
 .bgLeap .leapLogoImage {
     width: 100%;
-    max-width: 215px;
     margin-top: 60px;
+    text-align: right;
 }
-
+.bgLeap .leapLogoImage img {
+    width: 100%;
+    max-width: 250px;
+}
 
 .leap .header h4{
     margin:0 0 5px 0;
@@ -341,7 +349,7 @@ sub {
     max-width: 200px;
 }
 #secondary-menu .nav-mega .nav-mega-link {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 1.4rem 0 1.4rem;
     vertical-align: bottom!important;
     text-transform: capitalize;
     color: #1D1D27;
@@ -389,6 +397,7 @@ sub {
     margin: 40px 0 0 0;
     color: #fff;
     width: 90%;
+    font-weight: 400;
 }
 .title_spot_block .header, .title_spot_block .header p{
     width:95%;
@@ -441,6 +450,7 @@ sub {
     height: 99px;
     background: url(/siteassets/gb-portal/cosentyx-section/home-page/img/m4mLogoSmall.png) no-repeat left top;
     background-size: cover;
+    margin-top: 10px;
 }
 .event_spot_block .header .icon.phoneIcon {
     width: 98px;
@@ -1100,6 +1110,102 @@ box-sizing: border-box;
     font-size: 1.250em;
 }
 
+/******************/
+/** Form Styling **/
+/******************/
+
+.block .textBlock {
+    background: #fff;
+    padding: 16px 30px 60px 30px;
+}
+.block .textBlock form {
+    width: 50%;
+}
+.block .textBlock form .FormTextbox__Input {
+    border: 1px solid #532e63;
+    padding: 20px 15px;
+    width: 100%;
+}
+.block .textBlock form .Form__Element__Caption {
+    margin: 0;
+    color: #434343;
+    font-size: 14px;
+    line-height: 1em;
+    top: 38px;
+    left: 15px;
+}
+.block .textBlock form .is-focused .Form__Element__Caption {
+    top: 20px;
+    left: 15px;
+}
+.block .textBlock form h3 {
+    font-size: 1.563em;
+    color: #532e63;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.block .textBlock form .FormChoice .Form__Element__Caption {
+    padding: 20px 15px;
+    background: #532e63;
+    color: #fff;
+    line-height: 1em;
+    font-size: 1.125em;
+    margin: 0 0 10px 0;
+}
+.block .textBlock form .FormChoice .mdl-checkbox {
+    width: 100%;
+    padding-left: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1em;
+    line-height: 1em;
+    color: #532e63;
+    margin: 0;
+}
+.block .textBlock form .FormChoice .mdl-checkbox.is-checked {
+    background: #e40e63;
+    color: #fff;
+}
+.block .textBlock form .FormChoice .mdl-checkbox .mdl-checkbox__box-outline {
+    top: 6px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    border-color: #532e63;
+    background-color: #fff;
+}
+.block .textBlock form .FormChoice .mdl-checkbox.is-checked .mdl-checkbox__box-outline {
+    background: none;
+    background-color: #fff!important;
+    background-image: url(/siteassets/gb-portal/cosentyx-section/img/tick.jpg);
+    background-size: 12px 11px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-mask: none!important;
+    mask: none!important;
+    border-color: #e40e63!important;
+    
+}
+.block .textBlock form .FormChoice .mdl-checkbox.is-checked .mdl-checkbox__box-outline .mdl-checkbox__tick-outline {
+    background: none!important;
+    background-color: #fff;
+}
+
+.block .textBlock form p {
+    color: #2071b7;
+    font-size: 1.250em;
+    line-height: 1.4em;
+    margin: 15px 0;
+}
+.block .textBlock form #login > button, 
+.block .textBlock form .mdl-button {
+    background-color: #532e63!important;
+    border-color: #532e63!important;
+}
+
+
+
+
 @media (max-width: 1024px){
     main {
 /*        margin-top: 0;*/
@@ -1160,7 +1266,67 @@ box-sizing: border-box;
     .cos-references{
         margin: 20px;
     }
+    .bannerBGText {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .block .textBlock form {
+        width: 80%;
+    }
+}
 
+@media (max-width: 768px){
+    .nav-mega-wrapper {
+        position: fixed;
+    }
+    #secondary-menu .nav-mega {
+        padding: 35px 15px;
+    }
+    #secondary-menu .nav-mega .nav-mega-link {
+        padding: 0 0.5em;
+    }
+    .grid-content {
+        padding-right: 0;
+    }
+    .grid .grid-1-4 {
+        width: 50%!important;
+    }
+    .content_410 {
+        height: 100%;
+        max-height: 100%;
+    }
+    .block .textBlock form {
+        width: 80%;
+    }
+    .grid-2-3 {
+        width: 100%;
+    }
+    .bgImage {
+        display: none;
+    }
+    .title_spot_block h2.title,
+    .title_spot_block .header {
+        top: 0px;
+    } 
+    .grid .grid-content-sidebar {
+        width: 100%!important;
+    }
+    .grid .grid-content .mobileFooterContent {
+        display: none;
+    }
+    .sideBar {
+        margin-top: 20px;
+    }
+    .mobileHide {
+        display: none;
+    }
+    .mobileFooterContent {
+        padding: 30px 15px 0 15px;
+        
+    }
+    .mobileFooterContent .block {
+        margin: 0 0 20px 0;
+    }
 }
 
 @media (max-width: 767px){
@@ -1182,6 +1348,10 @@ box-sizing: border-box;
         max-height: 100%!important;
         height: 100%;
     }
+    .content_410.bgImage {
+        height: 400px;
+        max-height: 400px!important;
+    }
     .content_310 {
         min-height: 250px;
     }
@@ -1190,6 +1360,14 @@ box-sizing: border-box;
     }
     .grid .grid-1-4 {
         width: 100%!important;
+    }
+    .missionForMovementContent {
+        background: none;
+    }
+}
+@media (max-width: 414px){
+    .block .textBlock form {
+        width: 100%;
     }
 }
 

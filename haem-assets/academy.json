@@ -71,7 +71,7 @@
    "address": "London",
    "start-date": "9th October 2018",
    "area": "BMT",
-   "link": "/haematology-academy/events/British_Society_of_Blood_and_Marrow_Transplantation_Educational_Day",
+   "link": "/haematology-academy/events/british_society_of_blood_and_marrow_transplantation_educational_day2/",
    "month": "10",
    "location": "1",
    "disease": "2",
@@ -85,7 +85,7 @@
    "address": "London",
    "start-date": "2nd May 2018",
    "area": "BMT",
-   "link": "/haematology-academy/events/british_society_of_blood_and_marrow_transplantation_scientific_day",
+   "link": "/haematology-academy/events/british-society-of-blood-and-marrow-transplantation-scientific-day",
    "month": "5",
    "location": "1",
    "disease": "2",
@@ -113,7 +113,7 @@
    "address": "South West | Taunton",
    "start-date": "9th May 2018",
    "area": "Myeloma",
-   "link": "/haematology-academy/events/South_West_Myeloma_Group",
+   "link": "/haematology-academy/events/south-west-myeloma-group",
    "month": 11,
    "location": 3,
    "disease": 8,
@@ -126,7 +126,7 @@
    "address": "London",
    "start-date": "11th May 2018",
    "area": "General",
-   "link": "/haematology-academy/events/Haematology_Teenage_and_Young_Adults_through_to_30",
+   "link": "/haematology-academy/events/haematology-teenage--young-adults-through-to-30",
    "month": 5,
    "location": 1,
    "disease": 4,
@@ -152,12 +152,77 @@
    "address": "London",
    "start-date": "4th July 2018",
    "area": "CML & MPN",
-   "link": "/haematology-academy/events/Current_Perspectives_in_Haematology_Malignancies",
+   "link": "/haematology-academy/events/current-perspectives-in-haematology-malignancies/",
    "month": 7,
    "location": 1,
    "disease": "3 7",
    "bg":"red_background",
    "date":"2018-07-04"
+ }},
+ {"Event":
+ {
+  "title": "South West Lymphoma Group",
+   "address": "Taunton | Somerset",
+   "start-date": "11th September 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/south-west-lymphoma-group/",
+   "month": 9,
+   "location": 3,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2018-09-11"
+ }},
+ {"Event":
+ {
+  "title": "Current Perspectives in Haematological Malignancies - Manchester",
+   "address": "Manchester | North England",
+   "start-date": "11th October 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/current-perspectives-in-haematology-malignancies-manchester/",
+   "month": 10,
+   "location": 4,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2018-10-11"
+ }},
+ {"Event":
+ {
+  "title": "Current Perspectives in Haematological Malignancies - Bristol",
+   "address": "Bristol | South West",
+   "start-date": "22nd November 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/current-perspectives-in-haematology-malignancies-bristol/",
+   "month": 11,
+   "location": 3,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2018-11-22"
+ }},
+ {"Event":
+ {
+  "title": "Current Perspectives in Haematological Malignancies - Glasgow",
+   "address": "Glasgow | Scotland",
+   "start-date": "10th October 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/current-perspectives-in-haematology-malignancies-glasgow/",
+   "month": 10,
+   "location": 6,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2018-10-10"
+ }},
+ {"Event":
+ {
+  "title": "Paediatric BMT Group Meeting",
+   "address": "Manchester | North England",
+   "start-date": "15th-16th October 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/paediatric-BMT-group-meeting/",
+   "month": 10,
+   "location": 4,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2018-10-15"
  }}
 
 
