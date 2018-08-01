@@ -150,7 +150,7 @@ var evohome = (function() {
                 $('.contact').addClass('menu-red');
                 break;
             default:
-                $('.cosentyx').addClass('menu-red');
+                //$('.cosentyx').addClass('menu-red');
         }
     }
 
@@ -294,11 +294,37 @@ var evohome = (function() {
         }
     }
     
+    function externalLink() {
+        $('.external').click(function(e) {
+            e.preventDefault();
+            $('#external-link-disclaimer').addClass('active');
+            var internalLinlocation = $(this).attr('href');
+            $('.btn-success').click(function(){
+               window.location = internalLinlocation;
+            });
+            $('.btn-cancel').click(function(){
+               $('#external-link-disclaimer').removeClass('active');
+           });
+        });
+    }
+    
+    function addPlaceholderText() {
+        $('.block .textBlock form .FormTextbox__Input').each(function(index, elem) {
+            var eId = $(elem).attr('id');
+            var label = null;
+            if (eId && (label = $(elem).parents('form').find('label[for='+ eId +']')).length == 1) {
+                $(elem).attr('placeholder', $.trim($(label).html()));
+                $(label).remove();
+            }
+         });
+    }
+    
 
 /*------------------------------------*\
   go
 \*------------------------------------*/
 	var init = function() {
+        externalLink()
         addingToForm()
         menuHighlight()
 		//retriveData()
@@ -346,6 +372,7 @@ var evohome = (function() {
         backtoTop() 
         smoothScroll()
         addToFooter()
+        addPlaceholderText()
 	};
 
 	return { init: init };

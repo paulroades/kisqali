@@ -238,8 +238,8 @@ var evohome = (function() {
     
     function addingToForm() {
         $('.EPiServerForms').wrap('<div class="textBlock"></div>');
-        $('#d24b2b3c-6218-43f1-a667-28e5d03066f7').prepend('<h3>What can we help you with?</h3>');
-        $('#8fc84c2e-2d08-41c7-97c7-37dd6bf11994').append('<p style="margin:35px 0 ;">If you have a question about the product, please contact Medical Information on 01276 698370 or medinfo.uk@novartis.com</p>');
+        $('#768d910a-4429-4c1f-9a08-a4921f582ea4').prepend('<h3>What can we help you with?</h3>');
+        $('#c3015244-4896-4133-8f32-44211e7e0ca3').append('<p style="margin:35px 0 ;">If you have a question about the product, please contact Medical Information on 01276 698370 or medinfo.uk@novartis.com</p>');
         
         // Adding info after drug name as system wont let me add them. Hacky but its needed.
         
@@ -257,7 +257,7 @@ var evohome = (function() {
         var i;
         for (i = 0; i < drugNames.length; i++) {
             var nthChildNumber = i + 1;
-            $('#d24b2b3c-6218-43f1-a667-28e5d03066f7 label:nth-of-type(' + nthChildNumber + ') .mdl-checkbox__label').append(drugNames[i]);
+            $('#768d910a-4429-4c1f-9a08-a4921f582ea4 label:nth-of-type(' + nthChildNumber + ') .mdl-checkbox__label').append(drugNames[i]);
             //console.log(drugNames[i]);
         }
 

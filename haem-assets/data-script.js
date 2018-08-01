@@ -59,7 +59,7 @@ function retriveData(callback) {
 	//console.log(0);
 	//var dataSource = '/siteassets/theme/NEW_Portal/ui/js/calender/academy.json';
 	//var data = makeCorsRequest(dataSource);
-	var dataSource = '/siteassets/theme/New_Portal/UI/js/calendar/academy.json';
+	var dataSource = '/siteassets/theme/NEW_Portal/UI/js/calendar/academy.json';
     
     jqueryNoConflict.getJSON(dataSource, renderDataVisualsTemplate_future);
     jqueryNoConflict.getJSON(dataSource, renderDataVisualsTemplate_past);
@@ -89,7 +89,7 @@ function renderDataVisualsTemplate_future(data){
 	}); 
 
     handlebarsDebugHelper();
-    renderHandlebarsTemplate('/siteassets/theme/New_Portal/UI/js/calendar/dataDetailsTemplate.html', '#data-details', data);
+    renderHandlebarsTemplate('/siteassets/theme/NEW_Portal/UI/js/calendar/dataDetailsTemplate.html', '#data-details', data);
 };
 
 // render compiled handlebars template
@@ -115,7 +115,7 @@ function renderDataVisualsTemplate_past(data){
 
 	});
     handlebarsDebugHelper();
-    renderHandlebarsTemplate('/siteassets/theme/New_Portal/UI/js/calendar/dataDetailsTemplate.html', '#past-details', data);
+    renderHandlebarsTemplate('/siteassets/theme/NEW_Portal/UI/js/calendar/dataDetailsTemplate.html', '#past-details', data);
 };
 
 

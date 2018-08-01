@@ -1126,6 +1126,14 @@ box-sizing: border-box;
     padding: 20px 15px;
     width: 100%;
 }
+.block .textBlock form .FormTextbox__Input::placeholder {
+   color: #434343;
+}
+.block .textBlock form .Form__Element__ValidationError {
+    color: #fff!important;
+    background: red;
+    padding: 10px 15px!important;
+}
 .block .textBlock form .Form__Element__Caption {
     margin: 0;
     color: #434343;
