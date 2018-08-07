@@ -319,6 +319,17 @@ var evohome = (function() {
          });
     }
     
+    function internalTabsControls() {
+        $('.internalTabs li a').click(function(e){
+            e.preventDefault();
+            var url = $(this).attr('href');
+            $('.tabContent').addClass('hidden');
+            $(url).removeClass('hidden');
+            $('.tabs.internalTabs ul li a').removeClass('active');
+            $(this).addClass('active');
+        });
+    }
+    
 
 /*------------------------------------*\
   go
@@ -373,6 +384,7 @@ var evohome = (function() {
         smoothScroll()
         addToFooter()
         addPlaceholderText()
+        internalTabsControls()
 	};
 
 	return { init: init };

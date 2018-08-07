@@ -17,6 +17,9 @@ p {
     padding-left: 15px;
     position: relative;
 }
+.text--block.noPadding {
+    padding: 0;
+}
 .text--block ul li:before {
   content: "• ";
   color: #e40e63; 
@@ -29,6 +32,7 @@ p {
 }
 p {
     color: #231f20;
+    font-weight: 400;
 }
 .cookies-prompt p {
     color: #fff;
@@ -91,6 +95,7 @@ a img {
     transform: rotate(180deg);
 }
 .footNoteButton {
+    margin-top: 20px;
     border: 1px solid #532e63;
     width: 180px;
     display: block;
@@ -534,6 +539,11 @@ padding:0;
 .grad > .header h3 a {
     color: inherit!important;
 }
+.grad .footnote {
+    color: #fff;
+    font-size: 0.8em;
+    margin: 20px 0 0 0;
+}
 .event_spot_block .addPadding {
     padding: 20px;
 }
@@ -547,7 +557,7 @@ padding:0;
     color: #fff;
 }
 
-.spot_block_248>.header{
+.spot_block_248 > .header{
     height: 170px;
     max-height: 170px;
     padding: 0 10px 0 150px;
@@ -760,10 +770,15 @@ max-width:100% !important;
     margin: 0 0 15px 0;
     font-weight: bold;
 }
+.text--block h3.purpleText {
+    color: #532e63;
+}
+/*
 .text--block h3 + p {
     font-size: 1.563em;
     line-height: 1em;
 }
+*/
 .text--block h5 {
     color: #532e63;
     font-size: 1.125em;
@@ -890,6 +905,29 @@ max-width:100% !important;
     line-height: 1.2em;
     color: #fff;
 }
+.tabs.internalTabs ul {
+    padding-top: 10px;
+    margin: 0 0 20px 0;
+    border-bottom-color: #532e63;
+}
+.tabs.internalTabs ul li {
+    width: 49.8%;
+    padding: 0;
+    margin: 0;
+}
+.tabs.internalTabs ul li a {
+    padding: 22px 30px 20px 30px;
+    background: #947f9c;
+    color: #fff;
+    font-size: 0.875em;
+}
+.tabs.internalTabs ul li a.active {
+    background: #532e63;
+}
+.tabs.internalTabs ul li:before,
+.tabs.internalTabs ul li a:before {
+    display: none;
+}
 
 /*****************/
 /** Quick links **/
@@ -965,6 +1003,10 @@ max-width:100% !important;
 /** Footnotes **/
 /***************/
 
+.footnotes {
+    display: none;
+    padding: 20px 0;
+}
 .footnotes h6 {
     position: relative;
     color: #532e63;
