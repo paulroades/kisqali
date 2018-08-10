@@ -807,11 +807,14 @@ footer[id=site-specifics] li a:hover {
 #data-details, #past-details {
     margin-top: 10px;
 }
-#data-details .event--link, #past-details .event--link  {
+#data-details .event--link, 
+#past-details .event--link  {
     width: 32.6666666667%;
-    margin-left: 1%;
-    margin-bottom: 1%;
+    margin-left: 0.3%;
+    margin-right: 0.3%;
+    margin-bottom: 0.6%;
 }
+/*
 #data-details .event--link:first-of-type, #past-details .event--link:first-of-type {
     margin-left: 0;
 }
@@ -825,6 +828,7 @@ footer[id=site-specifics] li a:hover {
 #past-details .event--link:nth-of-type(13) {
     margin-left: 0;
 }
+*/
 
 #content .grid .borderBottom {
 /*    border-top: 3px solid #0762ab;*/

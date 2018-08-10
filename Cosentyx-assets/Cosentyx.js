@@ -299,8 +299,11 @@ var evohome = (function() {
             e.preventDefault();
             $('#external-link-disclaimer').addClass('active');
             var internalLinlocation = $(this).attr('href');
+            
             $('.btn-success').click(function(){
-               window.location = internalLinlocation;
+                //window.location = internalLinlocation;
+                window.open(internalLinlocation);
+                $('#external-link-disclaimer').removeClass('active');
             });
             $('.btn-cancel').click(function(){
                $('#external-link-disclaimer').removeClass('active');
