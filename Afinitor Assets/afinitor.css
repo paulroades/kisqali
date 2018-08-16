@@ -191,6 +191,13 @@ table tr td {
     .tableRow .grid-1-4 {
         width: 100%;
     }
+    .nav-overlay, 
+    .nav-overlay-desktop {
+        z-index: 9;
+    }
+    a.nav-mega-link {
+        color: #646565!important;
+    }
 }
 
 
