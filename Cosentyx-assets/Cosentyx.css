@@ -377,6 +377,14 @@ sub {
     border-bottom-color: #e50e63;
     color: #e50e63;
 }
+.licenceBar {
+    background: #cbc0d0;
+    padding: 13px 10px;
+    color: #532e63;
+    font-size: 14px; 
+    line-height: 16px;
+    text-align: center;
+}
 
 /**************************/
 /** main content Styling **/

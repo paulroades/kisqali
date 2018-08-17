@@ -333,6 +333,11 @@ var evohome = (function() {
         });
     }
     
+    function licenceBar() {
+        $('.sectionpage, .contentpage').prepend('<div class="block htmlembedblock grid-1-1"><div class="licenceBar">Cosentyx is indicated for the treatment of active PsA and AS in adult patients who have responded inadequately to DMARD or conventional therapy, respectively.<sup>1</sup></div></div>');
+    }
+    
+    
 
 /*------------------------------------*\
   go
@@ -388,6 +393,7 @@ var evohome = (function() {
         addToFooter()
         addPlaceholderText()
         internalTabsControls()
+        licenceBar()
 	};
 
 	return { init: init };

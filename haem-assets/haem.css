@@ -1099,15 +1099,32 @@ footer[id=site-specifics] li a:hover {
     .title_spot_block .header {
         top: 0;
     }
+    .spotLayout-topimage .content .absolutePositionedBottom h4 {
+        font-size: 0.8em!important;
+    }
+    #content .grid .piHeading .internalLinks li {
+        font-size: 0.8em;
+    }
+    .filter--block {
+        padding-left: 15px;
+    }
+    .footerContent {
+        padding: 40px 15px;
+    }
+    .footNote {
+        padding: 20px 15px!important;
+    }
 /*
     .alignCenter {
         width: 90%;
     }
 */
 
+/*
     .red {
         padding: 10px 35px;
     }
+*/
 
     .spotblock .red_background a.link, .spotblock .red_background_nvs a.link {
         margin: 40px 0 0 40px;
@@ -1143,21 +1160,48 @@ footer[id=site-specifics] li a:hover {
     .bgImage .grid-1-2 {
         width: 50%;
     }
-    .content_413 {
+    .whiteBackgroundContent .whiteBackgroundWrap {
+        width: 100%!important;
+    }
+    .content_413,
+    .content_300,
+    .content_400 {
         height: auto;
         max-height: inherit;
+    }
+    .bgBubbles {
+        height: 460px;
     }
     .alignCenter {
         width: 100%;
     }
     .alignCenter .half {
-        width: 50%;
+        width: 33.33%;
+    }
+    .alignCenter .half .content {
+        padding: 0;
+    }
+    .alignCenter .half .content .content-img {
+        margin-bottom: 0;
+    }
+    .alignCenter .half .content .absolutePositionedBottom {
+        position: relative;
+    }
+    .spotLayout-topimage .content .absolutePositionedBottom .widthHalf {
+        width: 100%;
     }
     .spotLayout-topimage .content .absolutePositionedBottom .widthHalf h4 {
-        font-size: 1.2em!important;
+        font-size: 1em!important;
     }
     .videoEmbedContainer {
         min-height: 500px;
+    }
+    .block .textBlock form {
+        width: 80%;
+    }
+    #content .grid .piContainer .paddingRight,
+    #content .grid .piContainer .paddingLeft {
+        width: 50%;
     }
 }
 
