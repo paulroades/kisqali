@@ -3,11 +3,11 @@ body,
     color: #1d1d1b;
     background: rgba(7,98,171, 0.1)!important;
 }
-.grid, 
+.grid,
 .grid-content {
     background: none!important;
 }
-main {   
+main {
     margin-top: 11rem;
     background: none!important;
 }
@@ -34,8 +34,8 @@ sup, sub {
   position: relative;
   top: -0.4em;
 }
-sub { 
-  top: 0.4em; 
+sub {
+  top: 0.4em;
 }
 .content_400 {
     height: 400px;
@@ -72,11 +72,10 @@ sub {
 
 .nav-mega-wrapper {
     -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-    -ms-transition: all 250ms ease;
-    -o-transition: all 250ms ease;
-    transition: all 250ms ease;
-    z-index: 9;
+-moz-transition: all 250ms ease;
+-ms-transition: all 250ms ease;
+-o-transition: all 250ms ease;
+transition: all 250ms ease;
 }
 body.menu-is-ready > div.nav-mega-wrapper {
     display: block;
@@ -84,10 +83,10 @@ body.menu-is-ready > div.nav-mega-wrapper {
 }
 .menu-is-ready .nav-mega-wrapper {
     -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-    -ms-transition: all 250ms ease;
-    -o-transition: all 250ms ease;
-    transition: all 250ms ease;
+-moz-transition: all 250ms ease;
+-ms-transition: all 250ms ease;
+-o-transition: all 250ms ease;
+transition: all 250ms ease;
     z-index: 20001!important;
 }
 
@@ -136,12 +135,12 @@ max-height:310px;
     padding: 0 0 5px 0;
     border-bottom: 1px solid #e10613;
     display: inline-block;
-    
+
 }
 .haem_background .home ul li {
     display: inline-block;
     color: #1d70b6;
-    font-size: 1.6em; 
+    font-size: 1.6em;
     line-height: 1em;
     border-right: 1px solid #1d70b6;
     font-weight: 100;
@@ -167,7 +166,7 @@ max-height:310px;
 }
 
 .blue_background{
-/*background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/haem_blue_bg.png);*/
+/*background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_blue_bg.png);*/
     background: #29235c;
 }
 .white_background {
@@ -240,7 +239,7 @@ background-position: center center;
     background-color: #f6f7f7;
     border-top: 5px solid #e30613;
     border-bottom:5px solid #7f1210;
-    background-image: 
+    background-image:
         linear-gradient(#e30613, #7f1210),
         linear-gradient(#e30613, #7f1210),
         url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg.png)
@@ -257,7 +256,7 @@ background-position: center center;
     background-color: #f6f7f7;
     border-top: 5px solid #e30613;
     border-bottom:5px solid #7f1210;
-    background-image: 
+    background-image:
         linear-gradient(#e30613, #7f1210),
         linear-gradient(#e30613, #7f1210),
         url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg_nvs.png);
@@ -320,17 +319,17 @@ background-position: center center;
     -ms-transition: all 250ms ease-in-out;
     -o-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
-    width: 11px; 
+    width: 11px;
     height: 13px;
     position: absolute;
     right: 10px;
     top: 20px;
 }
 .button {
-    
+
 }
 .grid .gradientBackground {
-    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/blueGradientBGSmall.png) no-repeat left top; 
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/blueGradientBGSmall.png) no-repeat left top;
     background-size: cover;
     background-color: none!important;
 }
@@ -373,7 +372,7 @@ background-position: center center;
 /*
 #content_97426 {
     background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_event_bg_Alt.png);
-    
+
 }
 */
 
@@ -422,7 +421,7 @@ a.menu-red {color:#cb0b0f !important}
 }
 
 .event_spot_block > .header > h4.underline{
-	border-bottom: 1px solid #fff; 
+	border-bottom: 1px solid #fff;
 }
 
 
@@ -470,7 +469,7 @@ a.menu-red {color:#cb0b0f !important}
     background-image: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/ec_filter_bg.png);
     padding: 10px;
     color: #fff;
-    font-size: 1.2rem;	
+    font-size: 1.2rem;
     margin-top:0;
     text-transform: uppercase;
     background-size: cover;
@@ -557,8 +556,8 @@ a.menu-red {color:#cb0b0f !important}
     display: inline-block;
     margin-bottom: 15px;
     width: 100%;
-}    
-.select select {        
+}
+.select select {
     display: inline-block;
     width: 100%;
     cursor: pointer;
@@ -568,7 +567,7 @@ a.menu-red {color:#cb0b0f !important}
     border-radius: 0px;
     background: #FFFFFF;
     color: #e30613;
-    font-size: 1.2rem;	
+    font-size: 1.2rem;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -585,7 +584,7 @@ a.menu-red {color:#cb0b0f !important}
     opacity: 0.5;
     pointer-events: none;
 }
-.select select option{        
+.select select option{
     display: inline-block;
     width: 100%;
     cursor: pointer;
@@ -665,7 +664,7 @@ a.menu-red {color:#cb0b0f !important}
 	color:#ffffff;
 	display:block;
 	width:40%;
-	
+
 }
 
 .block-accordion-label:before {
@@ -808,14 +807,11 @@ footer[id=site-specifics] li a:hover {
 #data-details, #past-details {
     margin-top: 10px;
 }
-#data-details .event--link, 
-#past-details .event--link  {
+#data-details .event--link, #past-details .event--link  {
     width: 32.6666666667%;
-    margin-left: 0.3%;
-    margin-right: 0.3%;
-    margin-bottom: 0.6%;
+    margin-left: 1%;
+    margin-bottom: 1%;
 }
-/*
 #data-details .event--link:first-of-type, #past-details .event--link:first-of-type {
     margin-left: 0;
 }
@@ -829,7 +825,6 @@ footer[id=site-specifics] li a:hover {
 #past-details .event--link:nth-of-type(13) {
     margin-left: 0;
 }
-*/
 
 #content .grid .borderBottom {
 /*    border-top: 3px solid #0762ab;*/
@@ -874,6 +869,9 @@ footer[id=site-specifics] li a:hover {
 #content .grid .internalLinks li a {
     color: #0762ab;
     text-decoration: none;
+}
+#content .grid .internalLinks li a span {
+    font-size: 1.4em;
 }
 .videoEmbedContainer {
     padding: 25px;
@@ -962,11 +960,6 @@ footer[id=site-specifics] li a:hover {
     padding: 20px 15px;
     width: 100%;
 }
-.block .textBlock form .Form__Element__ValidationError {
-    color: #fff!important;
-    background: red;
-    padding: 10px 15px!important;
-}
 .block .textBlock form .Form__Element__Caption {
     margin: 0;
     color: #434343;
@@ -1024,7 +1017,7 @@ footer[id=site-specifics] li a:hover {
     -webkit-mask: none!important;
     mask: none!important;
     border-color: #e10818!important;
-    
+
 }
 .block .textBlock form .FormChoice .mdl-checkbox.is-checked .mdl-checkbox__box-outline .mdl-checkbox__tick-outline {
     background: none!important;
@@ -1057,7 +1050,7 @@ footer[id=site-specifics] li a:hover {
     margin-top: 10px;
 }
 #content .grid .piHeading .internalLinks li {
-    font-size: 1em;
+    font-size: 0.74em;
 }
 #content .grid .piHeading .internalLinks li.active a {
     color: #e10818;
@@ -1099,32 +1092,15 @@ footer[id=site-specifics] li a:hover {
     .title_spot_block .header {
         top: 0;
     }
-    .spotLayout-topimage .content .absolutePositionedBottom h4 {
-        font-size: 0.8em!important;
-    }
-    #content .grid .piHeading .internalLinks li {
-        font-size: 0.8em;
-    }
-    .filter--block {
-        padding-left: 15px;
-    }
-    .footerContent {
-        padding: 40px 15px;
-    }
-    .footNote {
-        padding: 20px 15px!important;
-    }
 /*
     .alignCenter {
         width: 90%;
     }
 */
 
-/*
     .red {
         padding: 10px 35px;
     }
-*/
 
     .spotblock .red_background a.link, .spotblock .red_background_nvs a.link {
         margin: 40px 0 0 40px;
@@ -1132,12 +1108,12 @@ footer[id=site-specifics] li a:hover {
 
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     #logo .logo-holder {
         position: relative;
         top: -5px;
         left: 5px;
-/*        width: 70px;*/
+        width: 70px;
         padding-top: 0;
     }
     #logo .logo-holder .logo-wrapper img {
@@ -1146,7 +1122,6 @@ footer[id=site-specifics] li a:hover {
     }
     a.nav-mega-link {
         padding: 1.2rem 1rem 0.5rem 1rem;
-        color: #646565;
     }
     main {
         margin-top: 3.4rem;
@@ -1155,60 +1130,32 @@ footer[id=site-specifics] li a:hover {
         position: relative;
         top: 0px;
         width: 100%;
-        z-index: 8;
     }
     .bgImage .grid-1-2 {
         width: 50%;
     }
-    .whiteBackgroundContent .whiteBackgroundWrap {
-        width: 100%!important;
-    }
-    .content_413,
-    .content_300,
-    .content_400 {
+    .content_413 {
         height: auto;
         max-height: inherit;
-    }
-    .bgBubbles {
-        height: 460px;
     }
     .alignCenter {
         width: 100%;
     }
     .alignCenter .half {
-        width: 33.33%;
-    }
-    .alignCenter .half .content {
-        padding: 0;
-    }
-    .alignCenter .half .content .content-img {
-        margin-bottom: 0;
-    }
-    .alignCenter .half .content .absolutePositionedBottom {
-        position: relative;
-    }
-    .spotLayout-topimage .content .absolutePositionedBottom .widthHalf {
-        width: 100%;
+        width: 50%;
     }
     .spotLayout-topimage .content .absolutePositionedBottom .widthHalf h4 {
-        font-size: 1em!important;
+        font-size: 1.2em!important;
     }
     .videoEmbedContainer {
         min-height: 500px;
     }
-    .block .textBlock form {
-        width: 80%;
-    }
-    #content .grid .piContainer .paddingRight,
-    #content .grid .piContainer .paddingLeft {
-        width: 50%;
-    }
 }
 
-@media (max-width: 767px) { 
-    .nav-overlay, 
+@media (max-width: 767px) {
+    .nav-overlay,
     .nav-overlay-desktop {
-        z-index: 9;
+        z-index: 8;
     }
     .haem_background .home ul li {
         font-size: 1em;
@@ -1246,10 +1193,10 @@ footer[id=site-specifics] li a:hover {
         display: inline-block;
     }
     .publicuserinterestpromptblock .popup-controls {
-        
+
     }
     .publicuserinterestpromptblock .popup-controls {
-        
+
     }
     .fluidBGWhatsOn .content {
         padding: 90px 15px;
@@ -1292,24 +1239,9 @@ footer[id=site-specifics] li a:hover {
     }
 }
 
-@media (max-width: 450px) { 
+@media (max-width: 450px) {
     #data-details .event--link {
         width: 99%!important;
         margin-left: 0.5%!important;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
