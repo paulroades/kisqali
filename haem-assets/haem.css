@@ -871,7 +871,9 @@ footer[id=site-specifics] li a:hover {
     text-decoration: none;
 }
 #content .grid .internalLinks li a span {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    position: relative;
+    top: 2px;
 }
 .videoEmbedContainer {
     padding: 25px;
@@ -1030,6 +1032,9 @@ footer[id=site-specifics] li a:hover {
     line-height: 1.4em;
     margin: 15px 0;
 }
+.EPiServerForms .Form__Element.FormSubmitButton {
+    float: none;
+}
 
 /*********************/
 /** PI Page Styling **/
@@ -1048,9 +1053,10 @@ footer[id=site-specifics] li a:hover {
 }
 #content .grid .piHeading .internalLinks {
     margin-top: 10px;
+    text-align: center;
 }
 #content .grid .piHeading .internalLinks li {
-    font-size: 0.74em;
+    font-size: 0.9em;
 }
 #content .grid .piHeading .internalLinks li.active a {
     color: #e10818;

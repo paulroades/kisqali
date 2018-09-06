@@ -227,7 +227,7 @@ var evohome = (function() {
         });
         
       
-    };
+    }
     
     function whatsOnBanner() {
         $('.whatsOn').parent().parent().parent().parent().addClass('fluidBGWhatsOn');
@@ -243,6 +243,8 @@ var evohome = (function() {
         $('#768d910a-4429-4c1f-9a08-a4921f582ea4').prepend('<h3>What can we help you with?</h3>');
         $('#c3015244-4896-4133-8f32-44211e7e0ca3').append('<p style="margin:35px 0 ;">If you have a question about the product, please contact Medical Information on 01276 698370 or medinfo.uk@novartis.com</p>');
         $('#c3015244-4896-4133-8f32-44211e7e0ca3').prepend('<p style="margin:35px 0 ;"><a style="text-decoration: underline" href="/haematology-academy/prescribing-information/">Please click here to access Prescribing Information for the above products.</a></p>');
+        $('.formcontainerblock .textBlock').append('<p>Prescribing Information for the above mentioned products can be found <a href="/haematology-academy/prescribing-information/">here</a></p>')
+        
         
         // Adding info after drug name as system wont let me add them. Hacky but its needed.
         
