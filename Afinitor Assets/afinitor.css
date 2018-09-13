@@ -29,6 +29,10 @@
 .grid-content .grid-1-1 {
     padding: 0;
 }
+.negMargin {
+    position: relative;
+    top: -14px;
+}
 
 
 /********************/

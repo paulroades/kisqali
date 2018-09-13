@@ -115,15 +115,20 @@ var evohome = (function() {
                $('#external-link-disclaimer').removeClass('active');
            });
         });
+        
     }
     
-    
+    function marginTopRemove() {
+        $('.margin-top').parent().parent().addClass('negMargin');
+        //alert('loaded');
+    }
 
 	
 /*------------------------------------*\
   go
 \*------------------------------------*/
 	var init = function() {
+        marginTopRemove()
 		titleSpotBlock() 
 		homeBlock() 
 		sectionSpotBlock() 

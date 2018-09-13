@@ -249,12 +249,12 @@ var evohome = (function() {
         // Adding info after drug name as system wont let me add them. Hacky but its needed.
         
         var drugNames = [
-             '<sup>&reg;</sup><span style="color: #000;">▼</span> (deferasirox) <a href="/haematology-academy/prescribing-information#ExjadePI">Exjade PI</a>', 
-             '<sup>&reg;</sup> (panobinostat) <a href="/haematology-academy/prescribing-information#FarydakePI">Farydak PI</a>', 
-             '<sup>&reg;</sup> (ruxolitinib) <a href="/haematology-academy/prescribing-information#JakaviPI">Jakavi PI</a>',  
-             '<sup>&reg;</sup> (eltrombopag) <a href="/haematology-academy/prescribing-information#RevoladePI">Revolade PI</a>', 
-             '<sup>&reg;</sup> (nilotinib) <a href="/haematology-academy/prescribing-information#TasignaPI">Tasigna PI</a>',  
-             '<sup>&reg;</sup><span style="color: #000;">▼</span> (midostaurin) <a href="/haematology-academy/prescribing-information#RydaptPI">Rydapt PI</a>'
+             '<sup>&reg;</sup><span style="color: #000; font-size: 1.2em;">▼</span> (deferasirox)', 
+             '<sup>&reg;</sup> (panobinostat)', 
+             '<sup>&reg;</sup> (ruxolitinib)',  
+             '<sup>&reg;</sup> (eltrombopag)', 
+             '<sup>&reg;</sup> (nilotinib)',  
+             '<sup>&reg;</sup><span style="color: #000; font-size: 1.2em;">▼</span> (midostaurin)'
         ];
         
         //drugNames[1];

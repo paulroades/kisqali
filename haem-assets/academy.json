@@ -77,8 +77,7 @@
    "disease": 2,
    "bg":"red_background",
    "date":"2018-10-09"
- }
-},
+ }},
 
 {"Event":
  {
@@ -224,6 +223,19 @@
    "disease": 4,
    "bg":"red_background",
    "date":"2018-10-15"
+ }},
+ {"Event":
+ {
+  "title": "Haematology Masterclass 2019",
+   "address": "London | London",
+   "start-date": "14th February 2019",
+   "area": "General",
+   "link": "/haematology-academy/events/haematology_masterclass_2019/",
+   "month": 2,
+   "location": 1,
+   "disease": 4,
+   "bg":"red_background_nvs",
+   "date":"2019-02-14"
  }}
 
 
