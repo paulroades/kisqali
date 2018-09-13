@@ -236,6 +236,19 @@
    "disease": 4,
    "bg":"red_background_nvs",
    "date":"2019-02-14"
+ }},
+ {"Event":
+ {
+  "title": "Hot Topics in Haematology Meeting - Aberdeen",
+   "address": "Aberdeen | Scotland",
+   "start-date": "25th October 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/Hot-Topics-in-Haematology-Meeting-Aberdeen/",
+   "month": 10,
+   "location": 6,
+   "disease": 4,
+   "bg":"red_background_nvs",
+   "date":"2019-02-14"
  }}
 
 
