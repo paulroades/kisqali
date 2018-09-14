@@ -248,7 +248,46 @@
    "location": 6,
    "disease": 4,
    "bg":"red_background_nvs",
-   "date":"2019-02-14"
+   "date":"2018-10-25"
+ }},
+ {"Event":
+ {
+  "title": "Hot Topics in Haematology Meeting - Belfast",
+   "address": "Belfast | Northern Ireland ",
+   "start-date": "25th October 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/hot-topics-in-haematology-meeting-Belfast/",
+   "month": 10,
+   "location": 6,
+   "disease": 4,
+   "bg":"red_background_nvs",
+   "date":"2018-10-25"
+ }},
+ {"Event":
+ {
+  "title": "Hot Topics in Haematology Meeting - Dundee",
+   "address": "Aberdeen | Scotland",
+   "start-date": "25th October 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/hot-topics-in-haematology-meeting-dundee/",
+   "month": 10,
+   "location": 6,
+   "disease": 4,
+   "bg":"red_background_nvs",
+   "date":"2018-10-25"
+ }},
+ {"Event":
+ {
+  "title": "Hot Topics in Haematology Meeting - Edinburgh",
+   "address": "Aberdeen | Scotland",
+   "start-date": "25th October 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/hot-topics-in-haematology-meeting-edinburgh/",
+   "month": 10,
+   "location": 6,
+   "disease": 4,
+   "bg":"red_background_nvs",
+   "date":"2018-10-25"
  }}
 
 
