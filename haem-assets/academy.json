@@ -266,7 +266,7 @@
  {"Event":
  {
   "title": "Hot Topics in Haematology Meeting - Dundee",
-   "address": "Aberdeen | Scotland",
+   "address": "Dundee | Scotland",
    "start-date": "25th October 2018",
    "area": "General",
    "link": "/haematology-academy/events/hot-topics-in-haematology-meeting-dundee/",
@@ -279,10 +279,23 @@
  {"Event":
  {
   "title": "Hot Topics in Haematology Meeting - Edinburgh",
-   "address": "Aberdeen | Scotland",
+   "address": "Edinburgh | Scotland",
    "start-date": "25th October 2018",
    "area": "General",
    "link": "/haematology-academy/events/hot-topics-in-haematology-meeting-edinburgh/",
+   "month": 10,
+   "location": 6,
+   "disease": 4,
+   "bg":"red_background_nvs",
+   "date":"2018-10-25"
+ }},
+ {"Event":
+ {
+  "title": "Hot Topics in Haematology Meeting - Glasgow",
+   "address": "Glasgow | Scotland",
+   "start-date": "25th October 2018",
+   "area": "General",
+   "link": "/haematology-academy/events/hot-topics-in-haematology-meeting-glasgow/",
    "month": 10,
    "location": 6,
    "disease": 4,
