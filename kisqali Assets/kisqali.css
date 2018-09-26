@@ -71,6 +71,14 @@ body.home .grid-4-4 >  .content-focused{
 .content-focused-page ol {
     font-size: 1.1rem;
 }
+img,
+a img,
+a {
+    border:0;
+    height:auto;
+    outline:none;
+    text-decoration:none;
+}
  
 
 /********************/
@@ -216,7 +224,35 @@ a.nav-mega-link:hover{
             background-color: #006781;
              color: #fff;
         }
-
+@media (max-width: 1024px) {
+    #secondary-menu .nav-mega {
+        padding: 40px 15px;
+    }
+    a.nav-mega-link {
+        font-size: 0.8rem;
+    }
+    .grid .tablet-grid-1 {
+        width: 25%;
+    }
+}
+@media (max-width: 768px) {
+    #secondary-menu {
+        position: fixed;
+    }
+    #secondary-menu .nav-mega #kisqali-logo {
+        display: block;
+        margin: 0 0 10px 0;
+    }
+    #secondary-menu a.nav-mega-link {
+        font-size: 0.7rem;
+    }
+    .sub-navigation-items a {
+        border: 0;
+        padding: 0.4rem 0.51428rem;
+        line-height: 1.6;
+        border-radius: 0;
+    }
+}
 @media (max-width: 767px) {
     main {
         margin-top: 4rem;
@@ -233,7 +269,10 @@ a.nav-mega-link:hover{
     }
     .nav-overlay, 
     .nav-overlay-desktop {
-        z-index: 9;
+        z-index: 99998;
+    }
+    .nav-mega-wrapper {
+        z-index: 99999;
     }
     a.nav-mega-link {
         color: #646565!important;

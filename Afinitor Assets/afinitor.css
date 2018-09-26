@@ -33,6 +33,14 @@
     position: relative;
     top: -14px;
 }
+img,
+a img,
+a {
+    border:0;
+    height:auto;
+    outline:none;
+    text-decoration:none;
+}
 
 
 /********************/
@@ -162,18 +170,31 @@ table tr td {
     }
 }
 @media (max-width: 768px) {
+/*
     main {
         margin-top: 4rem;
     }
+*/
+/*
     #secondary-menu {
         display: none;
     }
+*/
 /*
     .nav-mega-link  {
         display: none!important;
     }
 */
-    
+    #secondary-menu>.nav-mega {
+        padding: 10px 0;
+    }
+    #secondary-menu .nav-mega #afinitor-logo {
+        display: block;
+        margin: 0 0 10px 0;
+    }
+    #secondary-menu .nav-mega .nav-mega-link {
+        font-size: 0.7rem;
+    }
     .tableRow .grid-1-4 {
         width: 49%;
         margin: 2% 0 0 2%;
@@ -198,6 +219,10 @@ table tr td {
     }
     .nav-mega-toggle-icon {
         display: block;
+    }
+    #content_119604,
+    #content_119605 {
+        width: 50%!important;
     }
 }
 @media (max-width: 767px) {
