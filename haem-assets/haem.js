@@ -5,51 +5,52 @@ var evohome = (function() {
     section blocks
 \*------------------------------------*/
 	function titleSpotBlock() {
-		var block = $('.title_spot_block');		
+		var block = $('.title_spot_block');
 		block.parent().parent().parent().addClass('content_400');
         $('.title_spot_block_300').parent().parent().parent().addClass('content_300');
 	}
-	
+
 	function homeBlock() {
-		var block = $('.haem');		
-		block.parent().parent().parent().addClass('haem_background');	
-		var block = $('.haem-acad');		
+		var block = $('.haem');
+		block.parent().parent().parent().addClass('haem_background');
+		var block = $('.haem-acad');
 		block.parent().parent().parent().addClass('haem_ec_background');
-		var block = $('.haem-acad-past');		
-		block.parent().parent().parent().addClass('haem_past_background');	
-        var block = $('.white');		
+		var block = $('.haem-acad-past');
+		block.parent().parent().parent().addClass('haem_past_background');
+        var block = $('.white');
 		block.parent().parent().parent().addClass('white_background');
         $('.haem-footer').parent().parent().parent().addClass('haem-footer-bg');
+        $('.haem-acadAlt').parent().parent().parent().parent().addClass('haem-acadAltContainer');
 	}
 
 	function blueBlock() {
-		var block = $('.blue');		
-		block.parent().parent().parent().addClass('blue_background');		
+		var block = $('.blue');
+		block.parent().parent().parent().addClass('blue_background');
 	}
 
 	function redBlocks() {
-		var block = $('.red');		
+		var block = $('.red');
 		block.parent().parent().parent().addClass('red_background');
 
-		var block = $('.red_nvs');		
-		block.parent().parent().parent().addClass('red_background_nvs');		
+		var block = $('.red_nvs');
+		block.parent().parent().parent().addClass('red_background_nvs');
 	}
-	
+
 	function eventSpotBlock() {
-		var block = $('.event_spot_block');		
-		block.parent().parent().parent().addClass('content_310');			
-	}	
+		var block = $('.event_spot_block');
+		block.parent().parent().parent().addClass('content_310');
+	}
 
 	function leftBlock() {
-		var block = $('.event--left');		
-		block.parent().parent().parent().parent() .parent().addClass('event_background');		
+		var block = $('.event--left');
+		block.parent().parent().parent().parent() .parent().addClass('event_background');
 	}
 
 	function rightBlock() {
-		var block = $('.event--right');		
-		block.parent().parent().parent().parent().parent().addClass('event_background');		
+		var block = $('.event--right');
+		block.parent().parent().parent().parent().parent().addClass('event_background');
 	}
-    
+
     function gradientBoxBlue() {
         $('.blueGradient').parent().parent().parent().parent().parent().addClass('gradWrap');
         $('.bgImageBlueGrad').parent().addClass('gradWrap');
@@ -57,7 +58,7 @@ var evohome = (function() {
         $('.gradientBackground').append('<div style="clear: both;"></div>');
         $('.whiteGradient').parent().parent().parent().parent().parent().parent().addClass('gradientBackgroundWhite');
     }
-    
+
     function rowItems() {
         $('.rowItem').parent().wrapAll( '<div class="row"></div>');
         $('.row').append('<div style="clear: both;"></div>');
@@ -67,18 +68,18 @@ var evohome = (function() {
 	function disclaimerLink() {
 
 		var domain = document.location.origin;
-		var qsv = window.location.search;	
+		var qsv = window.location.search;
 		var url = $('.publicuserinterestpromptblock').find('.popup-controls > li:first-of-type > a.btn').attr("href");
 		var target = domain + url + qsv;
-		$('.publicuserinterestpromptblock').find('.popup-controls > li:first-of-type > a.btn').attr("href", target); 
+		$('.publicuserinterestpromptblock').find('.popup-controls > li:first-of-type > a.btn').attr("href", target);
 
 	}
-    
+
     function increaseWidthColumn() {
         var block = $('.absolutePositionedBottom');
-        block.parent().parent().parent().parent().parent().addClass('half');	
+        block.parent().parent().parent().parent().parent().addClass('half');
         $( ".half" ).wrapAll( "<div class='alignCenter blocks--event--links'></div>");
-        	
+
         $( '.alignCenter' ).append('<div style="clear:both"></div>');
     	$( ".blocks--event--links" ).wrap( "<div class='block richtextblock spotblock grid-1-1 grey_background'></div>");
     }
@@ -88,65 +89,65 @@ var evohome = (function() {
 
 	/*
 	function sectionSpotBlock() {
-		var block = $('.section_spot_block');		
-		block.parent().parent().parent().addClass('content_310');			
-	}	
-	
-	function medicineSpotBlock() {
-		var block = $('.medicine_spot_block');	
-		block.parent().parent().parent().addClass('content_310');		
+		var block = $('.section_spot_block');
+		block.parent().parent().parent().addClass('content_310');
+	}
 
-	}	
+	function medicineSpotBlock() {
+		var block = $('.medicine_spot_block');
+		block.parent().parent().parent().addClass('content_310');
+
+	}
 
 	function medicineSpotBlockw() {
-		var block = $('.medicine_spot_block-w');	
-		block.parent().parent().parent().addClass('content_310');		
-		block.parent().parent().parent().addClass('blue--text');	
+		var block = $('.medicine_spot_block-w');
+		block.parent().parent().parent().addClass('content_310');
+		block.parent().parent().parent().addClass('blue--text');
 
-	}	
+	}
 
 	function tealBlueBlock() {
-		var block = $('.teal--blue');		
-		block.parent().parent().parent().parent().addClass('add-teal-blue');				
-	}	
-	
+		var block = $('.teal--blue');
+		block.parent().parent().parent().parent().addClass('add-teal-blue');
+	}
+
 	function midBlueBlock() {
-		var block = $('.mid--blue');		
-		block.parent().parent().parent().parent().addClass('add-mid-blue');				
-	}	
-	
+		var block = $('.mid--blue');
+		block.parent().parent().parent().parent().addClass('add-mid-blue');
+	}
+
 	function darkBlueBlock() {
-		var block = $('.dark--blue');		
-		block.parent().parent().parent().parent().addClass('add-dark-blue');				
-	}	
-	
+		var block = $('.dark--blue');
+		block.parent().parent().parent().parent().addClass('add-dark-blue');
+	}
+
 	function whiteBlock() {
-		var block = $('.add--white');		
-		block.parent().parent().parent().parent().addClass('add-white');				
-	}	
-	
+		var block = $('.add--white');
+		block.parent().parent().parent().parent().addClass('add-white');
+	}
+
 	function darkBlue4Block() {
-		var block = $('.dark--blue--4');		
-		block.parent().parent().parent().parent().addClass('add-dark-blue4');				
-	}	
-	
-	
+		var block = $('.dark--blue--4');
+		block.parent().parent().parent().parent().addClass('add-dark-blue4');
+	}
+
+
 	function pageStyle() {
 
-		var block = $('.page--wrapper');		
-		block.parent().addClass('page--block');	
+		var block = $('.page--wrapper');
+		block.parent().addClass('page--block');
 	}
 
 ≈
-	
+
 	function siteSearch() {
 		var myDiv = $('#content_96339').detach();
 		myDiv.appendTo('.nav-mega');
 
 		//$( ".search-control-holder" ).clone().appendTo( ".nav-mega" );
-		
+
 	}
-	
+
 	function hasClass(element, cls) {
 		return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 	}
@@ -156,8 +157,8 @@ var evohome = (function() {
 		 var logo = $( "#logo" ).detach();
 		 logo.prependTo('.nav-mega');
 
-		 
- 		
+
+
 	}
 
 
@@ -166,7 +167,7 @@ var evohome = (function() {
 		myDiv.appendTo('.nav-mega');
 
 		//$( ".search-control-holder" ).clone().appendTo( ".nav-mega" );
-		
+
 	}
 
     function wrapDivs() {
@@ -192,17 +193,17 @@ var evohome = (function() {
 		console.log(last_part);
 */
 		var menuItem= $('.'+last_part);
-		menuItem.addClass('menu-red');	
+		menuItem.addClass('menu-red');
 
     }
-    
-    
-    
+
+
+
     function addToMobileMenu() {
         var newMenuItems = $('#secondary-menu .nav-mega a');
         $(".nav-mega-wrapper .nav-mega").append(newMenuItems);
     }
-    
+
     function MPNPage() {
         if ($('.MPNPage')[0]){
             $('body').addClass('bgWhite');
@@ -210,8 +211,8 @@ var evohome = (function() {
             // Do something if class does not exist
         }
     }
-  
-    
+
+
     function smoothScroll() {
         $('.internalLinksMPN li a[href*="#"]').on('click', function (e) {
             e.preventDefault();
@@ -220,64 +221,67 @@ var evohome = (function() {
             }, 500, 'linear');
         });
         $('.piQuickLinks li a[href*="#"]').on('click', function (e) {
-            e.preventDefault();
+            e.preventDefault();					
             $('html, body').animate({
                 scrollTop: $($(this).attr('href')).offset().top - 200
             }, 500, 'linear');
+			
+			  $('.piQuickLinks li a[href*="#"]').removeClass("menu-red");
+			  var id = $(this).parent().attr('class')
+			  console.log(id);
+			$('.' + id).children('a').addClass("menu-red");
+			  
+					//$(this).addClass("menu-red");
+				
+
+				
         });
-        
-      
-    }
-    
+    };
+
     function whatsOnBanner() {
         $('.whatsOn').parent().parent().parent().parent().addClass('fluidBGWhatsOn');
         $('.whatsOn').parent().parent().parent().parent().wrap('<a href="/haematology-academy/calendar/"></a>');
     }
-    
+
     function addLogoOnMobile() {
         $('.inner-width').append('<a href="/" id="logo"><div class="logo-holder"><div class="logo-wrapper"><img itemprop="logo" class="logo" src="/siteassets/hcp-portal-master/img/novartis_logosm2.svg" alt="ServiceSphere GB"></div><input type="hidden" id="toptagline" value="Welcome to Novartis MedHub GB"></div></a>')
     }
-    
+
     function addingToForm() {
         $('.EPiServerForms').wrap('<div class="textBlock"></div>');
-        $('#768d910a-4429-4c1f-9a08-a4921f582ea4').prepend('<h3>What can we help you with?</h3>');
-        $('#c3015244-4896-4133-8f32-44211e7e0ca3').append('<p style="margin:35px 0 ;">If you have a question about the product, please contact Medical Information on 01276 698370 or medinfo.uk@novartis.com</p>');
-        $('#c3015244-4896-4133-8f32-44211e7e0ca3').prepend('<p style="margin:35px 0 ;"><a style="text-decoration: underline" href="/haematology-academy/prescribing-information/">Please click here to access Prescribing Information for the above products.</a></p>');
-        $('.formcontainerblock .textBlock').append('<p>Prescribing Information for the above mentioned products can be found <a href="/haematology-academy/prescribing-information/">here</a></p>')
-        
-        
+        $('#d24b2b3c-6218-43f1-a667-28e5d03066f7').prepend('<h3>What can we help you with?</h3>');
+        $('#8fc84c2e-2d08-41c7-97c7-37dd6bf11994').append('<p style="margin:35px 0 ;">If you have a question about the product, please contact Medical Information on 01276 698370 or medinfo.uk@novartis.com</p>');
+
         // Adding info after drug name as system wont let me add them. Hacky but its needed.
-        
+
         var drugNames = [
-             '<sup>&reg;</sup><span style="color: #000; font-size: 1.2em;">▼</span> (deferasirox)', 
-             '<sup>&reg;</sup> (panobinostat)', 
-             '<sup>&reg;</sup> (ruxolitinib)',  
-             '<sup>&reg;</sup> (eltrombopag)', 
-             '<sup>&reg;</sup> (nilotinib)',  
-             '<sup>&reg;</sup><span style="color: #000; font-size: 1.2em;">▼</span> (midostaurin)'
+             '<sup>&reg;</sup><span style="color: #000;">▼</span> (deferasirox)',
+             '<sup>&reg;</sup> (panobinostat)',
+             '<sup>&reg;</sup> (ruxolitinib)',
+             '<sup>&reg;</sup> (eltrombopag)',
+             '<sup>&reg;</sup> (nilotinib)',
+             '<sup>&reg;</sup><span style="color: #000;">▼</span> (midostaurin)'
         ];
-        
+
         //drugNames[1];
-        
+
         var i;
         for (i = 0; i < drugNames.length; i++) {
             var nthChildNumber = i + 1;
-            $('#768d910a-4429-4c1f-9a08-a4921f582ea4 label:nth-of-type(' + nthChildNumber + ') .mdl-checkbox__label').append(drugNames[i]);
+            $('#d24b2b3c-6218-43f1-a667-28e5d03066f7 label:nth-of-type(' + nthChildNumber + ') .mdl-checkbox__label').append(drugNames[i]);
             //console.log(drugNames[i]);
         }
-        
-       
 
     }
-    
+
     function eventsContentWrap() {
         $('.whiteBackground').parent().addClass('whiteBackgroundWrap');
         $('.whiteBackgroundWrap').wrapAll('<div class="whiteBackgroundContent"></div>');
         $('.whiteBackgroundContent').append('<div style="clear:both"></div>');
     }
-    
+
     // Add class to quick links on the PI page.
-    
+
     function isScrolledIntoView(elem) {
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
@@ -287,7 +291,7 @@ var evohome = (function() {
 
         return (elemTop <= docViewBottom);
     }
-    
+
 //    $(window).scroll(function () {
 //        $('.piContainer').each(function () {
 //            if (isScrolledIntoView(this) === true) {
@@ -297,64 +301,84 @@ var evohome = (function() {
 //            }
 //        });
 //    });
-    
-    function addPlaceholderText() {
-        $('.block .textBlock form .FormTextbox__Input').each(function(index, elem) {
-            var eId = $(elem).attr('id');
-            var label = null;
-            if (eId && (label = $(elem).parents('form').find('label[for='+ eId +']')).length == 1) {
-                $(elem).attr('placeholder', $.trim($(label).html()));
-                $(label).remove();
-            }
-         });
-    }
-    
-    function externalLink() {
-        $('.external').click(function(e) {
-            e.preventDefault();
-            $('#external-link-disclaimer').addClass('active');
-            var internalLinlocation = $(this).attr('href');
-            
-            $('.btn-success').click(function(){
-                //window.location = internalLinlocation;
-                window.open(internalLinlocation);
-                $('#external-link-disclaimer').removeClass('active');
-            });
-            $('.btn-cancel').click(function(){
-               $('#external-link-disclaimer').removeClass('active');
-           });
-        });
-        
 
-        $('.external').attr('data-linktype', 'link');
+    // button to reset search by dropdowns
+
+    function clearViewBy() {
+        $('.resetLink').click(function(){
+            $('#month option').prop('selected', function() {
+                return this.defaultSelected;
+            });
+        });
     }
     
-  
+    function headingSectionWithSidebar() {
+        $('.content-focused-page-headline').parent().wrap('<div class="gradientBackground"><div class="spotContainer visual headingColor-color2 headingAlignment-left headingStyle-normal iconColor-color1 textColor-color1 textAlignment-left textStyle-normal linkColor-color1 backgroundColor-transparent spotLayout-topimage trigger-change" itemscope="" itemtype="http://schema.org/CreativeWork"><div class="content content_400 content_300"><div class="content-restrict" style="overflow-wrap: break-word;"><div itemprop="text"><div class="title_spot_block title_spot_block_300 blueGradient"><div class="headingTable"><div class="headingTableCell"></div></div></div></div></div></div></div></div><div style="clear: both;"></div></div>');
+    }
     
+    function headingBlock() {
+        $('.sectionHeading').parent().parent().parent().parent().addClass('contentHeading');
+    }
     
+    function backtoTop() {
+        $('.backToTopButton').click(function() {
+          $("html, body").animate({ scrollTop: 0 }, "slow");
+          return false;
+        });
+    }
+    
+    function staticBlock(){
+        
+        if ($('#static')[0]){
+            var $sidebar   = $("#static"), 
+                $window    = $(window),
+                offset     = $sidebar.offset(),
+                topPadding = 90;
+
+                $sidebar.css({
+                    marginTop: 0
+                });
+
+                $window.scroll(function() {
+
+                    if ($window.scrollTop() > offset.top) {
+                        $sidebar.css({
+                            marginTop: $window.scrollTop() - offset.top + topPadding
+                        });
+                    } else {
+                        $sidebar.css({
+                            marginTop: 0
+                        });
+                    }
+                });
+        } else {
+            // Do something if class does not exist
+        }
+	}
+
 
 
 /*------------------------------------*\
   go
 \*------------------------------------*/
-	
-    
-    
+
+
+
     var init = function() {
         smoothScroll()
         MPNPage()
 		menuHighlight()
 		retriveData()
 	    increaseWidthColumn()
-		titleSpotBlock() 
-		subMenu() 
-		homeBlock() 
-		blueBlock() 
-		redBlocks() 
-		eventSpotBlock() 
+		titleSpotBlock()
+		subMenu()
+		homeBlock()
+		blueBlock()
+		redBlocks()
+		eventSpotBlock()
 		leftBlock()
 		rightBlock()
-		siteLogo() 
+		siteLogo()
         whatsOnBanner()
 		disclaimerLink()
         wrapDivs()
@@ -363,28 +387,35 @@ var evohome = (function() {
             addToMobileMenu()
             addLogoOnMobile()
         }
-        
+
         gradientBoxBlue()
         rowItems()
         eventsBlockHeight()
-        addingToForm() 
+        addingToForm()
         eventsContentWrap()
-        addPlaceholderText()
-        externalLink() 
+        clearViewBy()
+        headingSectionWithSidebar()
+        headingBlock()
+        backtoTop()
+        if($(window).width() > 1024) {
+            staticBlock()
+        } else {
+            
+        }
 		/*
-		
-		sectionSpotBlock() 
-		tealBlueBlock() 
-		midBlueBlock() 
-		darkBlueBlock() 
-		darkBlue4Block() 
-		whiteBlock() 
-		medicineSpotBlock() 
+
+		sectionSpotBlock()
+		tealBlueBlock()
+		midBlueBlock()
+		darkBlueBlock()
+		darkBlue4Block()
+		whiteBlock()
+		medicineSpotBlock()
 		medicineSpotBlockw()
-		
-		//siteSearch() 
-		pageStyle()*/ 
-		
+
+		//siteSearch()
+		pageStyle()*/
+
 	};
 
 	return { init: init };
@@ -394,7 +425,3 @@ var evohome = (function() {
 $(function() {
 	evohome.init();
 });
-
-
-
-

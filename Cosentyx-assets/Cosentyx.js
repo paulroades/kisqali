@@ -146,6 +146,12 @@ var evohome = (function() {
             case '/Medicines/cosentyx/prescribing-information/':
                 $('.prescribing-information').addClass('menu-red');
                 break;
+            case '/Medicines/cosentyx/sustained-benefits-in-as/':
+                $('.AS').addClass('menu-red');
+                break;
+            case '/Medicines/cosentyx/sustained-benefits-in-psa':
+                $('.PSA').addClass('menu-red');
+                break;
             case '/Medicines/cosentyx/contact':
                 $('.contact').addClass('menu-red');
                 break;
@@ -239,20 +245,22 @@ var evohome = (function() {
     function addToBodyClass() {
         switch (window.location.pathname) {
             case '/Medicines/cosentyx/ankylosing-spondylitis-disease-background':
-                $('#content').prepend('<div class="tabs"><ul><li><a class="active" href="/Medicines/cosentyx/ankylosing-spondylitis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient">YOUR AS PATIENT</a></li><li><a href="#">SUSTAINED BENEFITS</a></li></ul></div>');
+                $('#content').prepend('<div class="tabs"><ul><li><a class="active" href="/Medicines/cosentyx/ankylosing-spondylitis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient">YOUR AS PATIENT</a></li><li><a href="/Medicines/cosentyx/sustained-benefits-in-as/">COSENTYX OUTCOMES</a></li></ul></div>');
                 break;
             case '/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient':
-                console.log('test');
-                $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-disease-background">DISEASE BACKGROUND</a></li><li><a class="active" href="/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient">YOUR AS PATIENT</a></li><li><a href="#">SUSTAINED BENEFITS</a></li></ul></div>');
+                $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-disease-background">DISEASE BACKGROUND</a></li><li><a class="active" href="/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient">YOUR AS PATIENT</a></li><li><a href="/Medicines/cosentyx/sustained-benefits-in-as/">COSENTYX OUTCOMES</a></li></ul></div>');
+                break;
+            case '/Medicines/cosentyx/sustained-benefits-in-as/':
+                $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/ankylosing-spondylitis-your-as-patient">YOUR AS PATIENT</a></li><li><a class="active" href="/Medicines/cosentyx/sustained-benefits-in-as/">COSENTYX OUTCOMES</a></li></ul></div>');
                 break;
             case '/Medicines/cosentyx/psoriatic-arthritis-disease-background':
-                $('#content').prepend('<div class="tabs"><ul><li><a class="active" href="/Medicines/cosentyx/psoriatic-arthritis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/your-psoriatic-arthritis-patient">YOUR PsA PATIENT</a></li><li><a href="/Medicines/cosentyx/sustained-benefits-in-psa">SUSTAINED BENEFITS</a></li></ul></div>');
+                $('#content').prepend('<div class="tabs"><ul><li><a class="active" href="/Medicines/cosentyx/psoriatic-arthritis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/your-psoriatic-arthritis-patient">YOUR PsA PATIENT</a></li><li><a href="/Medicines/cosentyx/sustained-benefits-in-psa">COSENTYX OUTCOMES</a></li></ul></div>');
                 break;
             case '/Medicines/cosentyx/your-psoriatic-arthritis-patient':
-               $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/psoriatic-arthritis-disease-background">DISEASE BACKGROUND</a></li><li><a class="active" href="/Medicines/cosentyx/your-psoriatic-arthritis-patient">YOUR PsA PATIENT</a></li><li><a href="/Medicines/cosentyx/sustained-benefits-in-psa">SUSTAINED BENEFITS</a></li></ul></div>');
+               $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/psoriatic-arthritis-disease-background">DISEASE BACKGROUND</a></li><li><a class="active" href="/Medicines/cosentyx/your-psoriatic-arthritis-patient">YOUR PsA PATIENT</a></li><li><a href="/Medicines/cosentyx/sustained-benefits-in-psa">COSENTYX OUTCOMES</a></li></ul></div>');
                break; 
             case '/Medicines/cosentyx/sustained-benefits-in-psa':
-               $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/psoriatic-arthritis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/your-psoriatic-arthritis-patient">YOUR PsA PATIENT</a></li><li><a class="active" href="/Medicines/cosentyx/sustained-benefits-in-psa">SUSTAINED BENEFITS</a></li></ul></div>');
+               $('#content').prepend('<div class="tabs"><ul><li><a href="/Medicines/cosentyx/psoriatic-arthritis-disease-background">DISEASE BACKGROUND</a></li><li><a href="/Medicines/cosentyx/your-psoriatic-arthritis-patient">YOUR PsA PATIENT</a></li><li><a class="active" href="/Medicines/cosentyx/sustained-benefits-in-psa">COSENTYX OUTCOMES</a></li></ul></div>');
                break; 
         }
     }
@@ -393,7 +401,7 @@ var evohome = (function() {
         addToFooter()
         addPlaceholderText()
         internalTabsControls()
-        licenceBar()
+        //licenceBar()
 	};
 
 	return { init: init };
