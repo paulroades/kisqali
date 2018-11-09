@@ -20,7 +20,6 @@ var evohome = (function() {
         var block = $('.white');
 		block.parent().parent().parent().addClass('white_background');
         $('.haem-footer').parent().parent().parent().addClass('haem-footer-bg');
-        $('.haem-acadAlt').parent().parent().parent().parent().addClass('haem-acadAltContainer');
 	}
 
 	function blueBlock() {
@@ -221,22 +220,14 @@ var evohome = (function() {
             }, 500, 'linear');
         });
         $('.piQuickLinks li a[href*="#"]').on('click', function (e) {
-            e.preventDefault();					
+            e.preventDefault();
             $('html, body').animate({
                 scrollTop: $($(this).attr('href')).offset().top - 200
             }, 500, 'linear');
-			
-			  $('.piQuickLinks li a[href*="#"]').removeClass("menu-red");
-			  var id = $(this).parent().attr('class')
-			  console.log(id);
-			$('.' + id).children('a').addClass("menu-red");
-			  
-					//$(this).addClass("menu-red");
-				
-
-				
         });
-    };
+
+
+    }
 
     function whatsOnBanner() {
         $('.whatsOn').parent().parent().parent().parent().addClass('fluidBGWhatsOn');
@@ -249,18 +240,21 @@ var evohome = (function() {
 
     function addingToForm() {
         $('.EPiServerForms').wrap('<div class="textBlock"></div>');
-        $('#d24b2b3c-6218-43f1-a667-28e5d03066f7').prepend('<h3>What can we help you with?</h3>');
-        $('#8fc84c2e-2d08-41c7-97c7-37dd6bf11994').append('<p style="margin:35px 0 ;">If you have a question about the product, please contact Medical Information on 01276 698370 or medinfo.uk@novartis.com</p>');
+        $('#768d910a-4429-4c1f-9a08-a4921f582ea4').prepend('<h3>What can we help you with?</h3>');
+        $('#c3015244-4896-4133-8f32-44211e7e0ca3').append('<p style="margin:35px 0 ;">If you have a question about the product, please contact Medical Information on 01276 698370 or medinfo.uk@novartis.com</p>');
+        $('#c3015244-4896-4133-8f32-44211e7e0ca3').prepend('<p style="margin:35px 0 ;"><a style="text-decoration: underline" href="/haematology-academy/prescribing-information/">Please click here to access Prescribing Information for the above products.</a></p>');
+        $('.formcontainerblock .textBlock').append('<p>Prescribing Information for the above mentioned products can be found <a href="/haematology-academy/prescribing-information/">here</a></p>')
+
 
         // Adding info after drug name as system wont let me add them. Hacky but its needed.
 
         var drugNames = [
-             '<sup>&reg;</sup><span style="color: #000;">▼</span> (deferasirox)',
-             '<sup>&reg;</sup> (panobinostat)',
+             '<sup>&reg;</sup><span style="color: #000; font-size: 1.2em;">▼</span> (deferasirox)',
+             '<sup>&reg;</sup><span style="color: #000; font-size: 1.2em;">▼</span> (panobinostat)', 
              '<sup>&reg;</sup> (ruxolitinib)',
              '<sup>&reg;</sup> (eltrombopag)',
              '<sup>&reg;</sup> (nilotinib)',
-             '<sup>&reg;</sup><span style="color: #000;">▼</span> (midostaurin)'
+             '<sup>&reg;</sup><span style="color: #000; font-size: 1.2em;">▼</span> (midostaurin)'
         ];
 
         //drugNames[1];
@@ -268,9 +262,11 @@ var evohome = (function() {
         var i;
         for (i = 0; i < drugNames.length; i++) {
             var nthChildNumber = i + 1;
-            $('#d24b2b3c-6218-43f1-a667-28e5d03066f7 label:nth-of-type(' + nthChildNumber + ') .mdl-checkbox__label').append(drugNames[i]);
+            $('#768d910a-4429-4c1f-9a08-a4921f582ea4 label:nth-of-type(' + nthChildNumber + ') .mdl-checkbox__label').append(drugNames[i]);
             //console.log(drugNames[i]);
         }
+
+
 
     }
 
@@ -302,59 +298,39 @@ var evohome = (function() {
 //        });
 //    });
 
-    // button to reset search by dropdowns
+    function addPlaceholderText() {
+        $('.block .textBlock form .FormTextbox__Input').each(function(index, elem) {
+            var eId = $(elem).attr('id');
+            var label = null;
+            if (eId && (label = $(elem).parents('form').find('label[for='+ eId +']')).length == 1) {
+                $(elem).attr('placeholder', $.trim($(label).html()));
+                $(label).remove();
+            }
+         });
+    }
 
-    function clearViewBy() {
-        $('.resetLink').click(function(){
-            $('#month option').prop('selected', function() {
-                return this.defaultSelected;
+    function externalLink() {
+        $('.external').click(function(e) {
+            e.preventDefault();
+            $('#external-link-disclaimer').addClass('active');
+            var internalLinlocation = $(this).attr('href');
+
+            $('.btn-success').click(function(){
+                //window.location = internalLinlocation;
+                window.open(internalLinlocation);
+                $('#external-link-disclaimer').removeClass('active');
             });
+            $('.btn-cancel').click(function(){
+               $('#external-link-disclaimer').removeClass('active');
+           });
         });
-    }
-    
-    function headingSectionWithSidebar() {
-        $('.content-focused-page-headline').parent().wrap('<div class="gradientBackground"><div class="spotContainer visual headingColor-color2 headingAlignment-left headingStyle-normal iconColor-color1 textColor-color1 textAlignment-left textStyle-normal linkColor-color1 backgroundColor-transparent spotLayout-topimage trigger-change" itemscope="" itemtype="http://schema.org/CreativeWork"><div class="content content_400 content_300"><div class="content-restrict" style="overflow-wrap: break-word;"><div itemprop="text"><div class="title_spot_block title_spot_block_300 blueGradient"><div class="headingTable"><div class="headingTableCell"></div></div></div></div></div></div></div></div><div style="clear: both;"></div></div>');
-    }
-    
-    function headingBlock() {
-        $('.sectionHeading').parent().parent().parent().parent().addClass('contentHeading');
-    }
-    
-    function backtoTop() {
-        $('.backToTopButton').click(function() {
-          $("html, body").animate({ scrollTop: 0 }, "slow");
-          return false;
-        });
-    }
-    
-    function staticBlock(){
-        
-        if ($('#static')[0]){
-            var $sidebar   = $("#static"), 
-                $window    = $(window),
-                offset     = $sidebar.offset(),
-                topPadding = 90;
 
-                $sidebar.css({
-                    marginTop: 0
-                });
 
-                $window.scroll(function() {
+        $('.external').attr('data-linktype', 'link');
+    }
 
-                    if ($window.scrollTop() > offset.top) {
-                        $sidebar.css({
-                            marginTop: $window.scrollTop() - offset.top + topPadding
-                        });
-                    } else {
-                        $sidebar.css({
-                            marginTop: 0
-                        });
-                    }
-                });
-        } else {
-            // Do something if class does not exist
-        }
-	}
+
+
 
 
 
@@ -393,15 +369,8 @@ var evohome = (function() {
         eventsBlockHeight()
         addingToForm()
         eventsContentWrap()
-        clearViewBy()
-        headingSectionWithSidebar()
-        headingBlock()
-        backtoTop()
-        if($(window).width() > 1024) {
-            staticBlock()
-        } else {
-            
-        }
+        addPlaceholderText()
+        externalLink()
 		/*
 
 		sectionSpotBlock()

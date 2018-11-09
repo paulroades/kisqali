@@ -871,7 +871,7 @@ footer[id=site-specifics] li a:hover {
 #content .grid .borderBottom h2 {
     color: #1d70b7;
     margin: 0;
-    font-size: 2.063em;
+    font-size: 1.8em;
     line-height: 1em;
     font-weight: 100;
     padding: 0;
@@ -1187,6 +1187,20 @@ footer[id=site-specifics] li a:hover {
     height: auto;
     min-height: auto;
     padding: 40px 0;
+}
+.haem-acadAltContainer .haem_ec_background h2.title {
+    font-size: 3.125em;
+    line-height: 1em;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+    text-transform: none
+}
+.haem-acadAltContainer .haem_ec_background .linkAlt {
+    color: #fff;
+    font-size: 1.563em;
+    line-height: 1em;
+    padding-right: 30px;
+    position: relative;
 }
 .haem_ec_background .haem-acadAlt h2 {
     font-weight: 100;

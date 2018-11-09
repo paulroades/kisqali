@@ -103,20 +103,47 @@ var evohome = (function() {
         $('.inner-width').append('<a href="/" id="logo"><div class="logo-holder"><div class="logo-wrapper"><img itemprop="logo" class="logo" src="/siteassets/hcp-portal-master/img/novartis_logosm2.svg" alt="ServiceSphere GB"></div><input type="hidden" id="toptagline" value="Welcome to Novartis MedHub GB"></div></a>')
     }
     
+//    function externalLinkAlt() {
+//        $('.external').click(function(e) {
+//            e.preventDefault();
+//            $('#external-link-disclaimer').addClass('active');
+//            var internalLinlocation = $(this).attr('href');
+//            $('.btn-success').click(function(){
+//               window.location = internalLinlocation;
+//            });
+//            $('.btn-cancel').click(function(){
+//               $('#external-link-disclaimer').removeClass('active');
+//           });
+//        });
+//        
+//    }
+    
+    
     function externalLinkAlt() {
         $('.external').click(function(e) {
             e.preventDefault();
             $('#external-link-disclaimer').addClass('active');
             var internalLinlocation = $(this).attr('href');
+
             $('.btn-success').click(function(){
-               window.location = internalLinlocation;
+                //window.location = internalLinlocation;
+                window.open(internalLinlocation);
+                $('#external-link-disclaimer').removeClass('active');
             });
             $('.btn-cancel').click(function(){
                $('#external-link-disclaimer').removeClass('active');
            });
         });
-        
+
+
+        $('.external').attr('data-linktype', 'link');
     }
+
+    
+    
+    
+    
+    
     
     function marginTopRemove() {
         $('.margin-top').parent().parent().addClass('negMargin');
