@@ -20,6 +20,7 @@ var evohome = (function() {
         var block = $('.white');
 		block.parent().parent().parent().addClass('white_background');
         $('.haem-footer').parent().parent().parent().addClass('haem-footer-bg');
+        $('.haem-acadAlt').parent().parent().parent().parent().addClass('haem-acadAltContainer');
 	}
 
 	function blueBlock() {
@@ -178,10 +179,29 @@ var evohome = (function() {
     function menuHighlight(){
 		var url = $(location).attr('href'), parts = url.split("/"), last_part = parts[parts.length-2];
 
-/*
-		console.log(parts);
+		var temp = parts[parts.length-1];
+
+		console.log(temp);
 		console.log(last_part);
 
+		// if last section is empty use last_part
+		if (temp == ""){
+			var menuItem= $('.'+last_part);
+			
+		} else {
+			
+			if (temp.startsWith('?')){
+				var tempId = temp.substring(1, temp.length);
+				var menuItem= $('.'+tempId);
+			} else {
+				var menuItem= $('.'+temp);
+			}
+			
+		}
+		
+		menuItem.addClass('menu-red');
+		
+		/*
 		if (last_part != ""){
 			last_part = parts[parts.length-2];
 		}
@@ -190,10 +210,10 @@ var evohome = (function() {
 
 
 		console.log(last_part);
-*/
+
 		var menuItem= $('.'+last_part);
 		menuItem.addClass('menu-red');
-
+*/
     }
 
 
@@ -220,14 +240,28 @@ var evohome = (function() {
             }, 500, 'linear');
         });
         $('.piQuickLinks li a[href*="#"]').on('click', function (e) {
-            e.preventDefault();
+            e.preventDefault();					
             $('html, body').animate({
                 scrollTop: $($(this).attr('href')).offset().top - 200
             }, 500, 'linear');
+			
+			  $('.piQuickLinks li a[href*="#"]').removeClass("menu-red");
+			  var id = $(this).parent().attr('class')
+			  console.log(id);
+			$('.' + id).children('a').addClass("menu-red");
+			  
+					//$(this).addClass("menu-red");
         });
-
-
-    }
+        
+        $('.quickLinks ul li a.internalLink').click(function(e){
+            e.preventDefault();					
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top - 100
+            }, 500, 'linear');
+        });
+        
+        
+    };
 
     function whatsOnBanner() {
         $('.whatsOn').parent().parent().parent().parent().addClass('fluidBGWhatsOn');
@@ -240,21 +274,18 @@ var evohome = (function() {
 
     function addingToForm() {
         $('.EPiServerForms').wrap('<div class="textBlock"></div>');
-        $('#768d910a-4429-4c1f-9a08-a4921f582ea4').prepend('<h3>What can we help you with?</h3>');
-        $('#c3015244-4896-4133-8f32-44211e7e0ca3').append('<p style="margin:35px 0 ;">If you have a question about the product, please contact Medical Information on 01276 698370 or medinfo.uk@novartis.com</p>');
-        $('#c3015244-4896-4133-8f32-44211e7e0ca3').prepend('<p style="margin:35px 0 ;"><a style="text-decoration: underline" href="/haematology-academy/prescribing-information/">Please click here to access Prescribing Information for the above products.</a></p>');
-        $('.formcontainerblock .textBlock').append('<p>Prescribing Information for the above mentioned products can be found <a href="/haematology-academy/prescribing-information/">here</a></p>')
-
+        $('#d24b2b3c-6218-43f1-a667-28e5d03066f7').prepend('<h3>What can we help you with?</h3>');
+        $('#8fc84c2e-2d08-41c7-97c7-37dd6bf11994').append('<p style="margin:35px 0 ;">If you have a question about the product, please contact Medical Information on 01276 698370 or medinfo.uk@novartis.com</p>');
 
         // Adding info after drug name as system wont let me add them. Hacky but its needed.
 
         var drugNames = [
-             '<sup>&reg;</sup><span style="color: #000; font-size: 1.2em;">▼</span> (deferasirox)',
-             '<sup>&reg;</sup><span style="color: #000; font-size: 1.2em;">▼</span> (panobinostat)', 
+             '<sup>&reg;</sup><span style="color: #000;">▼</span> (deferasirox)',
+             '<sup>&reg;</sup> (panobinostat)',
              '<sup>&reg;</sup> (ruxolitinib)',
              '<sup>&reg;</sup> (eltrombopag)',
              '<sup>&reg;</sup> (nilotinib)',
-             '<sup>&reg;</sup><span style="color: #000; font-size: 1.2em;">▼</span> (midostaurin)'
+             '<sup>&reg;</sup><span style="color: #000;">▼</span> (midostaurin)'
         ];
 
         //drugNames[1];
@@ -262,11 +293,9 @@ var evohome = (function() {
         var i;
         for (i = 0; i < drugNames.length; i++) {
             var nthChildNumber = i + 1;
-            $('#768d910a-4429-4c1f-9a08-a4921f582ea4 label:nth-of-type(' + nthChildNumber + ') .mdl-checkbox__label').append(drugNames[i]);
+            $('#d24b2b3c-6218-43f1-a667-28e5d03066f7 label:nth-of-type(' + nthChildNumber + ') .mdl-checkbox__label').append(drugNames[i]);
             //console.log(drugNames[i]);
         }
-
-
 
     }
 
@@ -298,39 +327,124 @@ var evohome = (function() {
 //        });
 //    });
 
-    function addPlaceholderText() {
-        $('.block .textBlock form .FormTextbox__Input').each(function(index, elem) {
-            var eId = $(elem).attr('id');
-            var label = null;
-            if (eId && (label = $(elem).parents('form').find('label[for='+ eId +']')).length == 1) {
-                $(elem).attr('placeholder', $.trim($(label).html()));
-                $(label).remove();
-            }
-         });
-    }
+    // button to reset search by dropdowns
 
-    function externalLink() {
-        $('.external').click(function(e) {
-            e.preventDefault();
-            $('#external-link-disclaimer').addClass('active');
-            var internalLinlocation = $(this).attr('href');
-
-            $('.btn-success').click(function(){
-                //window.location = internalLinlocation;
-                window.open(internalLinlocation);
-                $('#external-link-disclaimer').removeClass('active');
+    function clearViewBy() {
+        $('.resetLink').click(function(){
+            $('#month option').prop('selected', function() {
+                return this.defaultSelected;
             });
-            $('.btn-cancel').click(function(){
-               $('#external-link-disclaimer').removeClass('active');
-           });
         });
-
-
-        $('.external').attr('data-linktype', 'link');
     }
+    
+    function headingSectionWithSidebar() {
+        $('.content-focused-page-headline').parent().wrap('<div class="gradientBackground"><div class="spotContainer visual headingColor-color2 headingAlignment-left headingStyle-normal iconColor-color1 textColor-color1 textAlignment-left textStyle-normal linkColor-color1 backgroundColor-transparent spotLayout-topimage trigger-change" itemscope="" itemtype="http://schema.org/CreativeWork"><div class="content content_400 content_300"><div class="content-restrict" style="overflow-wrap: break-word;"><div itemprop="text"><div class="title_spot_block title_spot_block_300 blueGradient"><div class="headingTable"><div class="headingTableCell"></div></div></div></div></div></div></div></div><div style="clear: both;"></div></div>');
+    }
+    
+    function headingBlock() {
+        $('.sectionHeading').parent().parent().parent().parent().addClass('contentHeading');
+    }
+    
+    function backtoTop() {
+        $('.backToTopButton').click(function() {
+          $("html, body").animate({ scrollTop: 0 }, "slow");
+          return false;
+        });
+    }
+    
+    function staticBlock(){
+        
+        if ($('#static')[0]){
+            var $sidebar   = $("#static"), 
+                $window    = $(window),
+                offset     = $sidebar.offset(),
+                topPadding = 90;
 
+                $sidebar.css({
+                    top: 0
+                });
 
+                $window.scroll(function() {
 
+                    if ($window.scrollTop() > offset.top) {
+                        $sidebar.css({
+                            top: $window.scrollTop() - offset.top + topPadding
+                        });
+                    } else {
+                        $sidebar.css({
+                            top: 0
+                        });
+                    }
+                });
+        } else {
+            // Do something if class does not exist
+        }
+	}
+    
+    
+    
+var dragging = false
+
+$(function() {
+    var handle = $('#drag')
+    var target = $('#wheel_dial')
+    handle.mousedown(function() {
+        dragging = true
+    })
+    $(document).mouseup(function() {
+        dragging = false
+    })
+    $(document).mousemove(function(e) {
+        if (dragging) {
+            
+            var mouse_x = e.pageX;
+            var mouse_y = e.pageY;
+            var radians = Math.atan2(mouse_x - 10, mouse_y - 10);
+            var degree = (radians * (360 / Math.PI) * -1) + 90;
+            target.css('-moz-transform', 'rotate(' + degree + 'deg)');
+            target.css('-moz-transform-origin', '50% 50%');
+            target.css('-webkit-transform', 'rotate(' + degree + 'deg)');
+            target.css('-webkit-transform-origin', '50% 50%');
+            target.css('-o-transform', 'rotate(' + degree + 'deg)');
+            target.css('-o-transform-origin', '50% 50%');
+            target.css('-ms-transform', 'rotate(' + degree + 'deg)');
+            target.css('-ms-transform-origin', '50% 50%');
+        }
+    })
+});
+    
+    function publicPopup() {
+        $('.external').click(function(){
+            if ($(this).attr('href') === 'http://www.novartis.co.uk') {
+                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis HCP portal website. This link will take you to the Novartis UK website instead.');
+            } else if ($(this).attr('href') === 'http://www.novartis.co.uk/') {
+                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis HCP portal website. This link will take you to the Novartis UK website instead.');
+            } else {
+                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving this website. This link will take you to a website containing content that Novartis cannot be held responsible for. Our Privacy Policy does not apply. You are solely responsible for your interactions with that website.<br>Novartis Pharmaceuticals UK Ltd assumes no responsibility for the site or its content.');
+            }
+        });
+    }
+    
+    function tabControls(){
+        $('#halfWidthTabs .tabs ul li a').click(function(e){
+            e.preventDefault();
+            var url = $(this).attr('href');
+            $('#halfWidthTabs .tabs ul li a').removeClass('active');
+            $(this).addClass('active');
+            $('#halfWidthTabs .tabContent').removeClass('active');
+            $(url).addClass('active');
+        });
+        
+        
+        $('#tabsFiveAccross .tabs ul li a').click(function(e){
+            e.preventDefault();
+            var url = $(this).attr('href');
+            $('#tabsFiveAccross .tabs ul li a').removeClass('active');
+            $(this).addClass('active');
+            $('#tabsFiveAccross .tabContent').removeClass('active');
+            $(url).addClass('active');
+        });
+    }
 
 
 
@@ -342,8 +456,8 @@ var evohome = (function() {
 
     var init = function() {
         smoothScroll()
-        MPNPage()
-		menuHighlight()
+        menuHighlight()
+		MPNPage()		
 		retriveData()
 	    increaseWidthColumn()
 		titleSpotBlock()
@@ -358,6 +472,8 @@ var evohome = (function() {
         whatsOnBanner()
 		disclaimerLink()
         wrapDivs()
+        publicPopup()
+        tabControls()
         if($(window).width() > 767) {
         } else {
             addToMobileMenu()
@@ -369,8 +485,15 @@ var evohome = (function() {
         eventsBlockHeight()
         addingToForm()
         eventsContentWrap()
-        addPlaceholderText()
-        externalLink()
+        clearViewBy()
+        headingSectionWithSidebar()
+        headingBlock()
+        backtoTop()
+        if($(window).width() > 1024) {
+            staticBlock()
+        } else {
+            
+        }
 		/*
 
 		sectionSpotBlock()

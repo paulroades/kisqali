@@ -871,7 +871,7 @@ footer[id=site-specifics] li a:hover {
 #content .grid .borderBottom h2 {
     color: #1d70b7;
     margin: 0;
-    font-size: 1.8em;
+    font-size: 2.063em;
     line-height: 1em;
     font-weight: 100;
     padding: 0;
@@ -923,7 +923,7 @@ footer[id=site-specifics] li a:hover {
     font-size: 0.9em;
     line-height: 1.4em;
 }
-.videoEmbedContainer .oo-player-container {
+.videoEmbedContainer .kWidgetIframeContainer {
     padding: 0!important;
     min-height: 260px;
     margin: 0 0 30px 0;
@@ -1107,6 +1107,8 @@ footer[id=site-specifics] li a:hover {
 
 #static {
     margin-top: 0;
+    position: relative;
+    top: 0;
 /*
     -webkit-transition: all 100ms ease-in-out;
        -moz-transition: all 100ms ease-in-out;
@@ -1128,6 +1130,9 @@ footer[id=site-specifics] li a:hover {
     font-size: 1.250em;
     line-height: 1em;
 }
+.contentHeading .content .sectionHeading h4.remove-bottom {
+    margin: 0;
+}
 .contentHeading .content .sectionHeading p {
     color: #fff;
     margin: 0;
@@ -1140,6 +1145,9 @@ footer[id=site-specifics] li a:hover {
 }
 .contentHeading .content .blueBG {
     background: #0069b1;
+}
+.contentHeading .content .skyBlueBG {
+    background: #66a5d0;   
 }
 .contentBlock {
     padding: 30px 20px;
@@ -1156,6 +1164,17 @@ footer[id=site-specifics] li a:hover {
 .contentBlock p:last-of-type {
     margin: 0;
 }
+
+.contentBlock ul{
+	margin-left: 15px;
+    padding: 0;
+}
+
+.contentBlock li{
+	font-weight:300;
+	padding-bottom: 10px;
+} 
+
 .contentBlock .row {
     margin: 0 0 60px 0;
 }
@@ -1219,14 +1238,14 @@ footer[id=site-specifics] li a:hover {
 }
 .haem_ec_background .haem-acadAlt h4 .linkAlt:after {
     position: absolute;
-    right: 20px;
-    top: 5px;
+    right: 15px;
+    top: 8px;
     content: '';
     display: block;
-    width: 5px;
-    height: 10px;
+    width: 10px;
+    height: 20px;
     background: url(/siteassets/gb-portal/therapy-areas/haematology/images/rightTriangle.png) no-repeat center center;
-    background-size: 5px 10px;
+    background-size: 10px 20px;
     -webkit-transition: all 250ms ease-in-out;
     -moz-transition: all 250ms ease-in-out;
     -ms-transition: all 250ms ease-in-out;
@@ -1272,6 +1291,10 @@ footer[id=site-specifics] li a:hover {
 /** Downloads **/
 /***************/
 
+.contentBlock .full {
+    width: 100% !important;
+}
+
 .contentBlock .download {
     width: 50%;
 }
@@ -1289,6 +1312,19 @@ footer[id=site-specifics] li a:hover {
     position: absolute;
     right: 0;
     bottom: 20px;
+}
+.downloads .iconRight {
+    position: relative;
+    padding-right: 45px;
+}
+.downloads .iconRight p {
+    margin: 0 0 15px 0;
+}
+.downloads .iconRight .iconDownload {
+    width: 22px;
+    position: absolute;
+    right: 0;
+    top: 10px;
 }
 
 /*************/
@@ -1358,6 +1394,10 @@ footer[id=site-specifics] li a:hover {
     margin: 0 0 15px 0;
 }
 
+.videoGallery p {
+    font-size:1.1rem;
+}
+
 /************************/
 /** Clinical guidlines **/
 /************************/
@@ -1395,6 +1435,139 @@ footer[id=site-specifics] li a:hover {
     background-size: 16px 16px;
 }
 
+.dosingAnimation {
+    position: relative;
+}
+#wheel_front {
+    position: absolute;
+    width: 77%;
+    height: 84%;
+    left: 9%;
+    top: 8%;
+    z-index: 2;
+}
+#wheel_dial  {
+    position: absolute;
+    width: 81%;
+    height: 81%;
+    left: 9.5%;
+    top: 9.5%;
+    z-index: 1;
+}
+#drag {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    z-index: 3;
+}
+
+
+/******************/
+/** Tabs Styling **/
+/******************/
+
+.tabArea {
+    background: #fff;
+}
+.tabArea .tabs {
+    
+}
+.tabArea .tabs ul {
+    margin: 0;
+    padding: 0;
+}
+.tabArea .tabs ul li {
+    display: block;
+    width: 20%;
+    margin: 0 0 0 0;
+    float: left;
+}
+.tabArea .tabs.tabsHalfWidth li {
+    width: 50%;
+    text-align: left;
+}
+.tabArea .tabs.tabsHalfWidth li a {
+    text-align: left;
+    padding: 25px 20px;
+}
+.tabArea .tabs ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 18px;
+    line-height: 18px;
+    background: #cce1ef;
+}
+.tabArea .tabs ul li a.active {
+    background: #66a5d0;
+    color: #fff;
+}
+.tabArea .tabContent {
+    padding: 30px 20px;
+}
+.tabArea .tabContent {
+    display: none;
+}
+.tabArea.tabAreaShow .tabContent {
+    display: block;
+}
+.tabArea .tabContent h5 {
+    color: #0069b1;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+}
+.tabArea .tabContent p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 5px 0;
+}
+.tabArea .tabContent p.underline {
+    text-decoration: underline;
+}
+.tabArea .tabContent ul {
+    padding: 0;
+    margin: 0 0 20px 15px;
+}
+.tabArea .tabContent ul li {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    line-height: 22px;
+}
+.tabArea .tabContent.active {
+    display: block;
+}
+.tabArea .grid-1-2 {
+    width: 50%!important;
+    padding-right: 5%;
+}
+.button {
+    display: inline-block;
+    color: #fff!important;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    background: #df1f26;
+    border-bottom: 3px solid #c10a27;
+    padding: 20px 35px; 
+    text-align: center;
+}
+.button span {
+    position: relative;
+    right: 0;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.button:hover span {
+    right: -3px;
+}
 
 @media (max-width: 1024px) {
     #logo .logo-holder {

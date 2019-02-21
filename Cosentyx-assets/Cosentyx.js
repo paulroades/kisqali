@@ -125,38 +125,65 @@ var evohome = (function() {
     
     function menuHighlight(){
         switch (window.location.pathname) {
-            case '/Medicines/cosentyx/early-intervention':
+            case '/Medicines/cosentyx/dermatology':
                 $('.early-intervention').addClass('menu-red');
                 break;
-            case '/Medicines/cosentyx/targeting-inflammation':
-                $('.targeting-inflammation').addClass('menu-red');
+            case '/Medicines/cosentyx/dermatology':
+                $('.Dermatology').addClass('menu-red');
                 break;
-            case '/Medicines/cosentyx/ankylosing-spondylitis-disease-background':
-                $('.AS').addClass('menu-red');
+            case '/Medicines/cosentyx/dermatology/':
+                $('.Dermatology').addClass('menu-red');
                 break;
-            case '/Medicines/cosentyx/psoriatic-arthritis-disease-background':
-                $('.PSA').addClass('menu-red');
+            case '/Medicines/cosentyx/dermatology/dermatology-HCP-resources/':
+                $('.Dermatology').addClass('menu-red');
                 break;
-            case '/Medicines/cosentyx/mission-for-movement':
-                $('.mission-for-movement').addClass('menu-red');
+            case '/Medicines/cosentyx/dermatology/clinical-outcomes/':
+                $('.Dermatology').addClass('menu-red');
                 break;
-            case '/Medicines/cosentyx/resources':
-                $('.resources').addClass('menu-red');
+            case '/Medicines/cosentyx/rheumatology':
+                $('.Rheumatology').addClass('menu-red');
                 break;
-            case '/Medicines/cosentyx/prescribing-information/':
-                $('.prescribing-information').addClass('menu-red');
+            case '/Medicines/cosentyx/rheumatology/':
+                $('.Rheumatology').addClass('menu-red');
                 break;
-            case '/Medicines/cosentyx/sustained-benefits-in-as/':
-                $('.AS').addClass('menu-red');
+            case '/Medicines/cosentyx/rheumatology/MOA/':
+                $('.Rheumatology').addClass('menu-red');
                 break;
-            case '/Medicines/cosentyx/sustained-benefits-in-psa':
-                $('.PSA').addClass('menu-red');
+            case '/Medicines/cosentyx/rheumatology/slide-resource-centre/':
+                $('.Rheumatology').addClass('menu-red');
+                break;
+            case '/Medicines/cosentyx/rheumatology/healthcare-professional-resources/':
+                $('.Rheumatology').addClass('menu-red');
+                break;
+            case '/Medicines/cosentyx/rheumatology/patient-resources/':
+                $('.Rheumatology').addClass('menu-red');
+                break;
+            case '/Medicines/cosentyx/rheumatology/guidelines/':
+                $('.Rheumatology').addClass('menu-red');
+                break;
+            case '/Medicines/cosentyx/rheumatology/clinical-outcomes/':
+                $('.Rheumatology').addClass('menu-red');
+                break;
+            case '/Medicines/cosentyx/patient-support':
+                $('.PatientSupport').addClass('menu-red');
+                break;
+            case '/Medicines/cosentyx/patient-support/':
+                $('.PatientSupport').addClass('menu-red');
+                break;
+            case '/Medicines/cosentyx/patient-support/meet-the-you-first-nurses/':
+                $('.PatientSupport').addClass('menu-red');
                 break;
             case '/Medicines/cosentyx/contact':
                 $('.contact').addClass('menu-red');
                 break;
+            case '/Medicines/cosentyx/contact/':
+                $('.contact').addClass('menu-red');
+                break;
+            case '/Medicines/cosentyx/prescribing-information':
+                $('.prescribing-information').addClass('menu-red');
+                break;
             default:
-                //$('.cosentyx').addClass('menu-red');
+                $('.cosentyx').addClass('menu-red');
         }
     }
 
@@ -217,10 +244,10 @@ var evohome = (function() {
 	}
     
     function headingSectionWithSidebar() {
-        $('.content-focused-page-headline').parent().wrap('<div class="headingSection addBottom"><div class="block spotblock spot grid-3-4 leftSideHeader"><div class="spotContainer visual headingColor-color2 headingAlignment-left headingStyle-normal iconColor-color1 textColor-color1 textAlignment-left textStyle-normal linkColor-color1 backgroundColor-color7 spotLayout-topimage trigger-change"><div class="content content_410 patternBG content_310"></div></div></div></div>');
+        $('.content-focused-page-headline').parent().wrap('<div class="headingSection addBottom"><div class="block spotblock spot leftSideHeader"><div class="spotContainer visual headingColor-color2 headingAlignment-left headingStyle-normal iconColor-color1 textColor-color1 textAlignment-left textStyle-normal linkColor-color1 backgroundColor-color7 spotLayout-topimage trigger-change"><div class="content content_410 content_310"></div></div></div></div>');
         
         var headerSideImage = $('.content-heading-img img').attr('src');
-        $('.headingSection').append('<div class="block htmlembedblock grid-1-4" id="content_84996"><div class="content_310 bgImage" style="background: url(' + headerSideImage + ') no-repeat center center; background-size: cover;"></div></div><div class="clear"></div>');
+        //$('.headingSection').append('<div class="block htmlembedblock grid-1-4" id="content_84996"><div class="content_310 bgImage" style="background: url(' + headerSideImage + ') no-repeat center center; background-size: cover;"></div></div><div class="clear"></div>');
         
         var paraText = $('.content-holder').html();
         $('.content-holder').hide();
@@ -345,6 +372,18 @@ var evohome = (function() {
         $('.sectionpage, .contentpage').prepend('<div class="block htmlembedblock grid-1-1"><div class="licenceBar">Cosentyx is indicated for the treatment of active PsA and AS in adult patients who have responded inadequately to DMARD or conventional therapy, respectively.</div></div>');
     }
     
+    function publicPopup() {
+        $('.external').click(function(){
+            if ($(this).attr('href') === 'http://www.novartis.co.uk') {
+                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis HCP portal website. This link will take you to the Novartis UK website instead.');
+            } else if ($(this).attr('href') === 'http://www.novartis.co.uk/') {
+                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis HCP portal website. This link will take you to the Novartis UK website instead.');
+            } else {
+                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving this website. This link will take you to a website containing content that Novartis cannot be held responsible for. Our Privacy Policy does not apply. You are solely responsible for your interactions with that website.<br>Novartis Pharmaceuticals UK Ltd assumes no responsibility for the site or its content.');
+            }
+        });
+    }
+    
     
 
 /*------------------------------------*\
@@ -401,6 +440,7 @@ var evohome = (function() {
         addToFooter()
         addPlaceholderText()
         internalTabsControls()
+        publicPopup()
         //licenceBar()
 	};
 

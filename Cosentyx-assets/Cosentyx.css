@@ -369,7 +369,7 @@ sub {
     max-width: 200px;
 }
 #secondary-menu .nav-mega .nav-mega-link {
-    padding: 0 1.4rem 0 1.4rem;
+    padding: 0 3rem;
     vertical-align: bottom!important;
     text-transform: capitalize;
     color: #1D1D27;
@@ -743,10 +743,13 @@ max-width:100% !important;
 /** SideBar Page Styling **/
 /**************************/
 
+.headingSection .leftSideHeader {
+    width: 100%;
+}
 .headingSection .grid-content h1 {
     font-weight: 600;
     font-size: 2.500em;
-    color: #fff;
+    color: #1D1D27;
     font-style: normal !important;
     padding: 0;
     margin: 0;

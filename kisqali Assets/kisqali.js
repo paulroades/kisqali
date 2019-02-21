@@ -24,7 +24,7 @@ var evohome = (function() {
 		var url = $('.publicuserinterestpromptblock').find('.popup-controls > li:first-of-type > a.btn').attr("href");
 		var target = domain + url + qsv;
 		$('.publicuserinterestpromptblock').find('.popup-controls > li:first-of-type > a.btn').attr("href", target); 
-
+       
 	}
 
 	function siteLogo() {
@@ -111,44 +111,21 @@ var evohome = (function() {
     }
     
     function addLogoOnMobile() {
-        $('.inner-width').append('<a href="/" id="logo"><div class="logo-holder"><div class="logo-wrapper"><img itemprop="logo" class="logo" src="/siteassets/hcp-portal-master/img/novartis_logosm2.svg" alt="ServiceSphere GB"></div><input type="hidden" id="toptagline" value="Welcome to Novartis MedHub GB"></div></a>')
+        $('.inner-width').append('<a href="/" id="logo"><div class="logo-holder"><div class="logo-wrapper"><img itemprop="logo" class="logo" src="/siteassets/gb-portal/img/novartis_logosm2.svg" alt="ServiceSphere GB"></div><input type="hidden" id="toptagline" value="Welcome to Novartis MedHub GB"></div></a>')
     }
     
     
-//    function externalLinkAlt() {
-//        $('.external').click(function(e) {
-//            e.preventDefault();
-//            $('#external-link-disclaimer').addClass('active');
-//            var internalLinlocation = $(this).attr('href');
-//            $('.btn-success').click(function(){
-//               window.location = internalLinlocation;
-//            });
-//            $('.btn-cancel').click(function(){
-//               $('#external-link-disclaimer').removeClass('active');
-//           });
-//        });
-//    }
-    function externalLinkAlt() {
-        $('.external').click(function(e) {
-            e.preventDefault();
-            $('#external-link-disclaimer').addClass('active');
-            var internalLinlocation = $(this).attr('href');
-
-            $('.btn-success').click(function(){
-                //window.location = internalLinlocation;
-                window.open(internalLinlocation);
-                $('#external-link-disclaimer').removeClass('active');
-            });
-            $('.btn-cancel').click(function(){
-               $('#external-link-disclaimer').removeClass('active');
-           });
+    function publicPopup() {
+        $('.external').click(function(){
+            if ($(this).attr('href') === 'http://www.novartis.co.uk') {
+                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis HCP portal website. This link will take you to the Novartis UK website instead.');
+            } else if ($(this).attr('href') === 'http://www.novartis.co.uk/') {
+                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis HCP portal website. This link will take you to the Novartis UK website instead.');
+            } else {
+                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving this website. This link will take you to a website containing content that Novartis cannot be held responsible for. Our Privacy Policy does not apply. You are solely responsible for your interactions with that website.<br>Novartis Pharmaceuticals UK Ltd assumes no responsibility for the site or its content.');
+            }
         });
-
-
-        $('.external').attr('data-linktype', 'link');
     }
-    
-    
 
 /*------------------------------------*\
   go
@@ -161,8 +138,9 @@ var evohome = (function() {
 		disclaimerLink();
 		homeSpotBlock();
         halfSpotBlock();
-        externalLinkAlt() 
+
         addClassToBody();
+        publicPopup();
         if($(window).width() > 767) {
             
         } else {
