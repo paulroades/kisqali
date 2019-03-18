@@ -842,10 +842,12 @@ footer[id=site-specifics] li a:hover {
     margin-top: 10px;
 }
 #data-details .event--link, #past-details .event--link  {
-    width: 32.6666666667%;
-    margin-left: 1%;
+    width: 33.33%;
+    margin-left: 0;
+    padding: 0 0.5%;
     margin-bottom: 1%;
 }
+/*
 #data-details .event--link:first-of-type, #past-details .event--link:first-of-type {
     margin-left: 0;
 }
@@ -859,6 +861,7 @@ footer[id=site-specifics] li a:hover {
 #past-details .event--link:nth-of-type(13) {
     margin-left: 0;
 }
+*/
 
 #content .grid .borderBottom {
 /*    border-top: 3px solid #0762ab;*/

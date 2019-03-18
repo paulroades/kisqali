@@ -52,7 +52,7 @@
 	@for $g from 1 through length($grid-sizes) {
 		@for $m from 1 through 4 {
 			&-#{$g}-4 .grid-#{$m}-4 {
-				@include desktop { width: calc(#{$m*nth($grid-sizes, $g)} %); }
+				//@include desktop { width: calc(#{$m*nth($grid-sizes, $g)} %); }
 			}
 		}
 	}

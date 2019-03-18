@@ -416,9 +416,9 @@ $(function() {
     function publicPopup() {
         $('.external').click(function(){
             if ($(this).attr('href') === 'http://www.novartis.co.uk') {
-                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis HCP portal website. This link will take you to the Novartis UK website instead.');
+                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis portal for HCPs. This link will take you to the Novartis UK Corporate site.');
             } else if ($(this).attr('href') === 'http://www.novartis.co.uk/') {
-                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis HCP portal website. This link will take you to the Novartis UK website instead.');
+                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis portal for HCPs. This link will take you to the Novartis UK Corporate site');
             } else {
                 $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving this website. This link will take you to a website containing content that Novartis cannot be held responsible for. Our Privacy Policy does not apply. You are solely responsible for your interactions with that website.<br>Novartis Pharmaceuticals UK Ltd assumes no responsibility for the site or its content.');
             }

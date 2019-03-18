@@ -125,33 +125,12 @@ var evohome = (function() {
         $('head').append('<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109035671-1"><\/script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-109035671-1");<\/script>');
     }
     
-    
-    function externalLink() {
-        console.log('externalLink');
-        $('.external').click(function(e) {
-            e.preventDefault();
-            $('#external-link-disclaimer').addClass('active');
-            var internalLinlocation = $(this).attr('href');
-            
-            $('.btn-success').click(function(){
-                //window.location = internalLinlocation;
-                window.open(internalLinlocation);
-                $('#external-link-disclaimer').removeClass('active');
-            });
-            $('.btn-cancel').click(function(){
-               $('#external-link-disclaimer').removeClass('active');
-           });
-        });
-    }
-    
     function publicPopup() {
         $('.external').click(function(){
             if ($(this).attr('href') === 'http://www.novartis.co.uk') {
                 $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis HCP portal website. This link will take you to the Novartis UK website instead.');
             } else if ($(this).attr('href') === 'http://www.novartis.co.uk/') {
                 $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving the Novartis HCP portal website. This link will take you to the Novartis UK website instead.');
-            } else if ($(this).attr('href') === 'https://psi.novartis.com') {
-                $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are leaving this Novartis UK site to go to a Novartis Global site. The Novartis UK privacy policy does not apply on the Novartis Global site.');
             } else {
                 $('#external-link-disclaimer .content-style-overlay h2 + div').html('You are now leaving this website. This link will take you to a website containing content that Novartis cannot be held responsible for. Our Privacy Policy does not apply. You are solely responsible for your interactions with that website.<br>Novartis Pharmaceuticals UK Ltd assumes no responsibility for the site or its content.');
             }
@@ -183,7 +162,6 @@ var evohome = (function() {
         showPopUp()
         removePadding()
 		staticBlock()
-        externalLink()
         publicPopup()
 	};
 
