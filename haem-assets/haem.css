@@ -98,7 +98,7 @@ transition: all 250ms ease;
 }
 
 .haem_ec_background{
-    background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/liquidfooterbg.jpg);
+    background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/liquidfooterbg.jpg);
     background-position: center center;
     height:310px;
     max-height:310px;
@@ -113,7 +113,7 @@ transition: all 250ms ease;
 }
 
 .haem_past_background{
-    background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/haem_past_bg.png);
+    background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_past_bg.png);
     height:310px;
     max-height:310px;
 }
@@ -160,7 +160,7 @@ transition: all 250ms ease;
     border-right: none;
 }
 .bgBubbles {
-    background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/whitebubblebg.jpg);
+    background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/whitebubblebg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -171,7 +171,7 @@ transition: all 250ms ease;
 }
 
 .blue_background{
-/*background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/haem_blue_bg.png);*/
+/*background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/haem_blue_bg.png);*/
     background: #29235c;
 }
 .white_background {
@@ -190,7 +190,7 @@ transition: all 250ms ease;
 }
 
 .spotLayout-topimage .haem-footer-bg {
-    background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/liquidfooterbg.jpg);
+    background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/liquidfooterbg.jpg);
     height:100%;
     max-height:100%;
     background-size: cover;
@@ -217,7 +217,7 @@ transition: all 250ms ease;
     display: block;
     width: 14px;
     height: 16px;
-    background:url(/siteassets/gb-portal/therapy-areas/haematology/images/rightTriangle.png) no-repeat center center;
+    background:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/rightTriangle.png) no-repeat center center;
     background-size: 14px 16px;
      -webkit-transition: all 250ms ease-in-out;
     -moz-transition: all 250ms ease-in-out;
@@ -247,7 +247,7 @@ background-position: center center;
     background-image:
         linear-gradient(#e30613, #7f1210),
         linear-gradient(#e30613, #7f1210),
-        url(/siteassets/gb-portal/therapy-areas/haematology/images/event_bg.png)
+        url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg.png)
     ;
     background-size:5px 100%, 5px 100%, cover;
     background-position:0 0, 100% 0, bottom right;
@@ -264,7 +264,7 @@ background-position: center center;
     background-image:
         linear-gradient(#e30613, #7f1210),
         linear-gradient(#e30613, #7f1210),
-        url(/siteassets/gb-portal/therapy-areas/haematology/images/event_bg_nvs.png);
+        url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/event_bg_nvs.png);
     ;
     background-size:5px 100%, 5px 100%, cover;
     background-position:0 0, 100% 0, bottom right;
@@ -272,7 +272,7 @@ background-position: center center;
 }
 
 .grid .bgImage {
-    background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/liquidfooterbg.jpg);
+    background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/liquidfooterbg.jpg);
     background-size: 90%;
     background-position: left top;
     background-repeat: no-repeat;
@@ -317,7 +317,7 @@ background-position: center center;
 .grid .bgImage .spotblock .content .button:after {
     content: '';
     display: block;
-    background:url(/siteassets/gb-portal/therapy-areas/haematology/images/rightTriangle.png) no-repeat center center;
+    background:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/rightTriangle.png) no-repeat center center;
     background-size: 11px 13px;
      -webkit-transition: all 250ms ease-in-out;
     -moz-transition: all 250ms ease-in-out;
@@ -334,7 +334,7 @@ background-position: center center;
 
 }
 .grid .gradientBackground {
-    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/blueGradientBGSmall.png) no-repeat left top;
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/blueGradientBGSmall.png) no-repeat left top;
     background-size: cover;
     background-color: none!important;
 }
@@ -349,7 +349,7 @@ background-position: center center;
     background: none;
 }
 .grid .gradientBackground.gradientBackgroundWhite {
-    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/whiteheaderbg.jpg) no-repeat right top #fff;
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/whiteheaderbg.jpg) no-repeat right top #fff;
 }
 .grid .gradientBackground.gradientBackgroundWhite .content_300 {
     height: 100%;
@@ -497,7 +497,7 @@ a.menu-red {color:#cb0b0f !important}
 }
 
 .filter--block h2{
-    background-image: url(/siteassets/gb-portal/therapy-areas/haematology/images/ec_filter_bg.png);
+    background-image: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/ec_filter_bg.png);
     padding: 10px;
     color: #fff;
     font-size: 1.2rem;
@@ -521,7 +521,7 @@ a.menu-red {color:#cb0b0f !important}
     font-size: 1.2rem;
     margin-top: 0;
     text-transform: uppercase;
-    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/ec_filter_bg.png);
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/ec_filter_bg.png);
     font-weight: 600;
     position: relative;
     background-size: cover;
@@ -544,7 +544,7 @@ a.menu-red {color:#cb0b0f !important}
 
 .past-events a span.cal--icon{
     display: block;
-    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/calendar_icon.png") no-repeat;
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/calendar_icon.png") no-repeat;
     width: 54px;
     height: 46px;
     float: left;
@@ -559,7 +559,7 @@ a.menu-red {color:#cb0b0f !important}
 .filter--key p:before{
 	content: "";
     display: block;
-    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/nvs_icon_Color.png") no-repeat;
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/nvs_icon_Color.png") no-repeat;
     width: 25px;
     height: 28px;
     float: left;
@@ -569,13 +569,13 @@ a.menu-red {color:#cb0b0f !important}
     top: 5px;
 }
 .filter--key p.sponsoredBY:before{
-    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/sponsoredByImage.png") no-repeat;
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/sponsoredByImage.png") no-repeat;
     width: 30px;
     height: 30px;
     background-size: 30px 30px;
 }
 .filter--key p.newContent:before{
-    background: url("/siteassets/gb-portal/therapy-areas/haematology/images/starIcon.png") no-repeat;
+    background: url("/siteassets/hcp-portal-master/therapy-areas/haematology/images/starIcon.png") no-repeat;
     width: 30px;
     height: 27px;
     background-size: 30px 27px;
@@ -683,7 +683,7 @@ a.menu-red {color:#cb0b0f !important}
 
 
 .block-accordion-label{
-	background-image:url(/siteassets/gb-portal/therapy-areas/haematology/images/accordian_blue_bg.png);
+	background-image:url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/accordian_blue_bg.png);
 	max-height:310px;
 	height:310px;
 	padding:50px;
@@ -957,7 +957,7 @@ footer[id=site-specifics] li a:hover {
     line-height: 1em;
 }
 .fluidBGWhatsOn {
-    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/whatsonbg.jpg) no-repeat 66% 30%!important;
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/whatsonbg.jpg) no-repeat 66% 30%!important;
     background-size: cover;
 }
 .fluidBGWhatsOn .content {
@@ -983,7 +983,7 @@ footer[id=site-specifics] li a:hover {
 /******************/
 
 .block .textBlock {
-    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/formBottomImage.jpg) no-repeat bottom right #fff;
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/formBottomImage.jpg) no-repeat bottom right #fff;
     background-size: 300px 309px;
     padding: 16px 30px 60px 30px;
 }
@@ -1045,7 +1045,7 @@ footer[id=site-specifics] li a:hover {
 .block .textBlock form .FormChoice .mdl-checkbox.is-checked .mdl-checkbox__box-outline {
     background: none;
     background-color: #fff!important;
-    background-image: url(/siteassets/gb-portal/therapy-areas/haematology/images/tick.png);
+    background-image: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/tick.png);
     background-size: 12px 11px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1247,7 +1247,7 @@ footer[id=site-specifics] li a:hover {
     display: block;
     width: 10px;
     height: 20px;
-    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/rightTriangle.png) no-repeat center center;
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/rightTriangle.png) no-repeat center center;
     background-size: 10px 20px;
     -webkit-transition: all 250ms ease-in-out;
     -moz-transition: all 250ms ease-in-out;
@@ -1350,7 +1350,7 @@ footer[id=site-specifics] li a:hover {
 .sideBar .blueBG h2.iconLeft:before{
     display: block;
     content: '';
-    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/quicklinksicon.png) no-repeat center center;
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/quicklinksicon.png) no-repeat center center;
     width: 42px;
     height: 44px;
     position: absolute;
@@ -1434,7 +1434,7 @@ footer[id=site-specifics] li a:hover {
     top: 10px;
     width: 16px;
     height: 16px;
-    background: url(/siteassets/gb-portal/therapy-areas/haematology/images/fileaccess.jpg) no-repeat center center;
+    background: url(/siteassets/hcp-portal-master/therapy-areas/haematology/images/fileaccess.jpg) no-repeat center center;
     background-size: 16px 16px;
 }
 

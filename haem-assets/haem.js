@@ -429,6 +429,9 @@ $(function() {
         $('#halfWidthTabs .tabs ul li a').click(function(e){
             e.preventDefault();
             var url = $(this).attr('href');
+
+console.log(url);
+
             $('#halfWidthTabs .tabs ul li a').removeClass('active');
             $(this).addClass('active');
             $('#halfWidthTabs .tabContent').removeClass('active');

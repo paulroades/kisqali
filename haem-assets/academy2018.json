@@ -302,122 +302,148 @@
    "bg":"red_background_nvs",
    "date":"2018-10-25"
  }},
- {"Event":
+{"Event":
+ {
+  "title": "9th Acute Leukaemia Day",
+   "address": "West Midlands | Birmingham",
+   "start-date": "20th September 2019",
+   "area": "General",
+   "link": "/haematology-academy/events/9th-Acute-Leukaemia-Day/",
+   "month": 9,
+   "location": 4,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2019-09-20"
+ }},
+    {"Event":
+ {
+  "title": "South West BMT",
+   "address": "South West | Bristol",
+   "start-date": "5th September 2019",
+   "area": "General",
+   "link": "/haematology-academy/events/South-West-BMT/",
+   "month": 9,
+   "location": 3,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2019-09-05"
+ }},
+{"Event":
+ {
+  "title": "Current Perspectives in Haematological Malignancies",
+   "address": "South West | Bristol",
+   "start-date": "21st November 2019",
+   "area": "General",
+   "link": "/haematology-academy/events/Current-Perspectives-in-Haematological-Malignancies/",
+   "month": 11,
+   "location": 3,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2019-11-21"
+ }},
+{"Event":
+ {
+  "title": "Current Perspectives in Haematological Malignancies",
+   "address": "Scotland | Edinburgh",
+   "start-date": "9th October 2019",
+   "area": "General",
+   "link": "/haematology-academy/events/Current-Perspectives-in-Haematological-Malignancies/",
+   "month": 10,
+   "location": 6,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2019-10-09"
+ }},
+{"Event":
  {
   "title": "Current Perspectives in Haematological Malignancies",
    "address": "London | London",
    "start-date": "4th June 2019",
    "area": "General",
-   "link": "/haematology-academy/events/current-perspectives-in-haematology-malignancies-london/",
+   "link": "/haematology-academy/events/Current-Perspectives-in-Haematological-Malignancies-London/",
    "month": 6,
    "location": 1,
    "disease": 4,
-   "bg":"red_background_nvs",
+   "bg":"red_background",
    "date":"2019-06-04"
  }},
- {"Event":
+{"Event":
  {
   "title": "The HMDS Annual Haematopathology Update",
-   "address": "Leeds | North England",
+   "address": "Yorkshire | Leeds",
    "start-date": "28th June 2019",
    "area": "General",
-   "link": "/haematology-academy/events/the-hmds-annual-haematopathology-update-leeds/",
+   "link": "/haematology-academy/events/The-HMDS-Annual-Haematopathology-Update/",
    "month": 6,
-   "location": 7,
+   "location": 5,
    "disease": 4,
-   "bg":"red_background_nvs",
+   "bg":"red_background",
    "date":"2019-06-28"
  }},
- {"Event":
- {
-  "title": "South West BMT",
-   "address": "Bristol | South West",
-   "start-date": "5th September 2019",
-   "area": "BMT",
-   "link": "/haematology-academy/events/south-west-bmt-bristol/",
-   "month": 9,
-   "location": 3,
-   "disease": 2,
-   "bg":"red_background_nvs",
-   "date":"2019-09-05"
- }},
- {"Event":
- {
-  "title": "9th Acute Leukaemia Day",
-   "address": "Birmingham  | West Midlands",
-   "start-date": "20th September 2019",
-   "area": "General",
-   "link": "/haematology-academy/events/9th-acute-leukaemia-day-birmingham/",
-   "month": 9,
-   "location": 3,
-   "disease": 2,
-   "bg":"red_background_nvs",
-   "date":"2019-09-20"
- }},
- {"Event":
- {
-  "title": "South West Lymphoma Group",
-   "address": "Taunton  | South West ",
-   "start-date": "2nd October 2019",
-   "area": "General",
-   "link": "/haematology-academy/events/south-west-lymphoma-group-taunton/",
-   "month": 10,
-   "location": 3,
-   "disease": 4,
-   "bg":"red_background_nvs",
-   "date":"2019-10-02"
- }},
- {"Event":
- {
-  "title": "Current Perspectives in Haematological Malignancies",
-   "address": "Edinburgh  | Scotland ",
-   "start-date": "9th October 2019",
-   "area": "General",
-   "link": "/haematology-academy/events/current-perspectives-in-haematology-malignancies-edinburgh/",
-   "month": 10,
-   "location": 6,
-   "disease": 4,
-   "bg":"red_background_nvs",
-   "date":"2019-10-09"
- }},
- {"Event":
+{"Event":
  {
   "title": "Current Perspectives in Haematological Malignancies",
    "address": "Manchester | North England",
    "start-date": "10th October 2019",
    "area": "General",
-   "link": "/haematology-academy/events/current-perspectives-in-haematology-malignancies-manchester-2019/",
+   "link": "/haematology-academy/events/Current-Perspectives-in-Haematological-Malignancies-October-10th/",
    "month": 10,
    "location": 7,
    "disease": 4,
-   "bg":"red_background_nvs",
+   "bg":"red_background",
    "date":"2019-10-10"
- }},
- {"Event":
- {
-  "title": "South West Myeloma Group",
-   "address": "Taunton  | South West ",
-   "start-date": "14th November 2019",
-   "area": "General",
-   "link": "/haematology-academy/events/south-west-myelona-group-taunton/",
-   "month": 11,
-   "location": 3,
-   "disease": 4,
-   "bg":"red_background_nvs",
-   "date":"2019-11-14"
  }},
 {"Event":
  {
-  "title": "Current Perspectives in Haematological Malignancies",
-   "address": "Bristol  | South West ",
-   "start-date": "21st November 2019",
+  "title": "1st North BMT Day",
+   "address": "Manchester | North England",
+   "start-date": "27th September 2019",
    "area": "General",
-   "link": "/haematology-academy/events/current-perspectives-in-haematology-malignancies-bristol-2019/",
-   "month": 11,
+   "link": "/haematology-academy/events/1st-North-BMT-Day/",
+   "month": 9,
+   "location": 7,
+   "disease": 4,
+   "bg":"red_background",
+   "date":"2019-09-27"
+ }},
+{"Event":
+ {
+  "title": "14th South West Lymphoma Group",
+   "address": "South West | Taunton",
+   "start-date": "6th March 2019",
+   "area": "General",
+   "link": "/haematology-academy/events/14th-South-West-Lymphoma-Group/",
+   "month": 3,
    "location": 3,
    "disease": 4,
-   "bg":"red_background_nvs",
-   "date":"2019-11-21"
+   "bg":"red_background",
+   "date":"2019-03-06"
+ }},
+{"Event":
+ {
+  "title": "South West Myeloma Group",
+   "address": "South West | Taunton",
+   "start-date": "16th May 2019",
+   "area": "General",
+   "link": "/haematology-academy/events/South-West-Myeloma-Group-May-2019/",
+   "month": 5,
+   "location": 3,
+   "disease": 8,
+   "bg":"red_background",
+   "date":"2019-05-16"
+ }},
+{"Event":
+ {
+  "title": "Haematology TYA – Leukaemia and Immunotherapy Day",
+   "address": "London | London",
+   "start-date": "17th May 2019",
+   "area": "General",
+   "link": "/haematology-academy/events/Haematology-TYA-Leukaemia-and-Immunotherapy-Day-16th-May-2019/",
+   "month": 5,
+   "location": 1,
+   "disease": 8,
+   "bg":"red_background",
+   "date":"2019-05-17"
  }}
 
  ]}

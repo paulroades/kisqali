@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:http://www.icalmaker.com
+BEGIN:VEVENT
+UID:http://www.icalmaker.com/event/43945d06-9301-4864-a7a7-8280cdc811d4
+DTSTAMP:20190531T094155Z
+DTSTART:20190604T100000Z
+DTEND:20190604T170000Z
+SUMMARY:Current Perspectives in Haematological Malignancies London
+LOCATION:Cavendish Conference Centre, 22 Duchess Mews, London W1G 9DT
+DESCRIPTION:The programme is designed to combine high calibre lectures and interactive discussions to provide an educational opportunity to update clinicians and allied professions in current issues within the management of diseases affecting haematology patients.
+END:VEVENT
+END:VCALENDAR
